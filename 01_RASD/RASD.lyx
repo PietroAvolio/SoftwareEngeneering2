@@ -402,7 +402,7 @@ The system will be composed of three main modules with different roles and
 
  This component is intended to be used by ShareEnJoy customers and will
  offer the functionality to see available vehicles in a specific geographical
- area, reserve and then rent a specific vehicle.
+ area, reserve and then rent a vehicle.
  It also allows users who have reserved a vehicle and who are nearby to
  it to unlock it.
  Through the app users can also send support requests to ShareEnJoy support
@@ -1005,6 +1005,88 @@ bigskip
  system it will be implemented for (i.e.
  Material design for Android, ModernUI for iOS) and support all screen resolutio
 ns between ldpi and xxdpi.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Mockups/App/Landing.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{10pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Mockups/App/Map.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{10pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Mockups/App/Vehicle_detail.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ShareEnJoy Mobile App mockups
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Labeling
@@ -1818,9 +1900,10 @@ Memory constraints
 \end_layout
 
 \begin_layout Standard
-Users should have enough space to install ShareEnJoy Mobile App application
+Users must have enough space to install ShareEnJoy Mobile App application
  on their own devices.
- The application size is still not known but it should be less than 100MB.
+ The size of the application is still unknown but it can be estimated in
+ less than 100MB.
 \begin_inset ERT
 status open
 
@@ -1837,7 +1920,7 @@ bigskip
 \end_layout
 
 \begin_layout Standard
-The system on which the core module will be runned requires enough primary
+The system on which the core module will be run requires enough primary
  memory space in order to install required softwares (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2021,8 +2104,8 @@ Charge users after each rent applying company pricing policies
 \end_layout
 
 \begin_layout Itemize
-Handle payment failure: disable the user if it's payment information are
- nomore valid
+Handle payment failure: disable the user'acount if it's payment information
+ are nomore valid
 \end_layout
 
 \begin_layout Itemize
@@ -2030,12 +2113,12 @@ Access and edit the company database
 \end_layout
 
 \begin_layout Itemize
-Notify users via SMS on their mobile phone TODO OPPURE NOTIFICA
+Notify users via SMS on their mobile phone number or via push notifications
+ through the SharEnJoy Mobile App
 \end_layout
 
 \begin_layout Itemize
-Generate monthly activities reports and send them to users' email address
- BILLS
+Generate monthly invoices and sent them to the users on their email address
 \end_layout
 
 \begin_layout Itemize
@@ -2048,11 +2131,20 @@ Non-functional requirements
 \end_layout
 
 \begin_layout Itemize
-The system must be able to handle thousands of requests simultaneously
+The system must be able to handle thousands of requests simultaneously.
 \end_layout
 
 \begin_layout Itemize
-TODO
+The system should work properly 24 hour a day, 7 days a week and should
+ provide an high uptime score.
+ Maintenance can be scheduled during the night, when traffic is lower.
+\end_layout
+
+\begin_layout Itemize
+Users' information should be securely stored in the company database and
+ not accessible to unhautorized people.
+ Espacially passwords should be encryptet using efficient cryptography algorithm
+s.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2093,7 +2185,128 @@ A 20% discount is applied on the total rental fee if the vehicle is parked
 
 \begin_layout Itemize
 A 30% discount is applied on the total reantl fee if the vehicle is parked
- 
+ in a charging station and the user plugs-in the charging cable.
+\end_layout
+
+\begin_layout Itemize
+A 30% extra fee is applied on the total rental fee if the vehicle is left
+ more than 3KM away from a rechargin station or if the vehicle is left with
+ less than 20% of battery capacity available.
+\end_layout
+
+\begin_layout Itemize
+If more than a discount or an extra fee should be applied, extra fees are
+ applied first in ascendant order, discounts are applied later in descendant
+ order.
+\end_layout
+
+\begin_layout Subsection
+User characteristics
+\end_layout
+
+\begin_layout Standard
+We distinguish beetwen two main categories of users
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Customers}$
+\end_inset
+
+ Customers that want to use the service in order to rent a vehicle.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Users: They can only see the position of available vehicles.
+ Anyone that uses the app without logging-in.
+\end_layout
+
+\begin_layout Itemize
+Logged-in users: They can access to all the functionalities of the service.
+ They are associated with a real identity and a payment method.
+ Logged-in users should possess a valid driving license, which should be
+ indicated during the registration process.
+ People with disabilities that doesn't allow the to drive a normal vehicle
+ cannot register and use the service: this check is done validating drive
+ license data during the registration process.
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Operators}$
+\end_inset
+
+ They're workers of the company, thus they have a good knowledge about the
+ service and will follow a training on how to use ShareEnJoy Control Room
+ software.
+\end_layout
+
+\begin_layout Subsection
+Constraints
+\end_layout
+
+\begin_layout Subsubsection
+Regulatory policies
+\end_layout
+
+\begin_layout Standard
+The system needs to store in the company database personal information of
+ the customers (e.g.
+ name, surname, address, email address, telephone number) as well as to
+ access users' locations in order to track vehicles.
+ These management of this kind of personal information should respect local
+ laws beloning to each area in which the service will be available.
+\end_layout
+
+\begin_layout Subsubsection
+Safety and security considerations
+\end_layout
+
+\begin_layout Standard
+Communications between system modules should be secure and use latest encryption
+ protocol in order to avoid man-in-the middle or other kind of informatic
+ attacks that could lead to data loss.
+\begin_inset Newline newline
+\end_inset
+
+Communications towards vehicles should be secured in order to avoid illegal
+ vehicles unlocks perfomerd by malicious users.
+\end_layout
+
+\begin_layout Subsection
+Assumptions and dependencies
+\end_layout
+
+\begin_layout Standard
+The system is based on the following domain assumptions:
+\end_layout
+
+\begin_layout Itemize
+Information provided by vehicles on-board information systems (i.e.
+ vehicle location by GPS, battery percentage, mechanical damages) are always
+ accurate and available.
+\end_layout
+
+\begin_layout Itemize
+If a vehicle cannot obtain location by GPS or has not internet connection
+ it's considered unavailable and not shown to users.
+\end_layout
+
+\begin_layout Itemize
+Vehicles always unlock when the system tells them to unlock.
+ This is true for each type of command.
+\end_layout
+
+\begin_layout Itemize
+Information system on board of company vehicles are always able to detect:
+ battery percentage, number of passengers, mechanical failures, GPS location.
+\end_layout
+
+\begin_layout Itemize
+If a user has a valid driving license then he can access the service (this
+ deals mainly with disabilities).
 \end_layout
 
 \end_body
