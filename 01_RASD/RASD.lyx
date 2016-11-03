@@ -26,9 +26,11 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement h
 \paperfontsize default
+\spacing single
 \use_hyperref false
-\papersize default
+\papersize a4paper
 \use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
@@ -49,6 +51,11 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\branch Introduction
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -74,7 +81,8 @@
 \align center
 \begin_inset Graphics
 	filename images/Logo_Politecnico_Milano.png
-	scale 20
+	display false
+	scale 30
 
 \end_inset
 
@@ -83,7 +91,7 @@
 
 \begin_layout Standard
 \align center
-Software Engineering 2 project: 
+Software Engineering 2 project:
 \begin_inset Formula $\mathit{PowerEnJoy}$
 \end_inset
 
@@ -91,7 +99,25 @@ Software Engineering 2 project:
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace smallskip
+\paragraph_spacing other 0
+\align center
+A.A.
+ 2016/2017 - Prof.
+ E.
+ di Nitto
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{20pt}
+\end_layout
+
 \end_inset
 
 
@@ -129,21 +155,46 @@ ocument
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{50pt}
+\end_layout
+
 \end_inset
 
-Version 
-\begin_inset Formula $\mathbf{1.0}$
-\end_inset
 
- - October 27, 2016
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace medskip
+Version 
+\series bold
+1.0 - 
+\series default
+2016/11/02
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallskip
+\end_layout
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="2">
 <features tabularvalignment="middle">
@@ -163,7 +214,7 @@ Pietro Avolio
 \begin_inset Text
 
 \begin_layout Plain Layout
-Mat 878640
+Mat XXXXXX
 \end_layout
 
 \end_inset
@@ -217,5 +268,1619 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Purpose
+\end_layout
+
+\begin_layout Standard
+ShareEnJoy is a new company that wants to enter the car sharing market and
+ wants to provide a service based on electric vehicles only.
+ The way they want to implement their service is classical and very common
+ to other car sharing services: it will be available in a specific geographical
+ area (called safe area) for each city in which the service will be activated.
+ Users will be able to reserve and then rent a vehicle, use it for as much
+ time as they desire and then be charged based on the rental time.
+\end_layout
+
+\begin_layout Standard
+As the car sharing service is based on electric vehicles only, the system
+ must provide some specific functionalities in order to handle electric
+ vehicles specific behaviours.
+ For example, the company owns some electric recharging stations spread
+ in the safe area and users should be encouraged to terminate their rentals
+ in these stations.
+ 
+\end_layout
+
+\begin_layout Standard
+ShareEnJoy needs a digital management system in order to support all the
+ activities for both their customers and their operators.
+ 
+\end_layout
+
+\begin_layout Subsection
+Scope
+\end_layout
+
+\begin_layout Standard
+Following the 
+\begin_inset Quotes eld
+\end_inset
+
+The World & Machine
+\begin_inset Quotes erd
+\end_inset
+
+ approach by M.
+ Jackson and P.
+ Zave we can identify real word entities that interact with the system (
+\begin_inset Quotes eld
+\end_inset
+
+the Word
+\begin_inset Quotes erd
+\end_inset
+
+), system entities (
+\begin_inset Quotes eld
+\end_inset
+
+the Machine
+\begin_inset Quotes erd
+\end_inset
+
+) and the intersection beetwen them (
+\begin_inset Quotes eld
+\end_inset
+
+the shared phenomena
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/1.2 - The world and the machine - Page 1.png
+	display false
+	scale 17
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+The World & Machine
+\begin_inset Quotes erd
+\end_inset
+
+ Venn diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+The system will be composed of three main modules with different roles and
+ purposes:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy Mobile App}$
+\end_inset
+
+ This component is intended to be used by ShareEnJoy customers and will
+ offer the functionality to see available vehicles in a specific geographical
+ area, reserve and then rent a specific vehicle.
+ It also allows users who have reserved a vehicle and who are nearby to
+ it to unlock it.
+ Through the app users can also send support requests to ShareEnJoy support
+ staff.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy Control Room}$
+\end_inset
+
+ This component is intended to be used by ShareEnJoy operators in order
+ to have a real time blueprint of the system, handle support requests and
+ be notified for some specific events (e.g.
+ a customer payment failure, a car that runs out of battery).
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy Core}$
+\end_inset
+
+ This component is intended to contain all the system logic.
+ It should work as a connection node between all the other components as
+ well as connection point to vehicles.
+ It should handle user’s payments through a payment gateway and perform
+ automated tasks.
+\end_layout
+
+\begin_layout Standard
+A list of high level goals that the system should accomplish is the following:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|G1| The system should know vehicles position and information such as model,
+ battery percentage, mechanical issues and damages.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|G2| The system should be able to show on a map the position of available
+ vehicles together with some selected status information (e.g.
+ battery percentage) and estimated information (e.g.
+ kilometers authonomy).
+ 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|G3| Users should be able to reserve a vehicle, unlock it when they’re close
+ to it's position and start the rent.
+ 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|G4| The system should charge the users after each rent with fees based
+ on company policies.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|G5| Users should be able to send a support request.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|G6| Company operators should be able to handle support requests forwarded
+ by users.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|G7| Company operators should be able to see and handle notifications sent
+ by the system as a reaction to some specific events.
+\end_layout
+
+\begin_layout Subsection
+Definitions, acronyms and abbreviations
+\end_layout
+
+\begin_layout Standard
+In order to avoid ambiguity and possible misunderstanding here are formally
+ listed some recurrent terms and acronyms used in this document.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="73col%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The System
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The digital management system to be developed.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ShareEnJoy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The company to develop the system for.
+ Also referred as 'the company'.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vehicle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A vehicle owned by the company that can be used in the car sharing service.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A person who wants to use the system and it's not a member of the company.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logged-in user
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A user who has completed the log-in process so that it can be associated
+ with a real identity and payment information.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Customer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A user or a logged-in user.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operator
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A person who wants to use the system and it's authenticated as a member
+ of the company.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Availabe vehicle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A vehicle that is not reserved by anywan and can be reserved by a logged-in
+ user.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reserved vehicle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A vehicle that has been reserved by a logged-in user.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rented vehicle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A vehicle that is currently rented by a logged-in user.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Safe Area
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The geographical area in which a vehicle can be parket and rental terminated.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DBMS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Database Management System
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TBD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+To Be Determined
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TBD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+To Be Determined
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reference documents
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|REFD1| Assignments AA 2016-2017
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|REFD2| ISO/IEC/IEEE 29148, first edition, 2011-12-01
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|REFD3| Requirements Engineering Part III
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|REFD4| IDC Research Inc analysis on mobile operating systems market share
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.idc.com/prodserv/smartphone-os-market-share.jsp
+\end_layout
+
+\end_inset
+
+, 2016 Q2
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|REFD5| Android distribution per version
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://developer.android.com/about/dashboards/index.html
+\end_layout
+
+\end_inset
+
+, as of 2016-11-02
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|REFD6| iOS distribution per version
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://david-smith.org/iosversionstats/
+\end_layout
+
+\end_inset
+
+, as of 2016-11-02
+\end_layout
+
+\begin_layout Subsection
+Overwiew
+\end_layout
+
+\begin_layout Standard
+TODO
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Overall Description
+\end_layout
+
+\begin_layout Subsection
+Product perspective
+\end_layout
+
+\begin_layout Standard
+The central component of the entire system is the ShareEnJoy Core module
+ which is the component where all the logic is put.
+ This piece of the system is in charge of providing an interface to vehicles
+ on-board information system, of processing requests from the other modules
+ of the system, of accessing system database and of interfacing with the
+ payment gateway.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All the other modules of which the system is made of (i.e.
+ ShareEnJoy Mobile App and ShareEnJoy Control Room) should interface with
+ the core module in order to accomplish required tasks (e.g.
+ user’s registration and login, vehicle reservation request, etc).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/RASD 2.1 - Product Prospective - Page 1.png
+	display false
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Block diagram of the system structure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+User Interfaces
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy Mobile App}$
+\end_inset
+
+ This module will be implemented as a mobile application and it's intended
+ for costumers.
+ It's important that the most used commands are visibile and easy navigable.
+ Secondary commands of less frequent usage can be organised in secondary
+ less visible menus.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+ In order to avoid mistakes between commands it's better to not have too
+ many selection on every page, text explainations should be clear and concise.
+ Error windows should show short error descriptions together with an error
+ identification code.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+ The application should follow the design guidelines of the different operating
+ system it will be implemented for (i.e.
+ Material design for Android, ModernUI for iOS) and support all screen resolutio
+ns between ldpi and xxdpi.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\end_inset
+
+ This module will be implemented as a web application and it is intended
+ for operators.
+ Functionalities should be well categorized and unambiguous.
+ Most frequently used functions should be as easy and immediate as possibile
+ in order to speed-up operators work and reduce customers wait time.
+ Some macros could be present in order to reduce repetitve tasks.
+ It should be accesible through a common internet connection and it should
+ be well optimized for a single chosen browser and a screen resolution.
+ Error windows should show a long error message in order to easily recover.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
+\end_inset
+
+ This module does not provide a direct user interface since it's intended
+ to be managed and maintained by qualified and specialized staff.
+ It should provide a very detailed activity logs.
+\end_layout
+
+\begin_layout Subsubsection
+Hardware interfaces
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Mobile\,App}$
+\end_inset
+
+ This component should obtain device location by its operating system.
+ If GPS position is unavailable or insufficiently precise, a localization
+ through wifi network could be possibile.
+ If both methods fail or can't provide the desired level of acuracy the
+ application can't work properly.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\end_inset
+
+ This software does not have any hardware interfaces.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
+\end_inset
+
+ This software does not have any hardware interfaces.
+\end_layout
+
+\begin_layout Subsubsection
+Software interfaces
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Mobile\,App}$
+\end_inset
+
+ Android and iOS together cover about the 99% of the mobile operating system
+ market share
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+REFD4
+\end_layout
+
+\end_inset
+
+ and are the systems we are going to focus on.
+\begin_inset Newline newline
+\end_inset
+
+After analysing per operating system distribution and share, a good compatibilit
+y tradeoff could be the following.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mobile device operating system
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operating System
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Min.
+ version
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Android
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.1 (API level 16)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+iOS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+With this minimal requirements we can support 97% of android devices
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+REFD5
+\end_layout
+
+\end_inset
+
+ and 92% of iOS devices
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+REFD6
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\end_inset
+
+ This software will be run on a web server and it should integrate a support
+ ticket system in order to handle support requests forwarded by users.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Web server application
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nginx
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.11.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{10pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Support ticket system
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+osTicket
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OSE 1.10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
+\end_inset
+
+ This software has to interface with vehicles on-board information system,
+ with the payment gateway and with a DBMS
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vehicles information system
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ShareEnJoy Vehicle I.S.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{10pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Payment Gateway
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GESTPAY
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Professional
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DBMS
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MySql Community Edition
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.7.6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The module can properly work on every operating system as long as these
+ components are installed and work properly.
+\end_layout
+
+\begin_layout Subsubsection
+Communication Interfaces
+\end_layout
+
+\begin_layout Standard
+All modules should communicate with the core module in order to complete
+ tasks, thus the core module can be seen as an internal API provider.
+ All the communications between the modules are bidirectional and could
+ be implemented through the internet HTTPs protocol using a REST approach.
+ Responses could be in the JSON format.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/RASD 2.1.5 - Communication interfaces - Page 1.png
+	display false
+	scale 17
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+System modules communication scheme
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Communication between the core and the DBMS works using the TCP protocol
+ on port 3306.
+\end_layout
+
+\begin_layout Standard
+Communication between the core and the payment gateway works using the TCP
+ protocol on an arbitrary port.
+\end_layout
+
+\begin_layout Standard
+The ShareEnJoy control room can be accessed using the HTTPs protocol on
+ port 80.
+\end_layout
+
+\begin_layout Subsubsection
+Memory constraints
+\end_layout
+
+\begin_layout Standard
+Users should have enough space to install ShareEnJoy Mobile App application
+ on their devices.
+ The application size is not know but it should be less than 20MB.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The system on which the core module will be runned requires enough primary
+ memory space in order install required softwares.
+ Other 5GB of primary memory space are required for the database and the
+ software itself.
+\begin_inset Newline newline
+\end_inset
+
+A good amount of secondary memory (i.e.
+ 32GB) will result in better performances for both the software itself and
+ the DBMS.
+\end_layout
+
+\begin_layout Subsubsection
+Operations
+\end_layout
+
+\begin_layout Standard
+TODO
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Product functions
+\end_layout
+
+\begin_layout Standard
+In thi section are listed all the functionalities that the system-to-be
+ is going to provide.
+\end_layout
+
+\begin_layout Subsubsection
+Functional requirements
+\end_layout
+
+\begin_layout Standard
+Functional requirements are listed per software
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy Mobile App}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Registration
+\end_layout
+
+\begin_layout Itemize
+Log-in
+\end_layout
+
+\begin_layout Itemize
+See and edit user's profile information and payment method
+\end_layout
+
+\begin_layout Itemize
+Show available vehicles on map
+\end_layout
+
+\begin_layout Itemize
+Search available vehicles based on GPS localization or inserted address
+\end_layout
+
+\begin_layout Itemize
+Make new or cancel existent vehicle reservation
+\end_layout
+
+\begin_layout Itemize
+Unlock a reserved vehicle
+\end_layout
+
+\begin_layout Itemize
+Guide the user to the reserved vehicle
+\end_layout
+
+\begin_layout Itemize
+Send a support request
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Login
+\end_layout
+
+\begin_layout Itemize
+Show all vehicles position and information
+\end_layout
+
+\begin_layout Itemize
+Show user account information, disable an account
+\end_layout
+
+\begin_layout Itemize
+Show users support requests and allow operators to reply
+\end_layout
+
+\begin_layout Itemize
+Show system notifications and mark them has 
+\begin_inset Formula $\mathit{handling}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathit{handled}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathit{not-handled}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+TODO
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
