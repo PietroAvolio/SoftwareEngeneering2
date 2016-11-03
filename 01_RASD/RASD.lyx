@@ -706,6 +706,27 @@ A vehicle that is currently rented by a logged-in user.
 \begin_inset Text
 
 \begin_layout Plain Layout
+Expired reservation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A reservation that has not been cancelled or transformed in a rental after
+ a certain amount of time defined by company policies.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 Safe Area
 \end_layout
 
@@ -736,26 +757,6 @@ DBMS
 
 \begin_layout Plain Layout
 Database Management System
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-TBD
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-To Be Determined
 \end_layout
 
 \end_inset
@@ -1216,7 +1217,15 @@ REFD6
 
 \end_inset
 
-.
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Labeling
@@ -1224,8 +1233,9 @@ REFD6
 \begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
 \end_inset
 
- This software will be run on a web server and it should integrate a support
- ticket system in order to handle support requests forwarded by users.
+ This software will require a Java EE application server.
+ It should integrate a support ticket system in order to handle support
+ requests forwarded by users.
 \begin_inset Newline newline
 \end_inset
 
@@ -1244,7 +1254,7 @@ REFD6
 \begin_inset Text
 
 \begin_layout Plain Layout
-Web server application
+Application server
 \end_layout
 
 \end_inset
@@ -1273,7 +1283,7 @@ Name
 \begin_inset Text
 
 \begin_layout Plain Layout
-nginx
+Glassfish
 \end_layout
 
 \end_inset
@@ -1293,7 +1303,7 @@ Version
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.11.5
+4.1.1
 \end_layout
 
 \end_inset
@@ -1391,11 +1401,19 @@ OSE 1.10
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
+\begin_inset CommandInset label
+LatexCommand label
+name "ShareEnJoyCore_Required_Softwares"
+
+\end_inset
+
+
 \begin_inset Formula $\mathit{ShareEnJoy\,Core}$
 \end_inset
 
  This software has to interface with vehicles on-board information system,
- with the payment gateway and with a DBMS
+ with the payment gateway and with a DBMS.
+ It will require a Java EE application server.
 \begin_inset Newline newline
 \end_inset
 
@@ -1635,6 +1653,89 @@ Version
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{10pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Application server
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Glassfish
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.1.1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -1718,8 +1819,8 @@ Memory constraints
 
 \begin_layout Standard
 Users should have enough space to install ShareEnJoy Mobile App application
- on their devices.
- The application size is not know but it should be less than 20MB.
+ on their own devices.
+ The application size is still not known but it should be less than 100MB.
 \begin_inset ERT
 status open
 
@@ -1737,7 +1838,14 @@ bigskip
 
 \begin_layout Standard
 The system on which the core module will be runned requires enough primary
- memory space in order install required softwares.
+ memory space in order to install required softwares (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ShareEnJoyCore_Required_Softwares"
+
+\end_inset
+
+).
  Other 5GB of primary memory space are required for the database and the
  software itself.
 \begin_inset Newline newline
@@ -1768,7 +1876,7 @@ Product functions
 \end_layout
 
 \begin_layout Standard
-In thi section are listed all the functionalities that the system-to-be
+In this section are listed all the functionalities that the system-to-be
  is going to provide.
 \end_layout
 
@@ -1777,7 +1885,7 @@ Functional requirements
 \end_layout
 
 \begin_layout Standard
-Functional requirements are listed per software
+Functional requirements are listed per system component:
 \end_layout
 
 \begin_layout Labeling
@@ -1798,7 +1906,7 @@ Log-in
 \end_layout
 
 \begin_layout Itemize
-See and edit user's profile information and payment method
+See and edit logged-in user's own profile information and payment method
 \end_layout
 
 \begin_layout Itemize
@@ -1806,7 +1914,12 @@ Show available vehicles on map
 \end_layout
 
 \begin_layout Itemize
-Search available vehicles based on GPS localization or inserted address
+Search available vehicles based on GPS localization or specific address
+\end_layout
+
+\begin_layout Itemize
+Show vehicle information (i.e.
+ battery percentage, estimated kilometers authonomy)
 \end_layout
 
 \begin_layout Itemize
@@ -1844,11 +1957,15 @@ Show all vehicles position and information
 \end_layout
 
 \begin_layout Itemize
-Show user account information, disable an account
+Show user account information, disable an user
 \end_layout
 
 \begin_layout Itemize
-Show users support requests and allow operators to reply
+Show user last activities
+\end_layout
+
+\begin_layout Itemize
+Show users support requests and allow operators to reply or close the requests
 \end_layout
 
 \begin_layout Itemize
@@ -1870,7 +1987,7 @@ Show system notifications and mark them has
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
 \end_inset
 
  
@@ -1878,9 +1995,106 @@ Show system notifications and mark them has
 
 \begin_deeper
 \begin_layout Itemize
-TODO
+Handle rent events (i.e.
+ 
+\begin_inset Formula $\mathit{RENT\,STARTED}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathit{RENT\,TERMINATED}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Send commands to vehicles (e.g.
+ 
+\begin_inset Formula $\mathit{UNLOCK\,DOORS}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Charge users after each rent applying company pricing policies
+\end_layout
+
+\begin_layout Itemize
+Handle payment failure: disable the user if it's payment information are
+ nomore valid
+\end_layout
+
+\begin_layout Itemize
+Access and edit the company database
+\end_layout
+
+\begin_layout Itemize
+Notify users via SMS on their mobile phone TODO OPPURE NOTIFICA
+\end_layout
+
+\begin_layout Itemize
+Generate monthly activities reports and send them to users' email address
+ BILLS
+\end_layout
+
+\begin_layout Itemize
+Detect expired reservation and charge the user for them
 \end_layout
 
 \end_deeper
+\begin_layout Subsubsection
+Non-functional requirements
+\end_layout
+
+\begin_layout Itemize
+The system must be able to handle thousands of requests simultaneously
+\end_layout
+
+\begin_layout Itemize
+TODO
+\end_layout
+
+\begin_layout Subsubsection
+Company pricing policies
+\end_layout
+
+\begin_layout Standard
+The company has defined some specific pricing policies to be applied in
+ correspondence with some specific user behaviours
+\end_layout
+
+\begin_layout Itemize
+Expired reservation has a cost of 1EUR.
+\end_layout
+
+\begin_layout Itemize
+The rental starts as the user turns on vehicle engine.
+\end_layout
+
+\begin_layout Itemize
+The rental stops as the user parks the vehicle within the safe area and
+ all the passengers leave the vehicle.
+\end_layout
+
+\begin_layout Itemize
+Rental fee is per minute.
+\end_layout
+
+\begin_layout Itemize
+A 10% discount is applied on the total rental fee if there are at least
+ 2 other passengers in the vehicle for more than the 50% of the rental time.
+\end_layout
+
+\begin_layout Itemize
+A 20% discount is applied on the total rental fee if the vehicle is parked
+ with more than 50% of battery capacity available.
+\end_layout
+
+\begin_layout Itemize
+A 30% discount is applied on the total reantl fee if the vehicle is parked
+ 
+\end_layout
+
 \end_body
 \end_document

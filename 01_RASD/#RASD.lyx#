@@ -1820,7 +1820,7 @@ Memory constraints
 \begin_layout Standard
 Users should have enough space to install ShareEnJoy Mobile App application
  on their own devices.
- The application size is still not known but it should be less than 100MB.
+ The application size is still not known but it should be less than 20MB.
 \begin_inset ERT
 status open
 
@@ -1838,7 +1838,7 @@ bigskip
 
 \begin_layout Standard
 The system on which the core module will be runned requires enough primary
- memory space in order to install required softwares (Section 
+ memory space in order install required softwares (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "ShareEnJoyCore_Required_Softwares"
@@ -1876,7 +1876,7 @@ Product functions
 \end_layout
 
 \begin_layout Standard
-In this section are listed all the functionalities that the system-to-be
+In thi section are listed all the functionalities that the system-to-be
  is going to provide.
 \end_layout
 
@@ -1987,7 +1987,7 @@ Show system notifications and mark them has
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
+\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
 \end_inset
 
  
@@ -2030,12 +2030,11 @@ Access and edit the company database
 \end_layout
 
 \begin_layout Itemize
-Notify users via SMS on their mobile phone TODO OPPURE NOTIFICA
+Notify users via SMS on their mobile phone
 \end_layout
 
 \begin_layout Itemize
 Generate monthly activities reports and send them to users' email address
- BILLS
 \end_layout
 
 \begin_layout Itemize
