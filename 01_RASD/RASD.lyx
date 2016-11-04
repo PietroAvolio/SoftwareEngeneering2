@@ -281,7 +281,7 @@ ShareEnJoy is a new company that wants to enter the car sharing market and
  wants to provide a service based on electric vehicles only.
  The way they want to implement their service is classical and very common
  to other car sharing services: it will be available in a specific geographical
- area (called safe area) for each city in which the service will be activated.
+ area (called safe area) for each city where the service will be activated.
  Users will be able to reserve and then rent a vehicle, use it for as much
  time as they desire and then be charged based on the rental time.
 \end_layout
@@ -294,10 +294,19 @@ As the car sharing service is based on electric vehicles only, the system
  in the safe area and users should be encouraged to terminate their rentals
  in these stations.
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
 \end_layout
 
-\begin_layout Standard
-ShareEnJoy needs a digital management system in order to support all the
+\end_inset
+
+ ShareEnJoy needs a digital management system in order to support all the
  activities for both their customers and their operators.
  
 \end_layout
@@ -402,7 +411,7 @@ The system will be composed of three main modules with different roles and
 
  This component is intended to be used by ShareEnJoy customers and will
  offer the functionality to see available vehicles in a specific geographical
- area, reserve and then rent a vehicle.
+ area, to reserve and then to rent a vehicle.
  It also allows users who have reserved a vehicle and who are nearby to
  it to unlock it.
  Through the app users can also send support requests to ShareEnJoy support
@@ -415,8 +424,8 @@ The system will be composed of three main modules with different roles and
 \end_inset
 
  This component is intended to be used by ShareEnJoy operators in order
- to have a real time blueprint of the system, handle support requests and
- be notified for some specific events (e.g.
+ to have a real time blueprint of the system, to handle support requests
+ and to be notified for some specific events (e.g.
  a customer payment failure, a car that runs out of battery).
 \end_layout
 
@@ -453,32 +462,37 @@ A list of high level goals that the system should accomplish is the following:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-|G3| Users should be able to reserve a vehicle, unlock it when they’re close
+|G3| Users should be able to register and insert a payment method.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|G4| Users should be able to reserve a vehicle, unlock it when they’re close
  to it's position and start the rent.
  
 \end_layout
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-|G4| The system should charge the users after each rent with fees based
+|G5| The system should charge the users after each rent with fees based
  on company policies.
 \end_layout
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-|G5| Users should be able to send a support request.
+|G6| Users should be able to send a support request.
 \end_layout
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-|G6| Company operators should be able to handle support requests forwarded
+|G7| Company operators should be able to handle support requests forwarded
  by users.
 \end_layout
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-|G7| Company operators should be able to see and handle notifications sent
- by the system as a reaction to some specific events.
+|G8| Company operators should be able to see and handle notifications sent
+ by the system.
 \end_layout
 
 \begin_layout Subsection
@@ -893,8 +907,8 @@ Product perspective
 
 \begin_layout Standard
 The central component of the entire system is the ShareEnJoy Core module
- which is the component where all the logic is put.
- This piece of the system is in charge of providing an interface to vehicles
+ which is where all the logic is put.
+ This module of the system is in charge of providing an interface to vehicles
  on-board information system, of processing requests from the other modules
  of the system, of accessing system database and of interfacing with the
  payment gateway.
@@ -1019,7 +1033,7 @@ status open
 \begin_inset Graphics
 	filename Mockups/App/Landing.png
 	display false
-	scale 60
+	scale 70
 
 \end_inset
 
@@ -1040,7 +1054,36 @@ hspace{10pt}
 \begin_inset Graphics
 	filename Mockups/App/Map.png
 	display false
-	scale 60
+	scale 70
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{10pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Mockups/App/Vehicle_detail.png
+	display false
+	scale 70
 
 \end_inset
 
@@ -1059,9 +1102,9 @@ hspace{10pt}
 
 
 \begin_inset Graphics
-	filename Mockups/App/Vehicle_detail.png
+	filename Mockups/App/Vehicle Reserved.png
 	display false
-	scale 60
+	scale 70
 
 \end_inset
 
@@ -1072,7 +1115,7 @@ hspace{10pt}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-ShareEnJoy Mobile App mockups
+ShareEnJoy Mobile App mockups of main functionalities screen
 \end_layout
 
 \end_inset
@@ -1921,7 +1964,7 @@ bigskip
 
 \begin_layout Standard
 The system on which the core module will be run requires enough primary
- memory space in order to install required softwares (Section 
+ memory space in order to install required softwares (section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "ShareEnJoyCore_Required_Softwares"
@@ -1968,7 +2011,7 @@ Functional requirements
 \end_layout
 
 \begin_layout Standard
-Functional requirements are listed per system component:
+Functional requirements are listed per system module:
 \end_layout
 
 \begin_layout Labeling
@@ -2238,9 +2281,9 @@ Logged-in users: They can access to all the functionalities of the service.
 \begin_inset Formula $\mathit{ShareEnJoy\,Operators}$
 \end_inset
 
- They're workers of the company, thus they have a good knowledge about the
- service and will follow a training on how to use ShareEnJoy Control Room
- software.
+ They are workers of the company, thus they have a good knowledge about
+ the service and will follow a training on how to use ShareEnJoy Control
+ Room software.
 \end_layout
 
 \begin_layout Subsection
@@ -2252,12 +2295,12 @@ Regulatory policies
 \end_layout
 
 \begin_layout Standard
-The system needs to store in the company database personal information of
- the customers (e.g.
+The system needs to store in the company database customers' personal informatio
+n (e.g.
  name, surname, address, email address, telephone number) as well as to
  access users' locations in order to track vehicles.
- These management of this kind of personal information should respect local
- laws beloning to each area in which the service will be available.
+ Sensible data treatment should respect local laws belonging to each area
+ where the service will be available.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2272,7 +2315,8 @@ Communications between system modules should be secure and use latest encryption
 \end_inset
 
 Communications towards vehicles should be secured in order to avoid illegal
- vehicles unlocks perfomerd by malicious users.
+ vehicles unlocks perfomerd by malicious users or other types of illegal
+ behaviours.
 \end_layout
 
 \begin_layout Subsection
@@ -2280,18 +2324,18 @@ Assumptions and dependencies
 \end_layout
 
 \begin_layout Standard
-The system is based on the following domain assumptions:
+The system is based on the following domain assumptions: <- 
 \end_layout
 
 \begin_layout Itemize
 Information provided by vehicles on-board information systems (i.e.
  vehicle location by GPS, battery percentage, mechanical damages) are always
- accurate and available.
+ available and accurate.
 \end_layout
 
 \begin_layout Itemize
 If a vehicle cannot obtain location by GPS or has not internet connection
- it's considered unavailable and not shown to users.
+ it is considered unavailable and not shown to users.
 \end_layout
 
 \begin_layout Itemize
@@ -2300,13 +2344,34 @@ Vehicles always unlock when the system tells them to unlock.
 \end_layout
 
 \begin_layout Itemize
-Information system on board of company vehicles are always able to detect:
+Vehicles on-board information systems are always able to detect and provide:
  battery percentage, number of passengers, mechanical failures, GPS location.
 \end_layout
 
 \begin_layout Itemize
 If a user has a valid driving license then he can access the service (this
- deals mainly with disabilities).
+ mainly deals with disabilities).
+\end_layout
+
+\begin_layout Subsection
+Future improvements
+\end_layout
+
+\begin_layout Itemize
+Allow the creation of different user groups in order to have different system
+ behaviours based on the group (e.g.
+ different pricing policies for groups).
+\end_layout
+
+\begin_layout Itemize
+Allow the creation of coupons that users can use to have special discounts.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \end_body

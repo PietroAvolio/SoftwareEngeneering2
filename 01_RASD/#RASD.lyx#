@@ -2353,5 +2353,26 @@ If a user has a valid driving license then he can access the service (this
  mainly deals with disabilities).
 \end_layout
 
+\begin_layout Subsection
+Future improvements
+\end_layout
+
+\begin_layout Itemize
+Allow the creation of different user groups in order to have different system
+ behaviours based on the group (e.g.
+ different pricing policies for groups).
+\end_layout
+
+\begin_layout Itemize
+Allow the creation of discount coupons to be distributed to users.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
