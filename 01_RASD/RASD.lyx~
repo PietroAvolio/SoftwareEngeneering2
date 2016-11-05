@@ -279,7 +279,10 @@ Purpose
 \begin_layout Standard
 ShareEnJoy is a new company that wants to enter the car sharing market and
  wants to provide a service based on electric vehicles only.
- The way they want to implement their service is classical and very common
+\begin_inset Newline newline
+\end_inset
+
+The way they want to implement their service is classical and very common
  to other car sharing services: it will be available in a specific geographical
  area (called safe area) for each city where the service will be activated.
  Users will be able to reserve and then rent a vehicle, use it for as much
@@ -2329,8 +2332,11 @@ The system is based on the following domain assumptions: <-
 
 \begin_layout Itemize
 Information provided by vehicles on-board information systems (i.e.
- vehicle location by GPS, battery percentage, mechanical damages) are always
- available and accurate.
+ vehicle location provided by
+\end_layout
+
+\begin_layout Itemize
+GPS, battery percentage, mechanical damages) are always available and accurate.
 \end_layout
 
 \begin_layout Itemize
@@ -2351,6 +2357,27 @@ Vehicles on-board information systems are always able to detect and provide:
 \begin_layout Itemize
 If a user has a valid driving license then he can access the service (this
  mainly deals with disabilities).
+\end_layout
+
+\begin_layout Subsection
+Future improvements
+\end_layout
+
+\begin_layout Itemize
+Allow the creation of different user groups in order to have different system
+ behaviours based on the group (e.g.
+ different pricing policies for groups).
+\end_layout
+
+\begin_layout Itemize
+Allow the creation of coupons that users can use to have special discounts.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \end_body
