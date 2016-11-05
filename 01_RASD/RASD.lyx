@@ -279,7 +279,10 @@ Purpose
 \begin_layout Standard
 ShareEnJoy is a new company that wants to enter the car sharing market and
  wants to provide a service based on electric vehicles only.
- The way they want to implement their service is classical and very common
+\begin_inset Newline newline
+\end_inset
+
+The way they want to implement their service is classical and very common
  to other car sharing services: it will be available in a specific geographical
  area (called safe area) for each city where the service will be activated.
  Users will be able to reserve and then rent a vehicle, use it for as much
@@ -289,9 +292,9 @@ ShareEnJoy is a new company that wants to enter the car sharing market and
 \begin_layout Standard
 As the car sharing service is based on electric vehicles only, the system
  must provide some specific functionalities in order to handle electric
- vehicles specific behaviours.
+ vehicles behaviours and needs.
  For example, the company owns some electric recharging stations spread
- in the safe area and users should be encouraged to terminate their rentals
+ among the safe area and users should be encouraged to terminate their rentals
  in these stations.
  
 \begin_inset ERT
@@ -334,7 +337,7 @@ the Word
 \begin_inset Quotes erd
 \end_inset
 
-), system entities (
+), specific system entities (
 \begin_inset Quotes eld
 \end_inset
 
@@ -412,10 +415,8 @@ The system will be composed of three main modules with different roles and
  This component is intended to be used by ShareEnJoy customers and will
  offer the functionality to see available vehicles in a specific geographical
  area, to reserve and then to rent a vehicle.
- It also allows users who have reserved a vehicle and who are nearby to
- it to unlock it.
- Through the app users can also send support requests to ShareEnJoy support
- staff.
+ It also allows users to unlock a reserved vehicle when they're nearby Through
+ the app users can also send support requests to ShareEnJoy support staff.
 \end_layout
 
 \begin_layout Labeling
@@ -426,7 +427,7 @@ The system will be composed of three main modules with different roles and
  This component is intended to be used by ShareEnJoy operators in order
  to have a real time blueprint of the system, to handle support requests
  and to be notified for some specific events (e.g.
- a customer payment failure, a car that runs out of battery).
+ an automatic payment failure, a car that runs out of battery).
 \end_layout
 
 \begin_layout Labeling
@@ -1115,7 +1116,7 @@ hspace{10pt}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-ShareEnJoy Mobile App mockups of main functionalities screen
+ShareEnJoy Mobile App mockups
 \end_layout
 
 \end_inset
@@ -2329,8 +2330,11 @@ The system is based on the following domain assumptions: <-
 
 \begin_layout Itemize
 Information provided by vehicles on-board information systems (i.e.
- vehicle location by GPS, battery percentage, mechanical damages) are always
- available and accurate.
+ vehicle location provided by
+\end_layout
+
+\begin_layout Itemize
+GPS, battery percentage, mechanical damages) are always available and accurate.
 \end_layout
 
 \begin_layout Itemize
