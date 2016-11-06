@@ -26,10 +26,19 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
+\float_placement H
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
 \use_package amsmath 1
@@ -214,7 +223,7 @@ Pietro Avolio
 \begin_inset Text
 
 \begin_layout Plain Layout
-Mat XXXXXX
+Mat 878640
 \end_layout
 
 \end_inset
@@ -333,7 +342,7 @@ The World & Machine
 \begin_inset Quotes eld
 \end_inset
 
-the Word
+the World
 \begin_inset Quotes erd
 \end_inset
 
@@ -345,11 +354,11 @@ the Machine
 \begin_inset Quotes erd
 \end_inset
 
-) and the intersection beetwen them (
+) and the intersection between them (
 \begin_inset Quotes eld
 \end_inset
 
-the shared phenomena
+the Shared Phenomena
 \begin_inset Quotes erd
 \end_inset
 
@@ -415,8 +424,9 @@ The system will be composed of three main modules with different roles and
  This component is intended to be used by ShareEnJoy customers and will
  offer the functionality to see available vehicles in a specific geographical
  area, to reserve and then to rent a vehicle.
- It also allows users to unlock a reserved vehicle when they're nearby Through
- the app users can also send support requests to ShareEnJoy support staff.
+ It also allows users to unlock a reserved vehicle when they're nearby.
+ Through the app users can also send support requests to ShareEnJoy support
+ staff.
 \end_layout
 
 \begin_layout Labeling
@@ -457,7 +467,7 @@ A list of high level goals that the system should accomplish is the following:
 |G2| The system should be able to show on a map the position of available
  vehicles together with some selected status information (e.g.
  battery percentage) and estimated information (e.g.
- kilometers authonomy).
+ kilometers autonomy).
  
 \end_layout
 
@@ -469,7 +479,7 @@ A list of high level goals that the system should accomplish is the following:
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
 |G4| Users should be able to reserve a vehicle, unlock it when they’re close
- to it's position and start the rent.
+ to its position and start the rent.
  
 \end_layout
 
@@ -751,7 +761,7 @@ Safe Area
 \begin_inset Text
 
 \begin_layout Plain Layout
-The geographical area in which a vehicle can be parket and rental terminated.
+The geographical area in which a vehicle can be parked and rental terminated.
 \end_layout
 
 \end_inset
@@ -865,7 +875,7 @@ https://developer.android.com/about/dashboards/index.html
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-|REFD6| iOS distribution per version
+|REFD6| iOS per version distribution
 \begin_inset space ~
 \end_inset
 
@@ -884,7 +894,7 @@ https://david-smith.org/iosversionstats/
 \end_layout
 
 \begin_layout Subsection
-Overwiew
+Overview
 \end_layout
 
 \begin_layout Standard
@@ -932,7 +942,7 @@ bigskip
 \end_layout
 
 \begin_layout Standard
-All the other modules of which the system is made of (i.e.
+All the other modules the system is made of (i.e.
  ShareEnJoy Mobile App and ShareEnJoy Control Room) should interface with
  the core module in order to accomplish required tasks (e.g.
  user’s registration and login, vehicle reservation request, etc).
@@ -1000,7 +1010,7 @@ bigskip
 
 \end_inset
 
- In order to avoid mistakes between commands it's better to not have too
+ In order to avoid mistakes between commands it's better not to have too
  many selection on every page, text explainations should be clear and concise.
  Error windows should show short error descriptions together with an error
  identification code.
@@ -2025,11 +2035,11 @@ Functional requirements are listed per system module:
 
 \begin_deeper
 \begin_layout Itemize
-Registration
+User registration
 \end_layout
 
 \begin_layout Itemize
-Log-in
+User log-in
 \end_layout
 
 \begin_layout Itemize
@@ -2076,7 +2086,7 @@ Send a support request
 
 \begin_deeper
 \begin_layout Itemize
-Login
+Operators login
 \end_layout
 
 \begin_layout Itemize
@@ -2084,15 +2094,15 @@ Show all vehicles position and information
 \end_layout
 
 \begin_layout Itemize
-Show user account information, disable an user
+Show user's account information, disable an user
 \end_layout
 
 \begin_layout Itemize
-Show user last activities
+Show user's last activities
 \end_layout
 
 \begin_layout Itemize
-Show users support requests and allow operators to reply or close the requests
+Show users' support requests and allow operators to reply or close the requests
 \end_layout
 
 \begin_layout Itemize
@@ -2109,6 +2119,19 @@ Show system notifications and mark them has
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Mark a vehicle as 
+\begin_inset Formula $\mathit{unavailable}$
+\end_inset
+
+ (e.g.
+ when the vehicle has a mechanical issue)
+\end_layout
+
+\begin_layout Itemize
+Charge users for driving fines.
 \end_layout
 
 \end_deeper
@@ -2325,7 +2348,7 @@ Assumptions and dependencies
 \end_layout
 
 \begin_layout Standard
-The system is based on the following domain assumptions: <- 
+The system is based on the following domain assumptions:
 \end_layout
 
 \begin_layout Itemize
@@ -2358,7 +2381,7 @@ If a user has a valid driving license then he can access the service (this
 \end_layout
 
 \begin_layout Subsection
-Future improvements
+Further developments
 \end_layout
 
 \begin_layout Itemize
@@ -2375,6 +2398,428 @@ Allow the creation of coupons that users can use to have special discounts.
 \begin_inset Newpage newpage
 \end_inset
 
+
+\end_layout
+
+\begin_layout Section
+Specific requirements
+\end_layout
+
+\begin_layout Subsection
+Functional requirements
+\end_layout
+
+\begin_layout Subsubsection
+Scenarios
+\end_layout
+
+\begin_layout Standard
+In order to better describe functional requirements listed in section 2.2.1
+ here is a list of possible system usages (scenarios) from various viewpoints.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\mathrm{Scenario\,}1$
+\end_inset
+
+ User registration and log-in
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luca is a university student who moved to Milan for studying.
+ He can’t afford to buy a car but sometimes he needs to move even when public
+ transports are unavailable (i.e.
+ during the night).
+ He decided to try a car sharing service and downloaded ShareEnJoy Mobile
+ App in order to use it during the incoming weekend.
+ Once the download is complete and the app is installed on his smartphone,
+ Luca starts the registration process: first he needs to create an account
+ filling-in his name and email address, his mobile phone number and choosing
+ an username.
+ Email address is not yet used and username is available, thus he can continue
+ inserting his driving license ID: he missed a characters so the application
+ shows an error message.
+ Luca fixes the mistake and moves on to the latest step in which he is requested
+ to insert his credit card information.
+ A fee of 0,01EUR is charged on his credit card in order to validate it
+ and the registration process is complete.
+\begin_inset Newline newline
+\end_inset
+
+Luca receives on his email address his password and can now log-in.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\mathrm{Scenario}\,2$
+\end_inset
+
+ Search for a vehicle and make a reservation
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Martin is a business man and he is just landed to Milan Malpensa airport.
+ He is going to have an intensive day and he needs to move fast in the town
+ center.
+ He is taking a train from Malpensa to Stazione Centrale station and during
+ the 30 minutes time trip he plans to reserve a vehicle near Stazione Centrale
+ in order to do not waste time when he will get off the train.
+ He is a ShareEnJoy user and he starts the application on his smartphone:
+ he fills in the address and sees available vehicles on the map.
+ He founds a vehicle with enough power according to his requirements and
+ 3 minutes walking from the station.
+ He decides to reserve the vehicles and clicks the relative button on the
+ application.
+ Now Martin can relax until he reaches Stazione Centrale.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\mathrm{Scenario}\,3$
+\end_inset
+
+ Unlock a vehicle and start the rent
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Marco is walking home after his evening gym session when he spots a ShareEnJoy
+ car parked along the street.
+ He is tired by his training session so he decides to check if the car is
+ available.
+ Marco starts the application on his smartphone and checks for available
+ vehicles nearby using his GPS location.
+ The vehicle along the street is available so Marco reserves it and, being
+ less than 5 meters away from the car, he is able to unlock it using the
+ relative button on the application.
+ Marco jumps in the car, secures the fast belt and starts the engine: the
+ rental starts and the price to be paied is shown on the screen installed
+ in the car.
+ 
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\mathrm{Scenario}\,4$
+\end_inset
+
+ User terminates a rent
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mario and his friends are planning to go the the cinema tonight but the
+ place they want to reach is not covered by city public transports.
+ Mario is an old ShareEnJoy customer and he knows that the place is inside
+ the safe area and that ShareEnJoy applies a special discount on the rental
+ fee if there are passengers.
+ He rents a vehicle and reaches the cinema: once there, he stops the engine
+ and terminates the rent.
+ An SMS sent to his mobile phone number informs him of the final price,
+ which was influenced by a number of company policies.
+ 9EUR is the base price, plus he has got a 10% discount because he traveled
+ with friends, a 20% discount because he left the car with more than 50%
+ of the battery capacity available and a 30% extra fee because there are
+ no recharging station in a 3KM range from the cinema.
+ Mario thinks that 8,43EUR is a very good price to spent a cinema night
+ with friends (with which he will divide the cost later!).
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\mathrm{Scenario}\,5$
+\end_inset
+
+ User sends a support request and operator handles it
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mario had a really busy day and he is now looking for an available ShareEnJoy
+ car so that he can reach his friends at the restaurant.
+ Mario uses the application on his smartphone to reserve a vehicle but when
+ he reaches the car he has an unexpected surprise: the car has no wheels
+ because they have been stolen.
+ He uses the application to open a support request describing the problem.
+ The operator sees the request in the ShareEnJoy Control Room software and
+ gives instruction on what to do to the client.
+ Then, he marks the car as unavailable and sends a notification to the mechanics
+ team.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\mathrm{Scenario\,6}$
+\end_inset
+
+ User tries to terminate the rent outside a safe area
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Marta is new to the car sharing services and it is the first time she rents
+ a ShareEnJoy vehicle.
+ She wants to reach Rho, a town near Milan, but it is outside the safe area
+ and she has not read information documents.
+ Once she reaches her destination, she stops the engine and tries to terminate
+ the rent: a message on the screen installed in the car and an SMS sent
+ to her mobile phone number notifies her that she can't terminate the rent
+ in that location and that she will be charged until she will terminate
+ the rental inside the safe area.
+ Marta checks the map and starts the engine again in order to move the car
+ inside the safe area, which is just 700mt away from her destination.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $Scenario\,7$
+\end_inset
+
+ User's payment fails
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Carol has just terminated a rental but she has no left money on her prepayed
+ credit card.
+ As soon as the ShareEnJoy Core Module tries to make a payment and it is
+ refused, it disables Carol's account and sents her a notification both
+ via SMS and email.
+ She will not be ablo the use her account to rent a vehicle until she will
+ update her payment information and pay the given amount.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\mathit{Scenario\,8}$
+\end_inset
+
+ User took a driving loan
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A driving loan has just been received at the ShareEnJoy headquarter.
+ The operator takes the loan and just inserts the amount and the date with
+ the time plus other loan information in the ShareEnJoy Control Room software.
+ The system automatically charges the user who was driving the vehicle in
+ that specific time.
+ The user is notified via both SMS and email.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\mathrm{Scenario\,9}$
+\end_inset
+
+ A vehicle is parked with a very low battery level
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Francesco is in a rush and he parks the car he rented with only 5% of the
+ battery available and far away from a charging station.
+ Once the rental is terminated the ShareEnJoy Core notifies the operators
+ via the ShareEnJoy Control Room software and marks the vehicle as unavailable
+ so that other users can not rent it.
+ Operators handle the notification and forward it to the mechanics staff
+ that will handle the situation.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\mathrm{Scenario\,10}$
+\end_inset
+
+ User's documents are about to expire
+\end_layout
+
+\begin_layout Standard
+ShareEnJoy Core detected that at least one Mirco’s document is going to
+ expire.
+ Mirco is at work when he receives an app notify and click it.
+ A message in the app appears and informs Mirco that his credit card is
+ going to expire this month and he must provide a new one in order to be
+ able to use ShareEnJoy service in the next months.
+ Mirco inserts the new credit card information and saves.
+ A fee of 0,001EUR is charged on his new credit card in order to validate
+ it.
+ Some weeks later, the same notify appears in Mirco’s phone and it surprises
+ him.
+ Mirco discovers that his driving license is going to expire in the next
+ month too.
+ He must insert new driving license information once he will get a renewal.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Class diagram
+\end_layout
+
+\begin_layout Standard
+This class diagram is a first analysis of the classes that will compose
+ the system and the way they interact one with each other.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+State diagram
+\end_layout
+
+\begin_layout Paragraph
+State chart of a vehicle
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When a vehicle is inserted into the system its status is 
+\begin_inset Formula $\mathit{AVAILABLE}$
+\end_inset
+
+ and it can be reserved by any user.
+ When a reservation comes, the status of the vehicle changes into 
+\begin_inset Formula $\mathit{RESERVED}$
+\end_inset
+
+: it can not be reserved by any other user and can be rented only by the
+ user who reserved it.
+ If the user cancels the reservation or the reservation expires the status
+ of the vehicles returns back to 
+\begin_inset Formula $\mathit{AVAILABLE}$
+\end_inset
+
+.
+ When the user procedes with the rental the status changes into 
+\begin_inset Formula $\mathit{RENTED}$
+\end_inset
+
+ and the vehicle can not be reserved by any other user.
+ Once the user terminates the rental the status returns back to 
+\begin_inset Formula $\mathit{AVAILABLE}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+If the vehicle encounters a mechanical issue or if the battery level is
+ too low when a rental is terminated it's status is changed into 
+\begin_inset Formula $\mathit{NOT}AVAILABLE$
+\end_inset
+
+: it can't be reserved by any user.
+ Once all problems are fixed the vehicle status returns back to 
+\begin_inset Formula $\mathit{AVAILABLE}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/State chart - Car - Page 1.png
+	display false
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+State chart of a vehicle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+State chart of a user's account
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+State chart of a user's account
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Use case
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 

@@ -24,7 +24,7 @@ sig Vehicle{
 }{ battery > 0 }
 
 fact{ //Facts about vehicles
-	no v : Company.vehicles | v in Company.availableVehicles and v.safeArea = none //Non possono esistere veicoli disponibili fuori da una safe area
+	no v : Company.vehicles | (v in Company.availableVehicles or v in Company.reservedVehicles) and v.safeArea = none //Non possono esistere veicoli disponibili o prenotati fuori da una safe area perché il noleggio può essere terminato solo nelle safe area
 }
 
 sig Reservation{
