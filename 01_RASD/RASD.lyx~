@@ -377,7 +377,7 @@ status open
 \begin_inset Graphics
 	filename images/1.2 - The world and the machine - Page 1.png
 	display false
-	scale 17
+	scale 70
 
 \end_inset
 
@@ -2035,44 +2035,67 @@ Functional requirements are listed per system module:
 
 \begin_deeper
 \begin_layout Itemize
-User registration
+Users can register.
 \end_layout
 
 \begin_layout Itemize
-User log-in
+Users can log-in.
 \end_layout
 
 \begin_layout Itemize
-See and edit logged-in user's own profile information and payment method
+Logged-in users can edit their account information and payment method.
 \end_layout
 
 \begin_layout Itemize
-Show available vehicles on map
+Users can see available vehicles on a map.
 \end_layout
 
 \begin_layout Itemize
-Search available vehicles based on GPS localization or specific address
+Users can search for available vehicles in a specific area using their GPS
+ position or inserting an address.
 \end_layout
 
 \begin_layout Itemize
-Show vehicle information (i.e.
- battery percentage, estimated kilometers authonomy)
+Users can see specific vehicle information (i.e.vehicle model, battery percentage,
+ estimated kilometers autonomy).
 \end_layout
 
 \begin_layout Itemize
-Make new or cancel existent vehicle reservation
+Logged-in users can make a vehicle reservation.
 \end_layout
 
 \begin_layout Itemize
-Unlock a reserved vehicle
+Logged-in users can cancel an existing vehicle reservation.
 \end_layout
 
 \begin_layout Itemize
-Guide the user to the reserved vehicle
+Logged-in users can unlock a reserved vehicle when they are nearby.
 \end_layout
 
 \begin_layout Itemize
-Send a support request
+Logged-in users can be guided by a navigator to a reserved vehicle.
+\end_layout
+
+\begin_layout Itemize
+Logged-in users can send a support request.
+\end_layout
+
+\begin_layout Itemize
+Logged-in users can make only one reservation at a time.
+ 
+\end_layout
+
+\begin_layout Itemize
+Logged-in users can make only one rental at a time.
+\end_layout
+
+\begin_layout Itemize
+Logged-in users can not have a reservation and a rental at the same time.
+\end_layout
+
+\begin_layout Itemize
+Logged-in users can rent a vehicle if and only if the have a reservation
+ on that vehicle.
 \end_layout
 
 \end_deeper
@@ -2086,52 +2109,76 @@ Send a support request
 
 \begin_deeper
 \begin_layout Itemize
-Operators login
+Operators can log-in
 \end_layout
 
 \begin_layout Itemize
-Show all vehicles position and information
+Operators can see on a map the position of all the vehicles together with
+ their information.
 \end_layout
 
 \begin_layout Itemize
-Show user's account information, disable an user
+Operators can see user's account information.
 \end_layout
 
 \begin_layout Itemize
-Show user's last activities
+Operators can disable or enable a user's account.
 \end_layout
 
 \begin_layout Itemize
-Show users' support requests and allow operators to reply or close the requests
+Operators can see user's last activities.
 \end_layout
 
 \begin_layout Itemize
-Show system notifications and mark them has 
-\begin_inset Formula $\mathit{handling}$
+Operators can see users' support requests.
+\end_layout
+
+\begin_layout Itemize
+Operators can change the status of a user's support request in 
+\begin_inset Formula $\mathit{OPEN,\,}HANDLING$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathit{HANDLED}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Operators can see system notifications.
+\end_layout
+
+\begin_layout Itemize
+Operators can change the status of a system notification in 
+\begin_inset Formula $\mathit{OPEN,\,HANDLING}$
 \end_inset
 
 , 
-\begin_inset Formula $\mathit{handled}$
+\begin_inset Formula $\mathit{HANDLED}$
 \end_inset
 
-, 
-\begin_inset Formula $\mathit{not-handled}$
+ or 
+\begin_inset Formula $\mathit{CRYTICAL}$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Itemize
-Mark a vehicle as 
-\begin_inset Formula $\mathit{unavailable}$
+Operators can change the status of a vehicle in 
+\begin_inset Formula $\mathit{AVAILABLE}$
 \end_inset
 
- (e.g.
- when the vehicle has a mechanical issue)
+ or 
+\begin_inset Formula $\mathit{NOT-AVAILABLE}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-Charge users for driving fines.
+Operators can charge users for driving fines.
 \end_layout
 
 \end_deeper
@@ -2145,7 +2192,7 @@ Charge users for driving fines.
 
 \begin_deeper
 \begin_layout Itemize
-Handle rent events (i.e.
+The module can handle rent events sent from vehicles (i.e.
  
 \begin_inset Formula $\mathit{RENT\,STARTED}$
 \end_inset
@@ -2154,42 +2201,72 @@ Handle rent events (i.e.
 \begin_inset Formula $\mathit{RENT\,TERMINATED}$
 \end_inset
 
-)
+).
 \end_layout
 
 \begin_layout Itemize
-Send commands to vehicles (e.g.
+The module can send commands to vehicles (e.g.
  
 \begin_inset Formula $\mathit{UNLOCK\,DOORS}$
 \end_inset
 
-)
+).
 \end_layout
 
 \begin_layout Itemize
-Charge users after each rent applying company pricing policies
+The module can charge users on their payment method after each rent applying
+ company princing policies.
 \end_layout
 
 \begin_layout Itemize
-Handle payment failure: disable the user'acount if it's payment information
- are nomore valid
+The module can handle payment failures.
 \end_layout
 
 \begin_layout Itemize
-Access and edit the company database
+The module can access and managed the company database.
 \end_layout
 
 \begin_layout Itemize
-Notify users via SMS on their mobile phone number or via push notifications
- through the SharEnJoy Mobile App
+The system can send communications to users via email on their email address.
 \end_layout
 
 \begin_layout Itemize
-Generate monthly invoices and sent them to the users on their email address
+The system can send communications to users via SMS on their mobile phone
+ number.
 \end_layout
 
 \begin_layout Itemize
-Detect expired reservation and charge the user for them
+The system can send communications to users via push notifications on their
+ smartphone.
+\end_layout
+
+\begin_layout Itemize
+The system can generate monthly invoices and sent them to the users on their
+ email address.
+\end_layout
+
+\begin_layout Itemize
+The system can detect when a vehicle reservation expires.
+\end_layout
+
+\begin_layout Itemize
+The system can mark a vehicle as 
+\begin_inset Formula $\mathit{NOT-AVAILABLE}$
+\end_inset
+
+ when its battery level is less than 20% and it's not rented by any user.
+\end_layout
+
+\begin_layout Itemize
+The system can mark a vehicle as 
+\begin_inset Formula $\mathit{AVAILABLE}$
+\end_inset
+
+ when its status is 
+\begin_inset Formula $\mathit{NOT-AVAILABLE}$
+\end_inset
+
+ and its battery level is greater than 20%.
 \end_layout
 
 \end_deeper
@@ -2204,14 +2281,18 @@ The system must be able to handle thousands of requests simultaneously.
 \begin_layout Itemize
 The system should work properly 24 hour a day, 7 days a week and should
  provide an high uptime score.
- Maintenance can be scheduled during the night, when traffic is lower.
+ 
+\end_layout
+
+\begin_layout Itemize
+Maintenance should be scheduled in low-load moments (typically during the
+ night)
 \end_layout
 
 \begin_layout Itemize
 Users' information should be securely stored in the company database and
  not accessible to unhautorized people.
- Espacially passwords should be encryptet using efficient cryptography algorithm
-s.
+ Passwords should be encryptet using efficient cryptography algorithms.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2353,11 +2434,8 @@ The system is based on the following domain assumptions:
 
 \begin_layout Itemize
 Information provided by vehicles on-board information systems (i.e.
- vehicle location provided by
-\end_layout
-
-\begin_layout Itemize
-GPS, battery percentage, mechanical damages) are always available and accurate.
+ vehicle location provided by GPS, battery percentage, mechanical damages)
+ are always available and accurate.
 \end_layout
 
 \begin_layout Itemize
@@ -2785,6 +2863,10 @@ State chart of a user's account
 \end_layout
 
 \begin_layout Standard
+TODO
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -2817,10 +2899,6 @@ State chart of a user's account
 
 \begin_layout Subsubsection
 Use case
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \end_body

@@ -21,7 +21,7 @@ sig User{
 sig Vehicle{
 	battery: one Int,
 	safeArea: lone SafeArea
-}{ battery > 0 }
+}{ battery > 0 and battery < 100}
 
 fact{ //Facts about vehicles
 	no v : Company.vehicles | (v in Company.availableVehicles or v in Company.reservedVehicles) and v.safeArea = none //Non possono esistere veicoli disponibili o prenotati fuori da una safe area perché il noleggio può essere terminato solo nelle safe area
@@ -62,4 +62,4 @@ fact{ //Facts abot users' behaviours
 }
 
 pred show{}
-run show for 10
+run show for 10 but 5 int
