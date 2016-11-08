@@ -296,6 +296,10 @@ The way they want to implement their service is classical and very common
  area (called safe area) for each city where the service will be activated.
  Users will be able to reserve and then rent a vehicle, use it for as much
  time as they desire and then be charged based on the rental time.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -305,21 +309,15 @@ As the car sharing service is based on electric vehicles only, the system
  For example, the company owns some electric recharging stations spread
  among the safe area and users should be encouraged to terminate their rentals
  in these stations.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
-\end_layout
-
+\begin_inset Newline newline
 \end_inset
 
- ShareEnJoy needs a digital management system in order to support all the
- activities for both their customers and their operators.
+
+\begin_inset Newline newline
+\end_inset
+
+ShareEnJoy needs a digital management system in order to support all the
+ activities for both their customers and their staff operators.
  
 \end_layout
 
@@ -424,8 +422,9 @@ The system will be composed of three main modules with different roles and
  This component is intended to be used by ShareEnJoy customers and will
  offer the functionality to see available vehicles in a specific geographical
  area, to reserve and then to rent a vehicle.
- It also allows users to unlock a reserved vehicle when they're nearby.
- Through the app users can also send support requests to ShareEnJoy support
+ It also allows users to unlock a vehicle they have reserved when they're
+ nearby.
+ Through the app, users can also send support requests to ShareEnJoy support
  staff.
 \end_layout
 
@@ -597,7 +596,7 @@ User
 \begin_inset Text
 
 \begin_layout Plain Layout
-A person who wants to use the system and it's not a member of the company.
+A person who wants to use the system and he's not a member of the company.
 \end_layout
 
 \end_inset
@@ -617,7 +616,7 @@ Logged-in user
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user who has completed the log-in process so that it can be associated
+A user who has completed the log-in process so that he can be associated
  with a real identity and payment information.
 \end_layout
 
@@ -658,7 +657,7 @@ Operator
 \begin_inset Text
 
 \begin_layout Plain Layout
-A person who wants to use the system and it's authenticated as a member
+A person who wants to use the system and he is authenticated as a member
  of the company.
 \end_layout
 
@@ -740,7 +739,7 @@ Expired reservation
 \begin_inset Text
 
 \begin_layout Plain Layout
-A reservation that has not been cancelled or transformed in a rental after
+A reservation that has not been cancelled or transformed into a rental after
  a certain amount of time defined by company policies.
 \end_layout
 
@@ -945,7 +944,8 @@ bigskip
 All the other modules the system is made of (i.e.
  ShareEnJoy Mobile App and ShareEnJoy Control Room) should interface with
  the core module in order to accomplish required tasks (e.g.
- user’s registration and login, vehicle reservation request, etc).
+ user’s registration and login, vehicle reservation request, etc), thus
+ they can be considered very thin clients.
 \end_layout
 
 \begin_layout Standard
@@ -998,35 +998,25 @@ User Interfaces
  It's important that the most used commands are visibile and easy navigable.
  Secondary commands of less frequent usage can be organised in secondary
  less visible menus.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
-\end_layout
-
+\begin_inset Newline newline
 \end_inset
 
- In order to avoid mistakes between commands it's better not to have too
- many selection on every page, text explainations should be clear and concise.
+
+\begin_inset Newline newline
+\end_inset
+
+In order to avoid mistakes between commands it's better not to have too
+ many selections on every page, text explainations should be clear and concise.
  Error windows should show short error descriptions together with an error
  identification code.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
-\end_layout
-
+\begin_inset Newline newline
 \end_inset
 
- The application should follow the design guidelines of the different operating
+
+\begin_inset Newline newline
+\end_inset
+
+The application should follow the design guidelines of the different operating
  system it will be implemented for (i.e.
  Material design for Android, ModernUI for iOS) and support all screen resolutio
 ns between ldpi and xxdpi.
@@ -1879,8 +1869,8 @@ Version
 \begin_inset Newline newline
 \end_inset
 
-The module can properly work on every operating system as long as these
- components are installed and work properly.
+The module can properly work on every operating system as long as required
+ components are installed or can be contacted.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2064,6 +2054,12 @@ Users can see specific vehicle information (i.e.vehicle model, battery percentag
 Logged-in users can make a vehicle reservation.
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Logged-in users can have only one servation at a time
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Logged-in users can cancel an existing vehicle reservation.
 \end_layout
@@ -2072,30 +2068,27 @@ Logged-in users can cancel an existing vehicle reservation.
 Logged-in users can unlock a reserved vehicle when they are nearby.
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-Logged-in users can be guided by a navigator to a reserved vehicle.
+Logged-in users can have only one rental at a time
 \end_layout
 
 \begin_layout Itemize
-Logged-in users can send a support request.
+Logged-in users can rent a vehicle if and only if they have a reservation
+ on that vehicle.
 \end_layout
 
-\begin_layout Itemize
-Logged-in users can make only one reservation at a time.
- 
-\end_layout
-
-\begin_layout Itemize
-Logged-in users can make only one rental at a time.
-\end_layout
-
+\end_deeper
 \begin_layout Itemize
 Logged-in users can not have a reservation and a rental at the same time.
 \end_layout
 
 \begin_layout Itemize
-Logged-in users can rent a vehicle if and only if the have a reservation
- on that vehicle.
+Logged-in users can be guided by a navigator to their reserved vehicle.
+\end_layout
+
+\begin_layout Itemize
+Logged-in users can send a support request.
 \end_layout
 
 \end_deeper
@@ -2134,12 +2127,12 @@ Operators can see users' support requests.
 \end_layout
 
 \begin_layout Itemize
-Operators can change the status of a user's support request in 
+Operators can change the status of a user's support request into 
 \begin_inset Formula $\mathit{OPEN,\,}HANDLING$
 \end_inset
 
  or 
-\begin_inset Formula $\mathit{HANDLED}$
+\begin_inset Formula $\mathit{CLOSED}$
 \end_inset
 
 .
@@ -2350,7 +2343,7 @@ If more than a discount or an extra fee should be applied, extra fees are
 
 \begin_layout Standard
 Policies are applied to calculate the final price for the users at the end
- of each rent.
+ of each rental.
 \end_layout
 
 \begin_layout Subsection
@@ -2380,8 +2373,8 @@ Logged-in users: They can access to all the functionalities of the service.
  They are associated with a real identity and a payment method.
  Logged-in users should possess a valid driving license, which should be
  indicated during the registration process.
- People with disabilities that doesn't allow the to drive a normal vehicle
- cannot register and use the service: this check is done validating drive
+ People with disabilities that doesn't allow them to drive a normal vehicle
+ cannot register and use the service: this check is done validating driver
  license data during the registration process.
 \end_layout
 
@@ -2392,7 +2385,7 @@ Logged-in users: They can access to all the functionalities of the service.
 \end_inset
 
  They are workers of the company, thus they have a good knowledge about
- the service and will follow a training on how to use ShareEnJoy Control
+ the service and they will attend a training on how to use ShareEnJoy Control
  Room software.
 \end_layout
 
@@ -2418,14 +2411,14 @@ Safety and security considerations
 \end_layout
 
 \begin_layout Standard
-Communications between system modules should be secure and use latest encryption
+Communications between system modules should be secure and use latest security
  protocol in order to avoid man-in-the middle or other kind of informatic
  attacks that could lead to data loss.
 \begin_inset Newline newline
 \end_inset
 
 Communications towards vehicles should be secured in order to avoid illegal
- vehicles unlocks perfomerd by malicious users or other types of illegal
+ vehicles unlocks perfomerd by malicious users or any other type of illegal
  behaviours.
 \end_layout
 
@@ -2497,8 +2490,9 @@ Scenarios
 \end_layout
 
 \begin_layout Standard
-In order to better describe functional requirements listed in section 2.2.1
- here is a list of possible system usages (scenarios) from various viewpoints.
+In order to better describe functional requirements listed in the section
+ 2.2.1 here is a list of possible system usages (scenarios) from various viewpoint
+s.
 \end_layout
 
 \begin_layout Paragraph
@@ -2864,11 +2858,32 @@ State chart of a vehicle
 \end_layout
 
 \begin_layout Paragraph
-State chart of a user's account
+State chart of an user account
 \end_layout
 
 \begin_layout Standard
-TODO
+When an account is created and the user has not yet completed the log-in
+ process the account is in the 
+\begin_inset Formula $\mathit{NOT}\,LOGGED-IN$
+\end_inset
+
+ status.
+ When in this status, the user can only access to a subset of the functions
+ of the system.
+ When the user successfully completes the log-in process the account status
+ changes into the 
+\begin_inset Formula $\mathit{LOGGED-IN}$
+\end_inset
+
+ status.
+ In this status the user can access to all the functions of the system.
+ Both the operators or the system can change the status of an account into
+ 
+\begin_inset Formula $\mathit{SUSPENDED}$
+\end_inset
+
+.
+ In this status the user can not complete the log-in process.
 \end_layout
 
 \begin_layout Standard
@@ -2878,6 +2893,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/State Chart - User - Page 1.png
+	display false
+	scale 28
+
+\end_inset
+
 
 \end_layout
 
