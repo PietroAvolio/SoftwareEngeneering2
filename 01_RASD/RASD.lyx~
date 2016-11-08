@@ -944,8 +944,8 @@ bigskip
 All the other modules the system is made of (i.e.
  ShareEnJoy Mobile App and ShareEnJoy Control Room) should interface with
  the core module in order to accomplish required tasks (e.g.
- user’s registration and login, vehicle reservation request, etc), thus
- they can be considered very thin clients.
+ user’s registration and login, vehicle reservation request, etc).
+ They can be considered very thin clients.
 \end_layout
 
 \begin_layout Standard
@@ -1140,12 +1140,12 @@ ShareEnJoy Mobile App mockups
 
  This module will be implemented as a web application and it is intended
  for operators.
- Functionalities should be well categorized and unambiguous.
+ All the functionalities should be well categorized and unambiguous.
  Most frequently used functions should be as easy and immediate as possibile
- in order to speed-up operators work and reduce customers wait time.
+ in order to speed-up operators' work and reduce customers' wait time.
  Some macros could be present in order to reduce repetitve tasks.
  It should be accesible through a common internet connection and it should
- be well optimized for a single chosen browser and a screen resolution.
+ be well optimized for a single chosen browser and screen resolution.
  Error windows should show a long error message in order to easily recover.
 \end_layout
 
@@ -2359,7 +2359,7 @@ We distinguish beetwen two main categories of users
 \begin_inset Formula $\mathit{ShareEnJoy\,Customers}$
 \end_inset
 
- Customers that want to use the service in order to rent a vehicle.
+ Customers who want to use the service in order to rent a vehicle.
 \end_layout
 
 \begin_deeper
@@ -2384,9 +2384,9 @@ Logged-in users: They can access to all the functionalities of the service.
 \begin_inset Formula $\mathit{ShareEnJoy\,Operators}$
 \end_inset
 
- They are workers of the company, thus they have a good knowledge about
- the service and they will attend a training on how to use ShareEnJoy Control
- Room software.
+ Clerks of the company.
+ They have a good knowledge about the service and they will attend a training
+ on how to use ShareEnJoy Control Room software.
 \end_layout
 
 \begin_layout Subsection
@@ -2411,9 +2411,9 @@ Safety and security considerations
 \end_layout
 
 \begin_layout Standard
-Communications between system modules should be secure and use latest security
- protocol in order to avoid man-in-the middle or other kind of informatic
- attacks that could lead to data loss.
+Communications between system modules should be secure and use advanced
+ security protocols in order to avoid man-in-the middle attacks or other
+ kind of informatic attacks that could lead to data loss.
 \begin_inset Newline newline
 \end_inset
 
@@ -2431,7 +2431,7 @@ The system is based on the following domain assumptions:
 \end_layout
 
 \begin_layout Itemize
-Information provided by vehicles on-board information systems (i.e.
+Information provided by vehicles on-board information system (i.e.
  vehicle location provided by GPS, battery percentage, mechanical damages)
  are always available and accurate.
 \end_layout
@@ -2443,17 +2443,17 @@ If a vehicle cannot obtain location by GPS or has not internet connection
 
 \begin_layout Itemize
 Vehicles always unlock when the system tells them to unlock.
- This is true for each type of command.
+ This is true for each type of command the system sends to vehicles.
 \end_layout
 
 \begin_layout Itemize
-Vehicles on-board information systems are always able to detect and provide:
+Vehicles on-board information system are always able to detect and provide:
  battery percentage, number of passengers, mechanical failures, GPS location.
 \end_layout
 
 \begin_layout Itemize
-If a user has a valid driving license then he can access the service (this
- mainly deals with disabilities).
+If a user has a valid driving license - so his driving license was successfully
+ evaluated during the registration process - then he can access the service.
 \end_layout
 
 \begin_layout Subsection
@@ -2461,9 +2461,9 @@ Further developments
 \end_layout
 
 \begin_layout Itemize
-Allow the creation of different user groups in order to have different system
- behaviours based on the group (e.g.
- different pricing policies for groups).
+Allow the creation of different groups of users in order to have different
+ system behaviours based on the group (e.g.
+ different pricing policies for different groups).
 \end_layout
 
 \begin_layout Itemize
@@ -2749,6 +2749,13 @@ ShareEnJoy Core detected that at least one Mirco’s document is going to
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Class diagram
 \end_layout
@@ -2759,6 +2766,46 @@ This class diagram is a first analysis of the classes that will compose
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Class diagram - Page 1.png
+	display false
+	scale 57
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Proposed class diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -2766,7 +2813,7 @@ This class diagram is a first analysis of the classes that will compose
 \end_layout
 
 \begin_layout Subsubsection
-State diagram
+State diagrams
 \end_layout
 
 \begin_layout Paragraph
@@ -2859,6 +2906,10 @@ State chart of a vehicle
 
 \begin_layout Paragraph
 State chart of an user account
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2883,7 +2934,8 @@ When an account is created and the user has not yet completed the log-in
 \end_inset
 
 .
- In this status the user can not complete the log-in process.
+ In this status the user can not complete the log-in process so he can access
+ the same subset of functions as in the NOT LOGGED-IN status.
 \end_layout
 
 \begin_layout Standard
@@ -2916,10 +2968,70 @@ State chart of a user's account
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
+\begin_layout Paragraph
+State chart of payment
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When a rental is terminated, the ShareEnJoy Core module automatically sends
+ a payment request via the payment gateway for the due amount.
+ If the response is positive the payment and it's information are just stored
+ into the company database.
+ If any error occours the payment enters into the 
+\begin_inset Formula $\mathit{PAYMENT\thinspace FAILED}$
+\end_inset
+
+ status.
+ As soon as the user updates his payment method information, the Core module
+ sends a new payment request.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/State chart - Payment - Page 1.png
+	display false
+	scale 32
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+State chart of a payment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
