@@ -87,6 +87,22 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \align center
 \begin_inset Graphics
 	filename images/Logo_Politecnico_Milano.png
@@ -262,6 +278,10 @@ Mat XXXXXX
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\align center
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -317,7 +337,7 @@ As the car sharing service is based on electric vehicles only, the system
 \end_inset
 
 ShareEnJoy needs a digital management system in order to support all the
- activities for both their customers and their staff operators.
+ activity for both their customers and their staff operators.
  
 \end_layout
 
@@ -410,8 +430,8 @@ The World & Machine
 \begin_inset Newpage pagebreak
 \end_inset
 
-The system will be composed of three main modules with different roles and
- purposes:
+The system will be composed of three main components with different roles
+ and purposes:
 \end_layout
 
 \begin_layout Labeling
@@ -422,10 +442,10 @@ The system will be composed of three main modules with different roles and
  This component is intended to be used by ShareEnJoy customers and will
  offer the functionality to see available vehicles in a specific geographical
  area, to reserve and then to rent a vehicle.
- It also allows users to unlock a vehicle they have reserved when they're
+ It will also allow users to unlock a vehicle they have reserved when they're
  nearby.
- Through the app, users can also send support requests to ShareEnJoy support
- staff.
+ Through the app, users will also be able to send support requests to ShareEnJoy
+ support staff.
 \end_layout
 
 \begin_layout Labeling
@@ -433,9 +453,10 @@ The system will be composed of three main modules with different roles and
 \begin_inset Formula $\mathit{ShareEnJoy Control Room}$
 \end_inset
 
- This component is intended to be used by ShareEnJoy operators in order
- to have a real time blueprint of the system, to handle support requests
- and to be notified for some specific events (e.g.
+ This component is intended to be used by ShareEnJoy operators.
+ It will provide a real-time blueprint of the system, the functionalities
+ to handle support requests and the possibility to be notified for some
+ specific events (e.g.
  an automatic payment failure, a car that runs out of battery).
 \end_layout
 
@@ -445,9 +466,9 @@ The system will be composed of three main modules with different roles and
 \end_inset
 
  This component is intended to contain all the system logic.
- It should work as a connection node between all the other components as
- well as connection point to vehicles.
- It should handle user’s payments through a payment gateway and perform
+ It will work as a connection node between all the other components as well
+ as connection point to vehicles.
+ It will handle user’s payments through a payment gateway and it will perform
  automated tasks.
 \end_layout
 
@@ -490,7 +511,7 @@ A list of high level goals that the system should accomplish is the following:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-|G6| Users should be able to send a support request.
+|G6| Users should be able to send support requests
 \end_layout
 
 \begin_layout Labeling
@@ -503,6 +524,13 @@ A list of high level goals that the system should accomplish is the following:
 \labelwidthstring 00.00.0000
 |G8| Company operators should be able to see and handle notifications sent
  by the system.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -916,12 +944,12 @@ Product perspective
 \end_layout
 
 \begin_layout Standard
-The central component of the entire system is the ShareEnJoy Core module
+The central component of the entire system is the ShareEnJoy Core components
  which is where all the logic is put.
- This module of the system is in charge of providing an interface to vehicles
- on-board information system, of processing requests from the other modules
- of the system, of accessing system database and of interfacing with the
- payment gateway.
+ This component of the system is in charge of providing an interface to
+ vehicles on-board information system, of processing requests from the other
+ components of the system, of accessing system database and of interfacing
+ with the payment gateway.
 \end_layout
 
 \begin_layout Standard
@@ -941,9 +969,9 @@ bigskip
 \end_layout
 
 \begin_layout Standard
-All the other modules the system is made of (i.e.
+All the other components the system is made of (i.e.
  ShareEnJoy Mobile App and ShareEnJoy Control Room) should interface with
- the core module in order to accomplish required tasks (e.g.
+ the core component in order to accomplish required tasks (e.g.
  user’s registration and login, vehicle reservation request, etc).
  They can be considered very thin clients.
 \end_layout
@@ -993,7 +1021,7 @@ User Interfaces
 \begin_inset Formula $\mathit{ShareEnJoy Mobile App}$
 \end_inset
 
- This module will be implemented as a mobile application and it's intended
+ This component will be implemented as a mobile application and it's intended
  for costumers.
  It's important that the most used commands are visibile and easy navigable.
  Secondary commands of less frequent usage can be organised in secondary
@@ -1138,7 +1166,7 @@ ShareEnJoy Mobile App mockups
 \begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
 \end_inset
 
- This module will be implemented as a web application and it is intended
+ This component will be implemented as a web application and it is intended
  for operators.
  All the functionalities should be well categorized and unambiguous.
  Most frequently used functions should be as easy and immediate as possibile
@@ -1154,7 +1182,7 @@ ShareEnJoy Mobile App mockups
 \begin_inset Formula $\mathit{ShareEnJoy\,Core}$
 \end_inset
 
- This module does not provide a direct user interface since it's intended
+ This component does not provide a direct user interface since it's intended
  to be managed and maintained by qualified and specialized staff.
  It should provide a very detailed activity logs.
 \end_layout
@@ -1180,7 +1208,7 @@ Hardware interfaces
 \begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
 \end_inset
 
- This software does not have any hardware interfaces.
+ This software does not have any hardware interface.
 \end_layout
 
 \begin_layout Labeling
@@ -1869,7 +1897,7 @@ Version
 \begin_inset Newline newline
 \end_inset
 
-The module can properly work on every operating system as long as required
+The component can properly work on every operating system as long as required
  components are installed or can be contacted.
 \end_layout
 
@@ -1878,9 +1906,9 @@ Communication Interfaces
 \end_layout
 
 \begin_layout Standard
-All modules should communicate with the core module in order to complete
- tasks, thus the core module can be seen as an internal API provider.
- All the communications between the modules are bidirectional and could
+All components should communicate with the core component in order to complete
+ tasks, thus the core component can be seen as an internal API provider.
+ All the communications between the components are bidirectional and could
  be implemented through the internet HTTPs protocol using a REST approach.
  Responses could be in the JSON format.
 \end_layout
@@ -1907,7 +1935,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-System modules communication scheme
+Communication beetwen system components
 \end_layout
 
 \end_inset
@@ -1964,7 +1992,7 @@ bigskip
 \end_layout
 
 \begin_layout Standard
-The system on which the core module will be run requires enough primary
+The system on which the core component will be run requires enough primary
  memory space in order to install required softwares (section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2012,7 +2040,7 @@ Functional requirements
 \end_layout
 
 \begin_layout Standard
-Functional requirements are listed per system module:
+Functional requirements are listed per system component:
 \end_layout
 
 \begin_layout Labeling
@@ -2056,7 +2084,7 @@ Logged-in users can make a vehicle reservation.
 
 \begin_deeper
 \begin_layout Itemize
-Logged-in users can have only one servation at a time
+Logged-in users can have only one reservation at a time
 \end_layout
 
 \end_deeper
@@ -2065,12 +2093,12 @@ Logged-in users can cancel an existing vehicle reservation.
 \end_layout
 
 \begin_layout Itemize
-Logged-in users can unlock a reserved vehicle when they are nearby.
+Logged-in users can unlock a vehicle they have reserved when they are nearby.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Logged-in users can have only one rental at a time
+Logged-in users can have only one rental at a time.
 \end_layout
 
 \begin_layout Itemize
@@ -2111,7 +2139,7 @@ Operators can see on a map the position of all the vehicles together with
 \end_layout
 
 \begin_layout Itemize
-Operators can see user's account information.
+Operators can see users' account information.
 \end_layout
 
 \begin_layout Itemize
@@ -2119,7 +2147,7 @@ Operators can disable or enable a user's account.
 \end_layout
 
 \begin_layout Itemize
-Operators can see user's last activities.
+Operators can see user's last activity.
 \end_layout
 
 \begin_layout Itemize
@@ -2143,12 +2171,16 @@ Operators can see system notifications.
 \end_layout
 
 \begin_layout Itemize
+Operators can reaply to a user's support request.
+\end_layout
+
+\begin_layout Itemize
 Operators can change the status of a system notification in 
 \begin_inset Formula $\mathit{OPEN,\,HANDLING}$
 \end_inset
 
 , 
-\begin_inset Formula $\mathit{HANDLED}$
+\begin_inset Formula $\mathit{CLOSED}$
 \end_inset
 
  or 
@@ -2159,7 +2191,7 @@ Operators can change the status of a system notification in
 \end_layout
 
 \begin_layout Itemize
-Operators can change the status of a vehicle in 
+Operators can change the status of a vehicle into
 \begin_inset Formula $\mathit{AVAILABLE}$
 \end_inset
 
@@ -2185,7 +2217,7 @@ Operators can charge users for driving fines.
 
 \begin_deeper
 \begin_layout Itemize
-The module can handle rent events sent from vehicles (i.e.
+The component can handle rent events sent from vehicles (i.e.
  
 \begin_inset Formula $\mathit{RENT\,STARTED}$
 \end_inset
@@ -2198,7 +2230,7 @@ The module can handle rent events sent from vehicles (i.e.
 \end_layout
 
 \begin_layout Itemize
-The module can send commands to vehicles (e.g.
+The component can send commands to vehicles (e.g.
  
 \begin_inset Formula $\mathit{UNLOCK\,DOORS}$
 \end_inset
@@ -2207,16 +2239,16 @@ The module can send commands to vehicles (e.g.
 \end_layout
 
 \begin_layout Itemize
-The module can charge users on their payment method after each rent applying
- company princing policies.
+The component can charge users on their payment method applying company
+ princing policies.
 \end_layout
 
 \begin_layout Itemize
-The module can handle payment failures.
+The component can handle payment failures.
 \end_layout
 
 \begin_layout Itemize
-The module can access and managed the company database.
+The component can access and manage the company database.
 \end_layout
 
 \begin_layout Itemize
@@ -2336,7 +2368,7 @@ A 30% extra fee is applied on the total rental fee if the vehicle is left
 \end_layout
 
 \begin_layout Itemize
-If more than a discount or an extra fee should be applied, extra fees are
+If more than a discount or an extra fee must be applied, extra fees are
  applied first in ascendant order, discounts are applied later in descendant
  order.
 \end_layout
@@ -2411,7 +2443,7 @@ Safety and security considerations
 \end_layout
 
 \begin_layout Standard
-Communications between system modules should be secure and use advanced
+Communications between system components should be secure and use advanced
  security protocols in order to avoid man-in-the middle attacks or other
  kind of informatic attacks that could lead to data loss.
 \begin_inset Newline newline
@@ -2431,9 +2463,13 @@ The system is based on the following domain assumptions:
 \end_layout
 
 \begin_layout Itemize
-Information provided by vehicles on-board information system (i.e.
- vehicle location provided by GPS, battery percentage, mechanical damages)
- are always available and accurate.
+Information provided by vehicles on-board information system to the core
+ component are always available and accurate.
+\end_layout
+
+\begin_layout Itemize
+Vehicles on-board information system are always able to detect and provide:
+ battery percentage, number of passengers, mechanical failures, GPS location.
 \end_layout
 
 \begin_layout Itemize
@@ -2444,11 +2480,6 @@ If a vehicle cannot obtain location by GPS or has not internet connection
 \begin_layout Itemize
 Vehicles always unlock when the system tells them to unlock.
  This is true for each type of command the system sends to vehicles.
-\end_layout
-
-\begin_layout Itemize
-Vehicles on-board information system are always able to detect and provide:
- battery percentage, number of passengers, mechanical failures, GPS location.
 \end_layout
 
 \begin_layout Itemize
@@ -2467,7 +2498,8 @@ Allow the creation of different groups of users in order to have different
 \end_layout
 
 \begin_layout Itemize
-Allow the creation of coupons that users can use to have special discounts.
+Allow the creation of coupons that users can use in order to have special
+ discounts.
 \end_layout
 
 \begin_layout Standard
@@ -2515,8 +2547,8 @@ Luca is a university student who moved to Milan for studying.
  App in order to use it during the incoming weekend.
  Once the download is complete and the app is installed on his smartphone,
  Luca starts the registration process: first he needs to create an account
- filling-in his name and email address, his mobile phone number and choosing
- an username.
+ filling-in his name and email address, his mobile phone number, his home
+ address and choosing an username.
  Email address is not yet used and username is available, thus he can continue
  inserting his driving license ID: he missed a characters so the application
  shows an error message.
@@ -2542,7 +2574,7 @@ Luca receives on his email address his password and can now log-in.
 \end_layout
 
 \begin_layout Standard
-Martin is a business man and he is just landed to Milan Malpensa airport.
+Martin is a businessman and he is just landed to Milan Malpensa airport.
  He is going to have an intensive day and he needs to move fast in the town
  center.
  He is taking a train from Malpensa to Stazione Centrale station and during
@@ -2578,10 +2610,17 @@ Marco is walking home after his evening gym session when he spots a ShareEnJoy
  The vehicle along the street is available so Marco reserves it and, being
  less than 5 meters away from the car, he is able to unlock it using the
  relative button on the application.
- Marco jumps in the car, secures the fast belt and starts the engine: the
- rental starts and the price to be paied is shown on the screen installed
+ Marco jumps into the car, secures the fast belt and starts the engine:
+ the rental starts and the price to be paied is shown on the screen installed
  in the car.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -2633,8 +2672,8 @@ Mario had a really busy day and he is now looking for an available ShareEnJoy
  He uses the application to open a support request describing the problem.
  The operator sees the request in the ShareEnJoy Control Room software and
  gives instruction on what to do to the client.
- Then, he marks the car as unavailable and sends a notification to the mechanics
- team.
+ Then, the operator marks the car as unavailable and sends a notification
+ to the mechanics team.
 \end_layout
 
 \begin_layout Paragraph
@@ -2650,11 +2689,11 @@ Mario had a really busy day and he is now looking for an available ShareEnJoy
 
 \begin_layout Standard
 Marta is new to the car sharing services and it is the first time she rents
- a ShareEnJoy vehicle.
+ a ShareEnJoy car.
  She wants to reach Rho, a town near Milan, but it is outside the safe area
  and she has not read information documents.
  Once she reaches her destination, she stops the engine and tries to terminate
- the rent: a message on the screen installed in the car and an SMS sent
+ the rental: a message on the screen installed in the car and an SMS sent
  to her mobile phone number notifies her that she can't terminate the rent
  in that location and that she will be charged until she will terminate
  the rental inside the safe area.
@@ -2666,7 +2705,7 @@ Marta is new to the car sharing services and it is the first time she rents
 \begin_inset Formula $Scenario\,7$
 \end_inset
 
- User's payment fails
+ User's payment failure
 \begin_inset Newline newline
 \end_inset
 
@@ -2674,10 +2713,10 @@ Marta is new to the car sharing services and it is the first time she rents
 \end_layout
 
 \begin_layout Standard
-Carol has just terminated a rental but she has no left money on her prepayed
+Carol has just terminated a rental but she has no money left on her prepayed
  credit card.
- As soon as the ShareEnJoy Core Module tries to make a payment and it is
- refused, it disables Carol's account and sents her a notification both
+ As soon as the ShareEnJoy Core component tries to make a payment and it
+ is refused, it disables Carol's account and sents her a notification both
  via SMS and email.
  She will not be ablo the use her account to rent a vehicle until she will
  update her payment information and pay the given amount.
@@ -2696,11 +2735,12 @@ Carol has just terminated a rental but she has no left money on her prepayed
 
 \begin_layout Standard
 A driving loan has just been received at the ShareEnJoy headquarter.
- The operator takes the loan and just inserts the amount and the date with
- the time plus other loan information in the ShareEnJoy Control Room software.
- The system automatically charges the user who was driving the vehicle in
- that specific time.
- The user is notified via both SMS and email.
+ The operator takes the loan and starts the procedure to forward it to the
+ user that took the loan.
+ The operator just inserts the date and the time indicated on the loan and
+ the system returns the user that took it.
+ The operator charges the user for the forwarding fee and sends him the
+ loan via post.
 \end_layout
 
 \begin_layout Paragraph
@@ -2732,14 +2772,14 @@ Francesco is in a rush and he parks the car he rented with only 5% of the
 \end_layout
 
 \begin_layout Standard
-ShareEnJoy Core detected that at least one Mirco’s document is going to
- expire.
- Mirco is at work when he receives an app notify and click it.
+ShareEnJoy Core detected that at least one of Mirco’s document is going
+ to expire.
+ Mirco is at work when he receives an app notify and clicks it.
  A message in the app appears and informs Mirco that his credit card is
- going to expire this month and he must provide a new one in order to be
- able to use ShareEnJoy service in the next months.
+ going to expire this month and that he must provide a new one in order
+ to be able to use ShareEnJoy service in the next months.
  Mirco inserts the new credit card information and saves.
- A fee of 0,001EUR is charged on his new credit card in order to validate
+ A fee of 0,01EUR is charged on his new credit card in order to validate
  it.
  Some weeks later, the same notify appears in Mirco’s phone and it surprises
  him.
@@ -2776,7 +2816,7 @@ status open
 \begin_inset Graphics
 	filename images/Class diagram - Page 1.png
 	display false
-	scale 57
+	scale 56
 	rotateAngle 270
 
 \end_inset
@@ -2982,8 +3022,8 @@ State chart of payment
 \end_layout
 
 \begin_layout Standard
-When a rental is terminated, the ShareEnJoy Core module automatically sends
- a payment request via the payment gateway for the due amount.
+When a rental is terminated, the ShareEnJoy Core component automatically
+ sends a payment request via the payment gateway for the due amount.
  If the response is positive the payment and it's information are just stored
  into the company database.
  If any error occours the payment enters into the 
@@ -3039,6 +3079,710 @@ State chart of a payment
 
 \begin_layout Subsubsection
 Use case
+\end_layout
+
+\begin_layout Standard
+The actors involved into the system are:
+\end_layout
+
+\begin_layout Itemize
+Not logged-in User
+\end_layout
+
+\begin_layout Itemize
+Logged-in User
+\end_layout
+
+\begin_layout Itemize
+Operator
+\end_layout
+
+\begin_layout Itemize
+Core component
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Full use case- - Page 1.png
+	display false
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Use case of the system involving all actors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Detailed description foreach use case
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{Not\,logged-in\,user\,registration}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Not Logged-in user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+The not-logged in user starts the registration process.
+\end_layout
+
+\begin_layout Itemize
+Step1: the not-logged in user is prompted to choose an username and a password
+ and to provide an email address.
+\end_layout
+
+\begin_layout Itemize
+The system checks that email address is not used by any other account and
+ that the username is still available.
+\end_layout
+
+\begin_layout Itemize
+Step2: the not-logged in user must provide his driving license information.
+\end_layout
+
+\begin_layout Itemize
+The system validates the provided driving license information.
+\end_layout
+
+\begin_layout Itemize
+Step3: the not-logged in user must provide his payment information.
+\end_layout
+
+\begin_layout Itemize
+The system validates the provided payment information.
+\end_layout
+
+\begin_layout Itemize
+The system shows a registration complete screen.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Account details, driving license information and payment method are store
+ in the company database.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+The choosen username is not available.
+\end_layout
+
+\begin_layout Itemize
+The filled-in email address is used by another account.
+\end_layout
+
+\begin_layout Itemize
+The driving license information are not valid.
+\end_layout
+
+\begin_layout Itemize
+The payment information are not valid.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+G3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathit{\boldsymbol{Not\,logged-in\,user\,login}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Not Logged-in user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+The not logged-in user starts the log-in process.
+\end_layout
+
+\begin_layout Itemize
+The not logged-in user fills-in his username and password.
+\end_layout
+
+\begin_layout Itemize
+The systems searches for a correspondence in the company database.
+\end_layout
+
+\begin_layout Itemize
+The system shows a log-in complete screen.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The not logged-in user is authenticated and becomes a logged-in user.
+ He can use all the functionalities of the system.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+There is no correspondent tuple <username, password> in the company database.
+\end_layout
+
+\begin_layout Itemize
+The user's account has been suspended.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{See\,available\,vehicles}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Not logged-in user, logged-in user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+The actor access the available vehicles screen.
+\end_layout
+
+\begin_layout Itemize
+The system retrieves the position of all the available vehicles in the area
+ shown in the screen.
+\end_layout
+
+\begin_layout Itemize
+The system prints on the map an icon foreach available vehicle.
+\end_layout
+
+\begin_layout Itemize
+The actor clicks on a vehicle icon.
+\end_layout
+
+\begin_layout Itemize
+The system shows vehicle details.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+G1, G2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CIAO
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_body
