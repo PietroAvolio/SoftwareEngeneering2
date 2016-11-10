@@ -944,7 +944,7 @@ Product perspective
 \end_layout
 
 \begin_layout Standard
-The central component of the entire system is the ShareEnJoy Core components
+The central component of the entire system is the ShareEnJoy Core component
  which is where all the logic is put.
  This component of the system is in charge of providing an interface to
  vehicles on-board information system, of processing requests from the other
@@ -1566,8 +1566,8 @@ name "ShareEnJoyCore_Required_Softwares"
 \end_inset
 
  This software has to interface with vehicles on-board information system,
- with the payment gateway and with a DBMS.
- It will require a Java EE application server.
+ with a payment gateway, with an SMS gateway and with a DBMS.
+ It will require a Java EE application server to work.
 \begin_inset Newline newline
 \end_inset
 
@@ -1897,8 +1897,86 @@ Version
 \begin_inset Newline newline
 \end_inset
 
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SMS Gateway
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trendoo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
 The component can properly work on every operating system as long as required
- components are installed or can be contacted.
+ components are installed or can be interfaced.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1953,18 +2031,31 @@ Communication beetwen system components
 \end_layout
 
 \begin_layout Standard
-Communication between the core and the DBMS works using the TCP protocol
- on port 3306.
+Communication between the core component and the DBMS works using the TCP
+ protocol on port 3306.
 \end_layout
 
 \begin_layout Standard
-Communication between the core and the payment gateway works using the TCP
- protocol on an arbitrary port.
+Communication between the core component and the payment gateway works using
+ the TCP protocol on an arbitrary port.
 \end_layout
 
 \begin_layout Standard
-The ShareEnJoy control room can be accessed using the HTTPs protocol on
- port 80.
+Communication between the core component and the SMS gateway works using
+ a webhook over HTTPs protocol
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The ShareEnJoy control room can be accessed by the operators using the HTTPs
+ protocol on port 80 and a common web browser.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2974,8 +3065,7 @@ When an account is created and the user has not yet completed the log-in
 \end_inset
 
 .
- In this status the user can not complete the log-in process so he can access
- the same subset of functions as in the NOT LOGGED-IN status.
+ In this status the user can not reserve o rent vehicles.
 \end_layout
 
 \begin_layout Standard
@@ -3046,7 +3136,7 @@ status open
 \begin_inset Graphics
 	filename images/State chart - Payment - Page 1.png
 	display false
-	scale 32
+	scale 35
 
 \end_inset
 
@@ -3108,7 +3198,7 @@ status open
 \begin_inset Graphics
 	filename images/Full use case- - Page 1.png
 	display false
-	scale 66
+	scale 69
 
 \end_inset
 
@@ -3119,7 +3209,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Use case of the system involving all actors
+Use case diagram of the system involving all actors
 \end_layout
 
 \end_inset
@@ -3217,13 +3307,29 @@ Events flow
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Itemize
-The not-logged in user starts the registration process.
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Step1: the not-logged in user is prompted to choose an username and a password
- and to provide an email address.
+The not logged-in user starts the registration process.
+\end_layout
+
+\begin_layout Itemize
+Step1: the not-logged in user is prompted to choose an username and to provide
+ his email address, home address and mobile phone number.
 \end_layout
 
 \begin_layout Itemize
@@ -3248,6 +3354,11 @@ The system validates the provided payment information.
 \end_layout
 
 \begin_layout Itemize
+The systems generates a password for the user which is sended via email
+ to the user.
+\end_layout
+
+\begin_layout Itemize
 The system shows a registration complete screen.
 \end_layout
 
@@ -3268,7 +3379,7 @@ Exit conditions
 \begin_inset Text
 
 \begin_layout Plain Layout
-Account details, driving license information and payment method are store
+Account details, driving license information and payment method are stored
  in the company database.
 \end_layout
 
@@ -3287,6 +3398,22 @@ Exceptions
 </cell>
 <cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Itemize
 The choosen username is not available.
@@ -3400,6 +3527,22 @@ Events flow
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 The not logged-in user starts the log-in process.
 \end_layout
@@ -3433,7 +3576,11 @@ Exit conditions
 \begin_inset Text
 
 \begin_layout Plain Layout
-The not logged-in user is authenticated and becomes a logged-in user.
+The not logged-in user is authenticated and his status changes into 
+\begin_inset Formula $\mathit{LOGGED-IN\,USER}$
+\end_inset
+
+.
  He can use all the functionalities of the system.
 \end_layout
 
@@ -3452,6 +3599,22 @@ Exceptions
 </cell>
 <cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Itemize
 There is no correspondent tuple <username, password> in the company database.
@@ -3478,7 +3641,7 @@ Goal
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+G3
 \end_layout
 
 \end_inset
@@ -3557,8 +3720,24 @@ Events flow
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
-The actor access the available vehicles screen.
+The actor accesses the available vehicles screen.
 \end_layout
 
 \begin_layout Itemize
@@ -3575,7 +3754,8 @@ The actor clicks on a vehicle icon.
 \end_layout
 
 \begin_layout Itemize
-The system shows vehicle details.
+The system shows the details of the vehicle: model, battery level, exact
+ position, estimated kilometers autonomy.
 \end_layout
 
 \end_inset
@@ -3636,6 +3816,1344 @@ Goal
 
 \begin_layout Plain Layout
 G1, G2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{Search\,for\,available\,vehicles}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Not logged-in user, logged-in user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The actor access the available vehicles screen.
+\end_layout
+
+\begin_layout Itemize
+The actor touches on the search-bar and types the address or chooses to
+ be localized by its GPS position.
+\end_layout
+
+\begin_layout Itemize
+The system retrieves the position of all the available vehicles in the area
+ choosen by the actor.
+\end_layout
+
+\begin_layout Itemize
+The system prints on the map an icon foreach available vehicle.
+\end_layout
+
+\begin_layout Itemize
+The actor clicks on a vehicle icon.
+\end_layout
+
+\begin_layout Itemize
+The system shows the details of the vehicle: model, battery level, exact
+ position, estimated kilometers autonomy.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+System can not reverse locate the address filled-in by the actor.
+\end_layout
+
+\begin_layout Itemize
+The application can not retrieve actor's position by GPS.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+G1, G2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{Make\,a\,reservation}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logged-in user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user is authenticated.
+\end_layout
+
+\begin_layout Itemize
+The user is in the vehicle details screen.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user clicks the 'Reserve Vehicle' button
+\end_layout
+
+\begin_layout Itemize
+The application asks for a confirmation and informs the user that an expired
+ reservation has a cost.
+\end_layout
+
+\begin_layout Itemize
+The user proceeds by clicking 'confirm'.
+\end_layout
+
+\begin_layout Itemize
+The system changes the status of the vehicle into 
+\begin_inset Formula $\mathit{RESERVED}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The application shows a screen containing the address position of the vehicle
+ and a countdown to reservation expiration.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A reservation is made for the user over the choosen vehicle.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Another user has made a reservation over the choosen vehicle in the meantime.
+\end_layout
+
+\begin_layout Itemize
+The user does not click 'confirm' when informed that an expired reservation
+ has a cost.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+G4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{Cancel\,a\,reservation}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logged-in user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user is authenticated.
+\end_layout
+
+\begin_layout Itemize
+The user has reserved a vehicle.
+\end_layout
+
+\begin_layout Itemize
+The user his in the reservation details page.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user clicks the 'Cancel reservation' button.
+\end_layout
+
+\begin_layout Itemize
+The applications informs the user that to cancel a reservation has a cost.
+\end_layout
+
+\begin_layout Itemize
+The user proceeds by clicking 'confirm'.
+\end_layout
+
+\begin_layout Itemize
+The system changes the status of the vehicle into 
+\begin_inset Formula $\mathit{AVAILABLE}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The reservation that the user had over the vehicle is deleted.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user does not click 'confirm' when informed that to cancel a reservation
+ has a cost.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+G4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{Unlock\,a\,reserved\,vehicle\,and\,start\,the\,rent}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logged-in user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user is authenticated.
+\end_layout
+
+\begin_layout Itemize
+The user has reserved a vehicle.
+\end_layout
+
+\begin_layout Itemize
+The user his in the reservation details page.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user clicks the 'unlock vehicle' button in the application.
+\end_layout
+
+\begin_layout Itemize
+The application acquires user's position via GPS.
+\end_layout
+
+\begin_layout Itemize
+The system checks that the user is in a close range to the vehicle.
+\end_layout
+
+\begin_layout Itemize
+The system sends the 
+\begin_inset Formula $\mathit{UNLOCK\,DOOR}$
+\end_inset
+
+command to the vehicle
+\end_layout
+
+\begin_layout Itemize
+The vehicle unlocks.
+\end_layout
+
+\begin_layout Itemize
+The user gets into the car.
+\end_layout
+
+\begin_layout Itemize
+The user starts the engine and the vehicle sends the 
+\begin_inset Formula $\mathit{RENTA\,STARTED}$
+\end_inset
+
+event to the system.
+\end_layout
+
+\begin_layout Itemize
+The system changes the status of the vehicle into
+\begin_inset Formula $\mathtt{\mathit{RENTED}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The price of the rental is shown on the screen installed into the car.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The reservation the user had over the vehicle is changed into a rental.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user is not neraby the vehicle.
+\end_layout
+
+\begin_layout Itemize
+The application can not acquire user's position via GPS.
+\end_layout
+
+\begin_layout Itemize
+The reservation the user had over the vehicle was expried.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+G4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{Terminate\,a\,rental}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logged-in user, core component
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user is authenticated.
+\end_layout
+
+\begin_layout Itemize
+The user has rented a vehicle.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user parks the car.
+\end_layout
+
+\begin_layout Itemize
+The user stops the engine.
+\end_layout
+
+\begin_layout Itemize
+The vehicle sends the 
+\begin_inset Formula $\mathit{RENTAL\,TERMINATED}$
+\end_inset
+
+event to the system.
+\end_layout
+
+\begin_layout Itemize
+As all the passengers leave the vehicle it locks itself.
+\end_layout
+
+\begin_layout Itemize
+The system changes the status of the vehicle into 
+\begin_inset Formula $\mathit{AVAILABLE}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The core component calculates the total rental fee based on the rental time
+ and on the company pricing policies.
+\end_layout
+
+\begin_layout Itemize
+The core component makes the payment via the payment gateway.
+\end_layout
+
+\begin_layout Itemize
+The core module send an SMS to the user via the SMS gateway.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The rental the user had over the vehicle is terminated.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The battery level of the vehicle at the end of the rent is too low and the
+ system does not change the status of the vehicle into 
+\begin_inset Formula $\mathit{AVAILABLE}$
+\end_inset
+
+but into 
+\begin_inset Formula $\mathit{NOT-AVAILABLE}$
+\end_inset
+
+.
+ If the vehicle is not plugged to any recharging station the system issues
+ a notification into the ControlRoom component.
+\end_layout
+
+\begin_layout Itemize
+The payment fails.
+ The core component marks the payment as 
+\begin_inset Formula $\mathit{PENDING}$
+\end_inset
+
+and changes the status of the user into 
+\begin_inset Formula $\mathit{SUSPENDED}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The vehicle is outside the safe area.
+ The user can not terminate the rent.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+G5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{Send\,a\,support\,request}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logged-in user, Operator
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user is authenticated.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The user enters the support section in the application.
+\end_layout
+
+\begin_layout Itemize
+The user clicks on 'Send Request' button.
+\end_layout
+
+\begin_layout Itemize
+The users fills-in a message containing the datils of his request.
+\end_layout
+
+\begin_layout Itemize
+The user clicks the 'Send' button.
+\end_layout
+
+\begin_layout Itemize
+The system adds the support request into the company database and shows
+ it to operators via the Control Room component.
+\end_layout
+
+\begin_layout Itemize
+The operator opens the request in the Control Room component.
+\end_layout
+
+\begin_layout Itemize
+The operator types a reply and send it to the user.
+\end_layout
+
+\begin_layout Itemize
+The user receives the response both on his email address and on his smartphone.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A support request is opened.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+G6, G7
 \end_layout
 
 \end_inset
@@ -3711,7 +5229,19 @@ Events flow
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Itemize
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -3751,7 +5281,19 @@ Exceptions
 <cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Itemize
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -3783,6 +5325,72 @@ Goal
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Software system properties
+\end_layout
+
+\begin_layout Itemize
+Reliability 
+\end_layout
+
+\begin_layout Itemize
+Availability: We expect an average uptime of 99,9% since our profit exclusive
+ depend on system availability
+\end_layout
+
+\begin_layout Itemize
+Security: Since we store confidential information and occurs about transaction
+ it's necessary to have encrypted communications and guarantee no login
+ stolen.
+ Only authorised personal and governement istitutions are allowed to manage
+ thisdata
+\end_layout
+
+\begin_layout Itemize
+Maintainability: In order to facilitate further implementation we should
+ adopt a MVC pattern and use best-practises that characterise object-oriented
+ projects.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Appendix
+\end_layout
+
+\begin_layout Subsection
+Used tools
+\end_layout
+
+\begin_layout Itemize
+Lyx as LaTeX editor.
+\end_layout
+
+\begin_layout Itemize
+Photoshop for mockups.
+\end_layout
+
+\begin_layout Itemize
+Lucidchart for diagrams.
+\end_layout
+
+\begin_layout Itemize
+Alloy Analizer to validate the model of the system.
+\end_layout
+
+\begin_layout Itemize
+Github as version controller.
+\end_layout
+
+\begin_layout Itemize
+Google docs for beta documents sharing.
 \end_layout
 
 \end_body
