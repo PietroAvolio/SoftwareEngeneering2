@@ -2390,6 +2390,10 @@ The system can mark a vehicle as
 Non-functional requirements
 \end_layout
 
+\begin_layout Standard
+TODO THIS ARE NOT NON_FUNCTIONAL REQUIREMENTS
+\end_layout
+
 \begin_layout Itemize
 The system must be able to handle thousands of requests simultaneously.
 \end_layout
@@ -5326,8 +5330,14 @@ Goal
 Software system properties
 \end_layout
 
-\begin_layout Itemize
-Reliability 
+\begin_layout Subsubsection
+Reliability
+\end_layout
+
+\begin_layout Standard
+The company expects an high amount of users, with an high growth curve expeciall
+y in the first months.
+ The system should support thousands of requests simoultaneously.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5368,6 +5378,10 @@ In order to facilitate further implementation we should adopt a MVC pattern
 
 \begin_layout Section
 Appendix
+\end_layout
+
+\begin_layout Subsection
+Alloy model
 \end_layout
 
 \begin_layout Subsection

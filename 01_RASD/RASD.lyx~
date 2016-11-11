@@ -949,7 +949,7 @@ The central component of the entire system is the ShareEnJoy Core component
  This component of the system is in charge of providing an interface to
  vehicles on-board information system, of processing requests from the other
  components of the system, of accessing system database and of interfacing
- with the payment gateway.
+ with the payment and SMS gateway.
 \end_layout
 
 \begin_layout Standard
@@ -1987,8 +1987,8 @@ Communication Interfaces
 All components should communicate with the core component in order to complete
  tasks, thus the core component can be seen as an internal API provider.
  All the communications between the components are bidirectional and could
- be implemented through the internet HTTPs protocol using a REST approach.
- Responses could be in the JSON format.
+ be implemented using the internet HTTPs protocol with a REST approach.
+ Responses could be implemented in the JSON format.
 \end_layout
 
 \begin_layout Standard
@@ -2398,11 +2398,6 @@ The system must be able to handle thousands of requests simultaneously.
 The system should work properly 24 hour a day, 7 days a week and should
  provide an high uptime score.
  
-\end_layout
-
-\begin_layout Itemize
-Maintenance should be scheduled in low-load moments (typically during the
- night)
 \end_layout
 
 \begin_layout Itemize
@@ -5331,27 +5326,41 @@ Goal
 Software system properties
 \end_layout
 
-\begin_layout Itemize
-Reliability 
+\begin_layout Subsubsection
+Reliability
 \end_layout
 
-\begin_layout Itemize
-Availability: We expect an average uptime of 99,9% since our profit exclusive
- depend on system availability
+\begin_layout Standard
+TODO
 \end_layout
 
-\begin_layout Itemize
-Security: Since we store confidential information and occurs about transaction
- it's necessary to have encrypted communications and guarantee no login
- stolen.
+\begin_layout Subsubsection
+Availability
+\end_layout
+
+\begin_layout Standard
+Downtime means less revenues for the company as users can not access the
+ service.
+\end_layout
+
+\begin_layout Subsubsection
+Security
+\end_layout
+
+\begin_layout Standard
+Since we store confidential information and occurs about transaction it's
+ necessary to have encrypted communications and guarantee no login stolen.
  Only authorised personal and governement istitutions are allowed to manage
  thisdata
 \end_layout
 
-\begin_layout Itemize
-Maintainability: In order to facilitate further implementation we should
- adopt a MVC pattern and use best-practises that characterise object-oriented
- projects.
+\begin_layout Subsubsection
+Maintainability
+\end_layout
+
+\begin_layout Standard
+In order to facilitate further implementation we should adopt a MVC pattern
+ and use best-practises that characterise object-oriented projects.
 \end_layout
 
 \begin_layout Standard
@@ -5363,6 +5372,10 @@ Maintainability: In order to facilitate further implementation we should
 
 \begin_layout Section
 Appendix
+\end_layout
+
+\begin_layout Subsection
+Alloy model
 \end_layout
 
 \begin_layout Subsection
