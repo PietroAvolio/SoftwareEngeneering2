@@ -1,6 +1,15 @@
-sig wUsername {}{ //Signatura che rappresenta l'username di un utente
-	all uname : wUsername | //Gli username genertai sono necessariamente associati ad uno ed un solo utente
+abstract sig Bool {}
+one sig True extends Bool {}
+one sig False extends Bool {}
+
+sig UserUsername {}{ //Signatura che rappresenta l'username di un utente
+	all uname : UserUsername | //Gli username genertai sono necessariamente associati ad uno ed un solo utente
 		one u : User | u.username = uname 
+}
+
+sig OperatorUsername{}{
+	all oname : OperatorUsername |
+		one o : Operator | o.username = oname
 }
 
 one sig Company{
@@ -8,7 +17,9 @@ one sig Company{
 	availableVehicles: set Vehicle,
 	notAvailableVehicles: set Vehicle,
 	reservedVehicles: set Vehicle,
-	rentedVehicles: set Vehicle
+	rentedVehicles: set Vehicle,
+	supportRequests: set SupportRequest
+
 }{ no v : Vehicle | vehicles - v = vehicles //I veicoli del mondo sono solo veicoli della compagnia
 	(vehicles = availableVehicles+notAvailableVehicles+reservedVehicles+rentedVehicles) and (availableVehicles&reservedVehicles = none and availableVehicles&notAvailableVehicles = none and reservedVehicles&notAvailableVehicles = none and rentedVehicles&notAvailableVehicles = none and availableVehicles&rentedVehicles = none and reservedVehicles&rentedVehicles = none) //I veicoli sono suddivisi in disponibili, prenotati, noleggiati e non esiste intersezione fra i gruppi
  }
@@ -16,8 +27,8 @@ one sig Company{
 sig SafeArea {}
 
 sig User{
-	username: one wUsername
-}{ }
+	username: one UserUsername
+}
 
 sig Vehicle{
 	battery: one Int,
@@ -44,7 +55,10 @@ fact{ //Facts about reservations
 
 sig Rental{
 	user: one User,
-	vehicle: one Vehicle
+	vehicle: one Vehicle,
+	terminated: one Bool,
+	payment: lone Payment,
+	duration: one Int
 }
 
 fact{ //Facts about rentals
@@ -53,6 +67,21 @@ fact{ //Facts about rentals
 
 	all r : Rental | //Per ogni rental esiste uno ed un solo veicolo nel set dei veicoli noleggiati
 		one v : Company.rentedVehicles | v = r.vehicle 
+
+	no r : Rental | //Un noleggio non puo terminare fuori da una safe area
+		r.terminated = True and r.vehicle.safeArea = none
+
+	no r : Rental | //Non esiste un noleggio terminato non associato ad un pagamento
+		r.payment = none		
+}
+
+sig SupportRequest{
+	sentBy : one User,
+	handledBy : one Operator
+}
+ 
+sig Operator{
+	username : OperatorUsername
 }
 
 fact{ //Facts abot users' behaviours
@@ -61,7 +90,16 @@ fact{ //Facts abot users' behaviours
 	no disj r1, r2 : Rental | r1.user = r2.user //Un utente non può noleggiare più di un veicolo veicolo
 
 	no ren : Rental, res : Reservation | ren.user = res.user //Un utente non può avere un noleggio ed una reservation contemporaneamente
+	 
+	no disj sr1, sr2 : SupportRequest | sr1.sentBy = sr2.sentBy
+}
+
+sig Payment{
+	amount: one Int,
+	success: one Bool
+}{
+	//I pagamenti vengono generati solo associati ai rental
 }
 
 pred show{}
-run show for 5 but 8 int
+run show for 10 int
