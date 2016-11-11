@@ -2390,6 +2390,10 @@ The system can mark a vehicle as
 Non-functional requirements
 \end_layout
 
+\begin_layout Standard
+TODO THIS ARE NOT NON_FUNCTIONAL REQUIREMENTS
+\end_layout
+
 \begin_layout Itemize
 The system must be able to handle thousands of requests simultaneously.
 \end_layout
@@ -5331,7 +5335,9 @@ Reliability
 \end_layout
 
 \begin_layout Standard
-TODO
+The company expects an high amount of users, with an high growth curve expeciall
+y in the first months.
+ The system should support thousands of requests simoultaneously.
 \end_layout
 
 \begin_layout Subsubsection
