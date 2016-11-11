@@ -1351,7 +1351,8 @@ iOS
 \begin_inset Newline newline
 \end_inset
 
-With this minimal requirements we can support 97% of android devices
+With this minimal requirements ShareEnJoy Mobile App supports 97% of android
+ devices
 \begin_inset Foot
 status open
 
@@ -1387,9 +1388,7 @@ REFD6
 \begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
 \end_inset
 
- This software will require a Java EE application server.
- It should integrate a support ticket system in order to handle support
- requests forwarded by users.
+ This component will require a Java EE application server to be executed.
 \begin_inset Newline newline
 \end_inset
 
@@ -1468,16 +1467,20 @@ Version
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
+\begin_inset Newline newline
+\end_inset
 
 
-\backslash
-hspace{10pt}
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
+It requires an interface to a support ticket system in order to handle support
+ requests forwarded by users.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -1565,9 +1568,7 @@ name "ShareEnJoyCore_Required_Softwares"
 \begin_inset Formula $\mathit{ShareEnJoy\,Core}$
 \end_inset
 
- This software has to interface with vehicles on-board information system,
- with a payment gateway, with an SMS gateway and with a DBMS.
- It will require a Java EE application server to work.
+ This component requires a Java EE application server to be executed.
 \begin_inset Newline newline
 \end_inset
 
@@ -1646,16 +1647,21 @@ Version
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
+\begin_inset Newline newline
+\end_inset
 
 
-\backslash
-hspace{10pt}
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
+ It requires an interface to vehicles on-board information system, to the
+ payment gateway, to the SMS gateway and to the DBMS in order to access
+ the company database.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -1729,11 +1735,16 @@ Professional
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
 
 
-\begin_inset Newline newline
+\backslash
+hspace{10pt}
+\end_layout
+
 \end_inset
 
 
@@ -1741,7 +1752,7 @@ Professional
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
 <row>
 <cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -1772,11 +1783,11 @@ Name
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-MySql Community Edition
+MySql C.E.
 \end_layout
 
 \end_inset
@@ -1792,7 +1803,7 @@ Version
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1807,16 +1818,7 @@ Version
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hspace{10pt}
-\end_layout
-
+\begin_inset Newline newline
 \end_inset
 
 
@@ -1890,11 +1892,16 @@ Version
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
 
 
-\begin_inset Newline newline
+\backslash
+hspace{15pt}
+\end_layout
+
 \end_inset
 
 
@@ -1968,15 +1975,6 @@ Version
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-The component can properly work on every operating system as long as required
- components are installed or can be interfaced.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2388,6 +2386,10 @@ The system can mark a vehicle as
 \end_deeper
 \begin_layout Subsubsection
 Non-functional requirements
+\end_layout
+
+\begin_layout Standard
+TODO THIS ARE NOT NON_FUNCTIONAL REQUIREMENTS
 \end_layout
 
 \begin_layout Itemize
@@ -3193,7 +3195,7 @@ status open
 \begin_inset Graphics
 	filename images/Full use case- - Page 1.png
 	display false
-	scale 69
+	scale 65
 
 \end_inset
 
@@ -5331,7 +5333,9 @@ Reliability
 \end_layout
 
 \begin_layout Standard
-TODO
+The company expects an high amount of users, with an high growth curve expeciall
+y in the first months.
+ The system should support thousands of requests simoultaneously.
 \end_layout
 
 \begin_layout Subsubsection

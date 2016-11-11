@@ -1480,10 +1480,6 @@ It requires an interface to a support ticket system in order to handle support
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
-
-
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
@@ -1752,7 +1748,7 @@ hspace{10pt}
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
-<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -1783,11 +1779,11 @@ Name
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-MySql C.E.
+MySql Community Edition
 \end_layout
 
 \end_inset
@@ -1803,7 +1799,7 @@ Version
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1899,7 +1895,7 @@ status open
 
 
 \backslash
-hspace{15pt}
+hspace{1
 \end_layout
 
 \end_inset
@@ -1975,6 +1971,15 @@ Version
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The component can properly work on every operating system as long as required
+ components are installed or can be interfaced.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3195,7 +3200,7 @@ status open
 \begin_inset Graphics
 	filename images/Full use case- - Page 1.png
 	display false
-	scale 35
+	scale 69
 
 \end_inset
 
