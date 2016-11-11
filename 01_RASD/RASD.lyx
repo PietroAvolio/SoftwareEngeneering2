@@ -1171,7 +1171,7 @@ ShareEnJoy Mobile App mockups
  All the functionalities should be well categorized and unambiguous.
  Most frequently used functions should be as easy and immediate as possibile
  in order to speed-up operators' work and reduce customers' wait time.
- Some macros could be present in order to reduce repetitve tasks.
+ Some macros could be present in order to reduce repetitive tasks.
  It should be accesible through a common internet connection and it should
  be well optimized for a single chosen browser and screen resolution.
  Error windows should show a long error message in order to easily recover.
@@ -1199,7 +1199,7 @@ Hardware interfaces
  This component should obtain device location by its operating system.
  If GPS position is unavailable or insufficiently precise, a localization
  through wifi network could be possibile.
- If both methods fail or can't provide the desired level of acuracy the
+ If both methods fail or can't provide the desired level of accuracy the
  application can't work properly.
 \end_layout
 
@@ -2260,7 +2260,7 @@ Operators can see system notifications.
 \end_layout
 
 \begin_layout Itemize
-Operators can reaply to a user's support request.
+Operators can reply to a user's support request.
 \end_layout
 
 \begin_layout Itemize
@@ -2538,7 +2538,7 @@ Communications between system components should be secure and use advanced
 \end_inset
 
 Communications towards vehicles should be secured in order to avoid illegal
- vehicles unlocks perfomerd by malicious users or any other type of illegal
+ vehicles unlocks perfomed by malicious users or any other type of illegal
  behaviours.
 \end_layout
 
@@ -2699,7 +2699,7 @@ Marco is walking home after his evening gym session when he spots a ShareEnJoy
  less than 5 meters away from the car, he is able to unlock it using the
  relative button on the application.
  Marco jumps into the car, secures the fast belt and starts the engine:
- the rental starts and the price to be paied is shown on the screen installed
+ the rental starts and the price to be paid is shown on the screen installed
  in the car.
  
 \end_layout
@@ -2801,12 +2801,12 @@ Marta is new to the car sharing services and it is the first time she rents
 \end_layout
 
 \begin_layout Standard
-Carol has just terminated a rental but she has no money left on her prepayed
- credit card.
+Carol has just terminated a rental but she has no money left on her prepaid
+ card.
  As soon as the ShareEnJoy Core component tries to make a payment and it
  is refused, it disables Carol's account and sents her a notification both
  via SMS and email.
- She will not be ablo the use her account to rent a vehicle until she will
+ She will not be able to use her account to rent a vehicle until she will
  update her payment information and pay the given amount.
 \end_layout
 
@@ -2828,7 +2828,7 @@ A driving loan has just been received at the ShareEnJoy headquarter.
  The operator just inserts the date and the time indicated on the loan and
  the system returns the user that took it.
  The operator charges the user for the forwarding fee and sends him the
- loan via post.
+ loan via post, furthermore transmits driver identity to Police.
 \end_layout
 
 \begin_layout Paragraph
@@ -3325,7 +3325,7 @@ The not logged-in user starts the registration process.
 \end_layout
 
 \begin_layout Itemize
-Step1: the not-logged in user is prompted to choose an username and to provide
+The not-logged in user is prompted to choose an username and to provide
  his email address, home address and mobile phone number.
 \end_layout
 
@@ -3335,7 +3335,7 @@ The system checks that email address is not used by any other account and
 \end_layout
 
 \begin_layout Itemize
-Step2: the not-logged in user must provide his driving license information.
+The not-logged in user must provide his driving license information.
 \end_layout
 
 \begin_layout Itemize
@@ -3343,7 +3343,7 @@ The system validates the provided driving license information.
 \end_layout
 
 \begin_layout Itemize
-Step3: the not-logged in user must provide his payment information.
+The not-logged in user must provide his payment information.
 \end_layout
 
 \begin_layout Itemize
@@ -3459,6 +3459,37 @@ G3
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\mathit{\boldsymbol{Not\,logged-in\,user\,login}}$
 \end_inset
 
@@ -3549,7 +3580,7 @@ The not logged-in user fills-in his username and password.
 \end_layout
 
 \begin_layout Itemize
-The systems searches for a correspondence in the company database.
+The systems search for a correspondence in the company database.
 \end_layout
 
 \begin_layout Itemize
@@ -4314,7 +4345,7 @@ The user has reserved a vehicle.
 \end_layout
 
 \begin_layout Itemize
-The user his in the reservation details page.
+The user is in the reservation details page.
 \end_layout
 
 \end_inset
@@ -4527,7 +4558,7 @@ The user has reserved a vehicle.
 \end_layout
 
 \begin_layout Itemize
-The user his in the reservation details page.
+The user is in the reservation details page.
 \end_layout
 
 \end_inset
@@ -4671,7 +4702,7 @@ The application can not acquire user's position via GPS.
 \end_layout
 
 \begin_layout Itemize
-The reservation the user had over the vehicle was expried.
+The reservation the user had over the vehicle was expired.
 \end_layout
 
 \end_inset
@@ -5355,7 +5386,7 @@ Security
 Since we store confidential information and occurs about transaction it's
  necessary to have encrypted communications and guarantee no login stolen.
  Only authorised personal and governement istitutions are allowed to manage
- thisdata
+ this data
 \end_layout
 
 \begin_layout Subsubsection
