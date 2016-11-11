@@ -3444,7 +3444,6 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram 1.png
 	display false
-	scale 33
 
 \end_inset
 
@@ -3672,7 +3671,6 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram 2.png
 	display false
-	scale 33
 
 \end_inset
 
@@ -3884,7 +3882,6 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram 3.png
 	display false
-	scale 33
 
 \end_inset
 
@@ -4121,7 +4118,6 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram 4.png
 	display false
-	scale 33
 
 \end_inset
 
@@ -4378,7 +4374,6 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram 5.png
 	display false
-	scale 33
 
 \end_inset
 
@@ -4633,7 +4628,6 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram 6.png
 	display false
-	scale 33
 
 \end_inset
 
@@ -4920,7 +4914,6 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram 7.png
 	display false
-	scale 33
 
 \end_inset
 
@@ -5217,7 +5210,6 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram 8.png
 	display false
-	scale 33
 
 \end_inset
 
@@ -5457,7 +5449,6 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram 9.png
 	display false
-	scale 33
 
 \end_inset
 
@@ -5815,10 +5806,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Sequence Diagram 10.png
+	display false
 
-\end_layout
+\end_inset
 
-\begin_layout Plain Layout
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
