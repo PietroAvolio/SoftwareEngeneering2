@@ -511,7 +511,7 @@ A list of high level goals that the system should accomplish is the following:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-|G6| Users should be able to send support requests
+|G6| Users should be able to send support requests.
 \end_layout
 
 \begin_layout Labeling
@@ -524,6 +524,12 @@ A list of high level goals that the system should accomplish is the following:
 \labelwidthstring 00.00.0000
 |G8| Company operators should be able to see and handle notifications sent
  by the system.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+|G9| The system should be able to notify company operators for some specific
+ events.
 \end_layout
 
 \begin_layout Standard
@@ -948,8 +954,8 @@ The central component of the entire system is the ShareEnJoy Core component
  which is where all the logic is put.
  This component of the system is in charge of providing an interface to
  vehicles on-board information system, of processing requests from the other
- components of the system, of accessing system database and of interfacing
- with the payment and SMS gateway.
+ components of the system, of accessing company database and of interfacing
+ with the payment and SMS gateways.
 \end_layout
 
 \begin_layout Standard
@@ -1034,7 +1040,7 @@ User Interfaces
 \end_inset
 
 In order to avoid mistakes between commands it's better not to have too
- many selections on every page, text explainations should be clear and concise.
+ many selections on every page; text explainations should be clear and concise.
  Error windows should show short error descriptions together with an error
  identification code.
 \begin_inset Newline newline
@@ -1044,10 +1050,10 @@ In order to avoid mistakes between commands it's better not to have too
 \begin_inset Newline newline
 \end_inset
 
-The application should follow the design guidelines of the different operating
- system it will be implemented for (i.e.
- Material design for Android, ModernUI for iOS) and support all screen resolutio
-ns between ldpi and xxdpi.
+The application should follow the design guidelines for the different operating
+ systems it will be implemented for (i.e.
+ Material design for Android, ModernUI for iOS) and support all the screen
+ resolutions between ldpi and xxdpi.
 \begin_inset Newline newline
 \end_inset
 
@@ -1170,9 +1176,13 @@ ShareEnJoy Mobile App mockups
  for operators.
  All the functionalities should be well categorized and unambiguous.
  Most frequently used functions should be as easy and immediate as possibile
- in order to speed-up operators' work and reduce customers' wait time.
- Some macros could be present in order to reduce repetitive tasks.
- It should be accesible through a common internet connection and it should
+ in order to speed-up operators' work and reduce customers' waiting time.
+ Some macros could be present in order to reduce repetitve tasks.
+ 
+\begin_inset Newline newline
+\end_inset
+
+It should be accesible through a common internet connection and it should
  be well optimized for a single chosen browser and screen resolution.
  Error windows should show a long error message in order to easily recover.
 \end_layout
@@ -1184,7 +1194,7 @@ ShareEnJoy Mobile App mockups
 
  This component does not provide a direct user interface since it's intended
  to be managed and maintained by qualified and specialized staff.
- It should provide a very detailed activity logs.
+ It should provide very detailed activity logs.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1198,9 +1208,9 @@ Hardware interfaces
 
  This component should obtain device location by its operating system.
  If GPS position is unavailable or insufficiently precise, a localization
- through wifi network could be possibile.
- If both methods fail or can't provide the desired level of accuracy the
- application can't work properly.
+ via WiFi network could be possibile.
+ If both methods fail or can't provide the desired precision the application
+ can't work properly.
 \end_layout
 
 \begin_layout Labeling
@@ -1239,7 +1249,7 @@ REFD4
 
 \end_inset
 
- and are the systems we are going to focus on.
+ and these are the systems we are going to focus on.
 \begin_inset Newline newline
 \end_inset
 
@@ -1254,30 +1264,10 @@ y tradeoff could be the following.
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
+<lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
-<row>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Mobile device operating system
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
 <row>
 <cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1351,8 +1341,8 @@ iOS
 \begin_inset Newline newline
 \end_inset
 
-With this minimal requirements ShareEnJoy Mobile App supports 97% of android
- devices
+With this minimal requirements ShareEnJoy Mobile App will support 97% of
+ android devices
 \begin_inset Foot
 status open
 
@@ -1480,6 +1470,10 @@ It requires an interface to a support ticket system in order to handle support
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
@@ -1576,19 +1570,19 @@ name "ShareEnJoyCore_Required_Softwares"
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
-<column alignment="left" valignment="top">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Vehicles information system
+Application server
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1612,14 +1606,14 @@ Name
 \begin_inset Text
 
 \begin_layout Plain Layout
-ShareEnJoy Vehicle I.S.
+Glassfish
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1632,7 +1626,7 @@ Version
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.0
+4.1.1
 \end_layout
 
 \end_inset
@@ -1748,7 +1742,7 @@ hspace{10pt}
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
 <row>
 <cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -1779,11 +1773,11 @@ Name
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-MySql Community Edition
+MySql C.E.
 \end_layout
 
 \end_inset
@@ -1799,7 +1793,7 @@ Version
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1821,19 +1815,19 @@ Version
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
 <row>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server
+Vehicles information system
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1857,14 +1851,14 @@ Name
 \begin_inset Text
 
 \begin_layout Plain Layout
-Glassfish
+ShareEnJoy Vehicle I.S.
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1877,7 +1871,7 @@ Version
 \begin_inset Text
 
 \begin_layout Plain Layout
-4.1.1
+1.0
 \end_layout
 
 \end_inset
@@ -1895,7 +1889,7 @@ status open
 
 
 \backslash
-hspace{1
+hspace{15pt}
 \end_layout
 
 \end_inset
@@ -1971,15 +1965,6 @@ Version
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-The component can properly work on every operating system as long as required
- components are installed or can be interfaced.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1990,7 +1975,7 @@ Communication Interfaces
 All components should communicate with the core component in order to complete
  tasks, thus the core component can be seen as an internal API provider.
  All the communications between the components are bidirectional and could
- be implemented using the internet HTTPs protocol with a REST approach.
+ be implemented using the internet TCP/IP protocol with a REST approach.
  Responses could be implemented in the JSON format.
 \end_layout
 
@@ -2040,12 +2025,12 @@ Communication between the core component and the DBMS works using the TCP
 
 \begin_layout Standard
 Communication between the core component and the payment gateway works using
- the TCP protocol on an arbitrary port.
+ the TCP/IP protocol on an arbitrary port.
 \end_layout
 
 \begin_layout Standard
 Communication between the core component and the SMS gateway works using
- a webhook over HTTPs protocol
+ the TCP/IP protocol.
 \begin_inset Newline newline
 \end_inset
 
@@ -2334,7 +2319,7 @@ The component can send commands to vehicles (e.g.
 
 \begin_layout Itemize
 The component can charge users on their payment method applying company
- princing policies.
+ pricing policies.
 \end_layout
 
 \begin_layout Itemize
@@ -2385,7 +2370,7 @@ The system can mark a vehicle as
 \begin_inset Formula $\mathit{NOT-AVAILABLE}$
 \end_inset
 
- and its battery level is greater than 20%.
+ and its battery level is higher than 20%.
 \end_layout
 
 \end_deeper
@@ -2394,23 +2379,7 @@ Non-functional requirements
 \end_layout
 
 \begin_layout Standard
-TODO THIS ARE NOT NON_FUNCTIONAL REQUIREMENTS
-\end_layout
-
-\begin_layout Itemize
-The system must be able to handle thousands of requests simultaneously.
-\end_layout
-
-\begin_layout Itemize
-The system should work properly 24 hour a day, 7 days a week and should
- provide an high uptime score.
- 
-\end_layout
-
-\begin_layout Itemize
-Users' information should be securely stored in the company database and
- not accessible to unhautorized people.
- Passwords should be encryptet using efficient cryptography algorithms.
+TODO
 \end_layout
 
 \begin_layout Subsubsection
@@ -2450,7 +2419,7 @@ A 20% discount is applied on the total rental fee if the vehicle is parked
 \end_layout
 
 \begin_layout Itemize
-A 30% discount is applied on the total reantl fee if the vehicle is parked
+A 30% discount is applied on the total reantal fee if the vehicle is parked
  in a charging station and the user plugs-in the charging cable.
 \end_layout
 
@@ -2476,7 +2445,7 @@ User characteristics
 \end_layout
 
 \begin_layout Standard
-We distinguish beetwen two main categories of users
+We distinguish between two main categories of users
 \end_layout
 
 \begin_layout Labeling
@@ -2489,7 +2458,7 @@ We distinguish beetwen two main categories of users
 
 \begin_deeper
 \begin_layout Itemize
-Users: They can only see the position of available vehicles.
+Not logged-in users: They can only see the position of available vehicles.
  Anyone that uses the app without logging-in.
 \end_layout
 
@@ -2498,7 +2467,7 @@ Logged-in users: They can access to all the functionalities of the service.
  They are associated with a real identity and a payment method.
  Logged-in users should possess a valid driving license, which should be
  indicated during the registration process.
- People with disabilities that doesn't allow them to drive a normal vehicle
+ People with disabilities that do not allow them to drive a normal vehicle
  cannot register and use the service: this check is done validating driver
  license data during the registration process.
 \end_layout
@@ -2543,7 +2512,7 @@ Communications between system components should be secure and use advanced
 \end_inset
 
 Communications towards vehicles should be secured in order to avoid illegal
- vehicles unlocks perfomed by malicious users or any other type of illegal
+ vehicles unlocks performed by malicious users or any other type of illegal
  behaviours.
 \end_layout
 
@@ -2567,7 +2536,7 @@ Vehicles on-board information system are always able to detect and provide:
 
 \begin_layout Itemize
 If a vehicle cannot obtain location by GPS or has not internet connection
- it is considered unavailable and not shown to users.
+ it is considered unavailable and it is not shown to users.
 \end_layout
 
 \begin_layout Itemize
@@ -2643,7 +2612,7 @@ Luca is a university student who moved to Milan for studying.
  filling-in his name and email address, his mobile phone number, his home
  address and choosing an username.
  Email address is not yet used and username is available, thus he can continue
- inserting his driving license ID: he missed a characters so the application
+ inserting his driving license ID: he missed a character so the application
  shows an error message.
  Luca fixes the mistake and moves on to the latest step in which he is requested
  to insert his credit card information.
@@ -2667,18 +2636,17 @@ Luca receives on his email address his password and can now log-in.
 \end_layout
 
 \begin_layout Standard
-Martin is a businessman and he is just landed to Milan Malpensa airport.
- He is going to have an intensive day and he needs to move fast in the town
+Martin is a businessman and he is just landed in Milan Malpensa airport.
+ He is going to have an intensive day and he needs to move fast in the city
  center.
  He is taking a train from Malpensa to Stazione Centrale station and during
  the 30 minutes time trip he plans to reserve a vehicle near Stazione Centrale
  in order to do not waste time when he will get off the train.
  He is a ShareEnJoy user and he starts the application on his smartphone:
  he fills in the address and sees available vehicles on the map.
- He founds a vehicle with enough power according to his requirements and
- 3 minutes walking from the station.
- He decides to reserve the vehicles and clicks the relative button on the
- application.
+ He finds a vehicle with enough battery percentage according to his needs
+ and away only three minutes walking from the station.
+ He decides to reserve this vehicles and clicks the button on the application.
  Now Martin can relax until he reaches Stazione Centrale.
 \end_layout
 
@@ -2704,7 +2672,7 @@ Marco is walking home after his evening gym session when he spots a ShareEnJoy
  less than 5 meters away from the car, he is able to unlock it using the
  relative button on the application.
  Marco jumps into the car, secures the fast belt and starts the engine:
- the rental starts and the price to be paid is shown on the screen installed
+ the rental starts and the price to be paied is shown on the screen installed
  in the car.
  
 \end_layout
@@ -2806,12 +2774,12 @@ Marta is new to the car sharing services and it is the first time she rents
 \end_layout
 
 \begin_layout Standard
-Carol has just terminated a rental but she has no money left on her prepaid
- card.
+Carol has just terminated a rental but she has no money left on her prepayed
+ credit card.
  As soon as the ShareEnJoy Core component tries to make a payment and it
  is refused, it disables Carol's account and sents her a notification both
  via SMS and email.
- She will not be able to use her account to rent a vehicle until she will
+ She will not be ablo the use her account to rent a vehicle until she will
  update her payment information and pay the given amount.
 \end_layout
 
@@ -2833,7 +2801,7 @@ A driving loan has just been received at the ShareEnJoy headquarter.
  The operator just inserts the date and the time indicated on the loan and
  the system returns the user that took it.
  The operator charges the user for the forwarding fee and sends him the
- loan via post, furthermore transmits driver identity to Police.
+ loan via post.
 \end_layout
 
 \begin_layout Paragraph
@@ -3081,7 +3049,7 @@ status open
 \begin_inset Graphics
 	filename images/State Chart - User - Page 1.png
 	display false
-	scale 30
+	scale 31
 
 \end_inset
 
@@ -3138,7 +3106,7 @@ status open
 \begin_inset Graphics
 	filename images/State chart - Payment - Page 1.png
 	display false
-	scale 35
+	scale 34
 
 \end_inset
 
@@ -3200,7 +3168,7 @@ status open
 \begin_inset Graphics
 	filename images/Full use case- - Page 1.png
 	display false
-	scale 69
+	scale 33
 
 \end_inset
 
@@ -3330,7 +3298,7 @@ The not logged-in user starts the registration process.
 \end_layout
 
 \begin_layout Itemize
-The not-logged in user is prompted to choose an username and to provide
+Step1: the not-logged in user is prompted to choose an username and to provide
  his email address, home address and mobile phone number.
 \end_layout
 
@@ -3340,7 +3308,7 @@ The system checks that email address is not used by any other account and
 \end_layout
 
 \begin_layout Itemize
-The not-logged in user must provide his driving license information.
+Step2: the not-logged in user must provide his driving license information.
 \end_layout
 
 \begin_layout Itemize
@@ -3348,7 +3316,7 @@ The system validates the provided driving license information.
 \end_layout
 
 \begin_layout Itemize
-The not-logged in user must provide his payment information.
+Step3: the not-logged in user must provide his payment information.
 \end_layout
 
 \begin_layout Itemize
@@ -3554,7 +3522,7 @@ The not logged-in user fills-in his username and password.
 \end_layout
 
 \begin_layout Itemize
-The system searches for a correspondence in the company database.
+The systems searches for a correspondence in the company database.
 \end_layout
 
 \begin_layout Itemize
@@ -4319,7 +4287,7 @@ The user has reserved a vehicle.
 \end_layout
 
 \begin_layout Itemize
-The user is in the reservation details page.
+The user his in the reservation details page.
 \end_layout
 
 \end_inset
@@ -4532,7 +4500,7 @@ The user has reserved a vehicle.
 \end_layout
 
 \begin_layout Itemize
-The user is in the reservation details page.
+The user his in the reservation details page.
 \end_layout
 
 \end_inset
@@ -4676,7 +4644,7 @@ The application can not acquire user's position via GPS.
 \end_layout
 
 \begin_layout Itemize
-The reservation the user had over the vehicle was expired.
+The reservation the user had over the vehicle was expried.
 \end_layout
 
 \end_inset
@@ -5169,12 +5137,15 @@ G6, G7
 \end_layout
 
 \begin_layout Standard
-CIAO
+\begin_inset Formula $\boldsymbol{Monito\,ruser's\,activity}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="2">
+<lyxtabular version="3" rows="5" columns="2">
 <features islongtable="true" longtabularalignment="left">
 <column alignment="left" valignment="top" width="25text%">
 <column alignment="left" valignment="top" width="75text%">
@@ -5192,7 +5163,7 @@ Actors
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Operator
 \end_layout
 
 \end_inset
@@ -5212,7 +5183,7 @@ Start conditions
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+None
 \end_layout
 
 \end_inset
@@ -5247,6 +5218,22 @@ vspace{-15pt}
 
 \end_layout
 
+\begin_layout Itemize
+The operator accesses the 'User Activity' page.
+\end_layout
+
+\begin_layout Itemize
+The operator types-in the user's email address.
+\end_layout
+
+\begin_layout Itemize
+The system retrieves the user's last activity.
+\end_layout
+
+\begin_layout Itemize
+The system shows the last activity ordered by date descendantly.
+\end_layout
+
 \end_inset
 </cell>
 </row>
@@ -5264,14 +5251,14 @@ Exit conditions
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+None
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5280,7 +5267,7 @@ Exceptions
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5299,15 +5286,39 @@ vspace{-15pt}
 
 \end_layout
 
+\begin_layout Itemize
+The operator can change the visualization order.
+\end_layout
+
 \end_inset
 </cell>
 </row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{Generate\,monthly\,invoices}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="left" valignment="top" width="75text%">
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Goal
+Actors
 \end_layout
 
 \end_inset
@@ -5316,7 +5327,129 @@ Goal
 \begin_inset Text
 
 \begin_layout Plain Layout
+Core component
+\end_layout
 
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+It is 00:01 of the first day of the month
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Events flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The core component collects a list of all the users associated with a payment
+ in the company database.
+\end_layout
+
+\begin_layout Itemize
+The core component generates an invoice containing all the payment foreach
+ user.
+\end_layout
+
+\begin_layout Itemize
+The core component sends the invoice in PDF format via email to the user.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exit conditions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exceptions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None
 \end_layout
 
 \end_inset
@@ -5333,6 +5466,26 @@ Goal
 Software system properties
 \end_layout
 
+\begin_layout Standard
+TODO THIS ARE NOT NON_FUNCTIONAL REQUIREMENTS
+\end_layout
+
+\begin_layout Itemize
+The system must be able to handle thousands of requests simultaneously.
+\end_layout
+
+\begin_layout Itemize
+The system should work properly 24 hour a day, 7 days a week and should
+ provide an high uptime score.
+ 
+\end_layout
+
+\begin_layout Itemize
+Users' information should be securely stored in the company database and
+ not accessible to unhautorized people.
+ Passwords should be encryptet using efficient cryptography algorithms.
+\end_layout
+
 \begin_layout Subsubsection
 Reliability
 \end_layout
@@ -5341,6 +5494,8 @@ Reliability
 The company expects an high amount of users, with an high growth curve expeciall
 y in the first months.
  The system should support thousands of requests simoultaneously.
+ The system should be prepared to be scalable in order to increase the capacity
+ of users it can handle as soon as it's required.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5350,6 +5505,9 @@ Availability
 \begin_layout Standard
 Downtime means less revenues for the company as users can not access the
  service.
+ For this reason, only few hours of downtime per year could be accepted.
+ Maintenance sessions can be scheduled for low traffic moments (e.g.
+ during the night).
 \end_layout
 
 \begin_layout Subsubsection
@@ -5357,10 +5515,21 @@ Security
 \end_layout
 
 \begin_layout Standard
-Since we store confidential information and occurs about transaction it's
- necessary to have encrypted communications and guarantee no login stolen.
- Only authorised personal and governement istitutions are allowed to manage
- this data
+The system manages users' personal information: communication beetwen components
+ must be secured using the TCP/IP and TLS protocols together with encrypting
+ communcations data using a sophisticated encryption algorithm with public
+ and private key.
+ 
+\end_layout
+
+\begin_layout Standard
+Passwords stored in the company database must be hashed (e.g.
+ using sha3 algorithm) and salted.
+\end_layout
+
+\begin_layout Standard
+Vehicle must accept commands only from the core component in order to avoid
+ malicious unlocks.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5370,6 +5539,16 @@ Maintainability
 \begin_layout Standard
 In order to facilitate further implementation we should adopt a MVC pattern
  and use best-practises that characterise object-oriented projects.
+\end_layout
+
+\begin_layout Standard
+Software must be well documented and associated with unit and integration
+ tests.
+\end_layout
+
+\begin_layout Standard
+Components should be implemented using a modular approach in order to facilitate
+ maintenance and scalability.
 \end_layout
 
 \begin_layout Standard
