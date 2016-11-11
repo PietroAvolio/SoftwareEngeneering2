@@ -2378,8 +2378,13 @@ The system can mark a vehicle as
 Non-functional requirements
 \end_layout
 
-\begin_layout Standard
-TODO
+\begin_layout Itemize
+Users should be encouraged people to use the service with their friends.
+\end_layout
+
+\begin_layout Itemize
+Users should be encourage to plug vehicles in a recharging station after
+ thei rentals.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2877,7 +2882,7 @@ status open
 \begin_inset Graphics
 	filename images/Class diagram - Page 1.png
 	display false
-	scale 27
+	scale 26
 
 \end_inset
 
@@ -3158,6 +3163,25 @@ Operator
 
 \begin_layout Itemize
 Core component
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{15pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
