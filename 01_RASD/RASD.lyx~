@@ -2384,7 +2384,7 @@ Users should be encouraged people to use the service with their friends.
 
 \begin_layout Itemize
 Users should be encourage to plug vehicles in a recharging station after
- thei rentals.
+ their rentals.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2882,11 +2882,7 @@ status open
 \begin_inset Graphics
 	filename images/Class diagram - Page 1.png
 	display false
-<<<<<<< HEAD
-	scale 25
-=======
 	scale 26
->>>>>>> ac7c57c6316164774f836a8655a551faf8e11500
 
 \end_inset
 
@@ -3465,17 +3461,17 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
-	filename images/Sequence Diagram 1.png
+	filename images/Sequence Diagram - Registration.png
 	display false
+	scale 50
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -3696,16 +3692,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Sequence Diagram 2.png
-	display false
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -3905,16 +3891,6 @@ G1, G2
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Sequence Diagram 3.png
-	display false
-
-\end_inset
-
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -4141,16 +4117,6 @@ G1, G2
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Sequence Diagram 4.png
-	display false
-
-\end_inset
-
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -4399,16 +4365,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Sequence Diagram 5.png
-	display false
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4653,13 +4609,6 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Sequence Diagram 6.png
-	display false
-
-\end_inset
-
-
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4939,13 +4888,6 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Sequence Diagram 7.png
-	display false
-
-\end_inset
-
-
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5235,13 +5177,6 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Sequence Diagram 8.png
-	display false
-
-\end_inset
-
-
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5474,13 +5409,6 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Sequence Diagram 9.png
-	display false
-
-\end_inset
-
-
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5834,13 +5762,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Sequence Diagram 10.png
-	display false
-
-\end_inset
-
-
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5863,26 +5784,6 @@ Sequence Diagram 10
 
 \begin_layout Subsection
 Software system properties
-\end_layout
-
-\begin_layout Standard
-TODO THIS ARE NOT NON_FUNCTIONAL REQUIREMENTS
-\end_layout
-
-\begin_layout Itemize
-The system must be able to handle thousands of requests simultaneously.
-\end_layout
-
-\begin_layout Itemize
-The system should work properly 24 hour a day, 7 days a week and should
- provide an high uptime score.
- 
-\end_layout
-
-\begin_layout Itemize
-Users' information should be securely stored in the company database and
- not accessible to unhautorized people.
- Passwords should be encryptet using efficient cryptography algorithms.
 \end_layout
 
 \begin_layout Subsubsection

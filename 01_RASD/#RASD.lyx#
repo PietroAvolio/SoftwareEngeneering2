@@ -3009,13 +3009,6 @@ State chart of a vehicle
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
 \begin_layout Paragraph
 State chart of an user account
 \begin_inset Newline newline
@@ -3714,6 +3707,10 @@ Sequence Diagram 2
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
