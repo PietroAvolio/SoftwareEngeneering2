@@ -1218,7 +1218,7 @@ Hardware interfaces
 \begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
 \end_inset
 
- This software does not have any hardware interface.
+ This component does not have any hardware interface.
 \end_layout
 
 \begin_layout Labeling
@@ -1226,7 +1226,7 @@ Hardware interfaces
 \begin_inset Formula $\mathit{ShareEnJoy\,Core}$
 \end_inset
 
- This software does not have any hardware interfaces.
+ This component does not have any hardware interfaces.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2878,7 +2878,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align left
+\align center
 \begin_inset Graphics
 	filename images/Class diagram - Page 1.png
 	display false
@@ -3009,8 +3009,15 @@ State chart of a vehicle
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
-State chart of an user account
+State chart of an user account 
 \begin_inset Newline newline
 \end_inset
 
@@ -3053,7 +3060,7 @@ status open
 \begin_inset Graphics
 	filename images/State Chart - User - Page 1.png
 	display false
-	scale 31
+	scale 30
 
 \end_inset
 
@@ -3110,7 +3117,7 @@ status open
 \begin_inset Graphics
 	filename images/State chart - Payment - Page 1.png
 	display false
-	scale 34
+	scale 32
 
 \end_inset
 
@@ -3142,7 +3149,7 @@ State chart of a payment
 \end_layout
 
 \begin_layout Subsubsection
-Use case
+Use cases
 \end_layout
 
 \begin_layout Standard
@@ -3191,7 +3198,7 @@ status open
 \begin_inset Graphics
 	filename images/Full use case- - Page 1.png
 	display false
-	scale 33
+	scale 32
 
 \end_inset
 
@@ -3464,7 +3471,7 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram - Registration.png
 	display false
-	scale 50
+	scale 72
 
 \end_inset
 
@@ -3475,7 +3482,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Sequence Diagram 1
+Sequence Diagram for the registration process
 \end_layout
 
 \end_inset
@@ -3487,6 +3494,13 @@ Sequence Diagram 1
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -3692,11 +3706,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Sequence Diagram 2
-\end_layout
+\align left
+\begin_inset Graphics
+	filename images/Sequence Diagram - LogIn - Page 1.png
+	display false
+	scale 68.5
 
 \end_inset
 
@@ -3704,9 +3718,24 @@ Sequence Diagram 2
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequence Diagram for the log-in process
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -3893,11 +3922,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Sequence Diagram 3
-\end_layout
+\align left
+\begin_inset Graphics
+	filename images/Sequence diagram - Show Available Vehicles - Page 1.png
+	display false
+	scale 78
 
 \end_inset
 
@@ -3905,9 +3934,24 @@ Sequence Diagram 3
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequence Diagram for the 'see available vehicles' use case
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -4119,11 +4163,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Sequence Diagram 4
-\end_layout
+\align center
+\begin_inset Graphics
+	filename images/Sequence diagram - Search Available Vehicles - Page 1.png
+	display false
+	scale 75
 
 \end_inset
 
@@ -4131,9 +4175,24 @@ Sequence Diagram 4
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequence Diagram for the search for available vehicles'
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -4365,11 +4424,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Sequence Diagram 5
-\end_layout
+\align center
+\begin_inset Graphics
+	filename images/Sequence diagram - Make a reservation - Page 1.png
+	display false
+	scale 69
 
 \end_inset
 
@@ -4377,9 +4436,24 @@ Sequence Diagram 5
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequence Diagram for 'make a reservation' use case
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -4605,6 +4679,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Sequence diagram - Cancel a reservation - Page 1.png
+	display false
+	scale 80
+
+\end_inset
+
 
 \end_layout
 
@@ -4612,7 +4693,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Sequence Diagram 6
+Sequence Diagram for 'cancel a reservation' use case
 \end_layout
 
 \end_inset
@@ -4630,7 +4711,14 @@ Sequence Diagram 6
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\boldsymbol{Unlock\,a\,reserved\,vehicle\,and\,start\,the\,rent}$
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{Unlock\,a\,reserved\,vehicle\,and\,start\,the\,rental}$
 \end_inset
 
 
@@ -4765,10 +4853,10 @@ The user gets into the car.
 
 \begin_layout Itemize
 The user starts the engine and the vehicle sends the 
-\begin_inset Formula $\mathit{RENTA\,STARTED}$
+\begin_inset Formula $\mathit{RENTAL-STARTED}$
 \end_inset
 
-event to the system.
+ event to the system.
 \end_layout
 
 \begin_layout Itemize
@@ -4776,7 +4864,7 @@ The system changes the status of the vehicle into
 \begin_inset Formula $\mathtt{\mathit{RENTED}}$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Itemize
@@ -4884,6 +4972,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Sequence Diagram - Unlock and start the rent - Page 1.png
+	display false
+	scale 64
+
+\end_inset
+
 
 \end_layout
 
@@ -4891,7 +4986,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Sequence Diagram 7
+Sequence Diagram for 'Unlock and start the rental' use case
 \end_layout
 
 \end_inset
@@ -4903,6 +4998,13 @@ Sequence Diagram 7
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -5023,11 +5125,11 @@ The vehicle sends the
 \begin_inset Formula $\mathit{RENTAL\,TERMINATED}$
 \end_inset
 
-event to the system.
+ event to the system.
 \end_layout
 
 \begin_layout Itemize
-As all the passengers leave the vehicle it locks itself.
+As all the passengers leave the vehicle locks itself.
 \end_layout
 
 \begin_layout Itemize
@@ -5109,7 +5211,7 @@ The battery level of the vehicle at the end of the rent is too low and the
 \begin_inset Formula $\mathit{AVAILABLE}$
 \end_inset
 
-but into 
+ but into 
 \begin_inset Formula $\mathit{NOT-AVAILABLE}$
 \end_inset
 
@@ -5173,6 +5275,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Sequence Diagram - Terminate a rental - Page 1.png
+	display false
+	scale 63
+
+\end_inset
+
 
 \end_layout
 
@@ -5188,10 +5297,13 @@ Sequence Diagram 8
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -5892,6 +6004,10 @@ Github as version controller.
 
 \begin_layout Itemize
 Google docs for beta documents sharing.
+\end_layout
+
+\begin_layout Subsection
+Time tracking
 \end_layout
 
 \end_body
