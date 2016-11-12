@@ -3,7 +3,7 @@ one sig True extends Bool {}
 one sig False extends Bool {}
 
 sig UserUsername {}{ //Signatura che rappresenta l'username di un utente
-	all uname : UserUsername | //Gli username genertai sono necessariamente associati ad uno ed un solo utente
+	all uname : UserUsername | //Gli username generati sono necessariamente associati ad uno ed un solo utente
 		one u : User | u.username = uname 
 }
 
@@ -46,7 +46,7 @@ sig Reservation{
 }{}
 
 fact{ //Facts about reservations
-	all v : Company.reservedVehicles | //Per ogni veicolo nel set dei veicoli riservati esiste una ed una solareservation
+	all v : Company.reservedVehicles | //Per ogni veicolo nel set dei veicoli riservati esiste una ed una sola reservation
 		one r : Reservation | r.vehicle = v
 
 	all r : Reservation | //Per ogni reservation esiste uno ed un solo veicolo nel set dei veicoli riservati

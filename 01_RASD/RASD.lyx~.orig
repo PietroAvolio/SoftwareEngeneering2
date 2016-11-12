@@ -3471,7 +3471,11 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram - Registration.png
 	display false
+<<<<<<< HEAD
 	scale 72
+=======
+	scale 32.7
+>>>>>>> 356138ba6d207aa64a0855dfa1022c88de12c9ed
 
 \end_inset
 
@@ -3482,7 +3486,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+<<<<<<< HEAD
 Sequence Diagram for the registration process
+=======
+Sequence Diagram for registration 
+>>>>>>> 356138ba6d207aa64a0855dfa1022c88de12c9ed
 \end_layout
 
 \end_inset
@@ -3729,10 +3737,16 @@ Sequence Diagram for the log-in process
 
 \end_layout
 
+<<<<<<< HEAD
 \end_inset
+
+
+\end_layout
 
 \begin_layout Standard
 \begin_inset Newpage newpage
+=======
+>>>>>>> 356138ba6d207aa64a0855dfa1022c88de12c9ed
 \end_inset
 
 
