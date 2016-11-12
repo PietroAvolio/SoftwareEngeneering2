@@ -2878,7 +2878,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align left
+\align center
 \begin_inset Graphics
 	filename images/Class diagram - Page 1.png
 	display false
@@ -3004,6 +3004,13 @@ State chart of a vehicle
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -3191,7 +3198,7 @@ status open
 \begin_inset Graphics
 	filename images/Full use case- - Page 1.png
 	display false
-	scale 33
+	scale 32
 
 \end_inset
 
@@ -3464,7 +3471,7 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram - Registration.png
 	display false
-	scale 50
+	scale 32.7
 
 \end_inset
 
@@ -3475,7 +3482,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Sequence Diagram 1
+Sequence Diagram for registration 
 \end_layout
 
 \end_inset
@@ -3487,6 +3494,13 @@ Sequence Diagram 1
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -3700,10 +3714,6 @@ Sequence Diagram 2
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
