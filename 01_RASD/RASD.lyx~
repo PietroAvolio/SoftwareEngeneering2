@@ -3500,6 +3500,12 @@ Sequence Diagram for the registration process
 \end_layout
 
 \begin_layout Standard
+Not logged-in user that desire to registrate his self stays in a loop filling
+ in the account information until he puts them correctly.
+ Same thing happens with document information and payment information.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -3730,6 +3736,9 @@ Sequence Diagram for the log-in process
 \end_layout
 
 \end_inset
+
+
+\end_layout
 
 \begin_layout Standard
 \begin_inset Newpage newpage
@@ -5286,7 +5295,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Sequence Diagram 8
+Sequence Diagram for 'terminate a rental' use case
 \end_layout
 
 \end_inset
