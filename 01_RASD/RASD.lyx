@@ -200,7 +200,7 @@ Version
 \series bold
 1.0 - 
 \series default
-2016/11/02
+2016/11/12
 \end_layout
 
 \begin_layout Standard
@@ -325,7 +325,7 @@ The way they want to implement their service is classical and very common
 \begin_layout Standard
 As the car sharing service is based on electric vehicles only, the system
  must provide some specific functionalities in order to handle electric
- vehicles behaviours and needs.
+ vehicles behaviours and requirements.
  For example, the company owns some electric recharging stations spread
  among the safe area and users should be encouraged to terminate their rentals
  in these stations.
@@ -947,7 +947,7 @@ Introduction: this section provides a general and low-detailed description
 \end_layout
 
 \begin_layout Enumerate
-Overall Description: this section provides general aspects of the system,
+Overall description: this section provides general aspects of the system,
  like interfaces, constraints, domain assumptions, software dependencies
  and users' characteristics.
 \end_layout
@@ -960,7 +960,7 @@ Specific requirements: this section provides scenarios, use cases and a
 \begin_layout Enumerate
 Appendix: this section contains the Alloy model used to model and verify
  the system, a list of the tools used to develop this document and the time-trac
-king table
+king table.
 \end_layout
 
 \begin_layout Standard
@@ -1034,7 +1034,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Block diagram of the system structure
+Block diagram representing the system structure
 \end_layout
 
 \end_inset
@@ -1070,7 +1070,7 @@ User Interfaces
 
 In order to avoid mistakes between commands it's better not to have too
  many selections on every page; text explainations should be clear and concise.
- Error windows should show short error descriptions together with an error
+ Error windows should show short error descriptions together with the error
  identification code.
 \begin_inset Newline newline
 \end_inset
@@ -1255,7 +1255,7 @@ Hardware interfaces
 \begin_inset Formula $\mathit{ShareEnJoy\,Core}$
 \end_inset
 
- This component does not have any hardware interfaces.
+ This component does not have any hardware interface.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1298,7 +1298,7 @@ y tradeoff could be the following.
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1307,7 +1307,7 @@ Operating System
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1371,7 +1371,7 @@ iOS
 \end_inset
 
 With this minimal requirements ShareEnJoy Mobile App will support 97% of
- android devices
+ the android devices
 \begin_inset Foot
 status open
 
@@ -1381,7 +1381,7 @@ REFD5
 
 \end_inset
 
- and 92% of iOS devices
+ and 92% of the iOS devices
 \begin_inset Foot
 status open
 
@@ -2003,8 +2003,8 @@ Communication Interfaces
 All components should communicate with the core component in order to complete
  tasks, thus the core component can be seen as an internal API provider.
  All the communications between the components are bidirectional and could
- be implemented using the internet TCP/IP protocol with a REST approach.
- Responses could be implemented in the JSON format.
+ be implemented using the TCP/IP protocol with a REST approach.
+ Responses could be implemented using the JSON format.
 \end_layout
 
 \begin_layout Standard
@@ -2181,8 +2181,8 @@ Users can search for available vehicles in a specific area using their GPS
 \end_layout
 
 \begin_layout Itemize
-Users can see specific vehicle information (i.e.vehicle model, battery percentage,
- estimated kilometers autonomy).
+Users can see specific vehicle information (i.e.
+ vehicle model, battery percentage, estimated kilometers of autonomy).
 \end_layout
 
 \begin_layout Itemize
@@ -2237,7 +2237,7 @@ Logged-in users can send a support request.
 
 \begin_deeper
 \begin_layout Itemize
-Operators can log-in
+Operators can log-in.
 \end_layout
 
 \begin_layout Itemize
@@ -2407,11 +2407,11 @@ Non-functional requirements
 \end_layout
 
 \begin_layout Itemize
-Users should be encouraged people to use the service with their friends.
+Users should be encouraged to use the service with their friends.
 \end_layout
 
 \begin_layout Itemize
-Users should be encourage to plug vehicles in a recharging station after
+Users should be encouraged to plug vehicles in a recharging station after
  their rentals.
 \end_layout
 
@@ -2421,7 +2421,7 @@ Company pricing policies
 
 \begin_layout Standard
 The company has defined some specific pricing policies to be applied in
- correspondence with some specific user behaviours:
+ correspondence to some specific user behaviours:
 \end_layout
 
 \begin_layout Itemize
@@ -2429,7 +2429,7 @@ Expired reservation has a cost of 1EUR.
 \end_layout
 
 \begin_layout Itemize
-The rental starts as the user turns on vehicle engine.
+The rental starts as the user turns on the vehicle engine.
 \end_layout
 
 \begin_layout Itemize
@@ -2478,7 +2478,7 @@ User characteristics
 \end_layout
 
 \begin_layout Standard
-We distinguish between two main categories of users
+We distinguish between two main categories of users:
 \end_layout
 
 \begin_layout Labeling
@@ -2487,6 +2487,7 @@ We distinguish between two main categories of users
 \end_inset
 
  Customers who want to use the service in order to rent a vehicle.
+ Divided into:
 \end_layout
 
 \begin_deeper
@@ -2528,7 +2529,8 @@ Regulatory policies
 The system needs to store in the company database customers' personal informatio
 n (e.g.
  name, surname, address, email address, telephone number) as well as to
- access users' locations in order to track vehicles.
+ access vehicles locations in order to track them.
+ By tracking vehicles locations users are tracked too.
  Sensible data treatment should respect local laws belonging to each area
  where the service will be available.
 \end_layout
@@ -2546,7 +2548,7 @@ Communications between system components should be secure and use advanced
 
 Communications towards vehicles should be secured in order to avoid illegal
  vehicles unlocks performed by malicious users or any other type of illegal
- behaviours.
+ behaviour.
 \end_layout
 
 \begin_layout Subsection
@@ -2578,7 +2580,7 @@ Vehicles always unlock when the system tells them to unlock.
 \end_layout
 
 \begin_layout Itemize
-If a user has a valid driving license - so his driving license was successfully
+If a user owns a valid driving license - so his driving license was successfully
  evaluated during the registration process - then he can access the service.
 \end_layout
 
@@ -2849,8 +2851,8 @@ A driving loan has just been received at the ShareEnJoy headquarter.
 \end_layout
 
 \begin_layout Standard
-Francesco is in a rush and he parks the car he rented with only 5% of the
- battery available and far away from a charging station.
+Francesco is in a rush and he parks the car that he rented with only 5%
+ of the battery available and far away from a charging station.
  Once the rental is terminated the ShareEnJoy Core notifies the operators
  via the ShareEnJoy Control Room software and marks the vehicle as unavailable
  so that other users can not rent it.
@@ -3525,6 +3527,16 @@ Sequence Diagram for the registration process
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{NOTE}$
+\end_inset
+
+: Not logged-in user that desires to register remains in a loop filling-in
+ required information until the system validates them and gives a 'success'
+ response.
+ This happens foreach step of the registration process.
 \end_layout
 
 \begin_layout Standard
@@ -5317,7 +5329,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Sequence Diagram for 'terminate a rental' use case
+Sequence Diagram for 'Terminate a rental' use case
 \end_layout
 
 \end_inset
@@ -5545,6 +5557,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Sequence Diagram - Handle a support request - Page 1.png
+	display false
+	scale 60
+
+\end_inset
+
 
 \end_layout
 
@@ -5552,7 +5571,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Sequence Diagram 9
+Sequence Diagram for 'send a support request' use cSease
 \end_layout
 
 \end_inset
@@ -5564,6 +5583,13 @@ Sequence Diagram 9
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -5734,6 +5760,52 @@ The operator can change the visualization order.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Sequence Diagram - Show user acitivity - Page 1.png
+	display false
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequence Diagram for 'Monitor user's activity' use case
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\boldsymbol{Generate\,monthly\,invoices}$
 \end_inset
 
@@ -5832,8 +5904,8 @@ vspace{-15pt}
 \end_layout
 
 \begin_layout Itemize
-The core component collects a list of all the users associated with a payment
- in the company database.
+The core component collects a list from the company database of all the
+ users associated with a payment of the last month.
 \end_layout
 
 \begin_layout Itemize
@@ -5902,11 +5974,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Sequence Diagram 10
-\end_layout
+\align center
+\begin_inset Graphics
+	filename images/Sequence Diagram - Monthly generated invoice - Page 1.png
+	display false
+	scale 70
 
 \end_inset
 
@@ -5914,9 +5986,24 @@ Sequence Diagram 10
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequence Diagram for 'Generate monthly invoices' use case
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -5969,7 +6056,8 @@ Passwords stored in the company database must be hashed (e.g.
 
 \begin_layout Standard
 Vehicle must accept commands only from the core component in order to avoid
- malicious unlocks.
+ malicious unlocks: this can be achivied using security certificates or
+ private/public key mechanisms.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5978,7 +6066,7 @@ Maintainability
 
 \begin_layout Standard
 In order to facilitate further implementation we should adopt a MVC pattern
- and use best-practises that characterise object-oriented projects.
+ and use best-practises.
 \end_layout
 
 \begin_layout Standard
@@ -6465,7 +6553,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-7
+10
 \end_layout
 
 \end_inset
@@ -6526,7 +6614,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+35.45
 \end_layout
 
 \end_inset
