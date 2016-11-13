@@ -2989,7 +2989,7 @@ When a vehicle is inserted into the system its status is
 \end_inset
 
 If the vehicle encounters a mechanical issue or if the battery level is
- too low when a rental is terminated it's status is changed into 
+ too low when a rental is terminated its status is changed into 
 \begin_inset Formula $\mathit{NOT}AVAILABLE$
 \end_inset
 
@@ -3258,7 +3258,7 @@ Use case diagram of the system involving all the actors
 \end_layout
 
 \begin_layout Paragraph
-Detailed description foreach use case
+Detailed description for each use case
 \begin_inset Newline newline
 \end_inset
 
@@ -3382,8 +3382,8 @@ The system validates the provided payment information.
 \end_layout
 
 \begin_layout Itemize
-The systems generates a password for the user which is sended via email
- to the user.
+The systems generates a password for the user which is sent via email to
+ the user.
 \end_layout
 
 \begin_layout Itemize
@@ -3452,11 +3452,11 @@ The filled-in email address is used by another account.
 \end_layout
 
 \begin_layout Itemize
-The driving license information are not valid.
+The driving license information is not valid.
 \end_layout
 
 \begin_layout Itemize
-The payment information are not valid.
+The payment information is not valid.
 \end_layout
 
 \end_inset
@@ -3534,7 +3534,7 @@ Sequence Diagram for the registration process
 : The logged-in user that desires to register remains in a loop filling-in
  required information until the system validates them and gives a 'success'
  response.
- This happens foreach step of the registration process.
+ This happens for each step of the registration process.
 \end_layout
 
 \begin_layout Standard
@@ -3871,7 +3871,7 @@ The system retrieves the position of all the available vehicles in the area
 \end_layout
 
 \begin_layout Itemize
-The system prints on the map an icon foreach available vehicle.
+The system prints on the map an icon for each available vehicle.
 \end_layout
 
 \begin_layout Itemize
@@ -4092,7 +4092,7 @@ The system retrieves the position of all the available vehicles in the area
 \end_layout
 
 \begin_layout Itemize
-The system prints on the map an icon foreach available vehicle.
+The system prints on the map an icon for each available vehicle.
 \end_layout
 
 \begin_layout Itemize
@@ -5908,7 +5908,7 @@ The core component collects a list from the company database of all the
 \end_layout
 
 \begin_layout Itemize
-The core component generates an invoice containing all the payment foreach
+The core component generates an invoice containing all the payment for each
  user.
 \end_layout
 
@@ -7577,7 +7577,7 @@ status open
 \begin_inset Graphics
 	filename Alloy/AlloyWorld1.png
 	display false
-	scale 30
+	scale 25
 
 \end_inset
 
@@ -7615,7 +7615,7 @@ status open
 \begin_inset Graphics
 	filename Alloy/AlloyWorld2.png
 	display false
-	scale 30
+	scale 22.8
 
 \end_inset
 
@@ -7653,7 +7653,7 @@ status open
 \begin_inset Graphics
 	filename Alloy/AlloyWorld3.png
 	display false
-	scale 30
+	scale 18
 
 \end_inset
 
@@ -7715,7 +7715,7 @@ Time tracking
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="19" columns="3">
+<lyxtabular version="3" rows="18" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -8140,7 +8140,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-10
+7
 \end_layout
 
 \end_inset
@@ -8214,7 +8214,7 @@ Guido Borrelli
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8226,52 +8226,20 @@ Guido Borrelli
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-46 h 45m 
+43 h 45m 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 41 h
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mathbf{Global}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
