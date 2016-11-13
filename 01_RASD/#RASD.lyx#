@@ -7110,7 +7110,7 @@ check onePaymentOneEvent for 5
 
 \begin_layout Plain Layout
 
-//Un utente non può avere due reservation attive, un veicolo non può essere
+//Un utente non puo avere due reservation attive, un veicolo non puo essere
  associato a due reservation attive 
 \end_layout
 
@@ -7142,13 +7142,8 @@ check noMoreThanOneReservation for 5
 
 \begin_layout Plain Layout
 
-//Un utente non può avere due noleggi attivi, un veicolo non può essere
+//Un utente non puo avere due noleggi attivi, un veicolo non puo essere
  associato a due noleggi attivi assert noMoreThanOneRental{
-\end_layout
-
-\begin_layout Plain Layout
-
-assert noMoreThanOneRental{
 \end_layout
 
 \begin_layout Plain Layout
@@ -7228,7 +7223,7 @@ check noReservationAndRental for 5
 
 \begin_layout Plain Layout
 
-assert noChargingWhileDriving{
+noChargingWhileDriving{
 \end_layout
 
 \begin_layout Plain Layout
@@ -7252,7 +7247,7 @@ check noChargingWhileDriving for 5
 
 \begin_layout Plain Layout
 
-//Non può esistere un veicolo disponibile fuori da una safe area
+//Non puo esistere un veicolo disponibile fuori da una safe area
 \end_layout
 
 \begin_layout Plain Layout
@@ -7568,8 +7563,8 @@ Generated words
 
 \begin_layout Standard
 In this section some words generated using the Alloy visualizer tool.
- All the words refer to the smallScenario predicate.
- In some words Integer objects are omitted in order to increase readability.
+ All the words refer to the smallScenario predicate.In some words Integer
+ objects are omitted in order to increase readeability.
 \end_layout
 
 \begin_layout Standard
