@@ -1,10 +1,11 @@
 # Software Engineering 2 project
+A.A. 2016/2017 - Referent Professor: E. Di Nitto
 
-## PowerEnJoy
+## Authhors
 
-Pietro Avolio 878640
-Guido Borrelli 874451
+Pietro Avolio 	Mat. 878640
+Guido Borrelli 	Mat. 874451
 
 ## Submissions
 
-+ Requirements analysys and Specification Document, submission deadline 13/11: [link](./01_RASD/RASD.pdf)
++ Requirements analysys and Specification Document. Deadline 13/11: [link](./releases/RASD)
