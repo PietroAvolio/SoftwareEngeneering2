@@ -127,8 +127,7 @@ Software Engineering 2 project:
 \paragraph_spacing other 0
 \align center
 A.A.
- 2016/2017 - Prof.
- E.
+ 2016/2017 - Professor E.
  di Nitto
 \end_layout
 
@@ -200,7 +199,7 @@ Version
 \series bold
 1.0 - 
 \series default
-2016/11/12
+13/11/2016
 \end_layout
 
 \begin_layout Standard
@@ -960,7 +959,7 @@ Specific requirements: this section provides scenarios, use cases and a
 \begin_layout Enumerate
 Appendix: this section contains the Alloy model used to model and verify
  the system, a list of the tools used to develop this document and the working
- hour tracking table.
+ hours tracking table.
 \end_layout
 
 \begin_layout Standard
@@ -1205,7 +1204,7 @@ PowerEnJoy Mobile App mockups
  for operators.
  All the functionalities should be well categorized and unambiguous.
  Most frequently used functions should be as easy and immediate as possibile
- in order to speed-up operators' work and reduce customers' waiting time.
+ in order to speed up operators' work and to reduce customers' waiting time.
  Some macros could be present in order to reduce repetitve tasks.
  
 \begin_inset Newline newline
@@ -2108,7 +2107,7 @@ reference "PowerEnJoyCore_Required_Softwares"
 \end_inset
 
 ).
- Other 5GB of primary memory space are required for the database and the
+ 5GB more of primary memory space are required for the database and the
  software itself.
 \begin_inset Newline newline
 \end_inset
@@ -2318,16 +2317,22 @@ Operators can charge users for driving fines.
 \begin_layout Itemize
 The component can handle rent events sent from vehicles (i.e.
  
-\begin_inset Formula $\mathit{RENT\,STARTED}$
+\begin_inset Formula $\mathit{RENT-STARTED}$
 \end_inset
 
 , 
-\begin_inset Formula $\mathit{RENT\,TERMINATED}$
+\begin_inset Formula $\mathit{RENT-TERMINATED}$
 \end_inset
 
 ).
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+A rental can be terminated only inside a SafeArea.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 The component can send commands to vehicles (e.g.
  
@@ -2403,7 +2408,7 @@ Users should be encouraged to use the service with their friends.
 \end_layout
 
 \begin_layout Itemize
-Users should be encouraged to plug vehicles in a recharging station after
+Users should be encouraged to plug vehicles into a recharging station after
  their rentals.
 \end_layout
 
@@ -2461,7 +2466,7 @@ If more than a discount or an extra fee must be applied, extra fees are
 \end_layout
 
 \begin_layout Standard
-Policies are applied to calculate the final price for the users at the end
+Policies are applied to calculate the final price for the user at the end
  of each rental.
 \end_layout
 
@@ -2577,7 +2582,7 @@ If a user owns a valid driving license - so his driving license was successfully
 \end_layout
 
 \begin_layout Itemize
-Users always unplug a vehicle from the recharging station before they start
+Users always unplug a vehicle from a recharging station before they start
  a rental.
 \end_layout
 
@@ -3073,7 +3078,7 @@ When an account is created and the user has not yet completed the log-in
 \end_inset
 
 .
- In this status the user can not reserve o rent vehicles.
+ In this status the user can not reserve o rent any vehicles.
 \end_layout
 
 \begin_layout Standard
@@ -3087,7 +3092,7 @@ status open
 \begin_inset Graphics
 	filename images/State Chart - User - Page 1.png
 	display false
-	scale 30
+	scale 63
 
 \end_inset
 
@@ -3098,7 +3103,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-State chart of a user's account
+State chart of a user account
 \end_layout
 
 \end_inset
@@ -3112,7 +3117,7 @@ State chart of a user's account
 \end_layout
 
 \begin_layout Paragraph
-State chart of payment
+State chart of a payment
 \begin_inset Newline newline
 \end_inset
 
@@ -3120,16 +3125,17 @@ State chart of payment
 \end_layout
 
 \begin_layout Standard
-When a rental is terminated, the PowerEnJoy Core component automatically
- sends a payment request via the payment gateway for the due amount.
- If the response is positive the payment and it's information are just stored
+When a rental is terminated or a reservation expires or it is cancelled,
+ the PowerEnJoy Core component automatically sends a payment request via
+ the payment gateway for the due amount.
+ If the response is positive the payment and its information are just stored
  into the company database.
  If any error occours the payment enters into the 
 \begin_inset Formula $\mathit{PAYMENT\thinspace FAILED}$
 \end_inset
 
  status.
- As soon as the user updates his payment method information, the Core module
+ As soon as the user updates his payment method information, the core component
  sends a new payment request.
 \end_layout
 
@@ -6076,6 +6082,14 @@ Software must be well documented and associated with unit and integration
 \begin_layout Standard
 Components should be implemented using a modular approach in order to facilitate
  maintenance and scalability.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Company pricing policies could frequently change during the time.
 \end_layout
 
 \begin_layout Standard
@@ -6933,6 +6947,13 @@ fact{
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Assertions
 \end_layout
@@ -7280,6 +7301,13 @@ check AlwaysSafe for 5
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Predicates
 \end_layout
@@ -7452,6 +7480,22 @@ The predicate show1 is intended to create a very complex simulation involving
 \begin_layout Standard
 The predicate smallScenario is intendend to create a smaller simulation
  easily readble also via the Alloy visualizer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -7639,10 +7683,6 @@ Alloy generated world #2
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -7717,7 +7757,7 @@ Google docs for beta documents sharing.
 \end_layout
 
 \begin_layout Subsection
-Working hour tracking
+Working hours tracking
 \end_layout
 
 \begin_layout Standard
