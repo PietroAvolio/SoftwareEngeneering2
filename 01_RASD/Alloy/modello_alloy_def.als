@@ -167,7 +167,11 @@ fact{
 //----- ASSERTIONS -----
 
 //---- PREDICATES -----
+pred terminateRental(r, r': Rental){
+	r'.user = r.user and r'.vehicle = r.vehicle and r'.duration = r.duration and r'.terminated = True and r'.payment != none
+}
 
 //----- RUN -----
 pred show{}
 run show for 8 int
+run terminateRental
