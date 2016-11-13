@@ -54,7 +54,7 @@ sig Reservation{
 }{
 	expired = True <=> cancelled = False
 	//Se la reservatio è scaduta o cancellata allora è associata ad un pagamento
-	payment == True <=> (cancelled = True or expired = True)
+	payment != none <=> (cancelled = True or expired = True)
 }
 
 //Signatura che rappresenta un noleggio
@@ -133,6 +133,12 @@ fact{
 	no disj sr1, sr2 : SupportRequest | sr1.sentBy = sr2.sentBy
 }
 
+//Facts about payments
+fact{
+	//Un pagamento puo essere associato ad una sola reservation o noleggio
+	all p : Payment | (one rental: Rental | rental.payment = p) => ((no rental2: Rental | rental2.payment = p) and (no reservation: Reservation | reservation.payment = p))
+		and (one reservation: Reservation | reservation.payment = p) => ((no reservation2: Reservation | reservation2.payment = p) and (no rental: Rental | rental.payment = p))
+}
 //----- RUN -----
 pred show{}
 run show for 8 int
