@@ -6120,7 +6120,7 @@ Time tracking
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="18" columns="3">
+<lyxtabular version="3" rows="19" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -6177,7 +6177,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.5
+2
 \end_layout
 
 \end_inset
@@ -6380,7 +6380,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-2
+3
 \end_layout
 
 \end_inset
@@ -6554,7 +6554,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-2
+3
 \end_layout
 
 \end_inset
@@ -6574,7 +6574,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5
 \end_layout
 
 \end_inset
@@ -6583,7 +6583,36 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.5
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13/11/2016
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
 \end_layout
 
 \end_inset
@@ -6606,7 +6635,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-35.45
+46 h 45m 
 \end_layout
 
 \end_inset
@@ -6615,7 +6644,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+41 h
 \end_layout
 
 \end_inset
