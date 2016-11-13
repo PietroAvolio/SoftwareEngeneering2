@@ -157,7 +157,7 @@ fact{
 //facts about notifications
 fact{
 	//Esiste una notifica per ogni veicolo NonDisponibile
-	all nav : Company.notAvailableVehicles | some n : Company.systemNotifications | n.vehicle = nav
+	all nav : Company.notAvailableVehicles | one n : Company.systemNotifications | n.vehicle = nav
 	//Esiste una notifica per ogni pagamento fallito
 	all fp : Payment | fp.success = False => (one notif : Company.systemNotifications | notif.payment = fp)
 	//Se una notifica è associata ad un pagamento allora è un pagamento fallito
