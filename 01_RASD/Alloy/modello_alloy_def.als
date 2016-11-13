@@ -22,12 +22,15 @@ one sig Company{
 	notAvailableVehicles: set Vehicle,
 	reservedVehicles: set Vehicle,
 	rentedVehicles: set Vehicle,
-	supportRequests: set SupportRequest
+	supportRequests: set SupportRequest,
+	notifications: set Notification
 }{
 	//I veicoli del mondo sono solo veicoli della compagnia
 	 no v : Vehicle | vehicles - v = vehicles 
 	//I veicoli sono suddivisi in disponibili, non disponibili, prenotati, noleggiati e non esiste intersezione fra i gruppi
-	(vehicles = availableVehicles+notAvailableVehicles+reservedVehicles+rentedVehicles) and (availableVehicles&reservedVehicles = none and availableVehicles&notAvailableVehicles = none and reservedVehicles&notAvailableVehicles = none and rentedVehicles&notAvailableVehicles = none and availableVehicles&rentedVehicles = none and reservedVehicles&rentedVehicles = none) 
+	(vehicles = availableVehicles+notAvailableVehicles+reservedVehicles+rentedVehicles) and (availableVehicles&reservedVehicles = none and availableVehicles&notAvailableVehicles = none and reservedVehicles&notAvailableVehicles = none and rentedVehicles&notAvailableVehicles = none and availableVehicles&rentedVehicles = none and reservedVehicles&rentedVehicles = none)
+	//Tutti i veicoli del set notAvailableVehicles hanno generato una notifica
+	all x: notAvailableVehicles | one n: Notification | x in n.car
  }
 
 //Signatura che rappresenta una SafeArea
@@ -53,8 +56,8 @@ sig Reservation{
 	payment: lone Payment
 }{
 	expired = True <=> cancelled = False
-	//Se la reservatio è scaduta o cancellata allora è associata ad un pagamento
-	payment == True <=> (cancelled = True or expired = True)
+	//Se la reservation è scaduta o cancellata allora è associata ad un pagamento
+	payment != none <=> (cancelled = True or expired = True)
 }
 
 //Signatura che rappresenta un noleggio
@@ -78,6 +81,8 @@ sig Payment{
 	amount > 0
 	//I pagamenti vengono generati solo associati ai rental terminati o alle reservation scadute/cancellate
 	all p : Payment | (one r : Rental | r.terminated = True and r.payment = p) or (one r : Reservation | (r.expired = True or r.cancelled = True) and r.payment = p)
+	//Tutti i pagamenti hanno generato una notifica se success=false del pagamento
+	all p : Payment | one n : Notification | p in n.payment && success = False 
 }
 
 
@@ -91,6 +96,16 @@ sig SupportRequest{
 	sentBy : one User,
 	handledBy : one Operator
 }
+
+sig Notification {
+	//Alcune notifiche possono essere associate ad un operatore
+	handledBy : lone Operator,
+	//Una notifica può riguardare un veicolo
+	car: lone Vehicle,
+	//Una notifica può riguardare un pagamento
+	payment: lone Payment
+}{#car + #payment =< 1 } //Una notifica non può riguardare un veicolo E un pagamento
+	
 
 //----- FACTS -----
  //Facts about vehicles
