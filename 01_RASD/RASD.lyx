@@ -200,7 +200,7 @@ Version
 \series bold
 1.0 - 
 \series default
-2016/11/12
+2016/11/13
 \end_layout
 
 \begin_layout Standard
@@ -959,8 +959,8 @@ Specific requirements: this section provides scenarios, use cases and a
 
 \begin_layout Enumerate
 Appendix: this section contains the Alloy model used to model and verify
- the system, a list of the tools used to develop this document and the time-trac
-king table.
+ the system, a list of the tools used to develop this document and the working
+ hour tracking table.
 \end_layout
 
 \begin_layout Standard
@@ -2029,7 +2029,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Communication beetwen system components
+Communication between system components
 \end_layout
 
 \end_inset
@@ -4568,7 +4568,7 @@ The user has reserved a vehicle.
 \end_layout
 
 \begin_layout Itemize
-The user his in the reservation details page.
+The user is in the reservation details page.
 \end_layout
 
 \end_inset
@@ -4878,7 +4878,7 @@ The system sends the
 \begin_inset Formula $\mathit{UNLOCK\,DOOR}$
 \end_inset
 
-command to the vehicle
+ command to the vehicle
 \end_layout
 
 \begin_layout Itemize
@@ -4962,7 +4962,7 @@ vspace{-15pt}
 \end_layout
 
 \begin_layout Itemize
-The user is not neraby the vehicle.
+The user is not nearby the vehicle.
 \end_layout
 
 \begin_layout Itemize
@@ -4970,7 +4970,7 @@ The application can not acquire user's position via GPS.
 \end_layout
 
 \begin_layout Itemize
-The reservation the user had over the vehicle was expried.
+The reservation the user had over the vehicle was expired.
 \end_layout
 
 \end_inset
@@ -5264,7 +5264,7 @@ The payment fails.
 \begin_inset Formula $\mathit{PENDING}$
 \end_inset
 
-and changes the status of the user into 
+ and changes the status of the user into 
 \begin_inset Formula $\mathit{SUSPENDED}$
 \end_inset
 
@@ -5454,7 +5454,7 @@ The user clicks on 'Send Request' button.
 \end_layout
 
 \begin_layout Itemize
-The users fills-in a message containing the datils of his request.
+The users fills-in a message containing the details of his request.
 \end_layout
 
 \begin_layout Itemize
@@ -5471,7 +5471,7 @@ The operator opens the request in the Control Room component.
 \end_layout
 
 \begin_layout Itemize
-The operator types a reply and send it to the user.
+The operator types a reply and sends it to the user.
 \end_layout
 
 \begin_layout Itemize
@@ -6017,9 +6017,9 @@ Reliability
 \end_layout
 
 \begin_layout Standard
-The company expects an high amount of users, with an high growth curve expeciall
-y in the first months.
- The system should support thousands of requests simoultaneously.
+The company forecasts a high amount of users, with an high growth curve
+ especially in the first months.
+ The system should support thousands of requests simultaneously.
  The system should be prepared to be scalable in order to increase the capacity
  of users it can handle as soon as it's required.
 \end_layout
@@ -6041,9 +6041,9 @@ Security
 \end_layout
 
 \begin_layout Standard
-The system manages users' personal information: communication beetwen components
+The system manages users' personal information: communication between components
  must be secured using the TCP/IP and TLS protocols together with encrypting
- communcations data using a sophisticated encryption algorithm with public
+ communications data using a sophisticated encryption algorithm with public
  and private key.
  
 \end_layout
@@ -6659,7 +6659,7 @@ Vehicles) and v.safeArea = none
 \begin_layout Plain Layout
 
 	//I veicoli con meno del 20% di batteria non sono disponibili e non può
- esistere una reservatio su di loro
+ esistere una reservation su di loro
 \end_layout
 
 \begin_layout Plain Layout
@@ -7110,7 +7110,7 @@ check onePaymentOneEvent for 5
 
 \begin_layout Plain Layout
 
-//Un utente non puo avere due reservation attive, un veicolo non puo essere
+//Un utente non può avere due reservation attive, un veicolo non può essere
  associato a due reservation attive 
 \end_layout
 
@@ -7142,8 +7142,13 @@ check noMoreThanOneReservation for 5
 
 \begin_layout Plain Layout
 
-//Un utente non puo avere due noleggi attivi, un veicolo non puo essere
+//Un utente non può avere due noleggi attivi, un veicolo non può essere
  associato a due noleggi attivi assert noMoreThanOneRental{
+\end_layout
+
+\begin_layout Plain Layout
+
+assert noMoreThanOneRental{
 \end_layout
 
 \begin_layout Plain Layout
@@ -7168,8 +7173,8 @@ check noMoreThanOneRental for 5
 
 \begin_layout Plain Layout
 
-//Un utente non puo avere un noleggio ed una reservation attive allo stesso
- tempo, Un veicolo non puo essere associato ad una reservation ed un noleggio
+//Un utente non può avere un noleggio ed una reservation attive allo stesso
+ tempo, un veicolo non può essere associato ad una reservation ed un noleggio
  allo stesso tempo 
 \end_layout
 
@@ -7223,7 +7228,7 @@ check noReservationAndRental for 5
 
 \begin_layout Plain Layout
 
-noChargingWhileDriving{
+assert noChargingWhileDriving{
 \end_layout
 
 \begin_layout Plain Layout
@@ -7247,7 +7252,7 @@ check noChargingWhileDriving for 5
 
 \begin_layout Plain Layout
 
-//Non puo esistere un veicolo disponibile fuori da una safe area
+//Non può esistere un veicolo disponibile fuori da una safe area
 \end_layout
 
 \begin_layout Plain Layout
@@ -7563,8 +7568,8 @@ Generated words
 
 \begin_layout Standard
 In this section some words generated using the Alloy visualizer tool.
- All the words refer to the smallScenario predicate.In some words Integer
- objects are omitted in order to increase readeability.
+ All the words refer to the smallScenario predicate.
+ In some words Integer objects are omitted in order to increase readability.
 \end_layout
 
 \begin_layout Standard
@@ -7634,10 +7639,6 @@ Alloy generated world #2
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -7650,10 +7651,12 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Alloy/AlloyWorld3.png
 	display false
-	scale 18
+	scale 40
+	rotateAngle 90
 
 \end_inset
 
@@ -7710,7 +7713,7 @@ Google docs for beta documents sharing.
 \end_layout
 
 \begin_layout Subsection
-Time tracking
+Working hour tracking
 \end_layout
 
 \begin_layout Standard
