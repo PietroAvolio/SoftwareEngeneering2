@@ -42,8 +42,9 @@ sig User{
 //Signatura che rappresenta un veicolo
 sig Vehicle{
 	battery: one Int,
-	safeArea: lone SafeArea
-}{ battery >= 0 and battery <= 100}
+	safeArea: lone SafeArea,
+	plugged: one Bool
+}{battery >= 0 and battery <= 100}
 
 //Signatura che rappresenta una reservation
 sig Reservation{
@@ -53,7 +54,7 @@ sig Reservation{
 	cancelled: one Bool,
 	payment: lone Payment
 }{
-	expired = True <=> cancelled = False
+	expired = True => cancelled = False
 	//Se la reservation è scaduta o cancellata allora è associata ad un pagamento
 	payment != none <=> (cancelled = True or expired = True)
 }
@@ -113,22 +114,24 @@ fact{
 	no v : Company.vehicles | (v in Company.availableVehicles or v in Company.reservedVehicles) and v.safeArea = none
 	//I veicoli con meno del 20% di batteria non sono disponibili e non può esistere una reservatio su di loro
 	all v : Company.vehicles | v.battery < 20 => (v not in Company.availableVehicles and v not in Company.reservedVehicles)  
+	//Se un veicolo è sotto carica allora non è noleggiato
+	all v : Company.vehicles | v.plugged = True <=> v not in Company.rentedVehicles
 }
 
  //Facts about reservations
 fact{
-	//Per ogni veicolo nel set dei veicoli riservati esiste una ed una sola reservation
-	all v : Company.reservedVehicles | one r : Reservation | r.vehicle = v
+	//Per ogni veicolo nel set dei veicoli riservati esiste una ed una sola reservation non scaduta o cancellata
+	all v : Company.reservedVehicles | one r : Reservation | r.vehicle = v and r.cancelled = False and r.expired = False
 	 //Per ogni reservation esiste uno ed un solo veicolo nel set dei veicoli riservati
-	all r : Reservation | one v : Company.reservedVehicles | v = r.vehicle 
+	all r : Reservation | (r.cancelled = False and r.expired = False) => (one v : Company.reservedVehicles | v = r.vehicle) 
 }
 
 //Facts about rentals
 fact{ 
-	//Per ogni veicolo nel set dei veicoli noleggiati esiste una ed una rental
-	all v : Company.rentedVehicles | one r : Rental | r.vehicle = v
+	//Per ogni veicolo nel set dei veicoli noleggiati esiste una ed una rental non terminata
+	all v : Company.rentedVehicles | one r : Rental | r.vehicle = v and r.terminated = False
 	//Per ogni rental esiste uno ed un solo veicolo nel set dei veicoli noleggiati
-	all r : Rental | one v : Company.rentedVehicles | v = r.vehicle 
+	all r : Rental | (r.terminated = False) => (one v : Company.rentedVehicles | v = r.vehicle) 
 	//Un noleggio non puo terminare fuori da una safe area
 	no r : Rental | 	r.terminated = True and r.vehicle.safeArea = none
 	 //Non esiste un noleggio terminato non associato ad un pagamento
@@ -138,11 +141,11 @@ fact{
 //Facts abot users
 fact{ 
 	//Un utente non può prenotare più di un veicolo allo stesso tempo
-	no disj r1, r2 : Reservation | r1.user = r2.user
+	no disj r1, r2 : Reservation | r1.user = r2.user and r1.expired = False and r1.cancelled = False and r2.expired = False and r2.cancelled = False
 	//Un utente non può noleggiare più di un veicolo veicolo allo stesso tempo
-	no disj r1, r2 : Rental | r1.user = r2.user 
+	no disj r1, r2 : Rental | r1.user = r2.user and r1.terminated = False and r2.terminated = False
 	//Un utente non può avere un noleggio ed una reservation contemporaneamente
-	no ren : Rental, res : Reservation | ren.user = res.user 
+	no ren : Rental, res : Reservation | ren.user = res.user and ren.terminated = False and res.expired = False and res.cancelled = False
 	//Un utente non puo avere due richieste di supporto allo stesso tempo
 	no disj sr1, sr2 : SupportRequest | sr1.sentBy = sr2.sentBy
 }
@@ -165,13 +168,43 @@ fact{
 }
 
 //----- ASSERTIONS -----
+//Non esistono due utenti con lo stesso username
+assert noSameUsername {
+  	no disj u,v: User | u.username = v.username
+}
+check noSameUsername for 5
+
+//Non esistono due operatori con lo stesso ID
+assert noSameID{
+	no disj o1, o2: Operator | o1.ID = o2.ID
+}
+check noSameID for 5
+
+//Tutti i noleggi terminati sono associati ad un pagamento
+assert noTerminatedRentalWithoutPayment {
+  	no r: Rental | r.terminated = True && r.payment != none
+}
+check noTerminatedRentalWithoutPayment for 5
+
+//Un utente non puo avere due reservation attive
+assert noMoreThanOneReservation{
+	no disj r1, r2: Reservation | r1.user = r2.user and r1.cancelled = False and r2.cancelled = False and r1.expired = False and r2.expired = False
+}
+check noMoreThanOneReservation for 5
+
+//Un utente non puo avere un noleggio ed una reservation attive allo stesso tempo
+assert noReservationAndRental{
+	no u: User |
+		(some rental: Rental | rental.user = u and rental.terminated = False) and (some reservation: Reservation | reservation.user = u and reservation.cancelled = False and reservation.expired = False)
+}
+check noReservationAndRental for 5
 
 //---- PREDICATES -----
-pred terminateRental(r, r': Rental){
-	r'.user = r.user and r'.vehicle = r.vehicle and r'.duration = r.duration and r'.terminated = True and r'.payment != none
+pred show{
+	#Vehicle = 5
+	#Reservation = 2
+	#Rental = 2
+	#Operator = 1
+	#SystemNotification = 1
 }
-
-//----- RUN -----
-pred show{}
-run show for 8 int
-run terminateRental
+run show for 6 but 8 int
