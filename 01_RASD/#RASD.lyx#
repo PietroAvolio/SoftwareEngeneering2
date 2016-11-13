@@ -2018,7 +2018,7 @@ status open
 \begin_inset Graphics
 	filename images/RASD 2.1.5 - Communication interfaces - Page 1.png
 	display false
-	scale 17
+	scale 61
 
 \end_inset
 
@@ -2144,7 +2144,7 @@ Functional requirements are listed per system component:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy Mobile App}$
+\begin_inset Formula $\mathit{PowerEnJoy Mobile App}$
 \end_inset
 
 
@@ -2221,7 +2221,7 @@ Logged-in users can send a support request.
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Control\,Room}$
 \end_inset
 
  
@@ -2308,7 +2308,7 @@ Operators can charge users for driving fines.
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Core}$
 \end_inset
 
  
@@ -2475,7 +2475,7 @@ We distinguish between two main categories of users:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Customers}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Customers}$
 \end_inset
 
  Customers who want to use the service in order to rent a vehicle.
@@ -2501,7 +2501,7 @@ Logged-in users: They can access to all the functionalities of the service.
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Operators}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Operators}$
 \end_inset
 
  Clerks of the company.
@@ -2574,6 +2574,11 @@ Vehicles always unlock when the system tells them to unlock.
 \begin_layout Itemize
 If a user owns a valid driving license - so his driving license was successfully
  evaluated during the registration process - then he can access the service.
+\end_layout
+
+\begin_layout Itemize
+Users always unplug a vehicle from the recharging station before they start
+ a rental.
 \end_layout
 
 \begin_layout Subsection
@@ -3217,10 +3222,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename images/Full use case- - Page 1.png
+	filename images/Full use case - Page 1.png
 	display false
-	scale 32
+	scale 70
 
 \end_inset
 
@@ -3231,7 +3237,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Use case diagram of the system involving all actors
+Use case diagram of the system involving all the actors
 \end_layout
 
 \end_inset
@@ -3491,9 +3497,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename images/Sequence Diagram - Registration.png
+	filename images/Sequence Diagram - Registration - Page 1.png
 	display false
-	scale 72
+	scale 73.5
 
 \end_inset
 
@@ -3525,7 +3531,7 @@ Sequence Diagram for the registration process
 \begin_inset Formula $\mathbf{NOTE}$
 \end_inset
 
-: Not logged-in user that desires to register remains in a loop filling-in
+: The logged-in user that desires to register remains in a loop filling-in
  required information until the system validates them and gives a 'success'
  response.
  This happens foreach step of the registration process.
@@ -4460,7 +4466,7 @@ status open
 \begin_inset Graphics
 	filename images/Sequence diagram - Make a reservation - Page 1.png
 	display false
-	scale 69
+	scale 63.5
 
 \end_inset
 
@@ -5549,10 +5555,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Sequence Diagram - Handle a support request - Page 1.png
 	display false
-	scale 60
+	scale 48
 
 \end_inset
 
@@ -6086,12 +6093,1486 @@ Appendix
 Alloy model
 \end_layout
 
+\begin_layout Subsubsection
+Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+//----- SIGNATURES -----
+\end_layout
+
+\begin_layout Plain Layout
+
+abstract sig Bool {}
+\end_layout
+
+\begin_layout Plain Layout
+
+one sig True extends Bool {} 
+\end_layout
+
+\begin_layout Plain Layout
+
+one sig False extends Bool {}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta l'username di un utente
+\end_layout
+
+\begin_layout Plain Layout
+
+sig UserUsername {}{
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Gli username generati sono necessariamente associati ad uno ed un solo
+ utente 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	all uname : UserUsername | one u : User | u.username = uname  
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta l'identificativo di un operatore
+\end_layout
+
+\begin_layout Plain Layout
+
+sig OperatorID{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Gli ID generati sono necessariamente associati ad uno ed un solo operatore
+\end_layout
+
+\begin_layout Plain Layout
+
+	all id : OperatorID | one o : Operator | o.ID = id 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta ShareEnJoy one sig Company{
+\end_layout
+
+\begin_layout Plain Layout
+
+	vehicles: some Vehicle,
+\end_layout
+
+\begin_layout Plain Layout
+
+	availableVehicles: set Vehicle,
+\end_layout
+
+\begin_layout Plain Layout
+
+	notAvailableVehicles: set Vehicle,
+\end_layout
+
+\begin_layout Plain Layout
+
+	reservedVehicles: set Vehicle,
+\end_layout
+
+\begin_layout Plain Layout
+
+	rentedVehicles: set Vehicle,
+\end_layout
+
+\begin_layout Plain Layout
+
+	supportRequests: set SupportRequest,
+\end_layout
+
+\begin_layout Plain Layout
+
+	systemNotifications: set SystemNotification }
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	//I veicoli del mondo sono solo veicoli della compagnia 
+\end_layout
+
+\begin_layout Plain Layout
+
+	no v : Vehicle | vehicles - v = vehicles  	
+\end_layout
+
+\begin_layout Plain Layout
+
+	//I veicoli sono suddivisi in disponibili, non disponibili, prenotati,
+ noleggiati e non esiste intersezione fra i gruppi 
+\end_layout
+
+\begin_layout Plain Layout
+
+	(vehicles = availableVehicles+notAvailableVehicles+reservedVehicles+rentedVehic
+les) and (availableVehicles&reservedVehicles = none and availableVehicles&notAva
+ilableVehicles = none and reservedVehicles&notAvailableVehicles = none and
+ rentedVehicles&notAvailableVehicles = none and availableVehicles&rentedVehicles
+ = none and reservedVehicles&rentedVehicles = none)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta una SafeArea 
+\end_layout
+
+\begin_layout Plain Layout
+
+sig SafeArea {}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta un utente
+\end_layout
+
+\begin_layout Plain Layout
+
+sig User{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	username: one UserUsername 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta un veicolo
+\end_layout
+
+\begin_layout Plain Layout
+
+sig Vehicle{ 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	battery: one Int, 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	safeArea: lone SafeArea, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	plugged: one Bool
+\end_layout
+
+\begin_layout Plain Layout
+
+}{battery >= 0 and battery <= 100}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta una reservation 
+\end_layout
+
+\begin_layout Plain Layout
+
+sig Reservation{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	user: one User, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	vehicle: one Vehicle, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	expired: one Bool, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	cancelled: one Bool,
+\end_layout
+
+\begin_layout Plain Layout
+
+	payment: lone Payment
+\end_layout
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\begin_layout Plain Layout
+
+	expired = True => cancelled = False
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Se e solo se la reservation è scaduta o cancellata allora è associata
+ ad un pagamento
+\end_layout
+
+\begin_layout Plain Layout
+
+	payment != none <=> (cancelled = True or expired = True) 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta un noleggio
+\end_layout
+
+\begin_layout Plain Layout
+
+sig Rental{
+\end_layout
+
+\begin_layout Plain Layout
+
+	user: one User,
+\end_layout
+
+\begin_layout Plain Layout
+
+	vehicle: one Vehicle,
+\end_layout
+
+\begin_layout Plain Layout
+
+	terminated: one Bool,
+\end_layout
+
+\begin_layout Plain Layout
+
+	payment: lone Payment,
+\end_layout
+
+\begin_layout Plain Layout
+
+	duration: one Int}
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	duration > 0
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Se il noleggio non è terminato non è associato ad un pagamento
+\end_layout
+
+\begin_layout Plain Layout
+
+	payment != none <=> terminated = True
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta un pagamento sig Payment{
+\end_layout
+
+\begin_layout Plain Layout
+
+	amount: one Int,
+\end_layout
+
+\begin_layout Plain Layout
+
+	success: one Bool
+\end_layout
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\begin_layout Plain Layout
+
+	amount > 0
+\end_layout
+
+\begin_layout Plain Layout
+
+	//I pagamenti vengono generati solo associati ai rental terminati o alle
+ reservation scadute/cancellate
+\end_layout
+
+\begin_layout Plain Layout
+
+	all p : Payment | (one r : Rental | r.terminated = True and r.payment = p)
+ or (one r : Reservation | (r.expired = True or r.cancelled = True) and r.payment
+ = p)
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta un operatore sig Operator{
+\end_layout
+
+\begin_layout Plain Layout
+
+	ID : OperatorID
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Signatura che rappresenta una richiesta di supporto
+\end_layout
+
+\begin_layout Plain Layout
+
+sig SupportRequest{
+\end_layout
+
+\begin_layout Plain Layout
+
+	sentBy : one User,
+\end_layout
+
+\begin_layout Plain Layout
+
+	handledBy : one Operator
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+sig SystemNotification {
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Alcune notifiche possono essere associate ad un operatore
+\end_layout
+
+\begin_layout Plain Layout
+
+	handledBy : lone Operator,
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Una notifica può riguardare un veicolo
+\end_layout
+
+\begin_layout Plain Layout
+
+	vehicle: lone Vehicle,
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Una notifica può riguardare un pagamento
+\end_layout
+
+\begin_layout Plain Layout
+
+	payment: lone Payment
+\end_layout
+
+\begin_layout Plain Layout
+
+}{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Una notifica non può riguardare un veicolo e un pagamento contemporaneamente
+\end_layout
+
+\begin_layout Plain Layout
+
+	vehicle != none <=> payment = none 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//----- FACTS ----- 
+\end_layout
+
+\begin_layout Plain Layout
+
+//Facts about vehicles 
+\end_layout
+
+\begin_layout Plain Layout
+
+fact{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Non possono esistere veicoli disponibili o prenotati fuori da una safe
+ area perché il noleggio può essere terminato solo nelle safe area
+\end_layout
+
+\begin_layout Plain Layout
+
+	no v : Company.vehicles | (v in Company.availableVehicles or v in Company.reserved
+Vehicles) and v.safeArea = none
+\end_layout
+
+\begin_layout Plain Layout
+
+	//I veicoli con meno del 20% di batteria non sono disponibili e non può
+ esistere una reservatio su di loro
+\end_layout
+
+\begin_layout Plain Layout
+
+	all v : Company.vehicles | v.battery < 20 => (v not in Company.availableVehicles
+ and v not in Company.reservedVehicles) 
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Se un veicolo è sotto carica allora non è noleggiato
+\end_layout
+
+\begin_layout Plain Layout
+
+	all v : Company.vehicles | v.plugged = True <=> v not in Company.rentedVehicles
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Facts about reservations 
+\end_layout
+
+\begin_layout Plain Layout
+
+fact{
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Per ogni veicolo nel set dei veicoli riservati esiste una ed una sola
+ reservation non scaduta o cancellata
+\end_layout
+
+\begin_layout Plain Layout
+
+	all v : Company.reservedVehicles | one r : Reservation | r.vehicle = v and
+ r.cancelled = False and r.expired = False
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Per ogni reservation esiste uno ed un solo veicolo nel set dei veicoli
+ riservati
+\end_layout
+
+\begin_layout Plain Layout
+
+	all r : Reservation | (r.cancelled = False and r.expired = False) => (one
+ v : Company.reservedVehicles | v = r.vehicle)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Facts about rentals 
+\end_layout
+
+\begin_layout Plain Layout
+
+fact{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Per ogni veicolo nel set dei veicoli noleggiati esiste una ed una rental
+ non terminata
+\end_layout
+
+\begin_layout Plain Layout
+
+	all v : Company.rentedVehicles | one r : Rental | r.vehicle = v and r.terminated
+ = False
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Per ogni rental esiste uno ed un solo veicolo nel set dei veicoli noleggiati
+\end_layout
+
+\begin_layout Plain Layout
+
+	all r : Rental | (r.terminated = False) => (one v : Company.rentedVehicles
+ | v = r.vehicle) 
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Un noleggio non puo terminare fuori da una safe area
+\end_layout
+
+\begin_layout Plain Layout
+
+	no r : Rental | r.terminated = True and r.vehicle.safeArea = none
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Non esiste un noleggio terminato non associato ad un pagamento
+\end_layout
+
+\begin_layout Plain Layout
+
+	no r : Rental | r.payment = none and r.terminated = True 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Facts abot users 
+\end_layout
+
+\begin_layout Plain Layout
+
+fact{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Un utente non può prenotare più di un veicolo allo stesso tempo
+\end_layout
+
+\begin_layout Plain Layout
+
+	no disj r1, r2 : Reservation | r1.user = r2.user and r1.expired = False and
+ r1.cancelled = False and r2.expired = False and r2.cancelled = False 	//Un
+ utente non può noleggiare più di un veicolo veicolo allo stesso tempo 	no
+ disj r1, r2 : Rental | r1.user = r2.user and r1.terminated = False and r2.terminate
+d = False
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Un utente non può avere un noleggio ed una reservation contemporaneamente
+\end_layout
+
+\begin_layout Plain Layout
+
+	no ren : Rental, res : Reservation | ren.user = res.user and ren.terminated
+ = False and res.expired = False and res.cancelled = False
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Un utente non puo avere due richieste di supporto allo stesso tempo
+\end_layout
+
+\begin_layout Plain Layout
+
+	no disj sr1, sr2 : SupportRequest | sr1.sentBy = sr2.sentBy
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Facts about payments 
+\end_layout
+
+\begin_layout Plain Layout
+
+fact{
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Un pagamento puo essere associato ad una sola reservation o noleggio
+\end_layout
+
+\begin_layout Plain Layout
+
+	all p : Payment | (one rental: Rental | rental.payment = p) => ((no rental2:
+ Rental | rental2.payment = p) and (no reservation: Reservation | reservation.paym
+ent = p)) and (one reservation: Reservation | reservation.payment = p) =>
+ ((no reservation2: Reservation | reservation2.payment = p) and (no rental:
+ Rental | rental.payment = p))
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//facts about notifications 
+\end_layout
+
+\begin_layout Plain Layout
+
+fact{
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Esiste una notifica per ogni veicolo NonDisponibile
+\end_layout
+
+\begin_layout Plain Layout
+
+	all nav : Company.notAvailableVehicles | one n : Company.systemNotifications
+ | n.vehicle = nav
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Esiste una notifica per ogni pagamento fallito
+\end_layout
+
+\begin_layout Plain Layout
+
+	all fp : Payment | fp.success = False => (one notif : Company.systemNotifications
+ | notif.payment = fp)
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Se una notifica è associata ad un pagamento allora è un pagamento fallito
+\end_layout
+
+\begin_layout Plain Layout
+
+	all n : Company.systemNotifications | n.payment != none => n.payment.success
+ = False
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Assertions
+\end_layout
+
+\begin_layout Standard
+Assertions were used to validate the given model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+//----- ASSERTIONS ----- 
+\end_layout
+
+\begin_layout Plain Layout
+
+//Non esistono due utenti con lo stesso username 
+\end_layout
+
+\begin_layout Plain Layout
+
+assert noSameUsername { 
+\end_layout
+
+\begin_layout Plain Layout
+
+	no disj u,v: User | u.username = v.username 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+check noSameUsername for 5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Non esistono due operatori con lo stesso ID 
+\end_layout
+
+\begin_layout Plain Layout
+
+assert noSameID{
+\end_layout
+
+\begin_layout Plain Layout
+
+	no disj o1, o2: Operator | o1.ID = o2.ID
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+check noSameID for 5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Tutti i noleggi terminati sono associati ad un pagamento 
+\end_layout
+
+\begin_layout Plain Layout
+
+assert noTerminatedRentalWithoutPayment {  
+\end_layout
+
+\begin_layout Plain Layout
+
+	no r: Rental | r.terminated = True && r.payment != none 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+check noTerminatedRentalWithoutPayment for 5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Tutte le reservation scadute o cancellate sono associate ad un pagamento
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+assert noTerminatedReservationWithoutPayment{
+\end_layout
+
+\begin_layout Plain Layout
+
+	no r: Rental | r.terminated = True && r.payment != none 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+check noTerminatedReservationWithoutPayment for 5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Un pagamento è associato ad un solo evento 
+\end_layout
+
+\begin_layout Plain Layout
+
+assert onePaymentOneEvent{
+\end_layout
+
+\begin_layout Plain Layout
+
+	no disj r1, r2: Rental | r1.payment = r2.payment 
+\end_layout
+
+\begin_layout Plain Layout
+
+	no disj r1, r2: Reservation | r1.payment = r2.payment
+\end_layout
+
+\begin_layout Plain Layout
+
+	no res: Reservation | some rent: Rental | res.payment = rent.payment 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+check onePaymentOneEvent for 5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Un utente non puo avere due reservation attive, un veicolo non puo essere
+ associato a due reservation attive 
+\end_layout
+
+\begin_layout Plain Layout
+
+assert noMoreThanOneReservation{
+\end_layout
+
+\begin_layout Plain Layout
+
+	no disj r1, r2: Reservation | (r1.user = r2.user or r1.vehicle = r2.vehicle)
+ and r1.cancelled = False and r2.cancelled = False and r1.expired = False and
+ r2.expired = False 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+check noMoreThanOneReservation for 5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Un utente non puo avere due noleggi attivi, un veicolo non puo essere
+ associato a due noleggi attivi assert noMoreThanOneRental{
+\end_layout
+
+\begin_layout Plain Layout
+
+	no disj r1, r2: Rental | (r1.user = r2.user or r1.vehicle = r2.vehicle) and
+ r1.terminated = False and r2.terminated = False 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+check noMoreThanOneRental for 5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Un utente non puo avere un noleggio ed una reservation attive allo stesso
+ tempo, Un veicolo non puo essere associato ad una reservation ed un noleggio
+ allo stesso tempo 
+\end_layout
+
+\begin_layout Plain Layout
+
+assert noReservationAndRental{
+\end_layout
+
+\begin_layout Plain Layout
+
+	no u: User | 
+\end_layout
+
+\begin_layout Plain Layout
+
+		(some rental: Rental | rental.user = u and rental.terminated = False) and
+ (some reservation: Reservation | reservation.user = u and reservation.cancelled
+ = False and reservation.expired = False)
+\end_layout
+
+\begin_layout Plain Layout
+
+	no v: Vehicle | 
+\end_layout
+
+\begin_layout Plain Layout
+
+		(some rental: Rental | rental.vehicle = v and rental.terminated = False)
+ and (some reservation: Reservation | reservation.vehicle = v and reservation.canc
+elled = False and reservation.expired = False) 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+check noReservationAndRental for 5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Non può esistere un veicolo in carica e noleggiato assert 
+\end_layout
+
+\begin_layout Plain Layout
+
+noChargingWhileDriving{
+\end_layout
+
+\begin_layout Plain Layout
+
+	no v: Vehicle | v in Company.rentedVehicles and v.plugged = True 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+check noChargingWhileDriving for 5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Non puo esistere un veicolo disponibile fuori da una safe area
+\end_layout
+
+\begin_layout Plain Layout
+
+assert AlwaysSafe{
+\end_layout
+
+\begin_layout Plain Layout
+
+	no v: Vehicle | v in Company.availableVehicles and v.safeArea = none
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+check AlwaysSafe for 5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Predicates
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+---- PREDICATES ----- 
+\end_layout
+
+\begin_layout Plain Layout
+
+pred show1{
+\end_layout
+
+\begin_layout Plain Layout
+
+	#User > 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	#Reservation > 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	#Rental > 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	#Operator = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	#SupportRequest = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	#SystemNotification = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	some v : Vehicle | v.battery < 20
+\end_layout
+
+\begin_layout Plain Layout
+
+	some v: Vehicle | v.safeArea = none
+\end_layout
+
+\begin_layout Plain Layout
+
+	some v: Vehicle | v.plugged = True
+\end_layout
+
+\begin_layout Plain Layout
+
+	some p: Payment | p.success = False 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pred smallScenario{
+\end_layout
+
+\begin_layout Plain Layout
+
+	#Vehicle <= 4
+\end_layout
+
+\begin_layout Plain Layout
+
+	#User <= 4
+\end_layout
+
+\begin_layout Plain Layout
+
+	#Operator = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	#SupportRequest = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+	#Rental <= 4
+\end_layout
+
+\begin_layout Plain Layout
+
+	#Reservation <= 4
+\end_layout
+
+\begin_layout Plain Layout
+
+	some r : Rental | r.terminated = False
+\end_layout
+
+\begin_layout Plain Layout
+
+	some r : Reservation | r.cancelled = False and r.expired = False 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+run show1 for 6 but 8 int 
+\end_layout
+
+\begin_layout Plain Layout
+
+run smallScenario for 6 but 8 int
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The predicate show1 is intended to create a very complex simulation involving
+ all possibile exceptions and signatures.
+\end_layout
+
+\begin_layout Standard
+The predicate smallScenario is intendend to create a smaller simulation
+ easily readble also via the Alloy visualizer.
+\end_layout
+
+\begin_layout Subsubsection
+Consistency results
+\end_layout
+
+\begin_layout Standard
+The model is consistent by the Alloy Analizer 4.2_2015-02-22.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+10 commands were executed.
+ The results are:    
+\end_layout
+
+\begin_layout Plain Layout
+
+#1: No counterexample found.
+ noSameUsername may be valid.
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+#2: No counterexample found.
+ noSameID may be valid.
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+#3: No counterexample found.
+ noTerminatedRentalWithoutPayment may be valid.
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+#4: No counterexample found.
+ noTerminatedReservationWithoutPayment may be valid.
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+#5: No counterexample found.
+ onePaymentOneEvent may be valid.
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+#6: No counterexample found.
+ noMoreThanOneReservation may be valid.
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+#7: No counterexample found.
+ noMoreThanOneRental may be valid.
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+#8: No counterexample found.
+ noReservationAndRental may be valid.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+#9: No counterexample found.
+ noChargingWhileDriving may be valid.
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+#10: No counterexample found.
+ AlwaysSafe may be valid.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+#11: Instance found.
+ show1 is consistent.
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+#12: Instance found.
+ smallScenario is consistent.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Generated words
+\end_layout
+
+\begin_layout Standard
+Here some words generated using the Alloy visualizer tool.
+ All the words refer to the smallScenario predicate.In some words Integer
+ objects are omitted in order to increase readeability.
+\end_layout
+
 \begin_layout Subsection
 Used tools
 \end_layout
 
 \begin_layout Itemize
-Lyx as LaTeX editor.
+LyX as LaTeX editor.
 \end_layout
 
 \begin_layout Itemize

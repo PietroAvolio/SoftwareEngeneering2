@@ -1,4 +1,4 @@
-//----- SIGNATURES -----
+----- SIGNATURES -----
 abstract sig Bool {}
 one sig True extends Bool {}
 one sig False extends Bool {}
@@ -107,7 +107,7 @@ sig SystemNotification {
 } 
 	
 
-//----- FACTS -----
+----- FACTS -----
  //Facts about vehicles
 fact{
  	//Non possono esistere veicoli disponibili o prenotati fuori da una safe area perché il noleggio può essere terminato solo nelle safe area
@@ -167,7 +167,7 @@ fact{
 	all n : Company.systemNotifications | n.payment != none => n.payment.success = False
 }
 
-//----- ASSERTIONS -----
+----- ASSERTIONS -----
 //Non esistono due utenti con lo stesso username
 assert noSameUsername {
   	no disj u,v: User | u.username = v.username
@@ -186,25 +186,78 @@ assert noTerminatedRentalWithoutPayment {
 }
 check noTerminatedRentalWithoutPayment for 5
 
-//Un utente non puo avere due reservation attive
+//Tutte le reservation scadute o cancellate sono associate ad un pagamento
+assert noTerminatedReservationWithoutPayment{
+	no r: Rental | r.terminated = True && r.payment != none
+}
+check noTerminatedReservationWithoutPayment for 5
+
+//Un pagamento è associato ad un solo evento
+assert onePaymentOneEvent{
+	no disj r1, r2: Rental | r1.payment = r2.payment
+	no disj r1, r2: Reservation | r1.payment = r2.payment
+	no res: Reservation | some rent: Rental | res.payment = rent.payment
+}
+check onePaymentOneEvent for 5
+
+//Un utente non puo avere due reservation attive, un veicolo non puo essere associato a due reservation attive
 assert noMoreThanOneReservation{
-	no disj r1, r2: Reservation | r1.user = r2.user and r1.cancelled = False and r2.cancelled = False and r1.expired = False and r2.expired = False
+	no disj r1, r2: Reservation | (r1.user = r2.user or r1.vehicle = r2.vehicle) and r1.cancelled = False and r2.cancelled = False and r1.expired = False and r2.expired = False
 }
 check noMoreThanOneReservation for 5
 
-//Un utente non puo avere un noleggio ed una reservation attive allo stesso tempo
+//Un utente non puo avere due noleggi attivi, un veicolo non puo essere associato a due noleggi attivi
+assert noMoreThanOneRental{
+	no disj r1, r2: Rental | (r1.user = r2.user or r1.vehicle = r2.vehicle) and r1.terminated = False and r2.terminated = False
+}
+check noMoreThanOneRental for 5
+
+//Un utente non puo avere un noleggio ed una reservation attive allo stesso tempo, Un veicolo non puo essere associato ad una reservation ed un noleggio allo stesso tempo
 assert noReservationAndRental{
 	no u: User |
 		(some rental: Rental | rental.user = u and rental.terminated = False) and (some reservation: Reservation | reservation.user = u and reservation.cancelled = False and reservation.expired = False)
+
+	no v: Vehicle |
+		(some rental: Rental | rental.vehicle = v and rental.terminated = False) and (some reservation: Reservation | reservation.vehicle = v and reservation.cancelled = False and reservation.expired = False)
 }
 check noReservationAndRental for 5
 
-//---- PREDICATES -----
-pred show{
-	#Vehicle = 5
-	#Reservation = 2
-	#Rental = 2
-	#Operator = 1
-	#SystemNotification = 1
+//Non può esistere un veicolo in carica e noleggiato
+assert noChargingWhileDriving{
+	no v: Vehicle | v in Company.rentedVehicles and v.plugged = True
 }
-run show for 6 but 8 int
+check noChargingWhileDriving for 5
+
+//Non puo esistere un veicolo disponibile fuori da una safe area
+assert AlwaysSafe{
+	no v: Vehicle | v in Company.availableVehicles and v.safeArea = none
+}
+check AlwaysSafe for 5
+
+---- PREDICATES -----
+pred show1{
+	#User > 1
+	#Reservation > 1
+	#Rental > 1
+	#Operator = 1
+	#SupportRequest = 1
+	#SystemNotification = 1
+	some v : Vehicle | v.battery < 20
+	some v: Vehicle | v.safeArea = none
+	some v: Vehicle | v.plugged = True
+	some p: Payment | p.success = False
+}
+
+pred smallScenario{
+	#Vehicle <= 4
+	#User <= 4
+	#Operator = 1
+	#SupportRequest = 0
+	#Rental <= 4
+	#Reservation <= 4
+	some r : Rental | r.terminated = False
+	some r : Reservation | r.cancelled = False and r.expired = False
+}
+
+run show1 for 6 but 8 int
+run smallScenario for 6 but 8 int
