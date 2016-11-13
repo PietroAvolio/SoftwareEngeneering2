@@ -56,7 +56,11 @@ sig Reservation{
 	payment: lone Payment
 }{
 	expired = True <=> cancelled = False
+<<<<<<< HEAD
+	//Se la reservatio è scaduta o cancellata allora è associata ad un pagamento
+=======
 	//Se la reservation è scaduta o cancellata allora è associata ad un pagamento
+>>>>>>> 4d4efeb66f6d1b637ce7e4abb0444cde80ba8c35
 	payment != none <=> (cancelled = True or expired = True)
 }
 
