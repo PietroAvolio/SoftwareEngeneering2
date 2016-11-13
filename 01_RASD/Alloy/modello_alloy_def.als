@@ -101,8 +101,8 @@ sig SystemNotification {
 	//Una notifica può riguardare un pagamento
 	payment: lone Payment
 }{ 
-	//Una notifica non può riguardare un veicolo o un pagamento
-	#vehicle + #payment =< 1 
+	//Una notifica non può riguardare un veicolo e un pagamento contemporaneamente
+	vehicle != none <=> payment = none
 } 
 	
 
