@@ -7,4 +7,4 @@ Guido Borrelli 874451
 
 ## Submissions
 
-+ Requirements analysys and Specification Document, submission deadline 13/11: [link](./01_RASD/RASD.lyx)
++ Requirements analysys and Specification Document, submission deadline 13/11: [link](./01_RASD/RASD.pdf)
