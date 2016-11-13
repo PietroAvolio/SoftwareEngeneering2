@@ -306,7 +306,7 @@ Purpose
 \end_layout
 
 \begin_layout Standard
-ShareEnJoy is a new company that wants to enter the car sharing market and
+PowerEnJoy is a new company that wants to enter the car sharing market and
  wants to provide a service based on electric vehicles only.
 \begin_inset Newline newline
 \end_inset
@@ -336,7 +336,7 @@ As the car sharing service is based on electric vehicles only, the system
 \begin_inset Newline newline
 \end_inset
 
-ShareEnJoy needs a digital management system in order to support all the
+PowerEnJoy needs a digital management system in order to support all the
  activity for both their customers and their staff operators.
  
 \end_layout
@@ -436,24 +436,24 @@ The system will be composed of three main components with different roles
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy Mobile App}$
+\begin_inset Formula $\mathit{PowerEnJoy Mobile App}$
 \end_inset
 
- This component is intended to be used by ShareEnJoy customers and will
+ This component is intended to be used by PowerEnJoy customers and will
  offer the functionality to see available vehicles in a specific geographical
  area, to reserve and then to rent a vehicle.
  It will also allow users to unlock a vehicle they have reserved when they're
  nearby.
- Through the app, users will also be able to send support requests to ShareEnJoy
+ Through the app, users will also be able to send support requests to PowerEnJoy
  support staff.
 \end_layout
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy Control Room}$
+\begin_inset Formula $\mathit{PowerEnJoy Control Room}$
 \end_inset
 
- This component is intended to be used by ShareEnJoy operators.
+ This component is intended to be used by PowerEnJoy operators.
  It will provide a real-time blueprint of the system, the functionalities
  to handle support requests and the possibility to be notified for some
  specific events (e.g.
@@ -462,7 +462,7 @@ The system will be composed of three main components with different roles
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy Core}$
+\begin_inset Formula $\mathit{PowerEnJoy Core}$
 \end_inset
 
  This component is intended to contain all the system logic.
@@ -580,7 +580,7 @@ The digital management system to be developed.
 \begin_inset Text
 
 \begin_layout Plain Layout
-ShareEnJoy
+PowerEnJoy
 \end_layout
 
 \end_inset
@@ -979,7 +979,7 @@ Product perspective
 \end_layout
 
 \begin_layout Standard
-The central component of the entire system is the ShareEnJoy Core component
+The central component of the entire system is the PowerEnJoy Core component
  which is where all the logic is put.
  This component of the system is in charge of providing an interface to
  vehicles on-board information system, of processing requests from the other
@@ -1005,7 +1005,7 @@ bigskip
 
 \begin_layout Standard
 All the other components the system is made of (i.e.
- ShareEnJoy Mobile App and ShareEnJoy Control Room) should interface with
+ PowerEnJoy Mobile App and PowerEnJoy Control Room) should interface with
  the core component in order to accomplish required tasks (e.g.
  user’s registration and login, vehicle reservation request, etc).
  They can be considered very thin clients.
@@ -1053,7 +1053,7 @@ User Interfaces
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy Mobile App}$
+\begin_inset Formula $\mathit{PowerEnJoy Mobile App}$
 \end_inset
 
  This component will be implemented as a mobile application and it's intended
@@ -1179,7 +1179,7 @@ hspace{10pt}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-ShareEnJoy Mobile App mockups
+PowerEnJoy Mobile App mockups
 \end_layout
 
 \end_inset
@@ -1198,7 +1198,7 @@ ShareEnJoy Mobile App mockups
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Control\,Room}$
 \end_inset
 
  This component will be implemented as a web application and it is intended
@@ -1218,7 +1218,7 @@ It should be accessible through a common internet connection and it should
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Core}$
 \end_inset
 
  This component does not provide a direct user interface since it's intended
@@ -1232,7 +1232,7 @@ Hardware interfaces
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Mobile\,App}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Mobile\,App}$
 \end_inset
 
  This component should obtain device location by its operating system.
@@ -1244,7 +1244,7 @@ Hardware interfaces
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Control\,Room}$
 \end_inset
 
  This component does not have any hardware interface.
@@ -1252,7 +1252,7 @@ Hardware interfaces
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Core}$
 \end_inset
 
  This component does not have any hardware interface.
@@ -1264,7 +1264,7 @@ Software interfaces
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Mobile\,App}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Mobile\,App}$
 \end_inset
 
  Android and iOS together cover about the 99% of the mobile operating system
@@ -1370,7 +1370,7 @@ iOS
 \begin_inset Newline newline
 \end_inset
 
-With this minimal requirements ShareEnJoy Mobile App will support 97% of
+With this minimal requirements PowerEnJoy Mobile App will support 97% of
  the android devices
 \begin_inset Foot
 status open
@@ -1403,7 +1403,7 @@ REFD6
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Control\,Room}$
 \end_inset
 
  This component will require a Java EE application server to be executed.
@@ -1578,12 +1578,12 @@ OSE 1.10
 \labelwidthstring 00.00.0000
 \begin_inset CommandInset label
 LatexCommand label
-name "ShareEnJoyCore_Required_Softwares"
+name "PowerEnJoyCore_Required_Softwares"
 
 \end_inset
 
 
-\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Core}$
 \end_inset
 
  This component requires a Java EE application server to be executed.
@@ -1879,7 +1879,7 @@ Name
 \begin_inset Text
 
 \begin_layout Plain Layout
-ShareEnJoy Vehicle I.S.
+PowerEnJoy Vehicle I.S.
 \end_layout
 
 \end_inset
@@ -2070,7 +2070,7 @@ Communication between the core component and the SMS gateway works using
 \end_layout
 
 \begin_layout Standard
-The ShareEnJoy control room can be accessed by the operators using the HTTPs
+The PowerEnJoy control room can be accessed by the operators using the HTTPs
  protocol on port 80 and a common web browser.
 \end_layout
 
@@ -2079,7 +2079,7 @@ Memory constraints
 \end_layout
 
 \begin_layout Standard
-Users must have enough space to install ShareEnJoy Mobile App application
+Users must have enough space to install PowerEnJoy Mobile App application
  on their own devices.
  The size of the application is still unknown but it can be estimated in
  less than 100MB.
@@ -2103,7 +2103,7 @@ The system on which the core component will be run requires enough primary
  memory space in order to install required softwares (section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "ShareEnJoyCore_Required_Softwares"
+reference "PowerEnJoyCore_Required_Softwares"
 
 \end_inset
 
@@ -2144,7 +2144,7 @@ Functional requirements are listed per system component:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy Mobile App}$
+\begin_inset Formula $\mathit{PowerEnJoy Mobile App}$
 \end_inset
 
 
@@ -2221,7 +2221,7 @@ Logged-in users can send a support request.
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Control\,Room}$
 \end_inset
 
  
@@ -2308,7 +2308,7 @@ Operators can charge users for driving fines.
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Core}$
 \end_inset
 
  
@@ -2475,7 +2475,7 @@ We distinguish between two main categories of users:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Customers}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Customers}$
 \end_inset
 
  Customers who want to use the service in order to rent a vehicle.
@@ -2501,12 +2501,12 @@ Logged-in users: They can access to all the functionalities of the service.
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{ShareEnJoy\,Operators}$
+\begin_inset Formula $\mathit{PowerEnJoy\,Operators}$
 \end_inset
 
  Clerks of the company.
  They have a good knowledge about the service and they will attend a training
- on how to use ShareEnJoy Control Room software.
+ on how to use PowerEnJoy Control Room software.
 \end_layout
 
 \begin_layout Subsection
@@ -2632,7 +2632,7 @@ Luca is a university student who moved to Milan for studying.
  He can’t afford to buy a car but sometimes he needs to move even when public
  transports are unavailable (i.e.
  during the night).
- He decided to try a car sharing service and downloaded ShareEnJoy Mobile
+ He decided to try a car sharing service and downloaded PowerEnJoy Mobile
  App in order to use it during the incoming weekend.
  Once the download is complete and the app is installed on his smartphone,
  Luca starts the registration process: first he needs to create an account
@@ -2669,7 +2669,7 @@ Martin is a businessman and he is just landed in Milan Malpensa airport.
  He is taking a train from Malpensa to Stazione Centrale station and during
  the 30 minutes time trip he plans to reserve a vehicle near Stazione Centrale
  in order to do not waste time when he will get off the train.
- He is a ShareEnJoy user and he starts the application on his smartphone:
+ He is a PowerEnJoy user and he starts the application on his smartphone:
  he fills in the address and sees available vehicles on the map.
  He finds a vehicle with enough battery percentage according to his needs
  and away only three minutes walking from the station.
@@ -2689,7 +2689,7 @@ Martin is a businessman and he is just landed in Milan Malpensa airport.
 \end_layout
 
 \begin_layout Standard
-Marco is walking home after his evening gym session when he spots a ShareEnJoy
+Marco is walking home after his evening gym session when he spots a PowerEnJoy
  car parked along the street.
  He is tired by his training session so he decides to check if the car is
  available.
@@ -2725,8 +2725,8 @@ Marco is walking home after his evening gym session when he spots a ShareEnJoy
 \begin_layout Standard
 Mario and his friends are planning to go the the cinema tonight but the
  place they want to reach is not covered by city public transports.
- Mario is an old ShareEnJoy customer and he knows that the place is inside
- the safe area and that ShareEnJoy applies a special discount on the rental
+ Mario is an old PowerEnJoy customer and he knows that the place is inside
+ the safe area and that PowerEnJoy applies a special discount on the rental
  fee if there are passengers.
  He rents a vehicle and reaches the cinema: once there, he stops the engine
  and terminates the rent.
@@ -2752,13 +2752,13 @@ Mario and his friends are planning to go the the cinema tonight but the
 \end_layout
 
 \begin_layout Standard
-Mario had a really busy day and he is now looking for an available ShareEnJoy
+Mario had a really busy day and he is now looking for an available PowerEnJoy
  car so that he can reach his friends at the restaurant.
  Mario uses the application on his smartphone to reserve a vehicle but when
  he reaches the car he has an unexpected surprise: the car has no wheels
  because they have been stolen.
  He uses the application to open a support request describing the problem.
- The operator sees the request in the ShareEnJoy Control Room software and
+ The operator sees the request in the PowerEnJoy Control Room software and
  gives instruction on what to do to the client.
  Then, the operator marks the car as unavailable and sends a notification
  to the mechanics team.
@@ -2777,7 +2777,7 @@ Mario had a really busy day and he is now looking for an available ShareEnJoy
 
 \begin_layout Standard
 Marta is new to the car sharing services and it is the first time she rents
- a ShareEnJoy car.
+ a PowerEnJoy car.
  She wants to reach Rho, a town near Milan, but it is outside the safe area
  and she has not read information documents.
  Once she reaches her destination, she stops the engine and tries to terminate
@@ -2803,7 +2803,7 @@ Marta is new to the car sharing services and it is the first time she rents
 \begin_layout Standard
 Carol has just terminated a rental but she has no money left on her prepayed
  credit card.
- As soon as the ShareEnJoy Core component tries to make a payment and it
+ As soon as the PowerEnJoy Core component tries to make a payment and it
  is refused, it disables Carol's account and sents her a notification both
  via SMS and email.
  She will not be ablo the use her account to rent a vehicle until she will
@@ -2822,7 +2822,7 @@ Carol has just terminated a rental but she has no money left on her prepayed
 \end_layout
 
 \begin_layout Standard
-A driving loan has just been received at the ShareEnJoy headquarter.
+A driving loan has just been received at the PowerEnJoy headquarter.
  The operator takes the loan and starts the procedure to forward it to the
  user that took the loan.
  The operator just inserts the date and the time indicated on the loan and
@@ -2845,8 +2845,8 @@ A driving loan has just been received at the ShareEnJoy headquarter.
 \begin_layout Standard
 Francesco is in a rush and he parks the car that he rented with only 5%
  of the battery available and far away from a charging station.
- Once the rental is terminated the ShareEnJoy Core notifies the operators
- via the ShareEnJoy Control Room software and marks the vehicle as unavailable
+ Once the rental is terminated the PowerEnJoy Core notifies the operators
+ via the PowerEnJoy Control Room software and marks the vehicle as unavailable
  so that other users can not rent it.
  Operators handle the notification and forward it to the mechanics staff
  that will handle the situation.
@@ -2860,12 +2860,12 @@ Francesco is in a rush and he parks the car that he rented with only 5%
 \end_layout
 
 \begin_layout Standard
-ShareEnJoy Core detected that at least one of Mirco’s document is going
+PowerEnJoy Core detected that at least one of Mirco’s document is going
  to expire.
  Mirco is at work when he receives an app notify and clicks it.
  A message in the app appears and informs Mirco that his credit card is
  going to expire this month and that he must provide a new one in order
- to be able to use ShareEnJoy service in the next months.
+ to be able to use PowerEnJoy service in the next months.
  Mirco inserts the new credit card information and saves.
  A fee of 0,01EUR is charged on his new credit card in order to validate
  it.
@@ -3115,7 +3115,7 @@ State chart of payment
 \end_layout
 
 \begin_layout Standard
-When a rental is terminated, the ShareEnJoy Core component automatically
+When a rental is terminated, the PowerEnJoy Core component automatically
  sends a payment request via the payment gateway for the due amount.
  If the response is positive the payment and it's information are just stored
  into the company database.
@@ -3218,7 +3218,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename images/Full use case- - Page 1.png
+	filename images/Full use case - Page 1.png
 	display false
 	scale 32
 
@@ -3491,7 +3491,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename images/Sequence Diagram - Registration.png
+	filename images/Sequence Diagram - Registration - Page 1.png
 	display false
 	scale 72
 

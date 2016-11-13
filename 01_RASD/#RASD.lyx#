@@ -2144,7 +2144,7 @@ Functional requirements are listed per system component:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{PowerEnJoy Mobile App}$
+\begin_inset Formula $\mathit{ShareEnJoy Mobile App}$
 \end_inset
 
 
@@ -2221,7 +2221,7 @@ Logged-in users can send a support request.
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{PowerEnJoy\,Control\,Room}$
+\begin_inset Formula $\mathit{ShareEnJoy\,Control\,Room}$
 \end_inset
 
  
@@ -2308,7 +2308,7 @@ Operators can charge users for driving fines.
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{PowerEnJoy\,Core}$
+\begin_inset Formula $\mathit{ShareEnJoy\,Core}$
 \end_inset
 
  
@@ -2475,7 +2475,7 @@ We distinguish between two main categories of users:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{PowerEnJoy\,Customers}$
+\begin_inset Formula $\mathit{ShareEnJoy\,Customers}$
 \end_inset
 
  Customers who want to use the service in order to rent a vehicle.
@@ -2501,7 +2501,7 @@ Logged-in users: They can access to all the functionalities of the service.
 \end_deeper
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\mathit{PowerEnJoy\,Operators}$
+\begin_inset Formula $\mathit{ShareEnJoy\,Operators}$
 \end_inset
 
  Clerks of the company.
@@ -3491,7 +3491,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename images/Sequence Diagram - Registration - Page 1.png
+	filename images/Sequence Diagram - Registration.png
 	display false
 	scale 72
 
