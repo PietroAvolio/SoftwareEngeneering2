@@ -5571,7 +5571,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Sequence Diagram for 'send a support request' use cSease
+Sequence Diagram for 'send a support request' use case
 \end_layout
 
 \end_inset
