@@ -23,14 +23,12 @@ one sig Company{
 	reservedVehicles: set Vehicle,
 	rentedVehicles: set Vehicle,
 	supportRequests: set SupportRequest,
-	notifications: set Notification
+	systemNotifications: set SystemNotification
 }{
 	//I veicoli del mondo sono solo veicoli della compagnia
 	 no v : Vehicle | vehicles - v = vehicles 
 	//I veicoli sono suddivisi in disponibili, non disponibili, prenotati, noleggiati e non esiste intersezione fra i gruppi
 	(vehicles = availableVehicles+notAvailableVehicles+reservedVehicles+rentedVehicles) and (availableVehicles&reservedVehicles = none and availableVehicles&notAvailableVehicles = none and reservedVehicles&notAvailableVehicles = none and rentedVehicles&notAvailableVehicles = none and availableVehicles&rentedVehicles = none and reservedVehicles&rentedVehicles = none)
-	//Tutti i veicoli del set notAvailableVehicles hanno generato una notifica
-	all x: notAvailableVehicles | one n: Notification | x in n.car
  }
 
 //Signatura che rappresenta una SafeArea
@@ -81,8 +79,6 @@ sig Payment{
 	amount > 0
 	//I pagamenti vengono generati solo associati ai rental terminati o alle reservation scadute/cancellate
 	all p : Payment | (one r : Rental | r.terminated = True and r.payment = p) or (one r : Reservation | (r.expired = True or r.cancelled = True) and r.payment = p)
-	//Tutti i pagamenti hanno generato una notifica se success=false del pagamento
-	all p : Payment | one n : Notification | p in n.payment && success = False 
 }
 
 
@@ -97,14 +93,17 @@ sig SupportRequest{
 	handledBy : one Operator
 }
 
-sig Notification {
+sig SystemNotification {
 	//Alcune notifiche possono essere associate ad un operatore
 	handledBy : lone Operator,
 	//Una notifica può riguardare un veicolo
-	car: lone Vehicle,
+	vehicle: lone Vehicle,
 	//Una notifica può riguardare un pagamento
 	payment: lone Payment
-}{#car + #payment =< 1 } //Una notifica non può riguardare un veicolo E un pagamento
+}{ 
+	//Una notifica non può riguardare un veicolo o un pagamento
+	#vehicle + #payment =< 1 
+} 
 	
 
 //----- FACTS -----
@@ -154,6 +153,21 @@ fact{
 	all p : Payment | (one rental: Rental | rental.payment = p) => ((no rental2: Rental | rental2.payment = p) and (no reservation: Reservation | reservation.payment = p))
 		and (one reservation: Reservation | reservation.payment = p) => ((no reservation2: Reservation | reservation2.payment = p) and (no rental: Rental | rental.payment = p))
 }
+
+//facts about notifications
+fact{
+	//Esiste una notifica per ogni veicolo NonDisponibile
+	all nav : Company.notAvailableVehicles | some n : Company.systemNotifications | n.vehicle = nav
+	//Esiste una notifica per ogni pagamento fallito
+	all fp : Payment | fp.success = False => (one notif : Company.systemNotifications | notif.payment = fp)
+	//Se una notifica è associata ad un pagamento allora è un pagamento fallito
+	all n : Company.systemNotifications | n.payment != none => n.payment.success = False
+}
+
+//----- ASSERTIONS -----
+
+//---- PREDICATES -----
+
 //----- RUN -----
 pred show{}
 run show for 8 int
