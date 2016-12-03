@@ -525,5 +525,49 @@ Logical layers
 
 \end_layout
 
+\begin_layout Subsection
+Component view
+\end_layout
+
+\begin_layout Subsubsection
+Relational Database
+\end_layout
+
+\begin_layout Subsubsection
+NoSQL Database
+\end_layout
+
+\begin_layout Subsubsection
+Application Server
+\end_layout
+
+\begin_layout Subsubsection
+Web server
+\end_layout
+
+\begin_layout Subsection
+Deployment view
+\end_layout
+
+\begin_layout Subsection
+Runtime view
+\end_layout
+
+\begin_layout Subsection
+Component interfaces
+\end_layout
+
+\begin_layout Subsection
+Selected architectural styles and patterns
+\end_layout
+
+\begin_layout Section
+Algorithm Design
+\end_layout
+
+\begin_layout Section
+User Interfaces Design
+\end_layout
+
 \end_body
 \end_document
