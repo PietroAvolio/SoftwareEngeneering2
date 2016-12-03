@@ -282,11 +282,9 @@ Purpose
 
 \begin_layout Standard
 The purpose of this Design Document is to provide a more detailed description
- of the PowerEnJoy system architecture.
- The aim of the document is to describe main architectural components, thei
- interfaces and interactions.
- Two sections are dedicated to algorithms and user interfaces too.
- 
+ of the PowerEnJoy system architecture, to describe main architectural component
+s, their interfaces and interactions.
+ Two sections are also dedicated to algorithms and user interfaces.
 \end_layout
 
 \begin_layout Standard
@@ -308,6 +306,7 @@ As stated in the RASD document, the PowerEnJoy system is made of three main
 \begin_layout Standard
 In this document, we will describe how this components create a four layers
  architecture, how they interact and communicate one with each other.
+ We we also provide a physical deployment structure.
 \end_layout
 
 \begin_layout Standard
@@ -331,7 +330,7 @@ In order to avoid ambiguity and possible misunderstaings, here we integrate
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="2">
+<lyxtabular version="3" rows="4" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -340,12 +339,52 @@ In order to avoid ambiguity and possible misunderstaings, here we integrate
 \begin_inset Text
 
 \begin_layout Plain Layout
-RDBMS
+Relational Data
 \end_layout
 
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Data structured according to the relational model
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NoSQL Data
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Data not strcutured according to the relational model
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RDBMS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -386,8 +425,16 @@ NoSQL Database Management Server
 Reference Documents
 \end_layout
 
+\begin_layout Standard
+TODO
+\end_layout
+
 \begin_layout Subsection
 Document Structure
+\end_layout
+
+\begin_layout Standard
+TODO
 \end_layout
 
 \begin_layout Standard
@@ -402,8 +449,23 @@ Architectural Design
 \end_layout
 
 \begin_layout Standard
-This section provides a very datailed view over the system and its components,
- describing them at both the physical and logical level.
+This section provides a very datailed view over the system architecture
+ and its components, describing them at both the logical and physical level..
+\end_layout
+
+\begin_layout Standard
+Section 2.1 describes high-level components of the system; each of this component
+s will be separately described and detailed in section 2.2.
+\end_layout
+
+\begin_layout Standard
+Section 2.3 focuses on the deployment of the system on phisical tiers, while
+ section 2.4 describes the dynamic behaviour of the softwares.
+\end_layout
+
+\begin_layout Standard
+Section 2.5 focuses on the interface between different components, finally
+ section 2.6 provides a description of the design choices the and patterns.
 \end_layout
 
 \begin_layout Subsection
@@ -411,32 +473,17 @@ High level components and their interaction
 \end_layout
 
 \begin_layout Standard
-The following are the main high level components of the system-to-be:
+As stated in the RASD document, the system is composed of three main softwares:
+ two very thin clients that are PowerEnJoy Mobile Application and PowerEnJoy
+ Control Room, and a server containing all the application logic that is
+ PowerEnJoy Core.
+ Plus, also company vehicles can be considered as passive clients, since
+ they complete some tasks automatically without human interactions.
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-\begin_inset Formula $\boldsymbol{Relational Database}$
-\end_inset
-
- this component is responsible for the storage and retrieval of data structured
- using the relational model (e.g.
- users' account information, payments status, vehicles information and status).
- Given the nature of the data stored ACID properties should be guaranteed.
- 
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-\begin_inset Formula $\boldsymbol{NoSql Database}$
-\end_inset
-
- this component is responsible for the storage and retrieval of data structured
- not using the relational model (e.g.
- activity logs, vehicles position history).
- This kind of data is intended to be stored and to be accessed not so frequently.
- For this reason we can renounce some of the ACID properties for the sake
- of speed.
+\begin_layout Standard
+The architetuctar style choosen for the system is a classical client-server
+ architectured, splitted on four layers as shown in the figure 1.
 \end_layout
 
 \begin_layout Standard
@@ -446,6 +493,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Layers - Page 1.png
+	display false
+	scale 35
+
+\end_inset
+
 
 \end_layout
 
@@ -453,14 +508,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Layers - Page 1.png
-	display false
-	scale 30
-
-\end_inset
-
-
+Logical layers
 \end_layout
 
 \end_inset
