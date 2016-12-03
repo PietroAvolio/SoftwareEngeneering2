@@ -533,6 +533,29 @@ Component view
 Relational Database
 \end_layout
 
+\begin_layout Standard
+The DBMS designed is MySQL Community Edition, a relational database, that
+ provide us affordability for how to concern transactions (ensuring ACID
+ properties).
+ 
+\end_layout
+
+\begin_layout Standard
+Furthermore, this MySQL is free.
+\end_layout
+
+\begin_layout Standard
+Here below, an ER diagram is given such to represent in a clear way the
+ structure of the database.
+\end_layout
+
+\begin_layout Standard
+(non so forse bisognerebbe mettere assieme le due spiegazioni di database
+ in un'unica e dire che per quanto riguarda l'approccio ai dati si è scelto
+ di usare 2 database di diversi tipi: il solito relational mysql che da
+ questi benefici e il nosql che da questo)
+\end_layout
+
 \begin_layout Subsubsection
 NoSQL Database
 \end_layout
