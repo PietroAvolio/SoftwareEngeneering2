@@ -483,7 +483,7 @@ As stated in the RASD document, the system is composed of three main softwares:
 
 \begin_layout Standard
 The architetuctar style choosen for the system is a classical client-server
- architectured, splitted on four layers as shown in the figure 1.
+ architectured, splitted on four layers as shown in figure 1.
 \end_layout
 
 \begin_layout Standard
@@ -509,6 +509,64 @@ status open
 
 \begin_layout Plain Layout
 Logical layers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The system also needs to interface with some external components in order
+ to accomplish some tasks.
+ This components are:
+\end_layout
+
+\begin_layout Itemize
+Payment Gateway
+\end_layout
+
+\begin_layout Itemize
+SMS Gateway
+\end_layout
+
+\begin_layout Itemize
+Support Ticket System
+\end_layout
+
+\begin_layout Standard
+A diagram including an high level overview of the system components is shown
+ in figure 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/High level view component - Page 1.png
+	display false
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+High level components overview
 \end_layout
 
 \end_inset
