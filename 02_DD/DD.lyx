@@ -917,6 +917,83 @@ Fee Manager
 Web server
 \end_layout
 
+\begin_layout Standard
+The web server is implemented using Java EE specific HTTP servlet and HTML5,
+ for this reason it runs on a GlassFish Server The dynamic part of the user
+ interface is realized using jQuery.
+ 
+\end_layout
+
+\begin_layout Standard
+This component does not implement any part of the business logic, but it
+ communicates with the application server RESTful APIs by using AJAX requests.
+ It can be accessed by operators using a standard web browser and the HTTPs
+ protocol.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The web server architecture, as shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Architecture-web-server"
+
+\end_inset
+
+, is very simple and composed of JavaServer Faces for the view and by a
+ controller which translates user actions into REST requests to the application
+ server.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Web Server architecture - Page 1.png
+	display false
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Architecture of the web server
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Architecture-web-server"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Clients
 \end_layout
@@ -1143,6 +1220,13 @@ reference "subsec:Application-server-to-external-components"
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Deployment view
 \begin_inset CommandInset label
@@ -1190,10 +1274,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Deplyment diagram - Page 1.png
 	display false
-	scale 26
+	scale 24
 
 \end_inset
 
@@ -1258,7 +1343,7 @@ name "subsec:Application-server-to-clients"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Subsubsection
