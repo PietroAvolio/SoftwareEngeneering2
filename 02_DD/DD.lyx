@@ -521,26 +521,66 @@ Architectural Design
 
 \begin_layout Standard
 This section provides a very datailed view over the system architecture
- and its components, describing them at both the logical and physical level..
+ and its components, describing them at both the logical and physical level.
 \end_layout
 
 \begin_layout Standard
-Section 2.1 describes high-level components of the system; each of this component
-s will be separately described and detailed in section 2.2.
-\end_layout
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:High-level-components"
 
-\begin_layout Standard
-Section 2.3 focuses on the deployment of the system on phisical tiers, while
- section 2.4 describes the dynamic behaviour of the softwares.
-\end_layout
+\end_inset
 
-\begin_layout Standard
-Section 2.5 focuses on the interface between different components, finally
- section 2.6 provides a description of the design choices the and patterns.
+ describes high-level components of the system; each of this components
+ will be separately described and detailed in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Component-view"
+
+\end_inset
+
+; section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Deployment-view"
+
+\end_inset
+
+ focuses on the deployment of the system on phisical tiers; section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Runtime-view"
+
+\end_inset
+
+ describes the dynamic behaviour of the softwares; section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Component-interfaces"
+
+\end_inset
+
+ focuses on the interface between different components; finally section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Selected-architectural-styles"
+
+\end_inset
+
+ provides a description of the design choices and patterns.
 \end_layout
 
 \begin_layout Subsection
 High level components and their interaction
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:High-level-components"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -684,6 +724,13 @@ name "fig:High-level-components"
 
 \begin_layout Subsection
 Component view
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Component-view"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -695,7 +742,7 @@ The relational database is in charge of storing all the data that well fit
  the relational model.
  It runs on a MySQL Community Edition as DBMS and it uses InnoDB as database
  engine for all the tables.
- ACID properties should be guaranteed over all the transactions.
+ ACID properties must be guaranteed over all the transactions.
  
 \end_layout
 
@@ -823,7 +870,7 @@ Operators Handler
 \end_layout
 
 \begin_layout Subsubsection*
-Vehicle Handler
+Vehicle Manager
 \end_layout
 
 \begin_layout Standard
@@ -860,6 +907,10 @@ Email Sender
 
 \begin_layout Subsubsection*
 Push Notifications sender
+\end_layout
+
+\begin_layout Subsubsection*
+Fee Manager
 \end_layout
 
 \begin_layout Subsubsection
@@ -1094,6 +1145,13 @@ reference "subsec:Application-server-to-external-components"
 
 \begin_layout Subsection
 Deployment view
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Deployment-view"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1135,7 +1193,7 @@ status open
 \begin_inset Graphics
 	filename images/Deplyment diagram - Page 1.png
 	display false
-	scale 27
+	scale 26
 
 \end_inset
 
@@ -1168,10 +1226,24 @@ name "fig:Deployment-diagram"
 
 \begin_layout Subsection
 Runtime view
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Runtime-view"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Component interfaces
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Component-interfaces"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1206,6 +1278,13 @@ name "subsec:Application-server-to-external-components"
 
 \begin_layout Subsection
 Selected architectural styles and patterns
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Selected-architectural-styles"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1214,6 +1293,18 @@ Algorithm Design
 
 \begin_layout Section
 User Interfaces Design
+\end_layout
+
+\begin_layout Section
+Appendix
+\end_layout
+
+\begin_layout Subsection
+Tools used
+\end_layout
+
+\begin_layout Subsection
+Working hours tracking
 \end_layout
 
 \end_body
