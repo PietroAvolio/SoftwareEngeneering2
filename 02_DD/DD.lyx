@@ -856,6 +856,37 @@ reference "subsec:Application-server-to-clients"
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/2.3) Components of the Core - Page 1.png
+	display false
+	scale 20
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Component diagram of Power Enjoy Core
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection*
 Account Handler
 \end_layout
