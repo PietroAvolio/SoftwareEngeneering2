@@ -856,17 +856,54 @@ reference "subsec:Application-server-to-clients"
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/2.3) Components of the Core - Page 1.png
+	display false
+	scale 20
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Component diagram of Power Enjoy Core
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection*
 Account Handler
 \end_layout
 
 \begin_layout Standard
-Registrazione, login, aggiornamento informazioni.
- Fornisce il token di identificazioner per i client.
+This component handle all stuff regarding accounts like: registration, log-in,
+ information updating.
+ Furthermore, it provides the token for client identification.
 \end_layout
 
 \begin_layout Subsubsection*
 Operators Handler
+\end_layout
+
+\begin_layout Standard
+This component is the same as before but regarding operators, so it provides
+ special functions regarding just the operators privilege.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -874,43 +911,93 @@ Vehicle Manager
 \end_layout
 
 \begin_layout Standard
-Contiene lo stato del veicolo, e ci dialoga.
+It is able to give information about vehicles and their status, furthermore
+ it should guarantee the possibility to change the status of the car manually
+ by the operator and inserting/deleting car according to real events occuring.
 \end_layout
 
 \begin_layout Subsubsection*
 Reservations Handler
 \end_layout
 
+\begin_layout Standard
+It occurs about the insert, update, and delete of vehicle reservations by
+ customers.
+ Up to the policy, it should in some cases decide to apply a charge.
+\end_layout
+
 \begin_layout Subsubsection*
 Rentals Handler
+\end_layout
+
+\begin_layout Standard
+Its work is to give a dialog with the vehicle, such that let it be possibile
+ remote vehicle actions without key.
 \end_layout
 
 \begin_layout Subsubsection*
 Payment Handler
 \end_layout
 
+\begin_layout Standard
+This beans handle all payment requests we must generate and interface himself
+ with the external gateway corresponding.
+\end_layout
+
 \begin_layout Subsubsection*
 Log Manager
+\end_layout
+
+\begin_layout Standard
+Just satisfy the need of keep tracking of everything in case of backup needed
+ or for legal purposes.
 \end_layout
 
 \begin_layout Subsubsection*
 CronTasks Manager
 \end_layout
 
+\begin_layout Standard
+(non ricordo bene) Needed in order to keep memory of all vehicle information
+ during the rental period.
+\end_layout
+
 \begin_layout Subsubsection*
 Support Requests Handler
+\end_layout
+
+\begin_layout Standard
+It occurs about the insert, update, and delete of support requests needed
+ by the customers.
+ These request are later handled personally by the operator.
 \end_layout
 
 \begin_layout Subsubsection*
 Email Sender
 \end_layout
 
+\begin_layout Standard
+Permit to mass mail users according to some parameters or events occuring.
+ 
+\end_layout
+
 \begin_layout Subsubsection*
-Push Notifications sender
+Push Notifications Sender
+\end_layout
+
+\begin_layout Standard
+Permit to mass push notification users according to some parameters or events
+ occuring.
+ 
 \end_layout
 
 \begin_layout Subsubsection*
 Fee Manager
+\end_layout
+
+\begin_layout Standard
+According to the policy, after gathering all data from a rental it calculates
+ the final cost eligible by the company.
 \end_layout
 
 \begin_layout Subsubsection
