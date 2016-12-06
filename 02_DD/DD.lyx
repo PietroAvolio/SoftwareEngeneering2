@@ -864,9 +864,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename images/2.3) Components of the Core - Page 1.png
+	filename images/2.3) Components of the Core  - Page 1.png
 	display false
-	scale 20
+	scale 22
 
 \end_inset
 
@@ -1443,7 +1443,15 @@ Requirements traceability
 \end_layout
 
 \begin_layout Section
+Requirements Traceability
+\end_layout
+
+\begin_layout Section
 Appendix
+\end_layout
+
+\begin_layout Standard
+NB: ricordarsi menzionare Tanca
 \end_layout
 
 \begin_layout Subsection
