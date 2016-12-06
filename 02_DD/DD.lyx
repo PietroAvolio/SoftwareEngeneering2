@@ -1421,6 +1421,23 @@ Algorithm Design
 User Interfaces Design
 \end_layout
 
+\begin_layout Standard
+In this section we include some mockups of both the mobile application and
+ the control room.
+ This mockups are styleless and does not refer to any specific platform:
+ the purpose of this section is to provide details about the structural
+ elements of the user interface but not their style.
+ 
+\end_layout
+
+\begin_layout Subsection
+PowerEnJoy Mobile Application
+\end_layout
+
+\begin_layout Subsection
+PowerEnJoy Control Room
+\end_layout
+
 \begin_layout Section
 Requirements traceability
 \end_layout
