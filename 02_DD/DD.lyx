@@ -854,37 +854,22 @@ reference "subsec:Application-server-to-clients"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/2.3) Components of the Core  - Page 1.png
-	display false
-	scale 22
-
+\begin_inset Newline newline
 \end_inset
 
 
-\begin_inset Caption Standard
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Plain Layout
-Component diagram of Power Enjoy Core
-\end_layout
+The following is a list of all the bean composing the Core application,
+ while a component diagram is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Component-diagram-core"
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1006,6 +991,56 @@ Push Notifications Sender
 \begin_layout Standard
 This bean allows the system to send push notifications to a specific or
  to a group of users.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/2.3) Components of the Core  - Page 1.png
+	display false
+	scale 18
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Component diagram of Power Enjoy Core.
+ All the beans uses the Log Manager.
+ thus there are no connections shown in the diagram for the sake of readability.
+ Also, all the beans inside the same container can interact one with each
+ other.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Component-diagram-core"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
