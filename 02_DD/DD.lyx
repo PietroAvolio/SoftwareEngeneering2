@@ -883,6 +883,8 @@ This bean manages all the features related to users: registration, login,
  the user logges in.
  It validates driving license information and it generates and sends the
  user's password during the registration process.
+ This bean also handles requests to show available vehicles in a certain
+ area.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1654,7 +1656,7 @@ User Manager
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle" tabularwidth="100col%">
 <column alignment="left" valignment="top" width="15col%">
 <column alignment="left" valignment="top" width="35col%">
@@ -1989,6 +1991,72 @@ Operation result code.
 \end_inset
 </cell>
 </row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+get_vehicles
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-16pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+position_lat
+\end_layout
+
+\begin_layout Itemize
+position_long
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-16pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A list of available vehicles in a certain range from the given position,
+ together with their positions and details.
+\end_layout
+
+\end_inset
+</cell>
+</row>
 </lyxtabular>
 
 \end_inset
@@ -2002,7 +2070,7 @@ Operators Manager
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="3">
+<lyxtabular version="3" rows="8" columns="3">
 <features tabularvalignment="middle" tabularwidth="100col%">
 <column alignment="left" valignment="top" width="15col%">
 <column alignment="left" valignment="top" width="35col%">
@@ -2416,7 +2484,7 @@ user_email
 \end_layout
 
 \begin_layout Itemize
-import
+amount
 \end_layout
 
 \begin_layout Itemize
@@ -2451,6 +2519,76 @@ Operation result code.
 \end_inset
 </cell>
 </row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+get_vehicles
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-16pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+position_lat
+\end_layout
+
+\begin_layout Itemize
+position_lon
+\end_layout
+
+\begin_layout Itemize
+range
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-16pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A list of all the vehicles in the given range from the given position, together
+ with their position and details.
+\end_layout
+
+\end_inset
+</cell>
+</row>
 </lyxtabular>
 
 \end_inset
@@ -2458,7 +2596,185 @@ Operation result code.
 
 \end_layout
 
+\begin_layout Subsubsection*
+Support Requests Handler
+\end_layout
+
 \begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle" tabularwidth="100col%">
+<column alignment="left" valignment="top" width="15col%">
+<column alignment="left" valignment="top" width="35col%">
+<column alignment="left" valignment="top" width="50col%">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{Service}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{Input}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{Output}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+send_request
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-16pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+request_details
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-16pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Operation result.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+send_message
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-16pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+request_id
+\end_layout
+
+\begin_layout Itemize
+message_text
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-16pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Operation result code.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
 
 \end_layout
 
