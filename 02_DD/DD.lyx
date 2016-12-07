@@ -1003,8 +1003,9 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/2.3) Components of the Core  - Page 1.png
+	lyxscale 14
 	display false
-	scale 18
+	scale 14
 
 \end_inset
 
@@ -1133,7 +1134,7 @@ PowerEnJoy Vehicles
 \end_layout
 
 \begin_layout Standard
-A stated in the RASD document and in the previous sections of this document,
+As stated in the RASD document and in the previous sections of this document,
  we consider PowerEnJoy vehicles as clients.
  Both the hardware and the software solutions used to implement the information
  system installed on the vehicles is not part of this project.
@@ -1154,7 +1155,7 @@ PowerEnJoy Mobile Application
 \end_layout
 
 \begin_layout Standard
-A stated in the RASD document, this mobile application represents the main
+As stated in the RASD document, this mobile application represents the main
  interface for customers and it should be implemented for both the Android
  and the iOS platforms.
 \end_layout
@@ -1396,6 +1397,159 @@ name "subsec:Runtime-view"
 
 \end_layout
 
+\begin_layout Standard
+In this section we will expand some scenario in order to clarify how dynamically
+ works the components shown in section 2.2 through sequence diagrams.
+\end_layout
+
+\begin_layout Standard
+We will represent entities of database via the Java Persistence API.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Sequence Diagram - Registration - Page 1.png
+	display false
+	scale 21
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Account registration - Sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Sequence Diagram - Auto searching & Reservation - Page 1.png
+	display false
+	scale 21
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Vehicle research and reservation - Sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Sequence Diagram - Rental Start - Page 1.png
+	display false
+	scale 19
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rental beginning process - Sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Sequence Diagram - Car booting - Page 1.png
+	display false
+	scale 21
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Car booting process - Sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Component interfaces
 \begin_inset CommandInset label
@@ -1471,10 +1625,6 @@ PowerEnJoy Mobile Application
 
 \begin_layout Subsection
 PowerEnJoy Control Room
-\end_layout
-
-\begin_layout Section
-Requirements traceability
 \end_layout
 
 \begin_layout Section
