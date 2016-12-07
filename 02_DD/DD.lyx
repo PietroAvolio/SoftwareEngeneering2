@@ -1609,7 +1609,7 @@ Application server to database
 The communication beetwen the application server and the two databases goes
  using standard TCP/IP protocol on two different network ports.
  Both the relational and the NoSQL databases are abstracted in the application
- core by using the Java Persistence APIs, which use the correct SQL dialact
+ core by using the Java Persistence APIs, which use the correct SQL dialect
  in order to interact with the MySql Community Edition DBMS and the MongoDB
  DBMS.
  
