@@ -1655,6 +1655,60 @@ In the following pages, we list the detailed rest APIs implemented by the
 User Manager
 \end_layout
 
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{login}$
+\end_inset
+
+ This interface point allows registered user to log in using username and
+ password.
+ If the credentials are correct, the response contains an authentication_token
+ to be sent as paramtere in furhter communcations.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{registration}$
+\end_inset
+
+ This interface point allows a customer to register and create an account.
+ If the registration process is succesful, an authentication_token is returned
+ and an email containing a password is sent to the user.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{documents}$
+\end_inset
+
+ This interface point allows a logged-in user to associate its document
+ to the account.
+ This interface is used both during the registration and when the user updates
+ its account information.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{payment}$
+\end_inset
+
+ This interface point allows a logged-in user to associate its payment informati
+on to the account.
+ This interface is used both during the registation and when the user updates
+ its payment method.
+ The provided information are validated, as stated in the RASD document,
+ by applying a fee of 0,01 EURO.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{get\,vehicles}$
+\end_inset
+
+ This interface point allows a logged-in user to retrieve available vehicles
+ in a certain area.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
@@ -1855,7 +1909,7 @@ Registration result code
 \begin_inset Text
 
 \begin_layout Plain Layout
-documents
+documents_info
 \end_layout
 
 \end_inset
@@ -1932,7 +1986,7 @@ Operation result code
 \begin_inset Text
 
 \begin_layout Plain Layout
-payment
+payment_info
 \end_layout
 
 \end_inset
@@ -2083,6 +2137,73 @@ A list of available vehicles in a certain range from the given position,
 
 \begin_layout Subsubsection*
 Operators Manager
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{login}$
+\end_inset
+
+ This interface point allows operators to log-in using their id and password.
+ If the authentication is succesful an operator_authentication_code is returned
+ to be used in furhter communcations.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{support\,requests}$
+\end_inset
+
+ This interface point allows operators to retrieve support requestes forwarded
+ by users.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{handle\,request}$
+\end_inset
+
+ This interface point allows operatos to handle a support request by sending
+ a message or changing the request status.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{get\,user\,info}$
+\end_inset
+
+ This interface point allows operators to get all the information about
+ a specific user suchs as account information and activity log.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{edit\,user}$
+\end_inset
+
+ This interface point allows operators to manipulate or disable an user
+ account.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{charge\,driving\,loan}$
+\end_inset
+
+ This interface point allows operators to charge an user for a loan he took
+ during a rental.
+ Operators just need to provide driving loan details and the system automaticall
+y detects which user was driving the car at the moment of the infraction.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{get\,vehicles}$
+\end_inset
+
+ This interface point allows operators to retrieve all the vehicles in a
+ specific area.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2521,10 +2642,6 @@ op_auth_token
 \end_layout
 
 \begin_layout Itemize
-user_email
-\end_layout
-
-\begin_layout Itemize
 amount
 \end_layout
 
@@ -2643,6 +2760,23 @@ A list of all the vehicles in the given range from the given position, together
 
 \begin_layout Subsubsection*
 Support Requests Handler
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{send\,request}$
+\end_inset
+
+ This interface point allows a logged-in user to forward a support request.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{send\,message}$
+\end_inset
+
+ This interface point allows a logged-in user to reply to a still open support
+ request.
 \end_layout
 
 \begin_layout Standard
@@ -2835,6 +2969,23 @@ Operation result code
 Reservations Manager
 \end_layout
 
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{reserve}$
+\end_inset
+
+ This interface point allows a logged-in user to reserve a vehicle.
+ If the operation is succesful, a reservation code is returned.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{cancel reservation}$
+\end_inset
+
+ This interface point allows a logged-in user to cancel an active reservation.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
@@ -3025,6 +3176,16 @@ Operation result code
 Rentals Manager
 \end_layout
 
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{unlock doors}$
+\end_inset
+
+ This interface point allows a logged-in user with an active reservation
+ over a vehicle to unlock the doors of the vehicle.
+ The operation is succesful only if the user nearby (< 100 mt) the vehicle.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
@@ -3154,6 +3315,14 @@ Operation result code
 Vehicle Manager
 \end_layout
 
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{event}$
+\end_inset
+
+ This interface point is used by vehicles to send a status update.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
@@ -3266,6 +3435,13 @@ Operation result code
 </row>
 </lyxtabular>
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
