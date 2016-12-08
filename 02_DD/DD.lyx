@@ -317,7 +317,7 @@ As stated in the RASD document, the PowerEnJoy system is made of three main
 \begin_layout Standard
 In this document, we will describe how this components create a four layers
  architecture, how they interact and communicate one with each other.
- We we also provide a physical deployment structure.
+ We will also provide a physical deployment structure.
 \end_layout
 
 \begin_layout Standard
@@ -331,7 +331,7 @@ Definitions, acronyms and abbreviations
 \end_layout
 
 \begin_layout Standard
-In order to avoid ambiguity and possible misunderstaings, here we integrate
+In order to avoid ambiguity and possible misunderstandings, here we integrate
  the definitions, acronyms and abbreviations table from the RASD document.
 \begin_inset Newline newline
 \end_inset
@@ -379,7 +379,7 @@ NoSQL Data
 \begin_inset Text
 
 \begin_layout Plain Layout
-Data not strcutured according to the relational model
+Data not structured according to the relational model
 \end_layout
 
 \end_inset
@@ -547,7 +547,7 @@ reference "subsec:Deployment-view"
 
 \end_inset
 
- focuses on the deployment of the system on phisical tiers; section 
+ focuses on the deployment of the system on physical tiers; section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Runtime-view"
@@ -593,8 +593,8 @@ As stated in the RASD document, the system is composed of three main softwares:
 \end_layout
 
 \begin_layout Standard
-The architetuctar style choosen for the system is a classical client-server
- architectured, splitted on four layers as shown in figure 
+The architectural style chosen for the system is a classical client-server
+ architecture, splitted on four layers as shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Logical-layer"
@@ -753,11 +753,11 @@ The relational database communicates with the business logic tier only:
 \end_layout
 
 \begin_layout Standard
-The database must be phisically protected and duplicated in order to avoid
+The database must be physically protected and duplicated in order to avoid
  data loss.
  Communication must be encrypted and different users should be created and
  assigned to the different softwares that access the database in order to
- always guarantee the minimum required level of provileges per software.
+ always guarantee the minimum required level of privileges per software.
 \end_layout
 
 \begin_layout Subsubsection
@@ -880,7 +880,7 @@ User Manager
 This bean manages all the features related to users: registration, login,
  account details update.
  Furthermore, this bean provides the token used to identify the client once
- the user logges in.
+ the user logged in.
  It validates driving license information and it generates and sends the
  user's password during the registration process.
  This bean also handles requests to show available vehicles in a certain
@@ -903,18 +903,18 @@ Vehicle Manager
 
 \begin_layout Standard
 This bean manages all the features and the operations related to vehicles.
- When te application is started, a stateful bean is instanciated for each
+ When the application is started, a stateful bean is instanciated for each
  company vehicle and it is destroyed only when the application is destroyed.
  This bean also implements the 
 \begin_inset Formula $\mathit{hearthbeat}$
 \end_inset
 
-function: it periodically communicates with the vehicle in order to get
+ function: it periodically communicates with the vehicle in order to get
  its information and keep the internal status updated.
  The update interval is of 30 seconds for rented vehicle, 2 minutes for
  all the others.
  It also offers an interface to change the status of the vehicle and it
- is responsible for sending commands.
+ is responsable for sending commands.
  This bean handles events sent by vehicles when the engine is turned on
  and off.
 \end_layout
@@ -939,7 +939,7 @@ Rentals Handler
 \begin_layout Standard
 Exactly like the Reservations Handler, this bean manages the insertion,
  the update, the deletion and the expiry of users rentals.
- It is responsible for handling the user's request to unlock the doors of
+ It is responsable for handling the user's request to unlock the doors of
  a vehicle.
 \end_layout
 
@@ -948,8 +948,8 @@ Pricing Policies Manager
 \end_layout
 
 \begin_layout Standard
-This bean calculates the final cost of a rental elegible by the company
- after gathering all the details of the rental and applying the princing
+This bean calculates the final cost of a rental eligible by the company
+ after gathering all the details of the rental and applying the pricing
  policies stated by the company.
 \end_layout
 
@@ -1448,6 +1448,17 @@ We will represent entities of database via the Java Persistence API.
 \end_layout
 
 \begin_layout Standard
+For the sake of simplicity, Log Manager bean is shown in every sequence
+ diagram and it's intended to register every action.
+\end_layout
+
+\begin_layout Standard
+For the same aspects, Rest API bean has been put between transactions that
+ require it.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -1663,7 +1674,7 @@ User Manager
  This interface point allows registered user to log in using username and
  password.
  If the credentials are correct, the response contains an authentication_token
- to be sent as paramtere in furhter communcations.
+ to be sent as paramtere in further communications.
 \end_layout
 
 \begin_layout Labeling
@@ -2154,7 +2165,7 @@ Operators Manager
 \begin_inset Formula $\mathit{support\,requests}$
 \end_inset
 
- This interface point allows operators to retrieve support requestes forwarded
+ This interface point allows operators to retrieve support requests forwarded
  by users.
 \end_layout
 
@@ -2163,7 +2174,7 @@ Operators Manager
 \begin_inset Formula $\mathit{handle\,request}$
 \end_inset
 
- This interface point allows operatos to handle a support request by sending
+ This interface point allows operators to handle a support request by sending
  a message or changing the request status.
 \end_layout
 
@@ -2173,7 +2184,7 @@ Operators Manager
 \end_inset
 
  This interface point allows operators to get all the information about
- a specific user suchs as account information and activity log.
+ a specific user such as account information and activity log.
 \end_layout
 
 \begin_layout Labeling
@@ -3459,7 +3470,7 @@ As stated in the RASD and in this document, we assume that the information
 \end_layout
 
 \begin_layout Standard
-For the way we strctured the whole architecture, we just require that the
+For the way we structured the whole architecture, we just require that the
  vehicles expose an unique interface point, using the RESTful approach encoded
  using the JSON format:
 \begin_inset Newline newline
@@ -3651,6 +3662,46 @@ name "subsec:Selected-architectural-styles"
 Algorithm Design
 \end_layout
 
+\begin_layout Standard
+In this section we want to provide an outline of the main algorithms that
+ are applied to our system.
+\end_layout
+
+\begin_layout Standard
+As stated before, in PowerEnJoy core will be allocated our logic and in
+ PowerEnJoy Mobile and PowerEnJoy Control Room we will offer a presentation
+ layer.
+\end_layout
+
+\begin_layout Standard
+We are going to show these algorithms in pseudocode because of the reasonable
+ tradeoff of expressivity and simplicity.
+ 
+\end_layout
+
+\begin_layout Standard
+They will represent high-idea procedures in order to not give any restrictions
+ for future coding implementations.
+ 
+\end_layout
+
+\begin_layout Standard
+Furthermore, this chapter should be intended as the mainly guidance for
+ source of informations by developers.
+\end_layout
+
+\begin_layout Subsection*
+Primo algoritmo: scenario?
+\end_layout
+
+\begin_layout Subsection*
+Secondo algoritmo: scenario?
+\end_layout
+
+\begin_layout Subsection*
+Terzo algoritmo: scenario?
+\end_layout
+
 \begin_layout Section
 User Interfaces Design
 \end_layout
@@ -3661,7 +3712,8 @@ In this section we include some mockups of both the mobile application and
  This mockups are styleless and does not refer to any specific platform:
  the purpose of this section is to provide details about the structural
  elements of the user interface but not their style.
- 
+ [ qua come siamo messi? ti serve una mano per qualcosa? ti ho un po' abbandonat
+o su questa sezione ]
 \end_layout
 
 \begin_layout Subsection
@@ -3674,6 +3726,10 @@ PowerEnJoy Control Room
 
 \begin_layout Section
 Requirements Traceability
+\end_layout
+
+\begin_layout Standard
+NB: ricordarsi di cavare quella roba dal rasd
 \end_layout
 
 \begin_layout Section
