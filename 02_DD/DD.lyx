@@ -1712,10 +1712,10 @@ on to the account.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
-<features tabularvalignment="middle" tabularwidth="100col%">
-<column alignment="left" valignment="top" width="15col%">
-<column alignment="left" valignment="top" width="35col%">
-<column alignment="left" valignment="top" width="50col%">
+<features islongtable="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="15text%">
+<column alignment="left" valignment="top" width="35text%">
+<column alignment="left" valignment="top" width="50text%">
 <row>
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
@@ -2058,8 +2058,8 @@ Operation result code
 \end_inset
 </cell>
 </row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<row newpage="true">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2068,7 +2068,7 @@ get_vehicles
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2101,7 +2101,7 @@ position_long
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
