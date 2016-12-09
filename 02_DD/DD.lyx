@@ -496,8 +496,28 @@ Java Persistence API
 Reference Documents
 \end_layout
 
-\begin_layout Standard
-TODO
+\begin_layout Itemize
+Design Document of previous year published on Beep.
+\end_layout
+
+\begin_layout Itemize
+Software Design & Software Architecture slides on Beep
+\end_layout
+
+\begin_layout Itemize
+Architectural Styles on Beep
+\end_layout
+
+\begin_layout Itemize
+Software Architectures in Action on Beep
+\end_layout
+
+\begin_layout Itemize
+Java EE 7 Overview on Beep
+\end_layout
+
+\begin_layout Itemize
+Tips and Trick for Supporting Architecture Description with UML on Beep
 \end_layout
 
 \begin_layout Subsection
@@ -505,7 +525,7 @@ Document Structure
 \end_layout
 
 \begin_layout Standard
-TODO
+TODO [ quello che compare a sinistra come indice quando apri il pdf ]
 \end_layout
 
 \begin_layout Standard
@@ -4585,6 +4605,10 @@ Effort spent
 
 \begin_layout Subsection
 Tools used
+\end_layout
+
+\begin_layout Standard
+copiamo dal rasd no? più moqups.com ?
 \end_layout
 
 \begin_layout Subsection
