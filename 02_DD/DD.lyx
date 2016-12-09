@@ -1514,7 +1514,11 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram - Auto searching & Reservation - Page 1.png
 	display false
+<<<<<<< HEAD
 	scale 21
+=======
+	scale 25
+>>>>>>> 721b7d1819a7923cb7a8fcf590dd79f94503f15d
 
 \end_inset
 
@@ -1549,7 +1553,11 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram - Rental Start - Page 1.png
 	display false
+<<<<<<< HEAD
 	scale 19
+=======
+	scale 22.5
+>>>>>>> 721b7d1819a7923cb7a8fcf590dd79f94503f15d
 
 \end_inset
 
