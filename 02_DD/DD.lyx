@@ -526,7 +526,54 @@ Document Structure
 \end_layout
 
 \begin_layout Standard
-TODO [ quello che compare a sinistra come indice quando apri il pdf ]
+The document is structured in the following chapters:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\boldsymbol{Introduction}$
+\end_inset
+
+ This chapter provides general information about this document, it's purpose
+ and the intended public.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\boldsymbol{Architectural\,Design}$
+\end_inset
+
+ This chapter provides details about the components of the system, their
+ interactions and interfaces.
+ The dynamic behaviour is provided as well as a focus on design, styles
+ and pattern choices.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\boldsymbol{Algorithm\,Design}$
+\end_inset
+
+ This chapter provides and discusses about the most interesting algorithms
+ to be implemented in the system.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\boldsymbol{User\,Interfaces\,Design}$
+\end_inset
+
+ This chapter provides some elements mockups for the user interfaces to
+ be developed.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\boldsymbol{Requirements\,Traceability}$
+\end_inset
+
+ This chapter shows how all the functional requirements stated in the RASD
+ document are statisfied by architectural choices.
 \end_layout
 
 \begin_layout Standard
@@ -1569,6 +1616,46 @@ Rental beginning process - Sequence diagram
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Sequence Diagram - Rent finished - Page 1.png
+	display false
+	scale 35
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rental finished - Sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Component interfaces
 \begin_inset CommandInset label
@@ -1694,7 +1781,7 @@ on to the account.
 <column alignment="left" valignment="top" width="15line%">
 <column alignment="left" valignment="top" width="35line%">
 <column alignment="left" valignment="top" width="50line%">
-<row newpage="true">
+<row>
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
