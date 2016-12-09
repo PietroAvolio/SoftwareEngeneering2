@@ -1439,12 +1439,12 @@ name "subsec:Runtime-view"
 \end_layout
 
 \begin_layout Standard
-In this section we will expand some scenario in order to clarify how dynamically
- works the components shown in section 2.2 through sequence diagrams.
+In this section we will expand some scenario from the RASD document in order
+ to clarify the dinamic behaviour of the system.
 \end_layout
 
 \begin_layout Standard
-We will represent entities of database via the Java Persistence API.
+Entities of database are represented using the Java Persistence API.
 \end_layout
 
 \begin_layout Standard
