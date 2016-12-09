@@ -1459,6 +1459,11 @@ For the same aspects, Rest API bean has been put between transactions that
 \end_layout
 
 \begin_layout Standard
+Where response appears, it is intended as a return message of a previous
+ call method.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -1920,7 +1925,7 @@ Registration result code
 \begin_inset Text
 
 \begin_layout Plain Layout
-documents_info
+documents
 \end_layout
 
 \end_inset
@@ -1997,7 +2002,7 @@ Operation result code
 \begin_inset Text
 
 \begin_layout Plain Layout
-payment_info
+payment
 \end_layout
 
 \end_inset
@@ -2997,6 +3002,14 @@ Reservations Manager
  This interface point allows a logged-in user to cancel an active reservation.
 \end_layout
 
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{show reservation}$
+\end_inset
+
+ This interface point allows a logged-in user to show an active reservation.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
@@ -3416,6 +3429,10 @@ vehicle_token
 event_type [ENGINE_ON | ENGINE_OFF]
 \end_layout
 
+\begin_layout Itemize
+status
+\end_layout
+
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
@@ -3677,6 +3694,10 @@ The design pattern we follow for the project building is the well known
 \begin_layout Standard
 Regarding how about concern the storage of passwords we have to deal with,
  we have decided....(non la so bene nel dettaglio questa parte)
+\end_layout
+
+\begin_layout Standard
+Idem per payment sensibile information ( dove li salviamo?)
 \end_layout
 
 \begin_layout Section
