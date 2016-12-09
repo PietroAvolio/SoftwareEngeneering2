@@ -872,6 +872,14 @@ reference "fig:Component-diagram-core"
 .
 \end_layout
 
+\begin_layout Standard
+All the beans uses the Log Manager and the REST API Manager, thus there
+ are no shown connections to this beans in the diagram for the sake of readabili
+ty.
+ Also, all the beans inside the same container can interact one with each
+ other.
+\end_layout
+
 \begin_layout Subsubsection*
 User Manager
 \end_layout
@@ -1040,7 +1048,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
+\align left
 \begin_inset Graphics
 	filename images/2.3) Components of the Core  - Page 1.png
 	lyxscale 14
@@ -1054,11 +1062,7 @@ status open
 
 \begin_layout Plain Layout
 Component diagram of Power Enjoy Core.
- All the beans uses the Log Manager and the REST API Manager, thus there
- are no shown connections to this beans in the diagram for the sake of readabili
-ty.
- Also, all the beans inside the same container can interact one with each
- other.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Component-diagram-core"
@@ -1073,13 +1077,6 @@ name "fig:Component-diagram-core"
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -1396,7 +1393,7 @@ status open
 \begin_inset Graphics
 	filename images/Deplyment diagram - Page 1.png
 	display false
-	scale 24
+	scale 22
 
 \end_inset
 
@@ -1440,27 +1437,15 @@ name "subsec:Runtime-view"
 
 \begin_layout Standard
 In this section we will expand some scenario from the RASD document in order
- to clarify the dinamic behaviour of the system.
+ to clarify the dinamic behaviour of the system.Entities of database are
+ represented using the Java Persistence API.
 \end_layout
 
 \begin_layout Standard
-Entities of database are represented using the Java Persistence API.
-\end_layout
-
-\begin_layout Standard
-For the sake of simplicity, Log Manager bean is shown in every sequence
- diagram and it's intended to register every action.
-\end_layout
-
-\begin_layout Standard
-For the same aspects, Rest API bean has been put between transactions that
- require it.
+For the sake of simplicity, the log manager bean is shown in every sequence
+ because it is intended to register every action The Rest API bean has been
+ put between transactions that require it.
  
-\end_layout
-
-\begin_layout Standard
-Where response appears, it is intended as a return message of a previous
- call method.
 \end_layout
 
 \begin_layout Standard
@@ -1474,10 +1459,11 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Sequence Diagram - Registration - Page 1.png
 	display false
-	scale 21
+	scale 28
 
 \end_inset
 
@@ -1505,14 +1491,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Sequence Diagram - Auto searching & Reservation - Page 1.png
 	display false
-	scale 21
+	scale 25.5
 
 \end_inset
 
@@ -1540,14 +1523,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Sequence Diagram - Rental Start - Page 1.png
 	display false
-	scale 19
+	scale 23.5
 
 \end_inset
 
@@ -3007,12 +2987,13 @@ Reservations Manager
 \begin_inset Formula $\mathit{show reservation}$
 \end_inset
 
- This interface point allows a logged-in user to show an active reservation.
+ This interface point allows a logged-in user to get an active reservation,
+ if any.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
+<lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle" tabularwidth="100col%">
 <column alignment="left" valignment="top" width="15col%">
 <column alignment="left" valignment="top" width="35col%">
@@ -3184,6 +3165,67 @@ vspace{-16pt}
 
 \begin_layout Itemize
 Operation result code
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+show_reservation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-16pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+authentication_token
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-16pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+[O] User's active reservation
 \end_layout
 
 \end_inset
