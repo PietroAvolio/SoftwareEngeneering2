@@ -3695,28 +3695,80 @@ name "subsec:Selected-architectural-styles"
 \end_layout
 
 \begin_layout Standard
-About the architectural style, the client&server style is approached in
- our 3 layers architecture.
- As specify before, we have thin client (PowerEnJoy Mobile App and PowerEnJoy
- Control Room), one server (PowerEnJoy Core) and one database server (MySql
- and NoSql).
+The main architectural style for the system is the client-server one, splitted
+ on four logical layers and three physical layers.
 \end_layout
 
 \begin_layout Standard
-The design pattern we follow for the project building is the well known
- MVC, suggested for every object oriented project.
- So we can separate the Model, which work is to manage data, from the View,
- a sort of presentation layer.
- In order to match these component we will count on the Controller component.
+The main design pattern to adopt is the well known MVC, suggested for every
+ object oriented project.
+ In this way we can easily separate the model, which main purpose is to
+ manage the data, from the view, which is the presentation layer, and from
+ the controller, which main purpose is to manage the other two components.
+\end_layout
+
+\begin_layout Subsubsection
+Passwords and other sensible data
 \end_layout
 
 \begin_layout Standard
-Regarding how about concern the storage of passwords we have to deal with,
- we have decided....(non la so bene nel dettaglio questa parte)
+The system collects users' passwords and other kind of sensible data (e.g.
+ mobile phone number, email address, home address) and a series of logs
+ about the vehicles that could be used to track the users.
+ For this reason, the database must be protected both physically and logically
+ in order to avoid any kind of data loss.
 \end_layout
 
 \begin_layout Standard
-Idem per payment sensibile information ( dove li salviamo?)
+Passwords should be salted and encrypted using the most advanced algorithms.
+\end_layout
+
+\begin_layout Subsubsection
+Maps
+\end_layout
+
+\begin_layout Standard
+The system massively uses maps as an immediate way to visualize the vehicles.
+ Also geocoding and distances calculation are used in all the components
+ of the system.
+ 
+\begin_inset Formula $\mathit{GoogleMaps}$
+\end_inset
+
+ is the most suitable external service to satisfy all the these needs on
+ both the client and the server side.
+\end_layout
+
+\begin_layout Subsubsection
+Communication with vehicles
+\end_layout
+
+\begin_layout Standard
+To communicate with the vehicles is a key requirement of the system, mainly
+ for what concers security.
+ In order to avoid that malicious users can take control over the vehicles
+ - and maybe unlock them - the on board information system should accept
+ commands from the PowerEnJoy Core only.
+ This can be achieved by using TLS certificates and encrypted communications.
+\end_layout
+
+\begin_layout Subsubsection
+Reliability and availability
+\end_layout
+
+\begin_layout Standard
+As stated in the RASD document (sections 3.2.1 and 3.2.2), reliability and availabil
+ity are core requirements for the system.
+ In order to achieve them, a combination of redundancy and parallelization
+ appears as the most suitable solution.
+ The deployment architectur we described in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Deployment-view"
+
+\end_inset
+
+ is engineered in order to easily support scalability and parallelism.
 \end_layout
 
 \begin_layout Section
@@ -3724,8 +3776,8 @@ Algorithm Design
 \end_layout
 
 \begin_layout Standard
-In this section we want to provide an outline of the main algorithms that
- are applied to our system.
+In this section we want to provide an outline of the main and more interesting
+ algorithms that are applied in the system.
 \end_layout
 
 \begin_layout Standard
@@ -3773,12 +3825,189 @@ In this section we include some mockups of both the mobile application and
  This mockups are styleless and does not refer to any specific platform:
  the purpose of this section is to provide details about the structural
  elements of the user interface but not their style.
- [ qua come siamo messi? ti serve una mano per qualcosa? ti ho un po' abbandonat
-o su questa sezione ]
 \end_layout
 
 \begin_layout Subsection
 PowerEnJoy Mobile Application
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename images/MobileMockups_0.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PowerEnJoy Mobile Application mockup 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename images/MobileMockups_1.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PowerEnJoy Mobile Application mockup 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename images/MobileMockups_2.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PowerEnJoy Mobile Application mockup 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename images/MobileMockups_3.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PowerEnJoy Mobile Application mockup 4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename images/MobileMockups_4.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PowerEnJoy Mobile Application mockup 5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3791,16 +4020,15 @@ Requirements Traceability
 
 \begin_layout Standard
 The aim of this document is to optimally design the requirements and goals
- shown in the previous document (RASD).
- 
+ shown in the RASD document.
 \end_layout
 
 \begin_layout Standard
-Here we logically match them with feature explained during this Design Document.
+Here we logically match them with feature explained in this Design Document.
 \end_layout
 
 \begin_layout Subsection
-Functional Requirements link:
+Functional requirements:
 \end_layout
 
 \begin_layout Standard
@@ -4571,7 +4799,7 @@ The system can mark a vehicle as AVAILABLE when its status is NOT AVAILABLE
 \end_layout
 
 \begin_layout Subsection
-Non-functional requirements link:
+Non-functional requirements:
 \end_layout
 
 \begin_layout Standard
