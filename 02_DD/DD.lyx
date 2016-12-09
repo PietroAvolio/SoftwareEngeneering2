@@ -1495,7 +1495,7 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram - Auto searching & Reservation - Page 1.png
 	display false
-	scale 25.5
+	scale 25
 
 \end_inset
 
@@ -1527,7 +1527,7 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram - Rental Start - Page 1.png
 	display false
-	scale 23.5
+	scale 22.5
 
 \end_inset
 
