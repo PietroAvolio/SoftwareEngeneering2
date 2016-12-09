@@ -1459,6 +1459,11 @@ For the same aspects, Rest API bean has been put between transactions that
 \end_layout
 
 \begin_layout Standard
+Where response appears, it is intended as a return message of a previous
+ call method.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -1920,7 +1925,7 @@ Registration result code
 \begin_inset Text
 
 \begin_layout Plain Layout
-documents_info
+documents
 \end_layout
 
 \end_inset
@@ -1997,7 +2002,7 @@ Operation result code
 \begin_inset Text
 
 \begin_layout Plain Layout
-payment_info
+payment
 \end_layout
 
 \end_inset
@@ -2997,6 +3002,14 @@ Reservations Manager
  This interface point allows a logged-in user to cancel an active reservation.
 \end_layout
 
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\mathit{show reservation}$
+\end_inset
+
+ This interface point allows a logged-in user to show an active reservation.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
@@ -3416,6 +3429,10 @@ vehicle_token
 event_type [ENGINE_ON | ENGINE_OFF]
 \end_layout
 
+\begin_layout Itemize
+status
+\end_layout
+
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
@@ -3658,6 +3675,31 @@ name "subsec:Selected-architectural-styles"
 
 \end_layout
 
+\begin_layout Standard
+About the architectural style, the client&server style is approached in
+ our 3 layers architecture.
+ As specify before, we have thin client (PowerEnJoy Mobile App and PowerEnJoy
+ Control Room), one server (PowerEnJoy Core) and one database server (MySql
+ and NoSql).
+\end_layout
+
+\begin_layout Standard
+The design pattern we follow for the project building is the well known
+ MVC, suggested for every object oriented project.
+ So we can separate the Model, which work is to manage data, from the View,
+ a sort of presentation layer.
+ In order to match these component we will count on the Controller component.
+\end_layout
+
+\begin_layout Standard
+Regarding how about concern the storage of passwords we have to deal with,
+ we have decided....(non la so bene nel dettaglio questa parte)
+\end_layout
+
+\begin_layout Standard
+Idem per payment sensibile information ( dove li salviamo?)
+\end_layout
+
 \begin_layout Section
 Algorithm Design
 \end_layout
@@ -3691,11 +3733,11 @@ Furthermore, this chapter should be intended as the mainly guidance for
 \end_layout
 
 \begin_layout Subsection*
-Primo algoritmo: scenario?
+Primo algoritmo: ricerca auto e reservation?
 \end_layout
 
 \begin_layout Subsection*
-Secondo algoritmo: scenario?
+Secondo algoritmo: rental?
 \end_layout
 
 \begin_layout Subsection*
@@ -3732,12 +3774,22 @@ Requirements Traceability
 NB: ricordarsi di cavare quella roba dal rasd
 \end_layout
 
-\begin_layout Section
-Appendix
+\begin_layout Standard
+The aim of this document is to optimally design the requirements and goals
+ shown in the previous document (RASD).
+ 
 \end_layout
 
 \begin_layout Standard
-NB: ricordarsi menzionare Tanca
+Here we logically match them with feature explained during this Design Document.
+\end_layout
+
+\begin_layout Standard
+So, ..........(metteremo una tabella? o una cosa scritta? )
+\end_layout
+
+\begin_layout Section
+Effort spent
 \end_layout
 
 \begin_layout Subsection
@@ -3746,6 +3798,14 @@ Tools used
 
 \begin_layout Subsection
 Working hours tracking
+\end_layout
+
+\begin_layout Section
+References
+\end_layout
+
+\begin_layout Standard
+NB: ricordarsi menzionare Tanca
 \end_layout
 
 \end_body
