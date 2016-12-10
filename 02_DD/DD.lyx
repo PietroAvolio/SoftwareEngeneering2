@@ -2675,7 +2675,7 @@ Operation result code
 \begin_inset Text
 
 \begin_layout Plain Layout
-charge_driving_
+charge_driving
 \begin_inset Newline newline
 \end_inset
 
@@ -3604,7 +3604,7 @@ For the way we structured the whole architecture, we just require that the
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="3">
+<lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle" tabularwidth="100col%">
 <column alignment="left" valignment="top" width="15col%">
 <column alignment="left" valignment="top" width="35col%">
@@ -3716,6 +3716,71 @@ mechanical_status
 \end_inset
 </cell>
 </row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+command	
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+• type [LOCK_DOORS | UNLOCK_DOORS | RENTALEND_OK | RENTALEND_KO ]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+	• response_code
+\end_layout
+
+\end_inset
+</cell>
+</row>
 </lyxtabular>
 
 \end_inset
@@ -3800,8 +3865,9 @@ Passwords and other sensible data
 
 \begin_layout Standard
 The system collects users' passwords and other kind of sensible data (e.g.
- mobile phone number, email address, home address) and a series of logs
- about the vehicles that could be used to track the users.
+ mobile phone number, email address, home address, payment information)
+ and a series of logs about the vehicles that could be used to track the
+ users.
  For this reason, the database must be protected both physically and logically
  in order to avoid any kind of data loss.
 \end_layout
@@ -3822,8 +3888,8 @@ The system massively uses maps as an immediate way to visualize the vehicles.
 \begin_inset Formula $\mathit{GoogleMaps}$
 \end_inset
 
- is the most suitable external service to satisfy all the these needs on
- both the client and the server side.
+ is the most suitable external service to satisfy all these needs on both
+ the client and the server side.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3832,7 +3898,7 @@ Communication with vehicles
 
 \begin_layout Standard
 To communicate with the vehicles is a key requirement of the system, mainly
- for what concers security.
+ for what concerns security.
  In order to avoid that malicious users can take control over the vehicles
  - and maybe unlock them - the on board information system should accept
  commands from the PowerEnJoy Core only.
@@ -3848,7 +3914,7 @@ As stated in the RASD document (sections 3.2.1 and 3.2.2), reliability and avail
 ity are core requirements for the system.
  In order to achieve them, a combination of redundancy and parallelization
  appears as the most suitable solution.
- The deployment architectur we described in section 
+ The deployment architecture we described in section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Deployment-view"
@@ -5357,7 +5423,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-33
+35.5
 \end_layout
 
 \end_inset
@@ -5368,14 +5434,6 @@ Guido Borrelli
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-References
-\end_layout
-
-\begin_layout Standard
-NB: ricordarsi menzionare Tanca
 \end_layout
 
 \end_body
