@@ -1627,7 +1627,7 @@ status open
 \begin_inset Graphics
 	filename images/Sequence Diagram - Rent finished - Page 1.png
 	display false
-	scale 35
+	scale 30
 	rotateAngle 90
 
 \end_inset
@@ -3884,7 +3884,7 @@ This algorithm represents the procedure issued when the user wants to make
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "language=Java,breaklines=true"
+lstparams "language=Java,basicstyle={\small},breaklines=true,tabsize=4"
 inline false
 status open
 
