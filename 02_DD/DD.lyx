@@ -5285,19 +5285,6 @@ The system can mark a vehicle as AVAILABLE when its status is NOT AVAILABLE
 
 \end_layout
 
-\begin_layout Subsection
-RASD updates
-\end_layout
-
-\begin_layout Standard
-During this production, we apply some refinement to the RASD.
-\end_layout
-
-\begin_layout Standard
-[NB: ricordarsi di cavare quella roba dal rasd e segnare versione 1.1 del
- rasd]
-\end_layout
-
 \begin_layout Section
 Effort spent
 \end_layout
@@ -5306,12 +5293,81 @@ Effort spent
 Tools used
 \end_layout
 
-\begin_layout Standard
-copiamo dal rasd no? più moqups.com ?
+\begin_layout Itemize
+LyX as LaTeX editor.
+\end_layout
+
+\begin_layout Itemize
+Moqups.com for mockups.
+\end_layout
+
+\begin_layout Itemize
+Lucidchart for diagrams.
+\end_layout
+
+\begin_layout Itemize
+Github as version controller.
+\end_layout
+
+\begin_layout Itemize
+Google docs for beta documents sharing.
 \end_layout
 
 \begin_layout Subsection
 Working hours tracking
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pietro Avolio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Guido Borrelli
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+33
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
