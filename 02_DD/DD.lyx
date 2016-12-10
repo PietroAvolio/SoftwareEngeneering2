@@ -1164,7 +1164,7 @@ The web server is implemented using Java EE specific HTTP servlet and HTML5,
 \begin_layout Standard
 This component does not implement any part of the business logic, but it
  communicates with the application server by using its RESTfil APIs.
- It can be accessed by operators using a standard web browser and the HTTPs
+ It can be accessed by operators using a standard web browser and the HTTPS
  protocol.
 \begin_inset Newline newline
 \end_inset
@@ -1334,7 +1334,7 @@ http://www.trendoo.it
 
 .
  Details on the communication between the system and the gateway is provided
- in section 
+ are section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Application-server-to-external-components"
@@ -1362,7 +1362,7 @@ https://www.gestpay.it/gestpay/index.jsp
 \end_inset
 
 .
- Details on the communication between the system and the gateway is provided
+ Details on the communication between the system and the gateway are provided
  in section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1392,7 +1392,7 @@ https://firebase.google.com/
 \end_inset
 
 .
- Details on the communication between the system and the gateway is provided
+ Details on the communication between the system and the gateway are provided
  in section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4356,6 +4356,126 @@ boolean rentalEnded(Rental r){
 \begin_layout Plain Layout
 
 	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Fee calculation
+\end_layout
+
+\begin_layout Standard
+This algorithm is part of the Pricing Policies Manager bean.
+ This algorithm is more interesting from the design structure of the code
+ rather then the code complexity itself.
+ PricingPolicies should be implemented as objects implementing the PricingPolicy
+ interface.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,basicstyle={\small},breaklines=true,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+double static calculateFee(Rental r){
+\end_layout
+
+\begin_layout Plain Layout
+
+	/* We first calculate the base price by multiplicand the duration of the
+ rental and the price per minute */
+\end_layout
+
+\begin_layout Plain Layout
+
+	double price = r.getTime() * PRICE_PER_MINUTE;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	/* We first apply all the discounts */
+\end_layout
+
+\begin_layout Plain Layout
+
+	for(PricingPolicy pp : discounts){
+\end_layout
+
+\begin_layout Plain Layout
+
+		price = pp.apply(r, price);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	/* We then apply all the surcharges */
+\end_layout
+
+\begin_layout Plain Layout
+
+	for(PricingPolicy p : surcharges){
+\end_layout
+
+\begin_layout Plain Layout
+
+		price = pp.apply(r, price);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	return price;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+interface PricingPolicy{
+\end_layout
+
+\begin_layout Plain Layout
+
+	double static apply(Rental r, double currentFee);
 \end_layout
 
 \begin_layout Plain Layout
