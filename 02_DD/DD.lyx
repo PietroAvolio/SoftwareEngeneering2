@@ -4472,7 +4472,7 @@ Logged-in users can not have a reservation and a rental at the same time.
 \begin_inset Text
 
 \begin_layout Plain Layout
-* External - Google Maps
+External - Google Maps
 \end_layout
 
 \end_inset
@@ -4694,7 +4694,7 @@ Operators can reply to a user's support request.
 \begin_inset Text
 
 \begin_layout Plain Layout
-*Operators Manager
+Operators Manager
 \end_layout
 
 \end_inset
@@ -4715,7 +4715,7 @@ Operators can change the status of a system notication in OPEN; HANDLING,
 \begin_inset Text
 
 \begin_layout Plain Layout
-*Operators Manager
+Operators Manager
 \end_layout
 
 \end_inset
@@ -4838,7 +4838,7 @@ The component can handle payment failures.
 \begin_inset Text
 
 \begin_layout Plain Layout
-*All
+All
 \end_layout
 
 \end_inset
@@ -4941,7 +4941,7 @@ The system can generate monthly invoices and sent them to the users on their
 \begin_inset Text
 
 \begin_layout Plain Layout
-*Vehicle Manager
+Vehicle Manager
 \end_layout
 
 \end_inset
@@ -4961,7 +4961,7 @@ The system can detect when a vehicle reservation expires.
 \begin_inset Text
 
 \begin_layout Plain Layout
-*Vehicle Manager
+Vehicle Manager
 \end_layout
 
 \end_inset
@@ -4982,7 +4982,7 @@ The system can mark a vehicle as NOT AVAILABLE when its battery level is
 \begin_inset Text
 
 \begin_layout Plain Layout
-*Vehicle Manager
+Vehicle Manager
 \end_layout
 
 \end_inset
@@ -5003,15 +5003,6 @@ The system can mark a vehicle as AVAILABLE when its status is NOT AVAILABLE
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Non-functional requirements:
-\end_layout
-
-\begin_layout Standard
-For what concern the non-functional requirements (2.2.2 section of the RASD),
- these are not mainly argument of the Design Document.
 \end_layout
 
 \begin_layout Subsection
