@@ -588,7 +588,7 @@ Architectural Design
 \end_layout
 
 \begin_layout Standard
-This section provides a very datailed view over the system architecture
+This section provides a very detailed view over the system architecture
  and its components, describing them at both the logical and physical level.
 \end_layout
 
@@ -900,7 +900,7 @@ Application Server
 \end_layout
 
 \begin_layout Standard
-The application server is where the PowerEnJoy Core is executed and were
+The application server is where the PowerEnJoy Core is executed and where
  all the business logic is.
  It is implemented using Java EE and it runs on a GlassFish Server.
  
@@ -1014,7 +1014,7 @@ Rentals Handler
 \begin_layout Standard
 Exactly like the Reservations Handler, this bean manages the insertion,
  the update, the deletion and the expiry of users rentals.
- It is responsable for handling the user's request to unlock the doors of
+ It is responsible for handling the user's request to unlock the doors of
  a vehicle.
 \end_layout
 
@@ -3999,12 +3999,292 @@ TIME);
 
 \begin_layout Plain Layout
 
-		/* If the reservation can not be create we simply return NULL */
+		/* If the reservation can not be created we simply return NULL */
 \end_layout
 
 \begin_layout Plain Layout
 
 		return NULL;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Unlock Doors
+\end_layout
+
+\begin_layout Standard
+This algorithm represents the procedure issued when the user with an active
+ reservation over a vehicle wants to unlock the doors of the vehicle.
+ This algorithm is part of the Rentals Handler bean.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+boolean unlockDoors(Vehicle v, User u, Coordinates userPosition){
+\end_layout
+
+\begin_layout Plain Layout
+
+	/* We first check if the user has an active reservation over the vehicle,
+ then we check if he is nearby */
+\end_layout
+
+\begin_layout Plain Layout
+
+	if(v.getStatus == STATUS_RESERVED && this.getReservation(u).getVehicle().equals(v)
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		&& Math.euclideanDistance(userPosition, VehicleManager.getForVehicle(v).getPositi
+on()) < MAX_DISTANCE_FROM_VEHICLE_TO_UNLOCK){
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We use the vehicle manager to send the command to the vehicle */
+\end_layout
+
+\begin_layout Plain Layout
+
+		VehicleManager.getForVehicle(v).unlockDoors();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We log the activity */
+\end_layout
+
+\begin_layout Plain Layout
+
+		LogManager.log(LOG_VEHICLE_ACTIVITY, "Doors unlocked by" + u);
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		return TRUE;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	return FALSE;	
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rental ended
+\end_layout
+
+\begin_layout Standard
+This algorithm is applied in the Rentals Handler when a rental is ended.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+boolean rentalEnded(Rental r){
+\end_layout
+
+\begin_layout Plain Layout
+
+	Vehicle v = r.getVehicle();
+\end_layout
+
+\begin_layout Plain Layout
+
+	User u = u.getUser();
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	/* The rental can be terminated only inside a safe area */
+\end_layout
+
+\begin_layout Plain Layout
+
+	if(v.isInSafeArea()){
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We calculate the fee and we charge the user */
+\end_layout
+
+\begin_layout Plain Layout
+
+		double rentalFee = PricingPolicyManager.calculateFee(r);
+\end_layout
+
+\begin_layout Plain Layout
+
+		PaymentHandler.chargeUser(u, rentalFee);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We update the rental object and the database */
+\end_layout
+
+\begin_layout Plain Layout
+
+		r.setEndend(System.currentTime());
+\end_layout
+
+\begin_layout Plain Layout
+
+		JPA.updateRental(r);
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* Based on the battery level, we change the status of the vehicle */
+\end_layout
+
+\begin_layout Plain Layout
+
+		VehicleManager vehicleManager = VehicleManager.getForVehicle(v);
+\end_layout
+
+\begin_layout Plain Layout
+
+		if(v.getBatteryLevel() > 20){
+\end_layout
+
+\begin_layout Plain Layout
+
+			vehicleManager.changeStatus(STATUS_AVAILABLE);
+\end_layout
+
+\begin_layout Plain Layout
+
+		}else{
+\end_layout
+
+\begin_layout Plain Layout
+
+			vehicleManager.changeStatus(STATUS_UNAVAILABLE);
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We log the operation */
+\end_layout
+
+\begin_layout Plain Layout
+
+		LogManager.log(r + "terminated");
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		return TRUE;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}else{
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We notify the user via sms too */
+\end_layout
+
+\begin_layout Plain Layout
+
+		SmsSender.send(u, OUTSIDE_SAFE_AREA);
+\end_layout
+
+\begin_layout Plain Layout
+
+		return FALSE;
 \end_layout
 
 \begin_layout Plain Layout
