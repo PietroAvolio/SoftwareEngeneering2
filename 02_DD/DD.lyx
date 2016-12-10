@@ -3863,43 +3863,163 @@ Algorithm Design
 \end_layout
 
 \begin_layout Standard
-In this section we want to provide an outline of the main and more interesting
- algorithms that are applied in the system.
-\end_layout
-
-\begin_layout Standard
-As stated before, in PowerEnJoy core will be allocated our logic and in
- PowerEnJoy Mobile and PowerEnJoy Control Room we will offer a presentation
- layer.
-\end_layout
-
-\begin_layout Standard
-We are going to show these algorithms in pseudocode because of the reasonable
- tradeoff of expressivity and simplicity.
- 
-\end_layout
-
-\begin_layout Standard
-They will represent high-idea procedures in order to not give any restrictions
+In this section we want to provide an outline of the main and the more interesti
+ng algorithm used by the system.
+ Algorithms are detailed using java-like pseudocode and textual descriptions
+ because of the reasonable tradeoff between expressivity and simplicity.
+ They will represent high-idea procedures in order to not give any restrictions
  for future coding implementations.
  
 \end_layout
 
+\begin_layout Subsection
+New reservation
+\end_layout
+
 \begin_layout Standard
-Furthermore, this chapter should be intended as the mainly guidance for
- source of informations by developers.
+This algorithm represents the procedure issued when the user wants to make
+ a new reservation over a vehicle.
+ This algorithm is part of the Reservations Handler bean.
 \end_layout
 
-\begin_layout Subsection*
-Primo algoritmo: ricerca auto e reservation?
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Reservation newReservation(Vehicle v, User u){
 \end_layout
 
-\begin_layout Subsection*
-Secondo algoritmo: rental?
+\begin_layout Plain Layout
+
+	/* We first check that the vehicle is available and that the user can make
+ a reservation*/
 \end_layout
 
-\begin_layout Subsection*
-Terzo algoritmo: scenario?
+\begin_layout Plain Layout
+
+	if(v.getStatus() == STATUS_AVAILABLE && u.isEnable() && this.getReservation(u)
+ == NULL && RentalsManager.getRental(u) == NULL){
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We create a reservation object containing the vehicle, the user, the
+ start time and the expiration time */
+\end_layout
+
+\begin_layout Plain Layout
+
+		Reservation r = new Reservation(v, u, System.currentTime(), System.currentTime()
++RESERVATIONS_EXPIRY_TIME);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We change the status of the vehicle using the VehicleManager */
+\end_layout
+
+\begin_layout Plain Layout
+
+		VehicleManager.getForVehicle(v).changeStatus(STATUS_RESERVED);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We store the reservation in the database using the JavaPersistenceApi*/
+\end_layout
+
+\begin_layout Plain Layout
+
+		JPA.storeReservation(r);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We schedule a task to handle the expiry of the reservation */
+\end_layout
+
+\begin_layout Plain Layout
+
+		new Handler().executePostDelayed(this.reservationExpiry(r), RESERVATIONS_EXPIRY_
+TIME);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We add something in the log related to user's activity */
+\end_layout
+
+\begin_layout Plain Layout
+
+		LogManager.log(LOG_USER_ACTIVITY, u, "Reserved " + v);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* We return the newly created reservation */
+\end_layout
+
+\begin_layout Plain Layout
+
+		return r;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	}else{
+\end_layout
+
+\begin_layout Plain Layout
+
+		/* If the reservation can not be create we simply return NULL */
+\end_layout
+
+\begin_layout Plain Layout
+
+		return NULL;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
