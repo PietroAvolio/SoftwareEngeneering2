@@ -1084,8 +1084,7 @@ Push Notifications Sender
 
 \begin_layout Standard
 This bean allows the system to send push notifications to a specific user
- or to a group of users.This bean allows the system to send push notifications
- to a specific user or to a group of users.
+ or to a group of users.
  It provides an interface to the Push Notifications Gateway.
 \end_layout
 
