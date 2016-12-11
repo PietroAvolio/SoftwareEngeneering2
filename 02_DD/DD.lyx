@@ -1003,7 +1003,7 @@ This bean manages all the aspects relative to reservations: insert, update,
  delete and expiry.
  When a reservation is requested over a vehicle it is handled directly by
  this bean.
- When a reservation expires, this bean communicates with the Pricing Polciies
+ When a reservation expires, this bean communicates with the Pricing Policies
  Manager and with the Payment Handler in order to charge the user.
 \end_layout
 
@@ -1056,7 +1056,7 @@ CronTasks Manager
 \begin_layout Standard
 This bean manages all the tasks that must be executed periodically, such
  as to retrieve the users to notify when their documents are about to expire
- and it generates internal support request needed to be handled by operators.
+ and it generates internal support requests to be handled by operators.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1065,7 +1065,7 @@ Support Requests Handler
 
 \begin_layout Standard
 This bean is in charge of the insert, update, and delete of support requests
- forwared by customers.
+ forwarded by customers.
  These request are later handled personally by the company operators.
 \end_layout
 
@@ -1083,8 +1083,8 @@ Push Notifications Sender
 \end_layout
 
 \begin_layout Standard
-This bean allows the system to send push notifications to a specific ouser
- r to a group of users.
+This bean allows the system to send push notifications to a specific user
+ or to a group of users.
  It provides an interface to the Push Notifications Gateway.
 \end_layout
 
@@ -1333,8 +1333,8 @@ http://www.trendoo.it
 \end_inset
 
 .
- Details on the communication between the system and the gateway is provided
- are section 
+ Details on the communication between the system and the gateway are provided
+ in section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Application-server-to-external-components"
@@ -1511,8 +1511,8 @@ In this section we will expand some scenarios from the RASD document with
 
 \begin_layout Standard
 For the sake of simplicity, the log manager bean is shown in every sequence
- because it is intended to register every action The Rest API Manager bean
- is put between transactions that require it.
+ because it is intended to register every action.
+ The Rest API Manager bean is put between transactions that require it.
  
 \end_layout
 
@@ -1672,7 +1672,7 @@ Application server to database
 \end_layout
 
 \begin_layout Standard
-The communication beetwen the application server and the two databases goes
+The communication between the application server and the two databases goes
  using standard TCP/IP protocol on two different network ports.
  Both the relational and the NoSQL databases are abstracted in the application
  core by using the Java Persistence APIs, which use the correct SQL dialect
@@ -1701,14 +1701,14 @@ name "subsec:Application-server-to-clients"
 \begin_layout Standard
 The clients and the application core communicate by using REST APIs over
  the HTTPS protocol.
- Requests are forwarded using the POST parameters, while responses are encoded
+ Requests are forwarded using POST parameters, while responses are encoded
  in the JSON format.
  
 \end_layout
 
 \begin_layout Standard
-In the following pages, we list the detailed rest APIs implemented by the
- beans.
+In the following pages, we list and detail the REST APIs implemented by
+ the beans.
  Parameters marked with an 
 \begin_inset Formula $\mathit{O}$
 \end_inset
@@ -1728,7 +1728,7 @@ User Manager
  This interface point allows registered user to log in using username and
  password.
  If the credentials are correct, the response contains an authentication_token
- to be sent as paramtere in further communications.
+ to be sent as a parameter in further communications.
 \end_layout
 
 \begin_layout Labeling
@@ -3320,7 +3320,7 @@ Rentals Handler
 
  This interface point allows a logged-in user with an active reservation
  over a vehicle to unlock the doors of the vehicle.
- The operation is succesful only if the user nearby (< 100 mt) the vehicle.
+ The operation is succesful only if the user is nearby (< 100 mt) the vehicle.
 \end_layout
 
 \begin_layout Standard
@@ -3854,9 +3854,9 @@ The main architectural style for the system is the client-server one, splitted
 \begin_layout Standard
 The main design pattern to adopt is the well known MVC, suggested for every
  object oriented project.
- In this way we can easily separate the model, which main purpose is to
+ In this way we can easily separate the model, whose main purpose is to
  manage the data, from the view, which is the presentation layer, and from
- the controller, which main purpose is to manage the other two components.
+ the controller, whose main purpose is to manage the other two components.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3914,7 +3914,7 @@ As stated in the RASD document (sections 3.2.1 and 3.2.2), reliability and avail
 ity are core requirements for the system.
  In order to achieve them, a combination of redundancy and parallelization
  appears as the most suitable solution.
- The deployment architecture we described in section 
+ The deployment architecture described in section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Deployment-view"
@@ -4022,8 +4022,8 @@ Reservation newReservation(Vehicle v, User u){
 
 \begin_layout Plain Layout
 
-		new Handler().executePostDelayed(this.reservationExpiry(r), RESERVATIONS_EXPIRY_
-TIME);
+		new Handler().executePostDelayed(this.reservationExpiry(r), RESERVATION_EXPIRY_T
+IME);
 \end_layout
 
 \begin_layout Plain Layout
@@ -4100,7 +4100,7 @@ This algorithm represents the procedure issued when the user with an active
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "language=Java"
+lstparams "language=Java,basicstyle={\small},breaklines=true,tabsize=4"
 inline false
 status open
 
@@ -4201,7 +4201,7 @@ This algorithm is applied in the Rentals Handler when a rental is ended.
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "language=Java"
+lstparams "language=Java,basicstyle={\small},breaklines=true,tabsize=4"
 inline false
 status open
 
@@ -4825,7 +4825,7 @@ User Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-Users can search for available vehicles in a specic area using their GPS
+Users can search for available vehicles in a specific area using their GPS
  position or inserting an address.
 \end_layout
 
@@ -4846,7 +4846,7 @@ User Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-Users can see specic vehicle information (i.e.
+Users can see specific vehicle information (i.e.
  vehicle model, battery percentage, estimated kilometers of autonomy).
 \end_layout
 
@@ -5484,7 +5484,7 @@ LyX as LaTeX editor.
 \end_layout
 
 \begin_layout Itemize
-Moqups.com for mockups.
+Moqups for mockups.
 \end_layout
 
 \begin_layout Itemize
@@ -5507,30 +5507,10 @@ Effort spent
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="2">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Pietro Avolio
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-35.5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5539,11 +5519,31 @@ Guido Borrelli
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-35.5
+35
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Guido Borrelli
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35
 \end_layout
 
 \end_inset
