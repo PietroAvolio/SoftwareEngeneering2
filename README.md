@@ -15,4 +15,4 @@ Guido Borrelli 	Mat. 874451
     - [Alloy model](./releases/RASD/alloy model Avolio Borrelli - v1.0.als)
 	
 + Design document. Deadline 11/12/2016:
-	- [PDF Document](./releases/DD/Design Document - v1.0.pdf) 
+	- [PDF Document](./releases/DD/Design Document - v1.0 - with_breaks.pdf) 
