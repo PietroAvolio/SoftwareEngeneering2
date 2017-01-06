@@ -3924,6 +3924,13 @@ reference "subsec:Deployment-view"
  is engineered in order to easily support scalability and parallelism.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Algorithm Design
 \end_layout
@@ -4488,6 +4495,13 @@ interface PricingPolicy{
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 User Interfaces Design
 \end_layout
@@ -4682,8 +4696,11 @@ PowerEnJoy Mobile Application mockup 5
 
 \end_layout
 
-\begin_layout Subsection
-PowerEnJoy Control Room
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -5465,6 +5482,13 @@ The system can mark a vehicle as AVAILABLE when its status is NOT AVAILABLE
 </row>
 </lyxtabular>
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
