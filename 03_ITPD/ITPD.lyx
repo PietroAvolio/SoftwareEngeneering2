@@ -291,8 +291,51 @@ Introduction
 Purpose
 \end_layout
 
+\begin_layout Standard
+The purpose of this Integration Test Plan Document is to provide information
+ on testing-related activities to be performed.
+\end_layout
+
+\begin_layout Standard
+Focus on sequence flow of components and their interaction is mainly spent
+ despite of each single component workload.
+\end_layout
+
+\begin_layout Standard
+-altro lo aggiungeremo quando avremo finito eventualmente-
+\end_layout
+
 \begin_layout Subsection
 Scope
+\end_layout
+
+\begin_layout Standard
+Our software solution provides an autonomosly process in order to rent a
+ car by the customers through their smartphone.
+ 
+\end_layout
+
+\begin_layout Standard
+However, there's an operative staff support in case of out-of-hand event
+ occurs.
+\end_layout
+
+\begin_layout Standard
+A customer is granted to see map position of vehicles and eventually reserving
+ one.
+ 
+\end_layout
+
+\begin_layout Standard
+After a reservation, he will be granted to open the vehicle and start the
+ rent.
+ Otherwise, he could also cancel the reservation if he changed his mind
+ or let the reservation expire and be charged for the reservation expiration.
+\end_layout
+
+\begin_layout Standard
+-altro? ho menzionato a grandi linee i goal e l'aspetto più importante della
+ soluzione software-
 \end_layout
 
 \begin_layout Subsection
@@ -302,7 +345,7 @@ Definitions, acronyms and abbreviations
 \begin_layout Standard
 In order to avoid ambiguity and possible misunderstandings, this table is
  an integration to the definitions, the acronyms and the abbreviations defined
- in the RASD document.
+ in the DD document.
 \begin_inset Newline newline
 \end_inset
 
@@ -311,7 +354,7 @@ In order to avoid ambiguity and possible misunderstandings, this table is
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="2">
+<lyxtabular version="3" rows="2" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -320,7 +363,7 @@ In order to avoid ambiguity and possible misunderstandings, this table is
 \begin_inset Text
 
 \begin_layout Plain Layout
-Relational Data
+JUnit
 \end_layout
 
 \end_inset
@@ -329,107 +372,7 @@ Relational Data
 \begin_inset Text
 
 \begin_layout Plain Layout
-Data structured according to the relational model
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-NoSQL Data
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Data not structured according to the relational model
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RDBMS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Relational Database Management Server
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-NSDBMS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-NoSQL Database Management Server
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Java EE
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Java Enterprise Edition
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-EJB
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Enterprise JavaBeans
+Tool used for unit testing accomplishment
 \end_layout
 
 \end_inset
@@ -440,7 +383,7 @@ Enterprise JavaBeans
 \begin_inset Text
 
 \begin_layout Plain Layout
-JPA
+ITPD
 \end_layout
 
 \end_inset
@@ -449,7 +392,7 @@ JPA
 \begin_inset Text
 
 \begin_layout Plain Layout
-Java Persistence API
+Integration Test Plan Document
 \end_layout
 
 \end_inset
