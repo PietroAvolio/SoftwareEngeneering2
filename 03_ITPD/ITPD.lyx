@@ -302,6 +302,12 @@ Focus on sequence flow of components and their interaction is mainly spent
 \end_layout
 
 \begin_layout Standard
+Integration testing goals are to find: incosistent interpretations of parameters
+, violations of value domains, side effects, omitted functionality, non
+ functional properties and dynamic mismatches.
+\end_layout
+
+\begin_layout Standard
 -altro lo aggiungeremo quando avremo finito eventualmente-
 \end_layout
 
@@ -354,7 +360,7 @@ In order to avoid ambiguity and possible misunderstandings, this table is
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="2">
+<lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -379,7 +385,7 @@ Tool used for unit testing accomplishment
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -388,11 +394,31 @@ ITPD
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Integration Test Plan Document
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mockito
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tool used for mockups creation for unit testing
 \end_layout
 
 \end_inset
@@ -403,6 +429,34 @@ Integration Test Plan Document
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Reference Documents:
+\end_layout
+
+\begin_layout Itemize
+Integration Test Plan Documents of previous year published on Beep and the
+ Dutch one.
+ 
+\end_layout
+
+\begin_layout Itemize
+Testing slides on Beep 
+\end_layout
+
+\begin_layout Itemize
+Architectural Styles on Beep Software Architectures in Action on Beep Java
+ EE 7 Overview on Beep 
+\end_layout
+
+\begin_layout Itemize
+Tips and Trick for Supporting Architecture Description with UML on Beep
+ 3
+\end_layout
+
+\begin_layout Itemize
+https://en.wikipedia.org/wiki/Integration_testing
 \end_layout
 
 \begin_layout Subsection
@@ -479,15 +533,15 @@ Development has to be accomplished according to the DD, with which this
 \end_layout
 
 \begin_layout Standard
-Thus, in order to prevent waste of time during this phase, every component
- (or a consistent percentuage) should be locally unit tested after the developme
-nt.
+Thus, after the development in order to find problems early, facilitates
+ changes and save time generally, every component (or a consistent percentuage)
+ should be locally unit tested.
 \end_layout
 
 \begin_layout Standard
-Than, in order to finally accomplish this Integration Test, could be useful
- to allocate some fake data in the database to verify consistency and correctnes
-s of components work.
+Than, in order to finally accomplish this Integration Test, is necessary
+ to allocate some mockups for unit testing (with Mockito) to allow a consistence
+ test and verify correctness of each components functions.
 \end_layout
 
 \begin_layout Subsection
@@ -550,7 +604,7 @@ Component
 \begin_inset Text
 
 \begin_layout Plain Layout
-Package?
+Subsystem?sarebbero i container?
 \end_layout
 
 \end_inset
@@ -1041,12 +1095,104 @@ Components list for integration
 
 \end_layout
 
+\begin_layout Subsection
+Integration testing strategy
+\end_layout
+
+\begin_layout Standard
+In order to prevent all possible issues coming from typical big bang, we
+ prefer a slowly incremental approach starting from our low level components
+ during our Integration testing.
+ 
+\end_layout
+
+\begin_layout Standard
+In such a way, we are facilitate in bug recognition and location, considered
+ we will have many low level components.
+\end_layout
+
+\begin_layout Standard
+The latter is the reason why our approach choice is that called bottom-up.
+ 
+\end_layout
+
+\begin_layout Subsection
+Integration sequence
+\end_layout
+
+\begin_layout Standard
+(dobbiamo deciderla assieme, immagino non si debba fare a caso ma deve avere
+ senso, tipo: partiamo da quello che non può mancare, la gestione dell'auto,
+ la prenotazione, il noleggio, etc e per ultimo i vari sender e stronzate
+ varie di supporto etc)
+\end_layout
+
+\begin_layout Standard
+For the sake of usability of the partial software integrated and strict
+ dependencies of the components, we adopted in the following figure this
+ reasonable sequence.
+\end_layout
+
+\begin_layout Standard
+(foto del diagramma sequenziale su Lucid)
+\end_layout
+
 \begin_layout Section
-Individual Steps and Test Description
+Test Description
+\end_layout
+
+\begin_layout Subsection
+Test case specification
+\end_layout
+
+\begin_layout Standard
+Here we will schematizes and detail every integration steps of the integration
+ sequence identified in section 2.4.
+\end_layout
+
+\begin_layout Standard
+Una volta decisa la sequenza di integrazione, x ogni step dobbiamo fare
+ una test case specification
+\end_layout
+
+\begin_layout Subsection
+Test procedures
+\end_layout
+
+\begin_layout Standard
+Dobbiamo verificare con particolare attenzione alcune procedure ( tipo:
+ prenotazione, noleggio, termine noleggio, apertura auto) utilizzando come
+ steps i test case precedenti.
 \end_layout
 
 \begin_layout Section
 Tools and Test Equipment Required
+\end_layout
+
+\begin_layout Standard
+The following software here mentioned are identified to assist the integration
+ phase of all various components of PowerEnJoy core software.
+\end_layout
+
+\begin_layout Itemize
+Mockito: Let us mocking a persistence manager, an external service or an
+ unavailable class.
+ So, it permit to check the validity of interaction and data coherency in
+ a fast way, in fact we don't need to setup our DB and no environments.
+\end_layout
+
+\begin_layout Itemize
+Arquillian: Let us make integration tests against containers, in such a
+ way we can check interaction with the system and isolate during the tests
+ a small group of classes and resources needed.
+\end_layout
+
+\begin_layout Itemize
+JUnit: non è menzionato nei testing tools delle slide, però tutti ne parlano
+ e lo mettono.
+ Però non bisogna confondere con il unit test perché è un'altra frase del
+ testing, non questa.
+ No?
 \end_layout
 
 \begin_layout Section
@@ -1055,10 +1201,6 @@ Program Stubs and Test Data Required
 
 \begin_layout Section
 Appendix
-\end_layout
-
-\begin_layout Subsection
-References
 \end_layout
 
 \begin_layout Subsection
