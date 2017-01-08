@@ -1199,6 +1199,35 @@ JUnit: non è menzionato nei testing tools delle slide, però tutti ne parlano
 Program Stubs and Test Data Required
 \end_layout
 
+\begin_layout Standard
+Program stubs non ho capito bene cosa siano.
+\end_layout
+
+\begin_layout Standard
+Test data required direi che è fondamentale testare la correttezza della
+ 'zona verde' di noleggio sicuramente.
+ 
+\end_layout
+
+\begin_layout Standard
+Poi la correttezza dei dati ricevuti e inviati alle auto, perché è uno scambio
+ 
+\begin_inset Quotes eld
+\end_inset
+
+critico
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Altro non mi viene in mente ora, però non ho ancora avuto l'ispirazione
+ sul come metterlo giù anche perché devo capire ancora benino la parte degli
+ stubs.
+\end_layout
+
 \begin_layout Section
 Appendix
 \end_layout
@@ -1227,7 +1256,7 @@ Pietro Avolio
 \begin_inset Text
 
 \begin_layout Plain Layout
-35
+
 \end_layout
 
 \end_inset
@@ -1247,7 +1276,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-35
+
 \end_layout
 
 \end_inset
