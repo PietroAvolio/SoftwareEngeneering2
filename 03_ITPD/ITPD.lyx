@@ -183,7 +183,7 @@ vspace{50pt}
 Version 
 \series bold
 1.0 
-\begin_inset Formula $\mathrm{-}11/12/2016$
+\begin_inset Formula $\mathrm{-}15/01/2018$
 \end_inset
 
  
@@ -288,60 +288,28 @@ Introduction
 \end_layout
 
 \begin_layout Subsection
-Purpose
+Purpose and scope
 \end_layout
 
 \begin_layout Standard
-The purpose of this Integration Test Plan Document is to provide information
- on testing-related activities to be performed.
-\end_layout
-
-\begin_layout Standard
-Focus on sequence flow of components and their interaction is mainly spent
- despite of each single component workload.
-\end_layout
-
-\begin_layout Standard
-Integration testing goals are to find: incosistent interpretations of parameters
-, violations of value domains, side effects, omitted functionality, non
- functional properties and dynamic mismatches.
-\end_layout
-
-\begin_layout Standard
--altro lo aggiungeremo quando avremo finito eventualmente-
-\end_layout
-
-\begin_layout Subsection
-Scope
-\end_layout
-
-\begin_layout Standard
-Our software solution provides an autonomosly process in order to rent a
- car by the customers through their smartphone.
+The purpose of this integration test plan document is to provide information
+ about the integration test activities to be performed for the PowerEnJoy
+ project.
+ This includes how to accomplish the integration tests, which approach to
+ follow and which tools to use.
  
 \end_layout
 
 \begin_layout Standard
-However, there's an operative staff support in case of out-of-hand event
- occurs.
-\end_layout
-
-\begin_layout Standard
-A customer is granted to see map position of vehicles and eventually reserving
- one.
+The aim of the integration test activities is to verify that the different
+ components of the system interoperate coherently in order to fulfill the
+ functional and non-functional requirements of the system.
  
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-After a reservation, he will be granted to open the vehicle and start the
- rent.
- Otherwise, he could also cancel the reservation if he changed his mind
- or let the reservation expire and be charged for the reservation expiration.
-\end_layout
-
-\begin_layout Standard
--altro? ho menzionato a grandi linee i goal e l'aspetto più importante della
- soluzione software-
+Since some components are made up of several other sub-components, the integrati
+on tests must be performed inside those components too.
 \end_layout
 
 \begin_layout Subsection
@@ -351,7 +319,7 @@ Definitions, acronyms and abbreviations
 \begin_layout Standard
 In order to avoid ambiguity and possible misunderstandings, this table is
  an integration to the definitions, the acronyms and the abbreviations defined
- in the DD document.
+ in the RASD and DD documents.
 \begin_inset Newline newline
 \end_inset
 
@@ -360,7 +328,7 @@ In order to avoid ambiguity and possible misunderstandings, this table is
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
+<lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -369,7 +337,7 @@ In order to avoid ambiguity and possible misunderstandings, this table is
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+RASD
 \end_layout
 
 \end_inset
@@ -378,7 +346,27 @@ JUnit
 \begin_inset Text
 
 \begin_layout Plain Layout
-Tool used for unit testing accomplishment
+Requirements Analysis and Specication Document
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Design document
 \end_layout
 
 \end_inset
@@ -405,11 +393,51 @@ Integration Test Plan Document
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Component
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A part of the system implementing high-level functionalities
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sub-Component
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A part of a component
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Mockito
+LOF
 \end_layout
 
 \end_inset
@@ -418,7 +446,7 @@ Mockito
 \begin_inset Text
 
 \begin_layout Plain Layout
-Tool used for mockups creation for unit testing
+Lines Of Code
 \end_layout
 
 \end_inset
@@ -436,27 +464,24 @@ Reference Documents:
 \end_layout
 
 \begin_layout Itemize
-Integration Test Plan Documents of previous year published on Beep and the
- Dutch one.
+Integration Test Plan Documents of the previous years published on BeeP.
  
 \end_layout
 
 \begin_layout Itemize
-Testing slides on Beep 
+spinGRID integration test plan on BeeP.
 \end_layout
 
 \begin_layout Itemize
-Architectural Styles on Beep Software Architectures in Action on Beep Java
- EE 7 Overview on Beep 
+Testing slides on BeeP .
 \end_layout
 
 \begin_layout Itemize
-Tips and Trick for Supporting Architecture Description with UML on Beep
- 3
+Tips and Trick for Supporting Architecture Description with UML on BeeP.
 \end_layout
 
 \begin_layout Itemize
-https://en.wikipedia.org/wiki/Integration_testing
+Integration Testing page on Wikipedia (visited 08/01/2017).
 \end_layout
 
 \begin_layout Subsection
@@ -472,20 +497,22 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{Introduction}$
 \end_inset
 
- This chapter provides.
+ This chapter provides preliminary informations about the document.
 \end_layout
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\boldsymbol{Integration\,Strategy}$
+\begin_inset Formula $\boldsymbol{Integratio\,Strategy}$
 \end_inset
 
- This chapter provides.
+ This chapter provides detailed information about the entry criteria to
+ be met before starting the integration test, the elements to be integrated
+ and an outline of the main strategies to follow.
 \end_layout
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\boldsymbol{Individual\,Steps,,and,,Test,,Description}$
+\begin_inset Formula $\boldsymbol{Individual\,Steps\,and\,Test\,Description}$
 \end_inset
 
  This chapter provides .
@@ -493,7 +520,7 @@ The document is structured in the following chapters:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\boldsymbol{Tools\,and\,Test,,Equipment,,Required}$
+\begin_inset Formula $\boldsymbol{Tools\,and\,Test\,Equipment\,Required}$
 \end_inset
 
  This chapter provides.
@@ -501,7 +528,7 @@ The document is structured in the following chapters:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\boldsymbol{Program\,Stubs,,and,,Test,,Data,,Required}$
+\begin_inset Formula $\boldsymbol{Program\,Stubs\,and\,Test\,Data\,Required}$
 \end_inset
 
  This chapter shows how.
@@ -523,25 +550,47 @@ Entry criteria
 \end_layout
 
 \begin_layout Standard
-Obviously, before the Integration Test step all the components must be ready.
- 
+In this section we describe the prerequisites needed before the integration
+ tests can be started.
 \end_layout
 
 \begin_layout Standard
-Development has to be accomplished according to the DD, with which this
- document should be written along.
+Methods and classes should be locally unit tested and achieve at least an
+ 80% LOF coverage in order to discover major issues in the effective implementat
+ion of the algorithms and in the usage of the data structures.
+ Unit tests should be performed during the development.
 \end_layout
 
 \begin_layout Standard
-Thus, after the development in order to find problems early, facilitates
- changes and save time generally, every component (or a consistent percentuage)
- should be locally unit tested.
+The project should also have passed through a phase of code inspection in
+ order to ensure maintenability, the respect of the convenentions, usage
+ of the known best practices and the avoidance of the bad ones.
+ The code inspection should be automated via automated tools as much as
+ possibile in order to be able to spent manual inspection on the most complex
+ parts.
 \end_layout
 
 \begin_layout Standard
-Than, in order to finally accomplish this Integration Test, is necessary
- to allocate some mockups for unit testing (with Mockito) to allow a consistence
- test and verify correctness of each components functions.
+The following documents describing functional and non functional requirements,
+ behaviour and purpose of the system must be delivered:
+\end_layout
+
+\begin_layout Itemize
+Requirements Analysis and Specication Document (RASD).
+\end_layout
+
+\begin_layout Itemize
+Design Document (DD).
+\end_layout
+
+\begin_layout Itemize
+Integration Test Plan Document (this document).
+\end_layout
+
+\begin_layout Standard
+Finally, an up-to-date and complete documentation of the code, using a common
+ paradigm such as JavaDoc, could be a solid base and a good reference for
+ the integration tests development.
 \end_layout
 
 \begin_layout Subsection
@@ -549,23 +598,134 @@ Elements to be integrated
 \end_layout
 
 \begin_layout Standard
-We are going to integrate all components we already talked about in the
- DD.
+As stated in the DD document, the system is splitted on four logical layers,
+ each of those containing one or more components:
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\boldsymbol{Client\,Layer}$
+\end_inset
+
+ This logical layer contains the PowerEnJoy Mobile Application, the PowerEnJoy
+ Control Room and the vehicles.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\boldsymbol{Web\,Server}$
+\end_inset
+
+ This logical layer contains the web server required to host the PowerEnJoy
+ Control Room.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\boldsymbol{Business\,Tier}$
+\end_inset
+
+ This logical layer contains the PowerEnJoy Core component.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\boldsymbol{Data\,Tier}$
+\end_inset
+
+ This logical layer contains the RDBS and the NoSqlDBMS.
 \end_layout
 
 \begin_layout Standard
-For the sake of simplicity, we simply report in the following a table to
- let the readers have a quick view.
+These logical layers and the components they contain communicate using the
+ interfaces described in the DD, which are object of the integration tests.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Since we want to prevent every possible ambiguity, we will associate to
- every component its subsystem container in the table.
+The PowerEnJoy Core component, which contains all the application logic,
+ is made up of several sub-components grouped in various containers as described
+ in the DD document; it also communicates with some external gateways.
+ The way these sub-components integrate one with the other and the way they
+ communicate with the external gateways is the main part of the integration
+ test activities to be performed.
+\end_layout
+
+\begin_layout Subsection
+Integration testing strategy
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Integration-testing-strategy"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Last, Web Server components are left out because they cope with other kind
- of integration mechanism.
+In order to prevent all the possibile issues coming from a typical big bang
+ approach, in which all the integration tests are performed at the end of
+ the development process, a slowly incremental approach is the one chosen
+ for the integration tests of the system.
+ The incremental approach facilitates the localization and the recognition
+ of the flaws in the code.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+To limitate the number of stubs and mockups to be realized, the integration
+ tests should follow a bottom-up flow, starting from the smallest - and
+ oftem more critical - sub-components of the PowerEnJoy Core to the biggest
+ ones.
+ 
+\begin_inset Newline newline
+\end_inset
+
+The last tests to be perfomed are the ones concerning the intercommunication
+ betweent components, which is mainly based on RESTful APIs and HTTPs protocol.
+\end_layout
+
+\begin_layout Subsection
+Integration sequence
+\end_layout
+
+\begin_layout Standard
+In this section are descripbed the sequences in which both the high-level
+ components and the sub-components should be integrated.
+ The integration tests must proced from the sub-components to the components
+ ones.
+\end_layout
+
+\begin_layout Subsubsection
+Sub-components of the core component integration sequence
+\end_layout
+
+\begin_layout Standard
+The sub-components integration tests sequence is described in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Integration-subcomponents"
+
+\end_inset
+
+ and figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sequence-diagram-subcomponents"
+
+\end_inset
+
+.
+ As mentioned in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Integration-testing-strategy"
+
+\end_inset
+
+, the sequence moves from the most independent to the less independent component.
 \end_layout
 
 \begin_layout Standard
@@ -575,514 +735,20 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="17" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
-Enumeration
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-Component
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Subsystem?sarebbero i container?
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-User Manager
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-UserManagement Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Operators Manager
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-UserManagement Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Support Requests Handler
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-UserManagement Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Rentals Handler
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-VehiclesManagement Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Reservation Handler
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-VehiclesManagement Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-6
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Vehicle Manager
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-VehiclesManagement Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Log Manager
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Activity Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Push notifications sender
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Activity Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Email sender
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Activity Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-10
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-SMS sender
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Activity Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-11
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-REST API Manager
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Activity Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-12
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Payment Handler
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Activity Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-13
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CronTasks Manager
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Activity Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Pricing Policies Manager
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Activity Container
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-15
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-JavaServer Faces?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Web Server
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-16
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Controller?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Web Server
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Components list for integration
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Integration-subcomponents"
+
+\end_inset
+
+Integration of the sub-components of the core component
 \end_layout
 
 \end_inset
@@ -1090,51 +756,151 @@ Components list for integration
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection
-Integration testing strategy
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sequence-diagram-subcomponents"
+
+\end_inset
+
+Sequence diagram of the integration of the sub-components of the core component
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Components integration sequence
 \end_layout
 
 \begin_layout Standard
-In order to prevent all possible issues coming from typical big bang, we
- prefer a slowly incremental approach starting from our low level components
- during our Integration testing.
- 
+The integration testes sequence of the main components of the system is
+ described in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Integration-components"
+
+\end_inset
+
+and figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sequence-diagram-components"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-In such a way, we are facilitate in bug recognition and location, considered
- we will have many low level components.
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Integration-components"
+
+\end_inset
+
+Integration of the main components of the system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The latter is the reason why our approach choice is that called bottom-up.
- 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Main components integration sequence - Page 1.png
+	display false
+	scale 35
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection
-Integration sequence
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sequence-diagram-components"
+
+\end_inset
+
+Sequence diagram of the integration of the main components
 \end_layout
 
-\begin_layout Standard
-(dobbiamo deciderla assieme, immagino non si debba fare a caso ma deve avere
- senso, tipo: partiamo da quello che non può mancare, la gestione dell'auto,
- la prenotazione, il noleggio, etc e per ultimo i vari sender e stronzate
- varie di supporto etc)
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-For the sake of usability of the partial software integrated and strict
- dependencies of the components, we adopted in the following figure this
- reasonable sequence.
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-(foto del diagramma sequenziale su Lucid)
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1230,6 +996,24 @@ Altro non mi viene in mente ora, però non ho ancora avuto l'ispirazione
 
 \begin_layout Section
 Appendix
+\end_layout
+
+\begin_layout Subsection
+Tools used
+\end_layout
+
+\begin_layout Itemize
+LyX as LaTeX editor.
+ 
+\end_layout
+
+\begin_layout Itemize
+Lucidchart for diagrams.
+ 
+\end_layout
+
+\begin_layout Itemize
+Github as version controller.
 \end_layout
 
 \begin_layout Subsection
