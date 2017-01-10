@@ -182,8 +182,8 @@ vspace{50pt}
 \begin_layout Standard
 Version 
 \series bold
-1.0 
-\begin_inset Formula $\mathrm{-}11/12/2016$
+1.1 
+\begin_inset Formula $\mathrm{-}10/01/2017$
 \end_inset
 
  
@@ -274,6 +274,40 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Changelog
+\end_layout
+
+\begin_layout Standard
+[10/01/2017] 
+\begin_inset Formula $\boldsymbol{v1.1}$
+\end_inset
+
+ Added a missing arrow in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Component-diagram-core"
+
+\end_inset
+
+.
+ Fixed a typo in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Effort-spent"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1121,7 +1155,7 @@ status open
 	filename images/2.3) Components of the Core  - Page 1.png
 	lyxscale 14
 	display false
-	scale 18
+	scale 13
 
 \end_inset
 
@@ -5524,6 +5558,13 @@ Google docs for beta documents sharing.
 
 \begin_layout Subsection
 Effort spent
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Effort-spent"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5557,7 +5598,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-Guido Borrelli
+Pietro Avolio
 \end_layout
 
 \end_inset
