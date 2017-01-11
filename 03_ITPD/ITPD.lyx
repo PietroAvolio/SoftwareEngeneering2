@@ -563,8 +563,8 @@ ion of the algorithms and in the usage of the data structures.
 
 \begin_layout Standard
 The project should also have passed through a phase of code inspection in
- order to ensure maintenability, the respect of the convenentions, usage
- of the known best practices and the avoidance of the bad ones.
+ order to ensure maintenability, the respect of the conventions, usage of
+ the best known practices and the avoidance of the bad ones.
  The code inspection should be automated via automated tools as much as
  possibile in order to be able to spent manual inspection on the most complex
  parts.
@@ -675,16 +675,16 @@ In order to prevent all the possibile issues coming from a typical big bang
 \begin_inset Newline newline
 \end_inset
 
-To limitate the number of stubs and mockups to be realized, the integration
+Up to limitate the number of stubs and mockups to be realized, the integration
  tests should follow a bottom-up flow, starting from the smallest - and
- oftem more critical - sub-components of the PowerEnJoy Core to the biggest
+ often more critical - sub-components of the PowerEnJoy Core to the biggest
  ones.
  
 \begin_inset Newline newline
 \end_inset
 
-The last tests to be perfomed are the ones concerning the intercommunication
- betweent components, which is mainly based on RESTful APIs and HTTPs protocol.
+The last tests to be performed are the ones concerning the intercommunication
+ between components, which are mainly based on RESTful APIs and HTTPs protocol.
 \end_layout
 
 \begin_layout Subsection
@@ -701,7 +701,7 @@ name "subsec:Integration-sequence"
 \begin_layout Standard
 In this section are descripbed the sequences in which both the high-level
  components and the sub-components will be integrated.
- The integration tests will procede from the sub-components to the components
+ The integration tests will proceed from the sub-components to the components
  ones, following a bottom-up approach.
 \end_layout
 
@@ -732,13 +732,14 @@ reference "subsec:Integration-testing-strategy"
 
 \end_inset
 
-, the sequence moves from the most independent to the less independent component.
+, the sequence moves from the most independent to the less independent component
+ through the logical flow of physical events.
 \begin_inset Newline newline
 \end_inset
 
-As stated in the DD, almost all the components integrates with the Log Manager
+As stated in the DD, almost all the components iterate with the Log Manager
  and the RestAPI Manager: for this reason the integration tests are omitted
- from both the table and the figure for the sake of semplicity.
+ from both the table and the figure for the sake of simplicity.
  
 \begin_inset Newline newline
 \end_inset
@@ -1403,8 +1404,8 @@ Components integration sequence
 \end_layout
 
 \begin_layout Standard
-The integration testes sequence of the main components of the system is
- described in table 
+The integration tests sequence of the main components of the system is described
+ in table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Integration-components"
@@ -1425,7 +1426,7 @@ reference "fig:Sequence-diagram-components"
 The order of the integration tests between the PowerEnJoy Core with the
  two DBMS as well as the order of the integration tests between the PowerEnJoy
  Mobile Application and the PowerEnJoy Control Room with the PowerEnJoy
- Core are arbitrary and they could be inverted for some special needs rising
+ Core are arbitrary and they could be reversed for any special needs rising
  during the development.
 \end_layout
 
@@ -1947,8 +1948,8 @@ The following software here mentioned are identified to assist the integration
 \begin_layout Itemize
 Mockito: Let us mocking a persistence manager, an external service or an
  unavailable class.
- So, it permit to check the validity of interaction and data coherency in
- a fast way, in fact we don't need to setup our DB and no environments.
+ So, it permit to check the validity of interactions and data coherency
+ in a fast way, in fact we don't need to setup our DB and no environments.
 \end_layout
 
 \begin_layout Itemize
