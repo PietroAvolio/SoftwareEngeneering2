@@ -2029,8 +2029,8 @@ Responses should contain the correct results for each query
 \begin_inset Text
 
 \begin_layout Plain Layout
-The test checks: the correctnes of the mapping between the JPA and the datasourc
-e; that the previleges granted to the given user are sufficient
+The test checks: the correctness of the mapping between the JPA and the
+ datasource, if the privileges granted to the given user are sufficient
 \end_layout
 
 \end_inset
@@ -2392,9 +2392,9 @@ Responses should contain the correct results for each query
 \begin_inset Text
 
 \begin_layout Plain Layout
-The test checks: the correctnes of the mapping between the JPA and the datasourc
-e; the correctnes of the interface between the JPA and a NoSQL DBMS; that
- the previleges granted to the given user are sufficient
+The test checks: the correctness of the mapping between the JPA and the
+ datasource; the correctness of the interface between the JPA and a NoSQL
+ DBMS; if the privileges granted to the given user are sufficient
 \end_layout
 
 \end_inset
@@ -6557,7 +6557,7 @@ The response should be negative and a notification should be issued towards
 \begin_inset Text
 
 \begin_layout Plain Layout
-The test checks the behaviour of the system when a payment is not successfully
+The test checks the system behaviour when a payment is not successfully
 \end_layout
 
 \end_inset
@@ -7773,11 +7773,43 @@ Arquillian: Let us make integration tests against containers, in such a
 \end_layout
 
 \begin_layout Itemize
-JUnit: non è menzionato nei testing tools delle slide, però tutti ne parlano
- e lo mettono.
- Però non bisogna confondere con il unit test perché è un'altra frase del
- testing, non questa.
- No?
+JUnit: Let us write repeatable tests, tests are usually performed for unit
+ testing.
+ It's used for components interactions result checks too.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The test equipment regarding real tests used should be very heterogeneous:
+\end_layout
+
+\begin_layout Itemize
+various type of Android smartphone/tablet
+\end_layout
+
+\begin_layout Itemize
+different PCs for what concern PowerEnJoy Control Room
+\end_layout
+
+\begin_layout Itemize
+at least one test per vehicle model offered by PowerEnJoy
+\end_layout
+
+\begin_layout Itemize
+for every city we serve, we should check the boards of the available map
+\end_layout
+
+\begin_layout Standard
+If possible, enroll some 'tester' for some hour in order to retrieve the
+ satisfaction of all the complete system and functionalities to have a customer
+ experience feedback.
 \end_layout
 
 \begin_layout Standard
@@ -7792,32 +7824,24 @@ Program Stubs and Test Data Required
 \end_layout
 
 \begin_layout Standard
+For what concerns data test, we highly suggest to perform real tests on
+ allowed zone and forbidden zone of the rent.
+ 
+\end_layout
+
+\begin_layout Standard
+Furthermore, we should also check some critical vehicle status (vehicle
+ stress condition) and verify robustness of the system or eventually its
+ bottleneck
+\end_layout
+
+\begin_layout Standard
+The aim should be of physically verify possible real time issues not considered
+ in the software development analysis.
+\end_layout
+
+\begin_layout Standard
 Program stubs non ho capito bene cosa siano.
-\end_layout
-
-\begin_layout Standard
-Test data required direi che è fondamentale testare la correttezza della
- 'zona verde' di noleggio sicuramente.
- 
-\end_layout
-
-\begin_layout Standard
-Poi la correttezza dei dati ricevuti e inviati alle auto, perché è uno scambio
- 
-\begin_inset Quotes eld
-\end_inset
-
-critico
-\begin_inset Quotes erd
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Altro non mi viene in mente ora, però non ho ancora avuto l'ispirazione
- sul come metterlo giù anche perché devo capire ancora benino la parte degli
- stubs.
 \end_layout
 
 \begin_layout Standard
