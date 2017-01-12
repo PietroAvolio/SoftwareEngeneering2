@@ -324,76 +324,13 @@ In order to avoid ambiguity and possible misunderstandings, this table is
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="2">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="top">
-<column alignment="left" valignment="top">
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RASD
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Requirements Analysis and Specication Document
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DD
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Design document
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ITPD
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Integration Test Plan Document
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -402,7 +339,7 @@ Component
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -413,7 +350,7 @@ A part of the system implementing high-level functionalities
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -422,7 +359,7 @@ Sub-Component
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -433,7 +370,7 @@ A part of a component
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -442,7 +379,7 @@ LOF
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -701,8 +638,16 @@ name "subsec:Integration-sequence"
 \begin_layout Standard
 In this section are descripbed the sequences in which both the high-level
  components and the sub-components will be integrated.
- The integration tests will proceed from the sub-components to the components
- ones, following a bottom-up approach.
+ 
+\begin_inset Newline newline
+\end_inset
+
+The integration tests will proceed following a bottom-up approach: the first
+ integration test activities to be performed are between the PowerEnJoy
+ Core and the database layer; then following integration test activities
+ are between the internal sub-components of the PowerEnJoy core; last activities
+ are about the communication between the clients and the core, thus they
+ are about the RESTful APIs.
 \end_layout
 
 \begin_layout Subsubsection
@@ -759,10 +704,10 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="19" columns="3">
+<lyxtabular version="3" rows="20" columns="3">
 <features islongtable="true" longtabularalignment="center">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <row newpage="true">
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
@@ -802,7 +747,7 @@ status open
 \end_inset
 </cell>
 </row>
-<row>
+<row newpage="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -860,7 +805,7 @@ Pricing Policies Manager
 \end_inset
 </cell>
 </row>
-<row>
+<row newpage="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -1106,7 +1051,7 @@ SCI_11
 \begin_inset Text
 
 \begin_layout Plain Layout
-CronTasks Manager
+User Manager
 \end_layout
 
 \end_inset
@@ -1115,7 +1060,7 @@ CronTasks Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-Email sender
+Vehicle Manager
 \end_layout
 
 \end_inset
@@ -1144,7 +1089,7 @@ CronTasks Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-SMS sender
+Email sender
 \end_layout
 
 \end_inset
@@ -1173,7 +1118,7 @@ CronTasks Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-Push Notifications Sender
+SMS sender
 \end_layout
 
 \end_inset
@@ -1185,6 +1130,35 @@ Push Notifications Sender
 
 \begin_layout Plain Layout
 SCI_14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CronTasks Manager
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Push Notifications Sender
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SCI_15
 \end_layout
 
 \end_inset
@@ -1213,7 +1187,7 @@ Support Requests Handler
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_15
+SCI_16
 \end_layout
 
 \end_inset
@@ -1746,18 +1720,23 @@ reference "tab:Integration-components"
 \end_inset
 
 .
+ 
+\begin_inset Newline newline
+\end_inset
+
+Test cases are listed in the order in which they will be executed.
 \end_layout
 
 \begin_layout Subsubsection
-Integration test case SCI_1
+Integration test case CI_1
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1775,7 +1754,933 @@ Integration test case SCI_1
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_1
+CI_1_T1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PowerEnJoy Core -> Relational DBMS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Relational DBMS address and port; database user and password
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the connection between the two components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquillian
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CI_1_T2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PowerEnJoy Core -> Relational DBMS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Execution of different queries on the datasource
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Responses should contain the correct results for each prompted query
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the correctnes of the mapping between the JPA and the datasource;
+ test checks the correctness of the priviliges given to the database user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Full mapping of the JPA with the datasource, relational DBMS connection
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquillian
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Integration test case CI_2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CI_2_T1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PowerEnJoy Core -> NoSQL DBMS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NoSQL DBMS address and port
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the connection between the two components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquillian
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CI_2_T2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PowerEnJoy Core -> NoSQL DBMS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Execution of different queries on the datasource
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Responses should contain the correct results for each prompted query
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the correctnes of the mapping between the JPA and the datasource;
+ test checks the correctnes of the interface between the JPA and a NoSQL
+ DBMS; test checks the correctness of the priviliges given to the database
+ user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Full mapping of the JPA with the datasource, NoSQL DBMS connection
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquillian
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Integration test cases with the LogManager
+\end_layout
+
+\begin_layout Standard
+As stated in other parts of this document and in the DD, almos all the component
+s interact with the LogManager in order to ensure an high detail of log
+ for the entire system.
+ 
+\end_layout
+
+\begin_layout Standard
+This test should be perfomed for each component and it should be executed
+ as soon as the component is ready.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM_T
+\begin_inset Formula $\mathit{X}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+All the sub-components -> NoSQL DBMS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Execution of different log requests with different messages and log level
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Log should be correctly generated
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the correctness of method interactions between those two sub
+ components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Full development of the two components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquillian
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Integration test case SCI_1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SCI_1_T1
 \end_layout
 
 \end_inset
@@ -1821,7 +2726,7 @@ Rentals Handler -> Vehicle Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-Rentals Handler method call to get a specific vehicle status
+Method call to get a specific vehicle status
 \end_layout
 
 \end_inset
@@ -1844,14 +2749,14 @@ Rentals Handler method call to get a specific vehicle status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Vehicle Manager response provides vehicle status required
+Response should contain the correct vehicle status
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1867,14 +2772,15 @@ Vehicle Manager response provides vehicle status required
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1890,7 +2796,8 @@ Test checks correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Full development of the two components, database communication, test data
+ about the vehicle
 \end_layout
 
 \end_inset
@@ -1913,7 +2820,378 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+Arquillan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SCI_1_T2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rentals Handler -> Vehicle Manager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Method call to change a specific vehicle status
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Response should contain the correct operation result and the status of the
+ vehicle should be correctly changed in the system
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the correctness of method interactions between those two sub
+ components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Full development of the two components, database communication, test data
+ about the vehicle
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquillian
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SCI_1_T3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rentals Handler -> Vehicle Manager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Method call to send specific command to a given vehicle
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Response should contain the correct operation result
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the correctness of method interactions between those two sub
+ components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Full development of the two components, database communication, test data
+ about the vehicle, stub for the vehicle as a client
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JUnit + Mockito
 \end_layout
 
 \end_inset
@@ -1934,8 +3212,8 @@ Integration test case SCI_2
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1953,7 +3231,7 @@ Integration test case SCI_2
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_2
+SCI_2_T1
 \end_layout
 
 \end_inset
@@ -1999,8 +3277,7 @@ Rentals Handler -> Pricing Policies Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-Rentals Handler method call to calculate a rental charge with current rates
- 
+Method call to calculate a rental charge with current rates 
 \end_layout
 
 \end_inset
@@ -2023,7 +3300,7 @@ Rentals Handler method call to calculate a rental charge with current rates
 \begin_inset Text
 
 \begin_layout Plain Layout
-Pricing Policies Manager response provides bill required
+Response should contain the correct price for the provided rental
 \end_layout
 
 \end_inset
@@ -2046,14 +3323,15 @@ Pricing Policies Manager response provides bill required
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2069,7 +3347,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Full development of the two components, test data about the rental
 \end_layout
 
 \end_inset
@@ -2092,7 +3370,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+Arquillan
 \end_layout
 
 \end_inset
@@ -2113,8 +3391,8 @@ Integration test case SCI_3
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2132,7 +3410,7 @@ Integration test case SCI_3
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_3
+SCI_3_T1
 \end_layout
 
 \end_inset
@@ -2178,7 +3456,7 @@ Rentals Handler -> Payment Handler
 \begin_inset Text
 
 \begin_layout Plain Layout
-Rentals Handler method call to request a payment of a given amount
+Method call to request a payment of a given amount
 \end_layout
 
 \end_inset
@@ -2201,7 +3479,7 @@ Rentals Handler method call to request a payment of a given amount
 \begin_inset Text
 
 \begin_layout Plain Layout
-Payment Handler response provides payment information status
+Response should contain the correct operation result
 \end_layout
 
 \end_inset
@@ -2224,14 +3502,15 @@ Payment Handler response provides payment information status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2247,7 +3526,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Full development of the two components, stub for the payment gateway
 \end_layout
 
 \end_inset
@@ -2270,7 +3549,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+JUnit + Mockito
 \end_layout
 
 \end_inset
@@ -2291,8 +3570,8 @@ Integration test case SCI_4
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2310,7 +3589,7 @@ Integration test case SCI_4
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_4
+SCI_4_T1
 \end_layout
 
 \end_inset
@@ -2356,7 +3635,7 @@ Rentals Handler -> SMS Sender
 \begin_inset Text
 
 \begin_layout Plain Layout
-Rentals Handler method call ask for a SMS communication to the customer
+Method call to send an SMS to a given phone number
 \end_layout
 
 \end_inset
@@ -2379,7 +3658,7 @@ Rentals Handler method call ask for a SMS communication to the customer
 \begin_inset Text
 
 \begin_layout Plain Layout
-SMS Sender response provides success/failure code of the operation
+Response should contain the correct operation result
 \end_layout
 
 \end_inset
@@ -2402,14 +3681,15 @@ SMS Sender response provides success/failure code of the operation
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2425,7 +3705,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Full development of the two components, stub of the SMS gateway
 \end_layout
 
 \end_inset
@@ -2448,7 +3728,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+JUnit + Mockito
 \end_layout
 
 \end_inset
@@ -2469,8 +3749,8 @@ Integration test case SCI_5
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2488,7 +3768,7 @@ Integration test case SCI_5
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_5
+SCI_5_T1
 \end_layout
 
 \end_inset
@@ -2511,7 +3791,7 @@ SCI_5
 \begin_inset Text
 
 \begin_layout Plain Layout
-Rentals Handler -> Push Notification Sender
+Rentals Handler -> Push Notifications sender
 \end_layout
 
 \end_inset
@@ -2534,7 +3814,7 @@ Rentals Handler -> Push Notification Sender
 \begin_inset Text
 
 \begin_layout Plain Layout
-Rentals Handler method call ask for a Push Notification to the customer
+Method call to send a Push Notification to a given user
 \end_layout
 
 \end_inset
@@ -2557,7 +3837,7 @@ Rentals Handler method call ask for a Push Notification to the customer
 \begin_inset Text
 
 \begin_layout Plain Layout
-Push Notification Sender response provides success/failure code of the operation
+Response should contain the correct operation result
 \end_layout
 
 \end_inset
@@ -2580,14 +3860,15 @@ Push Notification Sender response provides success/failure code of the operation
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2603,7 +3884,8 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Full development of the two components, test data about the user, stub for
+ the Push Notifications gateway
 \end_layout
 
 \end_inset
@@ -2626,7 +3908,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+JUnit + Mockito
 \end_layout
 
 \end_inset
@@ -2647,8 +3929,8 @@ Integration test case SCI_6
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2666,7 +3948,7 @@ Integration test case SCI_6
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_6
+SCI_6_T1
 \end_layout
 
 \end_inset
@@ -2712,7 +3994,7 @@ Reservations Handler -> Vehicle Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-Reservations Handler method call to get a specific vehicle status
+Method call to get a specific vehicle status
 \end_layout
 
 \end_inset
@@ -2735,7 +4017,7 @@ Reservations Handler method call to get a specific vehicle status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Vehicle Manager response provides vehicle status required
+Response should contain the correct vehicle status
 \end_layout
 
 \end_inset
@@ -2758,14 +4040,15 @@ Vehicle Manager response provides vehicle status required
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2781,7 +4064,8 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Full development of the two components, database communication, test data
+ about the vehicle
 \end_layout
 
 \end_inset
@@ -2804,7 +4088,193 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+Arquillan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SCI_6_T2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reservations Handler -> Vehicle Manager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Method call to change a specific vehicle status
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Response should contain the correct operation result and the status of the
+ vehicle should be correctly changed in the system
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the correctness of method interactions between those two sub
+ components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Full development of the two components, database communication, test data
+ about the vehicle
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquillan
 \end_layout
 
 \end_inset
@@ -2825,8 +4295,8 @@ Integration test case SCI_7
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2844,7 +4314,7 @@ Integration test case SCI_7
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_7
+SCI_7_T1
 \end_layout
 
 \end_inset
@@ -2890,8 +4360,7 @@ Reservations Handler -> Pricing Policies Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-Reservations Handler method call to calculate an expired reservation charge
- with current rates 
+Method call to calculate the price of an expired reservation
 \end_layout
 
 \end_inset
@@ -2914,7 +4383,7 @@ Reservations Handler method call to calculate an expired reservation charge
 \begin_inset Text
 
 \begin_layout Plain Layout
-Pricing Policies Manager response provides bill required
+Response should contain the correct price of an expired reservation
 \end_layout
 
 \end_inset
@@ -2937,14 +4406,15 @@ Pricing Policies Manager response provides bill required
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2960,7 +4430,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Full development of the two components
 \end_layout
 
 \end_inset
@@ -2983,7 +4453,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+Arquillan
 \end_layout
 
 \end_inset
@@ -3004,8 +4474,8 @@ Integration test case SCI_8
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -3023,7 +4493,7 @@ Integration test case SCI_8
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_8
+SCI_8_T1
 \end_layout
 
 \end_inset
@@ -3069,20 +4539,7 @@ Reservations Handler -> Payment Handler
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Reservations Handler method call to request a payment of an expired reservation
- amount
+Method call to request a payment of a given amount
 \end_layout
 
 \end_inset
@@ -3105,21 +4562,7 @@ Reservations Handler method call to request a payment of an expired reservation
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-Payment Handler response provides payment information status
-
+Response should contain the correct operation result
 \end_layout
 
 \end_inset
@@ -3142,14 +4585,15 @@ Payment Handler response provides payment information status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3165,7 +4609,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Full development of the two components
 \end_layout
 
 \end_inset
@@ -3188,7 +4632,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+Arquillan
 \end_layout
 
 \end_inset
@@ -3209,8 +4653,8 @@ Integration test case SCI_9
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -3228,7 +4672,7 @@ Integration test case SCI_9
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_9
+SCI_9_T1
 \end_layout
 
 \end_inset
@@ -3274,7 +4718,7 @@ User Manager -> Payment Handler
 \begin_inset Text
 
 \begin_layout Plain Layout
-User Manager method call to insert/update payment methods
+Method call to request the validation of specific payment informations
 \end_layout
 
 \end_inset
@@ -3297,7 +4741,7 @@ User Manager method call to insert/update payment methods
 \begin_inset Text
 
 \begin_layout Plain Layout
-Payment Handler response provides typical response status
+Response should contain the correct operation result
 \end_layout
 
 \end_inset
@@ -3320,14 +4764,15 @@ Payment Handler response provides typical response status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3343,7 +4788,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Test data about the payment information, stub of the payment gateway
 \end_layout
 
 \end_inset
@@ -3366,7 +4811,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+JUnit + Mockito
 \end_layout
 
 \end_inset
@@ -3387,8 +4832,8 @@ Integration test case SCI_10
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -3406,7 +4851,7 @@ Integration test case SCI_10
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_10
+SCI_10_T1
 \end_layout
 
 \end_inset
@@ -3452,7 +4897,7 @@ User Manager -> Email Sender
 \begin_inset Text
 
 \begin_layout Plain Layout
-User Manager method call to insert/update payment methods
+Method call to send an email to a specific email address
 \end_layout
 
 \end_inset
@@ -3475,7 +4920,7 @@ User Manager method call to insert/update payment methods
 \begin_inset Text
 
 \begin_layout Plain Layout
-Email Sender response provides validity and verification status
+Email should be correctly sent to the address
 \end_layout
 
 \end_inset
@@ -3498,14 +4943,15 @@ Email Sender response provides validity and verification status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3521,7 +4967,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Test data about the email address, email server
 \end_layout
 
 \end_inset
@@ -3544,7 +4990,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+Arquillan
 \end_layout
 
 \end_inset
@@ -3565,8 +5011,8 @@ Integration test case SCI_11
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -3584,7 +5030,185 @@ Integration test case SCI_11
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_11
+SCI_11_T1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User Manager -> Vehicle Manager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Integration test case SCI_12
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SCI_12_T1
 \end_layout
 
 \end_inset
@@ -3630,7 +5254,7 @@ CronTasks Manager -> Email Sender
 \begin_inset Text
 
 \begin_layout Plain Layout
-CronTasks Manager method call to support its periodical functions
+Method call to send an email to a specific email address
 \end_layout
 
 \end_inset
@@ -3653,7 +5277,7 @@ CronTasks Manager method call to support its periodical functions
 \begin_inset Text
 
 \begin_layout Plain Layout
-Email Sender response provides validity and verification status
+Email should be correctly sent to the address
 \end_layout
 
 \end_inset
@@ -3676,14 +5300,15 @@ Email Sender response provides validity and verification status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3699,7 +5324,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Test data about the email address, email server
 \end_layout
 
 \end_inset
@@ -3722,7 +5347,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+Arquillan
 \end_layout
 
 \end_inset
@@ -3736,15 +5361,15 @@ JUnit
 \end_layout
 
 \begin_layout Subsubsection
-Integration test case SCI_12
+Integration test case SCI_13
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -3762,7 +5387,7 @@ Integration test case SCI_12
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_12
+SCI_13_T1
 \end_layout
 
 \end_inset
@@ -3808,7 +5433,7 @@ CronTasks Manager -> SMS Sender
 \begin_inset Text
 
 \begin_layout Plain Layout
-CronTasks Manager method call to support its periodical functions
+Method call to send an SMS to a given phone number
 \end_layout
 
 \end_inset
@@ -3831,7 +5456,7 @@ CronTasks Manager method call to support its periodical functions
 \begin_inset Text
 
 \begin_layout Plain Layout
-SMS Sender response provides validity and verification status
+Response should contain the correct operation result
 \end_layout
 
 \end_inset
@@ -3854,14 +5479,15 @@ SMS Sender response provides validity and verification status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3877,7 +5503,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Stub of the SMS gateway
 \end_layout
 
 \end_inset
@@ -3900,7 +5526,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+JUnit + Mockito
 \end_layout
 
 \end_inset
@@ -3914,15 +5540,15 @@ JUnit
 \end_layout
 
 \begin_layout Subsubsection
-Integration test case SCI_13
+Integration test case SCI_14
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -3940,7 +5566,7 @@ Integration test case SCI_13
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_13
+SCI_14_T1
 \end_layout
 
 \end_inset
@@ -3986,7 +5612,7 @@ CronTasks Manager -> Push Notification Sender
 \begin_inset Text
 
 \begin_layout Plain Layout
-CronTasks Manager method call to support its periodical functions
+Method call to send a Push Notification to a given user
 \end_layout
 
 \end_inset
@@ -4009,7 +5635,7 @@ CronTasks Manager method call to support its periodical functions
 \begin_inset Text
 
 \begin_layout Plain Layout
-Push Notification Sender response provides validity and verification status
+Response should contain the correct operation result
 \end_layout
 
 \end_inset
@@ -4032,14 +5658,15 @@ Push Notification Sender response provides validity and verification status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4055,7 +5682,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Test data about the user, stub for the Push Notifications gateway
 \end_layout
 
 \end_inset
@@ -4078,7 +5705,7 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+JUnit + Mockito
 \end_layout
 
 \end_inset
@@ -4092,15 +5719,15 @@ JUnit
 \end_layout
 
 \begin_layout Subsubsection
-Integration test case SCI_14
+Integration test case SCI_15
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -4118,7 +5745,7 @@ Integration test case SCI_14
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_14
+SCI_15_T1
 \end_layout
 
 \end_inset
@@ -4164,7 +5791,8 @@ Operators Manager -> Support Request Handler
 \begin_inset Text
 
 \begin_layout Plain Layout
-Operators Manager method call to handle support requests
+Method call to get all the support requests given a set of filters (could
+ be empty)
 \end_layout
 
 \end_inset
@@ -4187,14 +5815,14 @@ Operators Manager method call to handle support requests
 \begin_inset Text
 
 \begin_layout Plain Layout
-Support Request Handler response provides requests information 
+Response should contain all the support requests that match the given filters
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4210,14 +5838,15 @@ Support Request Handler response provides requests information
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+Test checks the correctness of method interactions between those two sub
+ components
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4233,7 +5862,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Database connection, test data about the support requests
 \end_layout
 
 \end_inset
@@ -4256,7 +5885,378 @@ Application server: PowerEnJoy Core
 \begin_inset Text
 
 \begin_layout Plain Layout
-JUnit
+Arquillan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SCI_15_T2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operators Manager -> Support Request Handler
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Method call to send a reply to the support request
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The reply should be correctly delivered
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the correctness of method interactions between those two sub
+ components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Database connection, test data about the support request, stub for the user's
+ client
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JUnit + Mockito
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SCI_15_T3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operators Manager -> Support Request Handler
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Method call to change the status of a support request
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The status of the support request should be correctly changed into the given
+ one
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the correctness of method interactions between those two sub
+ components; the change should be correctly notified to the user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Database connection, test data about the support request, stub for the user's
+ client
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JUnit + Mockito
 \end_layout
 
 \end_inset
@@ -4270,7 +6270,7 @@ JUnit
 \end_layout
 
 \begin_layout Subsubsection
-Integration test case SCI_15
+Integration test case SCI_16 TODOOOOOO
 \end_layout
 
 \begin_layout Standard
@@ -4296,7 +6296,7 @@ Integration test case SCI_15
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCI_15
+SCI_16_T1
 \end_layout
 
 \end_inset
