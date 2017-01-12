@@ -7184,6 +7184,13 @@ JUnit
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Integration test cases with the RESTful Api Manager
 \end_layout
@@ -7736,6 +7743,13 @@ E_SCI_1 after SCI_3
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Tools and Test Equipment Required
 \end_layout
@@ -7764,6 +7778,13 @@ JUnit: non è menzionato nei testing tools delle slide, però tutti ne parlano
  Però non bisogna confondere con il unit test perché è un'altra frase del
  testing, non questa.
  No?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -7797,6 +7818,13 @@ critico
 Altro non mi viene in mente ora, però non ho ancora avuto l'ispirazione
  sul come metterlo giù anche perché devo capire ancora benino la parte degli
  stubs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
