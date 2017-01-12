@@ -1846,7 +1846,7 @@ Relational DBMS address and port; database user and password
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the connection between the two components
+The test checks the connection between the core and the relational DBMS
 \end_layout
 
 \end_inset
@@ -1983,7 +1983,7 @@ PowerEnJoy Core -> Relational DBMS
 \begin_inset Text
 
 \begin_layout Plain Layout
-Execution of different queries on the datasource
+Execution of different queries on the relational data
 \end_layout
 
 \end_inset
@@ -2006,7 +2006,7 @@ Execution of different queries on the datasource
 \begin_inset Text
 
 \begin_layout Plain Layout
-Responses should contain the correct results for each prompted query
+Responses should contain the correct results for each query
 \end_layout
 
 \end_inset
@@ -2029,8 +2029,8 @@ Responses should contain the correct results for each prompted query
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctnes of the mapping between the JPA and the datasource;
- test checks the correctness of the priviliges given to the database user
+The test checks: the correctnes of the mapping between the JPA and the datasourc
+e; that the previleges granted to the given user are sufficient
 \end_layout
 
 \end_inset
@@ -2053,7 +2053,8 @@ Test checks the correctnes of the mapping between the JPA and the datasource;
 \begin_inset Text
 
 \begin_layout Plain Layout
-Full mapping of the JPA with the datasource, relational DBMS connection
+Full mapping of the JPA with the datasource, relational DBMS connection,
+ test relational data
 \end_layout
 
 \end_inset
@@ -2162,7 +2163,7 @@ PowerEnJoy Core -> NoSQL DBMS
 \begin_inset Text
 
 \begin_layout Plain Layout
-NoSQL DBMS address and port
+NoSQL DBMS address and port; database user and port
 \end_layout
 
 \end_inset
@@ -2208,7 +2209,7 @@ NoSQL DBMS address and port
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the connection between the two components
+The test checks the connection between the core and the relational DBMS
 \end_layout
 
 \end_inset
@@ -2368,7 +2369,7 @@ Execution of different queries on the datasource
 \begin_inset Text
 
 \begin_layout Plain Layout
-Responses should contain the correct results for each prompted query
+Responses should contain the correct results for each query
 \end_layout
 
 \end_inset
@@ -2391,10 +2392,9 @@ Responses should contain the correct results for each prompted query
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctnes of the mapping between the JPA and the datasource;
- test checks the correctnes of the interface between the JPA and a NoSQL
- DBMS; test checks the correctness of the priviliges given to the database
- user
+The test checks: the correctnes of the mapping between the JPA and the datasourc
+e; the correctnes of the interface between the JPA and a NoSQL DBMS; that
+ the previleges granted to the given user are sufficient
 \end_layout
 
 \end_inset
@@ -2417,207 +2417,8 @@ Test checks the correctnes of the mapping between the JPA and the datasource;
 \begin_inset Text
 
 \begin_layout Plain Layout
-Full mapping of the JPA with the datasource, NoSQL DBMS connection
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mathbf{Testing\,method}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Arquillian
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Integration test cases with the LogManager
-\end_layout
-
-\begin_layout Standard
-As stated in other parts of this document and in the DD, almos all the component
-s interact with the LogManager in order to ensure an high detail of log
- for the entire system.
- 
-\end_layout
-
-\begin_layout Standard
-This test should be perfomed for each component and it should be executed
- as soon as the component is ready.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="2">
-<features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="30text%">
-<column alignment="left" valignment="top" width="60text%">
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mathbf{Identifier}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-LM_T
-\begin_inset Formula $\mathit{X}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mathbf{Items}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-All the sub-components -> NoSQL DBMS
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mathbf{Input\,specification}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Execution of different log requests with different messages and log level
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mathbf{Output\,specification}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Log should be correctly generated
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mathbf{Description}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mathbf{Environmental\,needs}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Full development of the two components
+Full mapping of the JPA with the datasource, NoSQL DBMS connection, test
+ data
 \end_layout
 
 \end_inset
@@ -2772,8 +2573,8 @@ Response should contain the correct vehicle status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interaction between those two
+ sub-components
 \end_layout
 
 \end_inset
@@ -2820,7 +2621,7 @@ Full development of the two components, database communication, test data
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arquillan
+JUnit
 \end_layout
 
 \end_inset
@@ -2935,7 +2736,7 @@ Method call to change a specific vehicle status
 
 \begin_layout Plain Layout
 Response should contain the correct operation result and the status of the
- vehicle should be correctly changed in the system
+ vehicle should be correctly changed in the system and in the database
 \end_layout
 
 \end_inset
@@ -2958,8 +2759,8 @@ Response should contain the correct operation result and the status of the
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub-components
 \end_layout
 
 \end_inset
@@ -3006,7 +2807,7 @@ Full development of the two components, database communication, test data
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arquillian
+JUnit
 \end_layout
 
 \end_inset
@@ -3143,8 +2944,8 @@ Response should contain the correct operation result
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub-components
 \end_layout
 
 \end_inset
@@ -3323,8 +3124,8 @@ Response should contain the correct price for the provided rental
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub-components
 \end_layout
 
 \end_inset
@@ -3370,7 +3171,7 @@ Full development of the two components, test data about the rental
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arquillan
+JUnit
 \end_layout
 
 \end_inset
@@ -3502,8 +3303,8 @@ Response should contain the correct operation result
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub-components
 \end_layout
 
 \end_inset
@@ -3681,8 +3482,8 @@ Response should contain the correct operation result
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub-components
 \end_layout
 
 \end_inset
@@ -4040,8 +3841,8 @@ Response should contain the correct vehicle status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub components
 \end_layout
 
 \end_inset
@@ -4088,7 +3889,7 @@ Full development of the two components, database communication, test data
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arquillan
+JUnit
 \end_layout
 
 \end_inset
@@ -4226,8 +4027,8 @@ Response should contain the correct operation result and the status of the
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub components
 \end_layout
 
 \end_inset
@@ -4274,7 +4075,7 @@ Full development of the two components, database communication, test data
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arquillan
+JUnit
 \end_layout
 
 \end_inset
@@ -4406,8 +4207,8 @@ Response should contain the correct price of an expired reservation
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub components
 \end_layout
 
 \end_inset
@@ -4453,7 +4254,7 @@ Full development of the two components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arquillan
+JUnit
 \end_layout
 
 \end_inset
@@ -4585,8 +4386,8 @@ Response should contain the correct operation result
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub components
 \end_layout
 
 \end_inset
@@ -4632,7 +4433,7 @@ Full development of the two components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arquillan
+JUnit
 \end_layout
 
 \end_inset
@@ -4764,8 +4565,8 @@ Response should contain the correct operation result
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub components
 \end_layout
 
 \end_inset
@@ -4788,7 +4589,8 @@ Test checks the correctness of method interactions between those two sub
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test data about the payment information, stub of the payment gateway
+Full development of the two components, test data about the payment information,
+ stub of the payment gateway
 \end_layout
 
 \end_inset
@@ -4943,8 +4745,8 @@ Email should be correctly sent to the address
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test checks the correctness of method interactions between those two sub
- components
+The test checks the correctness of method interactions between those two
+ sub-components
 \end_layout
 
 \end_inset
@@ -4967,7 +4769,8 @@ Test checks the correctness of method interactions between those two sub
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test data about the email address, email server
+Full development of the two sub-components, test data about the email address,
+ email server
 \end_layout
 
 \end_inset
@@ -4990,7 +4793,7 @@ Test data about the email address, email server
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arquillan
+JUnit
 \end_layout
 
 \end_inset
@@ -5076,7 +4879,7 @@ User Manager -> Vehicle Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Method call to retrieve all the vehicle given the center and the radius
 \end_layout
 
 \end_inset
@@ -5099,7 +4902,7 @@ User Manager -> Vehicle Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Response should contain a list of all the available vehicles in the area
 \end_layout
 
 \end_inset
@@ -5122,7 +4925,8 @@ User Manager -> Vehicle Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+The test checks the correctness of method interfactions between those two
+ sub-components
 \end_layout
 
 \end_inset
@@ -5145,7 +4949,8 @@ User Manager -> Vehicle Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Full development of the two sub-components, database connection, test data
+ about the vehicles
 \end_layout
 
 \end_inset
@@ -5168,7 +4973,7 @@ User Manager -> Vehicle Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+JUnit
 \end_layout
 
 \end_inset
@@ -6270,15 +6075,15 @@ JUnit + Mockito
 \end_layout
 
 \begin_layout Subsubsection
-Integration test case SCI_16 TODOOOOOO
+Integration test case SCI_16
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -6342,7 +6147,7 @@ Operators Manager -> Vehicle Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-Operators Manager method call to handle Vehicle and retrieve its status
+Method call to get the status of a given vehicle
 \end_layout
 
 \end_inset
@@ -6365,7 +6170,7 @@ Operators Manager method call to handle Vehicle and retrieve its status
 \begin_inset Text
 
 \begin_layout Plain Layout
-Vehicle Manager response provides typical response
+Response should contain the correct status of the given vehicle
 \end_layout
 
 \end_inset
@@ -6395,7 +6200,7 @@ Test check correctness of method interactions between those two sub components
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6411,7 +6216,8 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core
+Full development of the two components, database connection, test data about
+ the vehicles
 \end_layout
 
 \end_inset
@@ -6455,8 +6261,8 @@ Integration test case E_SCI_1
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -6474,7 +6280,7 @@ Integration test case E_SCI_1
 \begin_inset Text
 
 \begin_layout Plain Layout
-E_SCI_1
+E_SCI_1_T1
 \end_layout
 
 \end_inset
@@ -6520,7 +6326,7 @@ Payment Handler -> Payment Gateway
 \begin_inset Text
 
 \begin_layout Plain Layout
-Payment Handler method call forward to an external component typical request
+Payment request over a credit card with enough credit available
 \end_layout
 
 \end_inset
@@ -6543,7 +6349,7 @@ Payment Handler method call forward to an external component typical request
 \begin_inset Text
 
 \begin_layout Plain Layout
-Payment Gateway response communicate status of the forwarded request
+The response should be positive and the payment should be correctly handled
 \end_layout
 
 \end_inset
@@ -6566,14 +6372,14 @@ Payment Gateway response communicate status of the forwarded request
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+The test checks the behaviour of the system when a payment is succesfull
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6589,7 +6395,194 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core and external gateway
+Full development of the payment handler, payment gateway connection, development
+ tools and development account for the payment gateway
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JUnit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E_SCI_1_T2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Payment Handler -> Payment Gateway
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Payment request over a credit card with not enough credit available
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The response should be negative and a notification should be issued towards
+ the operators and towards the user
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The test checks the behaviour of the system when a payment is not successfully
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Full development of the payment handler, payment gateway connection, development
+ tools and development account for the payment gateway, test data about
+ the user
 \end_layout
 
 \end_inset
@@ -6633,8 +6626,8 @@ Integration test case E_SCI_2
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -6652,7 +6645,7 @@ Integration test case E_SCI_2
 \begin_inset Text
 
 \begin_layout Plain Layout
-E_SCI_2
+E_SCI_2_T1
 \end_layout
 
 \end_inset
@@ -6698,7 +6691,8 @@ SMS Sender -> SMS Gateway
 \begin_inset Text
 
 \begin_layout Plain Layout
-SMS Sender method call forward to an external component typical request
+SMS send request to a specific number with special characters (è, à, ù,
+ ì)
 \end_layout
 
 \end_inset
@@ -6721,7 +6715,7 @@ SMS Sender method call forward to an external component typical request
 \begin_inset Text
 
 \begin_layout Plain Layout
-SMS Gateway response communicate status of the forwarded request
+The SMS should be correctly sent
 \end_layout
 
 \end_inset
@@ -6744,14 +6738,15 @@ SMS Gateway response communicate status of the forwarded request
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+The test checks both the connection with the SMS gateway and the possibile
+ issues with special characters
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6767,7 +6762,7 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core and external gateway
+Full development of the SMS sender, SMS gateway connection
 \end_layout
 
 \end_inset
@@ -6811,8 +6806,8 @@ Integration test case E_SCI_3
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -6830,7 +6825,7 @@ Integration test case E_SCI_3
 \begin_inset Text
 
 \begin_layout Plain Layout
-E_SCI_3
+E_SCI_3_T1
 \end_layout
 
 \end_inset
@@ -6876,8 +6871,7 @@ Push Notification Sender -> Push Notification Gateway
 \begin_inset Text
 
 \begin_layout Plain Layout
-Push Notification Sender method call forward to an external component typical
- request
+Push Notification send request to a specific user's device
 \end_layout
 
 \end_inset
@@ -6900,7 +6894,7 @@ Push Notification Sender method call forward to an external component typical
 \begin_inset Text
 
 \begin_layout Plain Layout
-Push Notification Gateway response communicate status of the forwarded request
+The notification should be correctly issued
 \end_layout
 
 \end_inset
@@ -6923,14 +6917,14 @@ Push Notification Gateway response communicate status of the forwarded request
 \begin_inset Text
 
 \begin_layout Plain Layout
-Test check correctness of method interactions between those two sub components
+The test checks the connection with the push notifications gateway
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6946,7 +6940,404 @@ Test check correctness of method interactions between those two sub components
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application server: PowerEnJoy Core and external gateway
+Full development of the Push Notifications sender, Push Notifications Gateway
+ connection
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JUnit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Integration test cases with the Log Manager
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Integration-test-cases"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As stated in other parts of this document and in the DD, almost all the
+ sub-components of the Core component interact with the LogManager.
+\end_layout
+
+\begin_layout Standard
+This test should be perfomed for each component and it should be executed
+ as soon as the component is ready.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM_T
+\begin_inset Formula $\mathit{X}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+All the sub-components -> Log Manager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Execution of different log requests with different messages and log level
+ (e.g.
+ warn, err, debug)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Message should be correctly added
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test checks the correctness of method interactions between those two sub
+ components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Full development of the two sub-components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JUnit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Integration test cases with the RESTful Api Manager
+\end_layout
+
+\begin_layout Standard
+As stated in other parts of this document and in the DD, many sub-components
+ of the Core component interact with the RESTful Api Manager.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RAM_T
+\begin_inset Formula $\mathit{X}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+All the sub-components -> RESTful Api Manager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+All the parameters needed to build the response in JSON format
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The response is encoded in JSON format and includes all the inputs
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The test checks the correctness of the responses built using the RestFul
+ Api Manager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Full development of the two sub-components
 \end_layout
 
 \end_inset
