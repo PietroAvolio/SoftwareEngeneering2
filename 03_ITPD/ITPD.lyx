@@ -503,7 +503,7 @@ The project should also have passed through a phase of code inspection in
  order to ensure maintenability, the respect of the conventions, usage of
  the best known practices and the avoidance of the bad ones.
  The code inspection should be automated via automated tools as much as
- possibile in order to be able to spent manual inspection on the most complex
+ possibile in order to be able to spend manual inspection on the most complex
  parts.
 \end_layout
 
@@ -7198,6 +7198,10 @@ Integration test cases with the RESTful Api Manager
 \begin_layout Standard
 As stated in other parts of this document and in the DD, many sub-components
  of the Core component interact with the RESTful Api Manager.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
