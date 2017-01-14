@@ -452,7 +452,7 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{Individual\,Steps\,and\,Test\,Description}$
 \end_inset
 
- This chapter provides .
+ This chapter provides details for each test procedure to be performed.
 \end_layout
 
 \begin_layout Labeling
@@ -460,7 +460,8 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{Tools\,and\,Test\,Equipment\,Required}$
 \end_inset
 
- This chapter provides.
+ This chapter provides a list of the tools to be used for the integration
+ test activities.
 \end_layout
 
 \begin_layout Labeling
@@ -468,7 +469,8 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{Program\,Stubs\,and\,Test\,Data\,Required}$
 \end_inset
 
- This chapter shows how.
+ This chapter summarizes the stubs, the drivers and the test data required
+ to perfor the integration test activities.
 \end_layout
 
 \begin_layout Standard
@@ -636,8 +638,8 @@ name "subsec:Integration-sequence"
 \end_layout
 
 \begin_layout Standard
-In this section are descripbed the sequences in which both the high-level
- components and the sub-components will be integrated.
+In this section is described the sequence in which both the high-level component
+s and the sub-components will be integrated.
  
 \begin_inset Newline newline
 \end_inset
@@ -1386,7 +1388,7 @@ reference "tab:Integration-components"
 
 \end_inset
 
-and figure 
+ and figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Sequence-diagram-components"
@@ -1693,10 +1695,17 @@ Test Description
 
 \begin_layout Subsection
 Test cases specification
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Test-cases-specification"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Here we will schematizes and detail every integration steps of the integration
+Here we will schematize and detail every integration step of the integration
  sequence identified in section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2054,7 +2063,7 @@ The test checks: the correctness of the mapping between the JPA and the
 
 \begin_layout Plain Layout
 Full mapping of the JPA with the datasource, relational DBMS connection,
- test relational data
+ test relational data, driver to run the JPA
 \end_layout
 
 \end_inset
@@ -2418,7 +2427,7 @@ The test checks: the correctness of the mapping between the JPA and the
 
 \begin_layout Plain Layout
 Full mapping of the JPA with the datasource, NoSQL DBMS connection, test
- data
+ data, driver to run the JPA
 \end_layout
 
 \end_inset
@@ -2898,7 +2907,7 @@ Rentals Handler -> Vehicle Manager
 \begin_inset Text
 
 \begin_layout Plain Layout
-Method call to send specific command to a given vehicle
+Method call to send a specific command to a given vehicle
 \end_layout
 
 \end_inset
@@ -7384,23 +7393,196 @@ JUnit
 
 \end_layout
 
+\begin_layout Subsubsection
+Integration test cases CI_3, CI_4, CI_5
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Identifier}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CI_3, CI_4, CI_5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Items}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PowerEnJoy Mobile App, PowerEnJoy Control Room, PowerEnJoy Vehicle -> PowerEnJoy
+ Core
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Input\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Different RESTful APIs calls
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Output\,specification}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Responses should be appropiate to the given request, security measures should
+ be satisfied
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Description}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The test checks the correctness of the communication between the clients
+ and the PowerEnJoy Core through RESTful APIs
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Environmental\,needs}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Full development of the two components
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{Testing\,method}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquillan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Test procedures
 \end_layout
 
 \begin_layout Standard
-In this section, we arranged some of the mainly procedures our service is
- going to offer to check interoperability and reaction of sequenced action
- to achieve the goal.
-\end_layout
-
-\begin_layout Standard
-We propose procedure regarding reservation, rental and payment actions.
-\end_layout
-
-\begin_layout Standard
-Same reasoning could so be apply for what concern other goals not here mentioned
-, like the handlement of a support request or a communication send.
+In this section we list some of the main procedures that the systems is
+ going to offer and that should be checked in order to verify interoperability
+ between the components and to check that the system achieves the goals
+ specified in the RASD.
 \end_layout
 
 \begin_layout Subsubsection
@@ -7408,6 +7590,7 @@ Integration test procedure TP1
 \end_layout
 
 \begin_layout Standard
+\align left
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
@@ -7453,7 +7636,7 @@ TP1
 \begin_inset Text
 
 \begin_layout Plain Layout
-Check correctness of a reservation creation
+Test the procedure to create a new reservation
 \end_layout
 
 \end_inset
@@ -7494,6 +7677,7 @@ Integration test procedure TP2
 \end_layout
 
 \begin_layout Standard
+\align left
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
@@ -7539,7 +7723,7 @@ TP2
 \begin_inset Text
 
 \begin_layout Plain Layout
-Check correctness of a rental beginning
+Test the procedure to start a rental
 \end_layout
 
 \end_inset
@@ -7580,6 +7764,7 @@ Integration test procedure TP3
 \end_layout
 
 \begin_layout Standard
+\align left
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
@@ -7625,7 +7810,7 @@ TP3
 \begin_inset Text
 
 \begin_layout Plain Layout
-Check correctness of a payment request after a rental
+Test the procedure to forward a payment request after a rental is terminated
 \end_layout
 
 \end_inset
@@ -7666,6 +7851,7 @@ Integration test procedure TP4
 \end_layout
 
 \begin_layout Standard
+\align left
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
@@ -7711,7 +7897,7 @@ TP14
 \begin_inset Text
 
 \begin_layout Plain Layout
-Check correctness of a payment transaction
+Test the payment transaction through the payment gateway
 \end_layout
 
 \end_inset
@@ -7759,35 +7945,26 @@ Tools and Test Equipment Required
 \end_layout
 
 \begin_layout Standard
-The following software here mentioned are identified to assist the integration
- phase of all various components of PowerEnJoy core software.
+The following softwares are identified to assist the integration activities
+ of the system:
 \end_layout
 
 \begin_layout Itemize
-Mockito: Let us mocking a persistence manager, an external service or an
- unavailable class.
- So, it permit to check the validity of interactions and data coherency
- in a fast way, in fact we don't need to setup our DB and no environments.
+Mockito: it is an open-source test framework useful to generate mock objects,
+ stubs and drivers.
 \end_layout
 
 \begin_layout Itemize
-Arquillian: Let us make integration tests against containers, in such a
- way we can check interaction with the system and isolate during the tests
- a small group of classes and resources needed.
+Arquillian: it is a test framework which can also manage the test of the
+ containers, their integration with JavaBeans and dependency injections
+ too.
 \end_layout
 
 \begin_layout Itemize
-JUnit: Let us write repeatable tests, tests are usually performed for unit
- testing.
- It's used for components interactions result checks too.
+JUnit: it is the most used framework for unit testing in Java, expecially
+ for unit tests.
+ Mainly used in this project to test the integration of the sub-components.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -7795,25 +7972,26 @@ The test equipment regarding real tests used should be very heterogeneous:
 \end_layout
 
 \begin_layout Itemize
-various type of Android smartphone/tablet
+Various type of Android smartphones/tablets with different screen resolutions
+ and hardware features.
 \end_layout
 
 \begin_layout Itemize
-different PCs for what concern PowerEnJoy Control Room
+Different PCs to run the PowerEnJoy Control Room on.
 \end_layout
 
 \begin_layout Itemize
-at least one test per vehicle model offered by PowerEnJoy
+At least one fully-equipped vehicle.
 \end_layout
 
 \begin_layout Itemize
-for every city we serve, we should check the boards of the available map
+Safe area should be tested for each city in which the service will be activated.
 \end_layout
 
 \begin_layout Standard
-If possible, enroll some 'tester' for some hour in order to retrieve the
- satisfaction of all the complete system and functionalities to have a customer
- experience feedback.
+A good practice would be to enroll some testers and perform a beta-testig
+ phase in order to check that all the goals and the functionalities are
+ correctly provided and in order to have a customer experience feedback.
 \end_layout
 
 \begin_layout Standard
@@ -7828,24 +8006,22 @@ Program Stubs and Test Data Required
 \end_layout
 
 \begin_layout Standard
-For what concerns data test, we highly suggest to perform real tests on
- allowed zone and forbidden zone of the rent.
+Using an incremental approach instead of a 'big bang' approach, different
+ stubs, drivers and test data are required during the different integration
+ test activities.
  
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-Furthermore, we should also check some critical vehicle status (vehicle
- stress condition) and verify robustness of the system or eventually its
- bottleneck
-\end_layout
+Stubs, drivers and test data are indicated for each test case in section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Integration-test-cases"
 
-\begin_layout Standard
-The aim should be of physically verify possible real time issues not considered
- in the software development analysis.
-\end_layout
+\end_inset
 
-\begin_layout Standard
-Program stubs non ho capito bene cosa siano.
+.
 \end_layout
 
 \begin_layout Standard
@@ -7901,7 +8077,7 @@ Pietro Avolio
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12
 \end_layout
 
 \end_inset
@@ -7921,7 +8097,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12
 \end_layout
 
 \end_inset
