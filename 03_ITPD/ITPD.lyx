@@ -7594,8 +7594,8 @@ Integration test procedure TP1
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -7681,8 +7681,8 @@ Integration test procedure TP2
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -7768,8 +7768,8 @@ Integration test procedure TP3
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -7855,8 +7855,8 @@ Integration test procedure TP4
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -8024,13 +8024,6 @@ reference "subsec:Integration-test-cases"
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Appendix
 \end_layout
@@ -8077,7 +8070,7 @@ Pietro Avolio
 \begin_inset Text
 
 \begin_layout Plain Layout
-12
+11
 \end_layout
 
 \end_inset
