@@ -319,7 +319,11 @@ Definitions, acronyms and abbreviations
 \begin_layout Standard
 In order to avoid ambiguity and possible misunderstandings, this table is
  an integration to the definitions, the acronyms and the abbreviations defined
- in the RASD and DD documents.
+ in the RASD and in the DD.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -439,11 +443,11 @@ The document is structured in the following chapters:
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\boldsymbol{Integratio\,Strategy}$
+\begin_inset Formula $\boldsymbol{Integration\,Strategy}$
 \end_inset
 
  This chapter provides detailed information about the entry criteria to
- be met before starting the integration test, the elements to be integrated
+ be met before starting the integration tests, the elements to be integrated
  and an outline of the main strategies to follow.
 \end_layout
 
@@ -470,7 +474,7 @@ The document is structured in the following chapters:
 \end_inset
 
  This chapter summarizes the stubs, the drivers and the test data required
- to perfor the integration test activities.
+ to perform the integration test activities.
 \end_layout
 
 \begin_layout Standard
@@ -502,16 +506,16 @@ ion of the algorithms and in the usage of the data structures.
 
 \begin_layout Standard
 The project should also have passed through a phase of code inspection in
- order to ensure maintenability, the respect of the conventions, usage of
- the best known practices and the avoidance of the bad ones.
- The code inspection should be automated via automated tools as much as
- possibile in order to be able to spend manual inspection on the most complex
- parts.
+ order to ensure maintainability, the respect of the conventions, the usage
+ of the best known practices and the avoidance of the bad ones.
+ The code inspection should be executed via automated tools as much as possibile
+ in order to be able to spend most of the time on manual inspection of the
+ most complex parts.
 \end_layout
 
 \begin_layout Standard
 The following documents describing functional and non functional requirements,
- behaviour and purpose of the system must be delivered:
+ behaviour and purpose of the system must be delivered and available:
 \end_layout
 
 \begin_layout Itemize
@@ -527,9 +531,9 @@ Integration Test Plan Document (this document).
 \end_layout
 
 \begin_layout Standard
-Finally, an up-to-date and complete documentation of the code, using a common
- paradigm such as JavaDoc, could be a solid base and a good reference for
- the integration tests development.
+Finally, an up-to-date and complete documentation of the code, written using
+ a common paradigm such as JavaDoc, could be a solid base and a good reference
+ for the integration tests development.
 \end_layout
 
 \begin_layout Subsection
@@ -537,7 +541,7 @@ Elements to be integrated
 \end_layout
 
 \begin_layout Standard
-As stated in the DD document, the system is splitted on four logical layers,
+As stated in the DD document, the system is splitted into four logical layers,
  each of those containing one or more components:
 \end_layout
 
@@ -614,10 +618,10 @@ In order to prevent all the possibile issues coming from a typical big bang
 \begin_inset Newline newline
 \end_inset
 
-Up to limitate the number of stubs and mockups to be realized, the integration
- tests should follow a bottom-up flow, starting from the smallest - and
- often more critical - sub-components of the PowerEnJoy Core to the biggest
- ones.
+In order to limitate the number of stubs and mockups to be realized, the
+ integration tests should follow a bottom-up flow, starting from the smallest
+ - and often more critical - sub-components of the PowerEnJoy Core to the
+ biggest ones.
  
 \begin_inset Newline newline
 \end_inset
@@ -7945,7 +7949,7 @@ Tools and Test Equipment Required
 \end_layout
 
 \begin_layout Standard
-The following softwares are identified to assist the integration activities
+The following software are identified to assist the integration activities
  of the system:
 \end_layout
 
