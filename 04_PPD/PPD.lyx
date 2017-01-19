@@ -183,7 +183,7 @@ vspace{50pt}
 Version 
 \series bold
 1.0 
-\begin_inset Formula $\mathrm{-}15/01/2018$
+\begin_inset Formula $\mathrm{-}15/01/2017$
 \end_inset
 
  
@@ -407,7 +407,8 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{Introduction}$
 \end_inset
 
- This chapter provides
+ This chapter provides a support to understand the aim of the document and
+ its structure
 \end_layout
 
 \begin_layout Labeling
@@ -415,7 +416,7 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{Function\,Points\,estimation}$
 \end_inset
 
- This chapter provides 
+ This chapter provides
 \end_layout
 
 \begin_layout Labeling
@@ -454,40 +455,122 @@ Function Points estimation
 \end_layout
 
 \begin_layout Standard
-Cosa è.
- formula e a che serve
+A Function Points estimation is 
+\begin_inset Quotes eld
+\end_inset
+
+a technique to assess the effort needed to design and develop custom software
+ applications
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-tabella con i pesi per ogni function type che useremo
-\end_layout
-
-\begin_layout Subsection
-External input
+It is based on a combination of charateristics, we're going to call function
+ type, like: inputs, outputs, inquiries, external interfaces.
 \end_layout
 
 \begin_layout Standard
-elencare + tabella peso riassuntiva ciascun elemento più peso relativo
+Every function type has a weight associate.
+\end_layout
+
+\begin_layout Standard
+The purpose is to compute tha total weight of the system summing every function
+ type elements with its weight.
+\end_layout
+
+\begin_layout Standard
+We are going to use the Albrecht's method in order to identify and count
+ the number of function types.
+\end_layout
+
+\begin_layout Standard
+qui manca la tabella con i costi che diamo ad ogni function type
 \end_layout
 
 \begin_layout Subsection
-External output
+External Input
+\end_layout
+
+\begin_layout Standard
+This function type represents elementary operation needed to elaborate data
+ coming from the external environment.
+\end_layout
+
+\begin_layout Standard
+tabella con tutti gli external input rilevati e relativo peso
 \end_layout
 
 \begin_layout Subsection
-Internal logical file
+External Output
+\end_layout
+
+\begin_layout Standard
+This function type represents elementary operation needed to produce data
+ for the external environment.
+\end_layout
+
+\begin_layout Standard
+Usually, data from logic files are elaborated too.
+\end_layout
+
+\begin_layout Standard
+tabella con tutti gli external output rilevati e relativo peso
 \end_layout
 
 \begin_layout Subsection
-External interface files
+Internal Logical File
+\end_layout
+
+\begin_layout Standard
+This function type represents an homogeneous set of data used and managed
+ by the application
+\end_layout
+
+\begin_layout Standard
+tabella con relativo elenco e peso
 \end_layout
 
 \begin_layout Subsection
-External inquiry
+External Interface Files
+\end_layout
+
+\begin_layout Standard
+This function type represents an homogeneous set of data used by the application
+ but produced and maintained by other applications.
+\end_layout
+
+\begin_layout Standard
+tabella con elenco e relativo peso
 \end_layout
 
 \begin_layout Subsection
-Count of total Function Points
+External Inquiry
+\end_layout
+
+\begin_layout Standard
+This function type represents elementary operation that involves both input
+ and output: no relevant usage of logic files.
+\end_layout
+
+\begin_layout Standard
+tabella con elenco e relativo peso
+\end_layout
+
+\begin_layout Subsection
+Total number of Function Points
+\end_layout
+
+\begin_layout Standard
+The function points count is in relationship with the complexity of the
+ project, what we obtained is called UFP: Unadjusted Function Points.
+\end_layout
+
+\begin_layout Standard
+As we will see in the next chapter, it's in strict relationship with the
+ estimate size of the project.
 \end_layout
 
 \begin_layout Standard
@@ -506,7 +589,30 @@ COCOMO II estimation
 \end_layout
 
 \begin_layout Standard
-Cosa è: formula e a che serve
+COCOMO II is a statistical approach to calculate a basic formula called
+ 'Effort Equation'
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $PM$
+\end_inset
+
+=A x Size^E x Produttoria 1 a n EMi -> Pietro, ho fatto insert formula ma
+ non ho capito come fare per fare i caratteri speciali come esponente produttori
+a etc
+\end_layout
+
+\begin_layout Standard
+COCOMO II focus on effort estimation in two cases:
+\end_layout
+
+\begin_layout Enumerate
+Post-Architecture: when we are extending an existing product
+\end_layout
+
+\begin_layout Enumerate
+Early Design: when we do not have clear information on the architecture
+ of the system (ex-novo)
 \end_layout
 
 \begin_layout Subsection
@@ -514,7 +620,26 @@ Project sizing
 \end_layout
 
 \begin_layout Standard
-calcoli della size
+As we anticipated before, we can translate UFP to SLOC (source lines of
+ code):
+\end_layout
+
+\begin_layout Standard
+Formula: s = p * FP
+\end_layout
+
+\begin_layout Standard
+p is a costant depending on programming language used.
+ 
+\end_layout
+
+\begin_layout Standard
+In our case, we are going to use J2EE and an average p value is 46 according
+ to http://www.qsm.com/resources/function-point-languages-table
+\end_layout
+
+\begin_layout Standard
+So, what we obtained as SLOC is: valore
 \end_layout
 
 \begin_layout Subsection
@@ -522,7 +647,8 @@ Effort estimation
 \end_layout
 
 \begin_layout Standard
-calcoli sull'effort e spiegare cosa dipende
+An effort estimation according to COCOMO II formula, depends on more variable
+ we are going to fix in the next paragraphs
 \end_layout
 
 \begin_layout Subsubsection
@@ -530,7 +656,43 @@ Scale factors
 \end_layout
 
 \begin_layout Standard
-elencarli e valutarli per la formula dell'effort in una tabella
+Scale factors are:
+\end_layout
+
+\begin_layout Itemize
+Precedentedness: means the experience on with similar previously accomplished
+ projects by the team members.
+\end_layout
+
+\begin_layout Itemize
+Development flexibility: means to no have to deal with particular constraints
+ to perform the estabilished requirements and external interface specifications
+\end_layout
+
+\begin_layout Itemize
+Risk resolution: means that a good risk management plan is made, that includes
+ clear information of budget, schedule and focus just on architectural definitio
+n.
+\end_layout
+
+\begin_layout Itemize
+Team cohesion: means how well the group members know each other, the capability
+ of the team to work in group, share vision and commitment.
+ 
+\end_layout
+
+\begin_layout Itemize
+Process maturity: means the ability to use a well known method for assessing
+ the maturity of a software organization.
+\end_layout
+
+\begin_layout Standard
+Considered these definitions, the estimated scale factors we have chosen
+ are represented in the following table.
+\end_layout
+
+\begin_layout Standard
+tabella con i valori degli scale factor
 \end_layout
 
 \begin_layout Subsubsection
@@ -538,7 +700,13 @@ Cost drivers
 \end_layout
 
 \begin_layout Standard
-elencarli e valutarli in una tabella
+Cost driver are parameters we have to evaluate in our project.
+ They depends on which case of development we are.
+ In our case, the early design one, we have the following cost drivers.
+\end_layout
+
+\begin_layout Standard
+elencarli e valutarli in una tabella, sono quelli delle slide
 \end_layout
 
 \begin_layout Subsubsection
@@ -549,6 +717,11 @@ Effort
 quindi l'effort totale finale date le 2 precedenti sottosez è Effort = calcolo
 \end_layout
 
+\begin_layout Standard
+Finally, we are able to solve the Effort equation aforementioned with those
+ achieved values.
+\end_layout
+
 \begin_layout Subsection
 Time estimation
 \end_layout
@@ -556,6 +729,28 @@ Time estimation
 \begin_layout Standard
 quindi dati tutti i valori di prima si può dire che la time to develope
  is given by ed è 
+\end_layout
+
+\begin_layout Standard
+This formula should estimate the time needed to develop the entire project,
+ considering the PM and E before computed.
+\end_layout
+
+\begin_layout Standard
+T = 3.67 * PM ^ 0.28+0.2*(E-0.91)
+\end_layout
+
+\begin_layout Standard
+We rather suggest to approximate the value to the nearest bigger integer,
+ so we estimate a period of * months work.
+\end_layout
+
+\begin_layout Standard
+Since our group is composed by two members, we think...
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
