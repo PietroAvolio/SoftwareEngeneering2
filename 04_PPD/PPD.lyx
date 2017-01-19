@@ -292,7 +292,13 @@ Purpose and scope
 \end_layout
 
 \begin_layout Standard
-The purpose of this document is to provide information about 
+The purpose of this document is to provide information about cost and needed
+ effort to implement the project we analyze during the previous documents.
+\end_layout
+
+\begin_layout Standard
+We will be able to to provide also a timing estimation for the development
+ of our work.
 \end_layout
 
 \begin_layout Subsection
@@ -317,7 +323,7 @@ In order to avoid ambiguity and possible misunderstandings, this table is
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+PPD
 \end_layout
 
 \end_inset
@@ -326,7 +332,7 @@ In order to avoid ambiguity and possible misunderstandings, this table is
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Project Planning Document
 \end_layout
 
 \end_inset
@@ -384,24 +390,8 @@ Reference Documents:
 \end_layout
 
 \begin_layout Itemize
-Integration Test Plan Documents of the previous years published on BeeP.
+Project Management slides on BeeP.
  
-\end_layout
-
-\begin_layout Itemize
-spinGRID integration test plan on BeeP.
-\end_layout
-
-\begin_layout Itemize
-Testing slides on BeeP .
-\end_layout
-
-\begin_layout Itemize
-Tips and Trick for Supporting Architecture Description with UML on BeeP.
-\end_layout
-
-\begin_layout Itemize
-Integration Testing page on Wikipedia (visited 08/01/2017).
 \end_layout
 
 \begin_layout Subsection
@@ -464,6 +454,47 @@ Function Points estimation
 \end_layout
 
 \begin_layout Standard
+Cosa è.
+ formula e a che serve
+\end_layout
+
+\begin_layout Standard
+tabella con i pesi per ogni function type che useremo
+\end_layout
+
+\begin_layout Subsection
+External input
+\end_layout
+
+\begin_layout Standard
+elencare + tabella peso riassuntiva ciascun elemento più peso relativo
+\end_layout
+
+\begin_layout Subsection
+External output
+\end_layout
+
+\begin_layout Subsection
+Internal logical file
+\end_layout
+
+\begin_layout Subsection
+External interface files
+\end_layout
+
+\begin_layout Subsection
+External inquiry
+\end_layout
+
+\begin_layout Subsection
+Count of total Function Points
+\end_layout
+
+\begin_layout Standard
+tabella con classifica totale di pesi
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -472,6 +503,59 @@ Function Points estimation
 
 \begin_layout Section
 COCOMO II estimation
+\end_layout
+
+\begin_layout Standard
+Cosa è: formula e a che serve
+\end_layout
+
+\begin_layout Subsection
+Project sizing
+\end_layout
+
+\begin_layout Standard
+calcoli della size
+\end_layout
+
+\begin_layout Subsection
+Effort estimation
+\end_layout
+
+\begin_layout Standard
+calcoli sull'effort e spiegare cosa dipende
+\end_layout
+
+\begin_layout Subsubsection
+Scale factors
+\end_layout
+
+\begin_layout Standard
+elencarli e valutarli per la formula dell'effort in una tabella
+\end_layout
+
+\begin_layout Subsubsection
+Cost drivers
+\end_layout
+
+\begin_layout Standard
+elencarli e valutarli in una tabella
+\end_layout
+
+\begin_layout Subsubsection
+Effort
+\end_layout
+
+\begin_layout Standard
+quindi l'effort totale finale date le 2 precedenti sottosez è Effort = calcolo
+\end_layout
+
+\begin_layout Subsection
+Time estimation
+\end_layout
+
+\begin_layout Standard
+quindi dati tutti i valori di prima si può dire che la time to develope
+ is given by ed è 
 \end_layout
 
 \begin_layout Standard
