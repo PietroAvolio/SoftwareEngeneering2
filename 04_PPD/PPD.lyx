@@ -904,16 +904,72 @@ Those kind of risks threaten the project plan and could easily afflict our
 \end_layout
 
 \begin_layout Itemize
-Risk: This project is our first team work together and one of first in absolute.
- Mistakes due to unexperience in estimations and arrangement could be done.
+Risk: This project is our first team work together and one of the first
+ in absolute.
+ Mistakes due to unexperience in estimations and arrangement could be levareged.
+\end_layout
+
+\begin_layout Itemize
+Risk: Requirements could change or be increased due to the customers or
+ law changement.
+ This could let not permit us to respect mandatory deadlines.
+\end_layout
+
+\begin_layout Itemize
+Risk: Since our work team is composed just by 2 members.
+ Diseases and healthy of the member is very relevant.
 \end_layout
 
 \begin_layout Subsection
 Technical Risks
 \end_layout
 
+\begin_layout Standard
+Those kind of risks threaten the quality and timeliness of the software
+ to be produced.
+\end_layout
+
+\begin_layout Itemize
+Risk: NoSQL and MySQL may appear unreliable for connectivity and transactions
+ issue.
+\end_layout
+
+\begin_layout Itemize
+Risk: Data corruption during relevant communication such ah PowerEnJoy Core
+ and vehicles or PowerEnJoy App more than expected.
+\end_layout
+
+\begin_layout Itemize
+Risk: PowerEnJoy App could be afflicted by security issue during important
+ communication such as for payment or personal identitification.
+\end_layout
+
 \begin_layout Subsection
 Business Risks
+\end_layout
+
+\begin_layout Standard
+Those kind of risks threaten the viability of the software to be built.
+\end_layout
+
+\begin_layout Itemize
+Risk: Personnel reduction of the work team due to financial issue.
+\end_layout
+
+\begin_layout Itemize
+Risk: Testing devices and infrastructure purchased and accidentally damaged.
+\end_layout
+
+\begin_layout Itemize
+Risk: Violation of future law with retro-action.
+\end_layout
+
+\begin_layout Itemize
+Risk: Competitors could steal our job.
+\end_layout
+
+\begin_layout Standard
+Tabella Risk Probability Effects per ogni categoria
 \end_layout
 
 \begin_layout Section
