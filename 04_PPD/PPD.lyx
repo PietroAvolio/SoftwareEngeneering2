@@ -700,7 +700,7 @@ Cost drivers
 \end_layout
 
 \begin_layout Standard
-Cost driver are parameters we have to evaluate in our project.
+Cost drivers are parameters we have to evaluate in our project.
  They depends on which case of development we are.
  In our case, the early design one, we have the following cost drivers.
 \end_layout
@@ -757,7 +757,125 @@ Since our group is composed by two members, we think...
 \end_layout
 
 \begin_layout Section
-Tasks & Schedule
+Scheduling & Task allocation
+\end_layout
+
+\begin_layout Subsection
+Schedule
+\end_layout
+
+\begin_layout Standard
+This section provides a schedule of the entire work project and an overview
+ of how resources are allocated in order to complete task.
+\end_layout
+
+\begin_layout Standard
+Main goal we desire to achieve is to provide a global view of the project
+ to all team members.
+ This is important to let the people know in which context are they working,
+ their importance and stimulate them to achieve together the final goal.
+ In such a way every task should be accomplished with contributions of all
+ members.
+\end_layout
+
+\begin_layout Standard
+This behaviour should let us achieve a more accurate control on each task.
+\end_layout
+
+\begin_layout Standard
+The following are the task we will accomplish to complete our work.
+\end_layout
+
+\begin_layout Itemize
+Requirement Analysis and Specification Document
+\end_layout
+
+\begin_layout Itemize
+Design Document
+\end_layout
+
+\begin_layout Itemize
+Integration Testing Plan Document
+\end_layout
+
+\begin_layout Itemize
+Project Plan Document
+\end_layout
+
+\begin_layout Itemize
+A short but clear global presentation summarizing all aspects to convince
+ our customers and receive feedbacks before the beginning of the development
+ phase
+\end_layout
+
+\begin_layout Itemize
+Development phase according to document specifications
+\end_layout
+
+\begin_layout Itemize
+Integration Testing according to document specifications
+\end_layout
+
+\begin_layout Standard
+The task dependencies are shown in this meaningful statechart graph
+\end_layout
+
+\begin_layout Standard
+immagine degli stati dei task e le frecce per le relazioni di precedenza
+\end_layout
+
+\begin_layout Standard
+Here in the table below, the deadlines for each task.
+ Note that, the document's tasks deadlines were mandatory imposed by our
+ customers.
+ The implentation and integration tasks deadlines are fixed according to
+ the value achieved in the chapter 3.
+\end_layout
+
+\begin_layout Standard
+tabella con task e data inizio e fine
+\end_layout
+
+\begin_layout Subsection
+Task allocation
+\end_layout
+
+\begin_layout Standard
+As we said before, every component of the team actively partecipate to each
+ task.
+\end_layout
+
+\begin_layout Standard
+The way we arrange our resources in order to complete task work on time
+ is shown in the following tables:
+\end_layout
+
+\begin_layout Standard
+tabella per il RASD con gli argomenti del rasd
+\end_layout
+
+\begin_layout Standard
+tabella per il DD con gli argomenti del DD
+\end_layout
+
+\begin_layout Standard
+tabella del ITDP con argomenti del ITDP
+\end_layout
+
+\begin_layout Standard
+tabella di questo Planning con argomenti del planning
+\end_layout
+
+\begin_layout Standard
+tabella per la presentation
+\end_layout
+
+\begin_layout Standard
+tabella per l'implementazione ( non so bene le fasi specifiche io)
+\end_layout
+
+\begin_layout Standard
+tabella per l'integration test con le fasi dell'integration test
 \end_layout
 
 \begin_layout Standard
@@ -768,18 +886,34 @@ Tasks & Schedule
 \end_layout
 
 \begin_layout Section
-Resource allocation 
+Risks 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
+Those risks our team could incur are divided into 3 types:
 \end_layout
 
-\begin_layout Section
-Risks association
+\begin_layout Subsection
+Project Risks
+\end_layout
+
+\begin_layout Standard
+Those kind of risks threaten the project plan and could easily afflict our
+ project schedule.
+ In such a way project costs could increase very much.
+\end_layout
+
+\begin_layout Itemize
+Risk: This project is our first team work together and one of first in absolute.
+ Mistakes due to unexperience in estimations and arrangement could be done.
+\end_layout
+
+\begin_layout Subsection
+Technical Risks
+\end_layout
+
+\begin_layout Subsection
+Business Risks
 \end_layout
 
 \begin_layout Section
