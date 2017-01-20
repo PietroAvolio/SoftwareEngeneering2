@@ -292,13 +292,13 @@ Purpose and scope
 \end_layout
 
 \begin_layout Standard
-The purpose of this document is to provide information about cost and needed
- effort to implement the project we analyze during the previous documents.
+The purpose of this document is to provide information about cost and effort
+ necessity for project implementation.
 \end_layout
 
 \begin_layout Standard
-We will be able to to provide also a timing estimation for the development
- of our work.
+Furthermore, we will be able to provide a timing estimation of the entire
+ project.
 \end_layout
 
 \begin_layout Subsection
@@ -306,13 +306,16 @@ Definitions, acronyms and abbreviations
 \end_layout
 
 \begin_layout Standard
-In order to avoid ambiguity and possible misunderstandings, this table is
- an integration to the definitions, the acronyms and the abbreviations defined
- in the RASD and DD documents.
+In order to avoid ambiguity and misunderstandings, this table is an integration
+ to the definitions, the acronyms and the abbreviations defined in the RASD
+ and DD documents.
 \begin_inset Newline newline
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle" tabularwidth="100text%">
@@ -343,7 +346,7 @@ Project Planning Document
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+FP
 \end_layout
 
 \end_inset
@@ -352,7 +355,7 @@ Project Planning Document
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Function Points
 \end_layout
 
 \end_inset
@@ -363,7 +366,7 @@ Project Planning Document
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+UFP
 \end_layout
 
 \end_inset
@@ -372,7 +375,7 @@ Project Planning Document
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Unadjusted Function Points
 \end_layout
 
 \end_inset
@@ -416,7 +419,8 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{Function\,Points\,estimation}$
 \end_inset
 
- This chapter provides
+ This chapter provides an estimation of the project according to a Function
+ Point analysis
 \end_layout
 
 \begin_layout Labeling
@@ -424,23 +428,17 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{COCOMO\,II\,estimation}$
 \end_inset
 
- This chapter provides 
+ This chapter provides an estimation of the project according to a COCOMO
+ method approach.
 \end_layout
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-\begin_inset Formula $\boldsymbol{Tasks\,\&\,Schedule}$
+\begin_inset Formula $\boldsymbol{Scheduling\,\&\,Task},Allocation$
 \end_inset
 
- This chapter provides 
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-\begin_inset Formula $\boldsymbol{Resource\,allocation}$
-\end_inset
-
- This chapter summarizes 
+ This chapter provides an overview of all tasks to be deployed and a schedule
+ of work.
 \end_layout
 
 \begin_layout Standard
@@ -468,17 +466,17 @@ a technique to assess the effort needed to design and develop custom software
 \end_layout
 
 \begin_layout Standard
-It is based on a combination of charateristics, we're going to call function
- type, like: inputs, outputs, inquiries, external interfaces.
+It is based on a combination of charateristics known as function type.
 \end_layout
 
 \begin_layout Standard
-Every function type has a weight associate.
+Every function type has a weight associate in relation to its relevance
 \end_layout
 
 \begin_layout Standard
-The purpose is to compute tha total weight of the system summing every function
- type elements with its weight.
+The purpose is to compute the total weight of the system summing every function
+ type elements with its weight and obtain an important value for future
+ estimation
 \end_layout
 
 \begin_layout Standard
