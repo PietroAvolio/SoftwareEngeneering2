@@ -2624,6 +2624,7 @@ Factor
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+<<<<<<< HEAD
 \begin_layout Plain Layout
 
 \series bold
@@ -4030,7 +4031,11 @@ Integration Testing according to document specifications
 \end_layout
 
 \begin_layout Standard
+The task dependencies are shown in this meaningful statechart graph
+=======
+\begin_layout Standard
 The task dependencies are shown in this meaningful statechart graph:
+>>>>>>> 9fbf5b618691bbf6f7c064c5e76f0b63156f87e2
 \end_layout
 
 \begin_layout Standard
@@ -5474,13 +5479,6 @@ Business Risks
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Those kind of risks threaten the viability of the software to be built.
 \end_layout
 
@@ -5654,6 +5652,13 @@ Low
 </row>
 </lyxtabular>
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
