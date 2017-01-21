@@ -2790,7 +2790,7 @@ Implementation
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4/02/2017
 \end_layout
 
 \end_inset
@@ -2799,7 +2799,7 @@ Implementation
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4/03/2018 (*1 month holiday)
 \end_layout
 
 \end_inset
@@ -2819,7 +2819,7 @@ Testing
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5/03/2018
 \end_layout
 
 \end_inset
@@ -2828,7 +2828,7 @@ Testing
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5/05/2018
 \end_layout
 
 \end_inset
@@ -3448,9 +3448,8 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
+<lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
@@ -3463,20 +3462,11 @@ Resource
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-First 6 months
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ancora non so dobbiamo ficcare cocomo
+12 months
 \end_layout
 
 \end_inset
@@ -3492,20 +3482,11 @@ Pietro
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Developing
 \end_layout
 
 \end_inset
@@ -3521,20 +3502,11 @@ Guido
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Developing
 \end_layout
 
 \end_inset
@@ -3617,7 +3589,7 @@ Pietro
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Integration Test
 \end_layout
 
 \end_inset
@@ -3626,7 +3598,7 @@ Pietro
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Beta Test
 \end_layout
 
 \end_inset
@@ -3646,7 +3618,7 @@ Guido
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Integration Test
 \end_layout
 
 \end_inset
@@ -3655,7 +3627,7 @@ Guido
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Beta Test
 \end_layout
 
 \end_inset
@@ -3709,9 +3681,8 @@ Those kind of risks threaten the project plan and could easily afflict our
 
 \begin_layout Enumerate
 Risk: This project is our first team work together and one of first in absolute.
- Mistakes due to unexperience in estimations and arrangement could be done.
-Risk: This project is our first team work together and one of the first
- in absolute.
+ Mistakes due to unexperience in estimations and arrangement could be done.Risk:
+ This project is our first team work together and one of the first in absolute.
  Mistakes due to unexperience in estimations and arrangement could be levareged.
 \end_layout
 
