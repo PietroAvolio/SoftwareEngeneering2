@@ -17,3 +17,6 @@ Guido Borrelli 	Mat. 874451
 	
 + Integration Test Plan Document. Deadline 15/01/2017
 	- [PDF Document of the last version](./releases/3.ITPD/Integration Test Plan Document - v1.0.pdf)
+	
++ Project Plan Document. Deadline 22/01/2017
+	- [PDF Document of the last version](./releases/4.PPD/Project Plan Document - v1.0.pdf)

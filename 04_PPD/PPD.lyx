@@ -519,7 +519,7 @@ The document is structured in the following chapters:
 \end_inset
 
  This chapter provides a support to understand the aim of the document and
- its structure
+ its structure.
 \end_layout
 
 \begin_layout Labeling
@@ -527,7 +527,8 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{Function\,Points\,estimation}$
 \end_inset
 
- This chapter provides
+ This chapter provides an effort estimation made using the Function Points
+ extimation technique.
 \end_layout
 
 \begin_layout Labeling
@@ -535,7 +536,8 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{COCOMO\,II\,estimation}$
 \end_inset
 
- This chapter provides 
+ This chapter provides an effort estimation made using the COCOMO II extimation
+ technique.
 \end_layout
 
 \begin_layout Labeling
@@ -543,7 +545,7 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{Tasks\,\&\,Schedule}$
 \end_inset
 
- This chapter provides 
+ This chapter provides detailes about the task and their schedule.
 \end_layout
 
 \begin_layout Labeling
@@ -551,7 +553,8 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{Resource\,allocation}$
 \end_inset
 
- This chapter summarizes 
+ This chapter desribes how team members are allocated to each task of the
+ project.
 \end_layout
 
 \begin_layout Standard
@@ -2534,7 +2537,7 @@ Precedentedness
 \shape default
  reflects the experience of the team members with similar, previously accomplish
 ed, projects.
- Low values mean no previus experience, high values mean high experience.
+ Low values mean no previous experience, high values mean high experience.
 \end_layout
 
 \begin_layout Labeling
@@ -2553,8 +2556,8 @@ Risk
 \begin_inset space ~
 \end_inset
 
-resolution reflects the existence and the deppening of a risk analysis.
- Low valeus mean little analysis, high values mean a complete risk analysis.
+resolution reflects the existence and the deepening of a risk analysis.
+ Low values mean little analysis, high values mean a complete risk analysis.
 \end_layout
 
 \begin_layout Labeling
@@ -2564,7 +2567,7 @@ Team
 \end_inset
 
 cohesion reflects how well the group members know each other and the capability
- of the whole team team to share vision and commitment.
+ of the whole team to share vision and commitment.
 \end_layout
 
 \begin_layout Labeling
@@ -2874,14 +2877,14 @@ Cost drivers
 \end_layout
 
 \begin_layout Standard
-Cost drivers are parameters that depends on whether the project is a case
+Cost drivers are parameters that depend on whether the project is a case
  of post-architecture or early design project.
  From the cost drivers we can derive the Effort Multiplier used in the COCOMO
  II formula.
 \end_layout
 
 \begin_layout Standard
-Stated that the PowerEnJoy proect is a case of 
+Stated that the PowerEnJoy project is a case of 
 \series bold
 post-architecture
 \series default
@@ -3125,7 +3128,7 @@ RUSE
 \begin_inset Text
 
 \begin_layout Plain Layout
-Developed fo Resuability
+Developed for Resuability
 \end_layout
 
 \end_inset
@@ -4010,7 +4013,7 @@ Deliver the Design Document
 \end_layout
 
 \begin_layout Itemize
-Delive the Integration Testing Plan Document
+Deliver the Integration Testing Plan Document
 \end_layout
 
 \begin_layout Itemize
@@ -5256,7 +5259,7 @@ reference "fig:Technical-Risks"
 DBMSs unreliability
 \series default
 : NoSQL and MySQL may appear unreliable for connectivity and transactions
- issue.
+ issues.
 \end_layout
 
 \begin_layout Enumerate
@@ -5487,7 +5490,7 @@ Business Risks
 \end_layout
 
 \begin_layout Standard
-Business Risks are listed below, together with a classification of thei
+Business Risks are listed below, together with a classification of their
  possibile effects provided in table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5502,7 +5505,7 @@ reference "tab:Business-Risks"
 \begin_layout Enumerate
 
 \series bold
-Personne Reduction
+Personnel Reduction
 \series default
 : Personnel reduction of the work team due to financial issue.
 \end_layout
