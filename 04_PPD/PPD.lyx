@@ -3863,6 +3863,13 @@ Finally, we are able to solve the Effort Equation using the computed params:
 
 \begin_layout Subsection
 Duration
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Duration"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3879,6 +3886,7 @@ We can calculate the amount of calandar time using the following mathematical
 \end_layout
 
 \begin_layout Standard
+\align left
 where
 \end_layout
 
@@ -3978,55 +3986,44 @@ Schedule
 \end_layout
 
 \begin_layout Standard
-This section provides a schedule of the entire work project and an overview
- of how resources are allocated in order to complete task.
+The main goal that this section desires to achieve is to provide a global
+ view of the project to all team members, in order to let people involved
+ in the project know in which context are they working, their importance
+ and stimulate them to achieve together the final goal.
+ 
 \end_layout
 
 \begin_layout Standard
-Main goal we desire to achieve is to provide a global view of the project
- to all team members.
- This is important to let the people know in which context are they working,
- their importance and stimulate them to achieve together the final goal.
- In such a way every task should be accomplished with contributions of all
- members.
-\end_layout
-
-\begin_layout Standard
-This behaviour should let us achieve a more accurate control on each task.
-\end_layout
-
-\begin_layout Standard
-The following are the task we will accomplish to complete our work.
+The main tasks for the project are:
 \end_layout
 
 \begin_layout Itemize
-Requirement Analysis and Specification Document
+Deliver the Requirement Analysis and Specification Document
 \end_layout
 
 \begin_layout Itemize
-Design Document
+Deliver the Design Document
 \end_layout
 
 \begin_layout Itemize
-Integration Testing Plan Document
+Delive the Integration Testing Plan Document
 \end_layout
 
 \begin_layout Itemize
-Project Plan Document
+Deliver the Project Plan Document
 \end_layout
 
 \begin_layout Itemize
-A short but clear global presentation summarizing all aspects to convince
- our customers and receive feedbacks before the beginning of the development
- phase
+Prepare a short but clear global presentation summarizing all the main aspects
+ of the project
 \end_layout
 
 \begin_layout Itemize
-Development phase according to document specifications
+Implement the software products and run unit tests
 \end_layout
 
 \begin_layout Itemize
-Integration Testing according to document specifications
+Perform the integration test phase
 \end_layout
 
 \begin_layout Standard
@@ -4040,12 +4037,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Document StateChart - Page 1.jpeg
+	display false
 	scale 50
 
 \end_inset
@@ -4072,18 +4067,33 @@ Documents statecharts
 \end_layout
 
 \begin_layout Standard
-Here in the table below, the deadlines for each task.
- Note that, the document's tasks deadlines were mandatory imposed by our
- customers.
- 
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Deadlines-for-each"
+
+\end_inset
+
+ reports the deadlines for each task.
+ The implentation and integration tasks deadlines are fixed according to
+ the value achieved in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Unadjusted-Function-Points"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-The implentation and integration tasks deadlines are fixed according to
- the value achieved in the chapter 3.
-\end_layout
+\begin_inset Float table
+wide false
+sideways false
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
 <features tabularvalignment="middle">
@@ -4095,6 +4105,8 @@ The implentation and integration tasks deadlines are fixed according to
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Documents
 \end_layout
 
@@ -4104,6 +4116,8 @@ Documents
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Beginning date
 \end_layout
 
@@ -4113,7 +4127,9 @@ Beginning date
 \begin_inset Text
 
 \begin_layout Plain Layout
-Deadline date
+
+\series bold
+Deadline
 \end_layout
 
 \end_inset
@@ -4287,7 +4303,7 @@ Implementation
 \begin_inset Text
 
 \begin_layout Plain Layout
-4/03/2018 (*1 month holiday)
+4/03/2018
 \end_layout
 
 \end_inset
@@ -4298,7 +4314,7 @@ Implementation
 \begin_inset Text
 
 \begin_layout Plain Layout
-Testing
+Integration Testing
 \end_layout
 
 \end_inset
@@ -4329,18 +4345,35 @@ Testing
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Deadlines-for-each"
+
+\end_inset
+
+Deadlines for each task
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Task allocation
 \end_layout
 
 \begin_layout Standard
-As we said before, every component of the team actively partecipate to each
- task.
-\end_layout
-
-\begin_layout Standard
-The way we arrange our resources in order to complete the whole work on
- time is shown in the following tables:
+This section shows how each member of the team was involved in each task.
 \end_layout
 
 \begin_layout Standard
@@ -4354,6 +4387,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle">
@@ -4365,6 +4399,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Resource
 \end_layout
 
@@ -4374,6 +4410,8 @@ Resource
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 1st week
 \end_layout
 
@@ -4383,6 +4421,8 @@ Resource
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 2nd week
 \end_layout
 
@@ -4452,10 +4492,14 @@ Specific Requirements
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Resource allocation for RASD
+Resource allocation for the RASD
 \end_layout
 
 \end_inset
@@ -4479,6 +4523,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle">
@@ -4490,6 +4535,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Resource
 \end_layout
 
@@ -4499,6 +4546,8 @@ Resource
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 1st week
 \end_layout
 
@@ -4508,6 +4557,8 @@ Resource
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 2nd week
 \end_layout
 
@@ -4580,7 +4631,7 @@ Requiments Traceability
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Resource allocation for DD
+Resource allocation for the DD
 \end_layout
 
 \end_inset
@@ -4600,6 +4651,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle">
@@ -4611,6 +4663,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Resource
 \end_layout
 
@@ -4620,6 +4674,8 @@ Resource
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 1st week
 \end_layout
 
@@ -4629,6 +4685,8 @@ Resource
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 2nd week
 \end_layout
 
@@ -4721,6 +4779,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle">
@@ -4732,6 +4791,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Resource
 \end_layout
 
@@ -4741,6 +4802,8 @@ Resource
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 1st week
 \end_layout
 
@@ -4750,6 +4813,8 @@ Resource
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 2nd week
 \end_layout
 
@@ -4842,6 +4907,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
@@ -4852,6 +4918,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Resource
 \end_layout
 
@@ -4861,6 +4929,8 @@ Resource
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 1st week
 \end_layout
 
@@ -4929,220 +4999,6 @@ Resource allocation for Presentation
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Resource
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-12 months
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Pietro
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Developing
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Guido
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Developing
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Resource allocation for Implementation
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Resource
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1st month
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2nd month
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Pietro
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Integration Test
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Beta Test
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Guido
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Integration Test
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Beta Test
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Resource allocation for Testing
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -5154,7 +5010,13 @@ Risks
 \end_layout
 
 \begin_layout Standard
-Those risks our team could incur are divided into 3 types:
+The risks associated with the project can be classified in three main categories
+: project risks, technical risks and business risks.
+\end_layout
+
+\begin_layout Standard
+In this section we analyze the potential risks coming from each of these
+ categories.
 \end_layout
 
 \begin_layout Subsection
@@ -5162,30 +5024,53 @@ Project Risks
 \end_layout
 
 \begin_layout Standard
-Those kind of risks threaten the project plan and could easily afflict our
- project schedule.
- In such a way project costs could increase very much.
+Project Risks are listed below, together with a classification of their
+ possible effects provided in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Project-Risks"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-Risk: This project is our first team work together and one of first in absolute.
- Mistakes due to unexperience in estimations and arrangement could be done.Risk:
- This project is our first team work together and one of the first in absolute.
- Mistakes due to unexperience in estimations and arrangement could be levareged.
+
+\series bold
+Lack Of Communication Among Team Members
+\series default
+: This project is our first team work together and one of first in absolute.
+ Mistakes due to unexperience in estimations and arrangement could be highly
+ probable.
 \end_layout
 
 \begin_layout Enumerate
-Risk: Requirements could change or be increased due to the customers or
- law changement.
- This could let not permit us to respect mandatory deadlines.
+
+\series bold
+Requirements change
+\series default
+: Requirements could change or increased due to the customers or law changes.
+ This could affect deadlines.
 \end_layout
 
 \begin_layout Enumerate
-Risk: Since our work team is composed just by 2 members.
- Diseases and healthy of the member is very relevant.
+
+\series bold
+Lack of experience in programming with the specific frameworks
+\series default
+: Our team has not much experience with the Java 2EE framework.
+ This will surely affect development.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
@@ -5197,6 +5082,8 @@ Risk: Since our work team is composed just by 2 members.
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Risk
 \end_layout
 
@@ -5206,6 +5093,8 @@ Risk
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Probability
 \end_layout
 
@@ -5215,6 +5104,8 @@ Probability
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Effects
 \end_layout
 
@@ -5235,7 +5126,7 @@ Effects
 \begin_inset Text
 
 \begin_layout Plain Layout
-High
+Moderate
 \end_layout
 
 \end_inset
@@ -5244,7 +5135,7 @@ High
 \begin_inset Text
 
 \begin_layout Plain Layout
-Relevant
+Moderate
 \end_layout
 
 \end_inset
@@ -5264,7 +5155,7 @@ Relevant
 \begin_inset Text
 
 \begin_layout Plain Layout
-Moderate
+Low
 \end_layout
 
 \end_inset
@@ -5273,7 +5164,7 @@ Moderate
 \begin_inset Text
 
 \begin_layout Plain Layout
-Serious
+Moderate
 \end_layout
 
 \end_inset
@@ -5293,7 +5184,7 @@ Serious
 \begin_inset Text
 
 \begin_layout Plain Layout
-Moderate
+Certain
 \end_layout
 
 \end_inset
@@ -5302,13 +5193,36 @@ Moderate
 \begin_inset Text
 
 \begin_layout Plain Layout
-Serious
+Moderate
 \end_layout
 
 \end_inset
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Project-Risks"
+
+\end_inset
+
+Project Risks
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -5320,28 +5234,65 @@ Technical Risks
 \end_layout
 
 \begin_layout Standard
-Those kind of risks threaten the quality and timeliness of the software
+Technical Risks are listed below, together with a classification of their
+ possibile effects provided in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Technical-Risks"
+
+\end_inset
+
+.Those kind of risks threaten the quality and timeliness of the software
  to be produced.
 \end_layout
 
 \begin_layout Itemize
-Risk: NoSQL and MySQL may appear unreliable for connectivity and transactions
+
+\series bold
+DBMSs unreliability
+\series default
+: NoSQL and MySQL may appear unreliable for connectivity and transactions
  issue.
 \end_layout
 
 \begin_layout Itemize
-Risk: Data corruption during relevant communication such ah PowerEnJoy Core
+
+\series bold
+Data Los
+\series default
+: Data corruption during relevant communication such ah PowerEnJoy Core
  and vehicles or PowerEnJoy App more than expected.
 \end_layout
 
 \begin_layout Itemize
-Risk: PowerEnJoy App could be afflicted by security issue during important
- communication such as for payment or personal identitification.
+
+\series bold
+Security Issues
+\series default
+: PowerEnJoy App could be afflicted by security issue during important communica
+tion such as for payments or personal identitification.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Issues communicating with vehicles
+\series default
+: The system could show unwanted behaviours in case of issues communicating
+ with vehicles.
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
+<lyxtabular version="3" rows="5" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -5351,6 +5302,8 @@ Risk: PowerEnJoy App could be afflicted by security issue during important
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Risk
 \end_layout
 
@@ -5360,6 +5313,8 @@ Risk
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Probability
 \end_layout
 
@@ -5369,6 +5324,8 @@ Probability
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Effects
 \end_layout
 
@@ -5427,6 +5384,35 @@ Moderate
 \begin_inset Text
 
 \begin_layout Plain Layout
+Catastrophic
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Low
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 Serious
 \end_layout
 
@@ -5438,7 +5424,7 @@ Serious
 \begin_inset Text
 
 \begin_layout Plain Layout
-3
+4
 \end_layout
 
 \end_inset
@@ -5447,7 +5433,7 @@ Serious
 \begin_inset Text
 
 \begin_layout Plain Layout
-Low
+Moderate
 \end_layout
 
 \end_inset
@@ -5456,13 +5442,36 @@ Low
 \begin_inset Text
 
 \begin_layout Plain Layout
-Serious
+Low
 \end_layout
 
 \end_inset
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Technical-Risks"
+
+\end_inset
+
+Technical Risks
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -5481,26 +5490,58 @@ Business Risks
 \end_layout
 
 \begin_layout Standard
-Those kind of risks threaten the viability of the software to be built.
+Business Risks are listed below, together with a classification of thei
+ possibile effects provided in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Business-Risks"
+
+\end_inset
+
+.
+ Those kind of risks threaten the viability of the system to be.
 \end_layout
 
 \begin_layout Itemize
-Risk: Personnel reduction of the work team due to financial issue.
+
+\series bold
+Personne Reduction
+\series default
+: Personnel reduction of the work team due to financial issue.
 \end_layout
 
 \begin_layout Itemize
-Risk: Testing devices and infrastructure purchased and accidentally damaged.
+
+\series bold
+Accidental Damages
+\series default
+: Testing devices and infrastructure purchased and accidentally damaged.
 \end_layout
 
 \begin_layout Itemize
-Risk: Violation of future law with retro-action.
+
+\series bold
+Law Changes
+\series default
+: Violation of future law with retro-action.
 \end_layout
 
 \begin_layout Itemize
-Risk: Competitors could steal our job.
+
+\series bold
+New Competitors
+\series default
+: Competitors could enter the market and erose marke shares.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="3">
 <features tabularvalignment="middle">
@@ -5512,6 +5553,8 @@ Risk: Competitors could steal our job.
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Risk
 \end_layout
 
@@ -5521,6 +5564,8 @@ Risk
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Probability
 \end_layout
 
@@ -5530,6 +5575,8 @@ Probability
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Effects
 \end_layout
 
@@ -5653,6 +5700,29 @@ Low
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Business-Risks"
+
+\end_inset
+
+Business Risks
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
