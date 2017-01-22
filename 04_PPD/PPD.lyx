@@ -577,6 +577,10 @@ technique to assess the effort needed to design and develop custom software
 \begin_inset Newline newline
 \end_inset
 
+
+\begin_inset Newline newline
+\end_inset
+
 In this section we specify the FPs for the PowerEnJoy project and we associate
  a weight to each of them.
  
@@ -5483,13 +5487,6 @@ Business Risks
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Business Risks are listed below, together with a classification of thei
  possibile effects provided in table 
 \begin_inset CommandInset ref
@@ -5724,6 +5721,13 @@ Business Risks
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
