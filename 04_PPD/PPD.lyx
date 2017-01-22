@@ -292,7 +292,7 @@ Purpose and scope
 \end_layout
 
 \begin_layout Standard
-The purpose of this document is to provide the extimation of cost and effort
+The purpose of this document is to provide the estimation of cost and effort
  needed to implement the PowerEnJoy system..
 \end_layout
 
@@ -528,7 +528,7 @@ The document is structured in the following chapters:
 \end_inset
 
  This chapter provides an effort estimation made using the Function Points
- extimation technique.
+ estimation technique.
 \end_layout
 
 \begin_layout Labeling
@@ -536,7 +536,7 @@ The document is structured in the following chapters:
 \begin_inset Formula $\boldsymbol{COCOMO\,II\,estimation}$
 \end_inset
 
- This chapter provides an effort estimation made using the COCOMO II extimation
+ This chapter provides an effort estimation made using the COCOMO II estimation
  technique.
 \end_layout
 
@@ -1394,7 +1394,7 @@ Medium
 \begin_layout Standard
 \align left
 The assigned weight is proportional to the number of the internal components
- involved to generate to output.
+ involved to generate the output.
 \end_layout
 
 \begin_layout Subsection
@@ -2424,7 +2424,7 @@ where:
 \shape italic
 A
 \shape default
- Is a costant that approximates the productivity constant PM/KSLOC.
+ Is a costant that approximate the productivity constant PM/KSLOC.
  Its value is 
 \shape italic
 2.94
@@ -2547,7 +2547,7 @@ ed, projects.
 Development flexibility 
 \shape default
 reflects the degree of flexibility in the development process.
- Low values meas no flexibility, high values mean no prescriptions.
+ Low values mean no flexibility, high values mean no prescriptions.
 \end_layout
 
 \begin_layout Labeling
@@ -2888,8 +2888,8 @@ Stated that the PowerEnJoy project is a case of
 \series bold
 post-architecture
 \series default
-, the estimated cost driver for the project, together with the total computerd
- EM param, are described in table 
+, the estimated cost drivers for the project, together with the total computed
+ PM param, are described in table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Cost-Drivers"
@@ -3962,7 +3962,7 @@ We obtain
 \end_layout
 
 \begin_layout Standard
-By diving the calculated PM by the TDEV value we obtain the extimated number
+By diving the calculated PM by the TDEV value we obtain the estimated number
  of developers needed for the project:
 \end_layout
 
@@ -5258,16 +5258,16 @@ reference "fig:Technical-Risks"
 \series bold
 DBMSs unreliability
 \series default
-: NoSQL and MySQL may appear unreliable for connectivity and transactions
+: NoSQL and MySQL may appears unreliable for connectivity and transactions
  issues.
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
-Data Los
+Data Loss
 \series default
-: Data corruption during relevant communication such ah PowerEnJoy Core
+: Data corruption during relevant communication such as PowerEnJoy Core
  and vehicles or PowerEnJoy App more than expected.
 \end_layout
 
@@ -5276,17 +5276,17 @@ Data Los
 \series bold
 Security Issues
 \series default
-: PowerEnJoy App could be afflicted by security issue during important communica
-tion such as for payments or personal identitification.
+: PowerEnJoy App could be afflicted by security issues during important
+ communication such as for payments or personal identitifications.
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
-Issues communicating with vehicles
+Issues with vehicles
 \series default
-: The system could show unwanted behaviours in case of issues communicating
- with vehicles.
+: The system could show unwanted behaviours in case of unpredictable events
+ with vehicles or its software or natural disasters.
 \end_layout
 
 \begin_layout Standard
@@ -5440,7 +5440,7 @@ Serious
 \begin_inset Text
 
 \begin_layout Plain Layout
-Moderate
+Low
 \end_layout
 
 \end_inset
@@ -5449,7 +5449,7 @@ Moderate
 \begin_inset Text
 
 \begin_layout Plain Layout
-Low
+Moderate
 \end_layout
 
 \end_inset
@@ -5515,7 +5515,8 @@ Personnel Reduction
 \series bold
 Accidental Damages
 \series default
-: Testing devices and infrastructure purchased and accidentally damaged.
+: Testing devices and infrastructure purchased that could accidentally be
+ damaged.
 \end_layout
 
 \begin_layout Enumerate
@@ -5523,7 +5524,7 @@ Accidental Damages
 \series bold
 Law Changes
 \series default
-: Violation of future law with retro-action.
+: Violation of future law retroactive.
 \end_layout
 
 \begin_layout Enumerate
@@ -5531,7 +5532,7 @@ Law Changes
 \series bold
 New Competitors
 \series default
-: Competitors could enter the market and erose marke shares.
+: Competitors could join the market and erose market shares and profitability.
 \end_layout
 
 \begin_layout Standard
@@ -5753,6 +5754,10 @@ LyX as LaTeX editor.
 Github as version controller.
 \end_layout
 
+\begin_layout Itemize
+LucidChart for diagram
+\end_layout
+
 \begin_layout Subsection
 Effort spent
 \end_layout
@@ -5777,7 +5782,7 @@ Pietro Avolio
 \begin_inset Text
 
 \begin_layout Plain Layout
-9
+12
 \end_layout
 
 \end_inset
@@ -5797,7 +5802,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-8
+11
 \end_layout
 
 \end_inset
