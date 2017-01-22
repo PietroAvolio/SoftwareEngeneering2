@@ -5250,7 +5250,7 @@ reference "fig:Technical-Risks"
  to be produced.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 DBMSs unreliability
@@ -5259,7 +5259,7 @@ DBMSs unreliability
  issue.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Data Los
@@ -5268,7 +5268,7 @@ Data Los
  and vehicles or PowerEnJoy App more than expected.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Security Issues
@@ -5277,7 +5277,7 @@ Security Issues
 tion such as for payments or personal identitification.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Issues communicating with vehicles
@@ -5499,7 +5499,7 @@ reference "tab:Business-Risks"
  Those kind of risks threaten the viability of the system to be.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Personne Reduction
@@ -5507,7 +5507,7 @@ Personne Reduction
 : Personnel reduction of the work team due to financial issue.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Accidental Damages
@@ -5515,7 +5515,7 @@ Accidental Damages
 : Testing devices and infrastructure purchased and accidentally damaged.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Law Changes
@@ -5523,7 +5523,7 @@ Law Changes
 : Violation of future law with retro-action.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 New Competitors
@@ -5774,7 +5774,7 @@ Pietro Avolio
 \begin_inset Text
 
 \begin_layout Plain Layout
-21
+9
 \end_layout
 
 \end_inset
@@ -5794,7 +5794,7 @@ Guido Borrelli
 \begin_inset Text
 
 \begin_layout Plain Layout
-20
+8
 \end_layout
 
 \end_inset
