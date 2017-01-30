@@ -367,11 +367,11 @@ There are no interfaces defined in the file.
 \end_layout
 
 \begin_layout Enumerate
-All methods names are verbs and respect the usual convenction.
+All methods names are verbs and respect the usual conventions.
 \end_layout
 
 \begin_layout Enumerate
-All class variables respect the usual convenction.
+All class variables respect the usual conventions.
 \end_layout
 
 \begin_layout Enumerate
@@ -395,7 +395,7 @@ Braces
 \end_layout
 
 \begin_layout Enumerate
-A consistent bracing style is used in the file: It is the K&R style Java
+A consistent bracing style is used in the file: it is the K&R style Java
  variant, in which the opening brace is on the same line not only for the
  blocks inside a function, but also for class or method declarations.
 \end_layout
@@ -431,7 +431,7 @@ Wrapping Lines
 \end_layout
 
 \begin_layout Enumerate
-All lines breaks occur after a comma ora an operator.
+All lines breaks occur after a comma or an operator.
 \end_layout
 
 \begin_layout Enumerate
@@ -440,7 +440,7 @@ High-level breaks are used.
 
 \begin_layout Enumerate
 All new statements are alligned with the beginning of the expression at
- the same level as the previus line.
+ the same level as the previous line.
 \end_layout
 
 \begin_layout Subsection
@@ -549,7 +549,7 @@ All variables are intialized befor use.
 
 \begin_layout Enumerate
 All variables are initialized where they are declared, unless for class
- global variables, which are initializaed using the constructor.
+ global variables, which are initialized using the constructor.
 \end_layout
 
 \begin_layout Enumerate
@@ -570,7 +570,7 @@ Parameters are presented in the right order.
 \end_layout
 
 \begin_layout Enumerate
-Correct methods are always colled (they mainly are overload methods).
+Correct methods are always called (they mainly are overload methods).
 \end_layout
 
 \begin_layout Enumerate
@@ -615,7 +615,7 @@ The only output is a log message (line 152) and it is free of spelling and
 
 \color orange
 Error messages are comprehensive but they do not provide information on
- how to correct the error.
+ how to fix the error.
 \end_layout
 
 \begin_layout Enumerate
@@ -643,7 +643,7 @@ Operators precedence and parenthesizing is correct.
 \end_layout
 
 \begin_layout Enumerate
-THere are no precedence problems.
+There are no precedence problems.
 \end_layout
 
 \begin_layout Enumerate
@@ -655,11 +655,11 @@ Comparison and Boolean operators are correct.
 \end_layout
 
 \begin_layout Enumerate
-There are no throw-clatch expressions.
+There are no throw-catch expressions.
 \end_layout
 
 \begin_layout Enumerate
-There are no implicit type conversations.
+There are no implicit type conversion.
 \end_layout
 
 \begin_layout Subsection
