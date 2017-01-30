@@ -1,0 +1,726 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\branch Introduction
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{secnumdepth}{4}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/Logo_Politecnico_Milano.png
+	display false
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Software Engineering 2 project:
+\begin_inset Formula $\mathit{PowerEnJoy}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 0
+\align center
+A.A.
+ 2016/2017 - Professor E.
+ di Nitto
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{20pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+
+\series bold
+\size huge
+Code Inspection
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{50pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Version 
+\series bold
+1.0 
+\begin_inset Formula $\mathrm{-}/01/2017$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pietro Avolio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mat 878640
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Guido Borrelli
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mat 874451
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Assigned classes
+\end_layout
+
+\begin_layout Standard
+The file of the project assigned to our group contains one public 
+\series bold
+ModelField
+\series default
+ class and one public 
+\series bold
+EncryptMethod
+\series default
+ enum, under the 
+\series bold
+org.apache.ofbiz.entity.model
+\series default
+ package.
+\end_layout
+
+\begin_layout Section
+Functional role of assigned classes
+\end_layout
+
+\begin_layout Standard
+This ModelField class implements the field elements, that is a field of
+ a row in a database.
+ There are attributes indicating if the field is part of the Primary Key
+ of the table or indicating of the field is null or not.
+\end_layout
+
+\begin_layout Standard
+It is an immutable class: all the attributes are final and there are no
+ setter methods.
+ The constructor is private and the object can be created only using the
+ overloaded create method (factory pattern).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The class can also represent an encrypted field: the encryption method is
+ passed using the create method.
+ There is also a method to export the field by attaching it to an XML Document.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Result of the inspection
+\end_layout
+
+\begin_layout Subsection
+Naming Convenctions
+\end_layout
+
+\begin_layout Enumerate
+Almost all variables, method and class names are meaningful and their scope
+ can be understood at a first read, except for the global variable isPk,
+ defined on line 207, which stands for isPrimaryKey and which is not immediately
+ understendable without reading the documentation.
+\end_layout
+
+\begin_layout Enumerate
+There are no one-character variables in the classes.
+\end_layout
+
+\begin_layout Enumerate
+All class names are nouns and respect the usual convenction.
+\end_layout
+
+\begin_layout Enumerate
+There are no interfaces defined in the file.
+\end_layout
+
+\begin_layout Enumerate
+All methods names are verbs and respect the usual convenction.
+\end_layout
+
+\begin_layout Enumerate
+All class variables respect the usual convenction.
+\end_layout
+
+\begin_layout Enumerate
+There are no constants defined in the file.
+\end_layout
+
+\begin_layout Subsection
+Indention
+\end_layout
+
+\begin_layout Enumerate
+The entire file is intended using four spaces.
+\end_layout
+
+\begin_layout Enumerate
+No indention is done using the TAB button.
+\end_layout
+
+\begin_layout Subsection
+Braces
+\end_layout
+
+\begin_layout Enumerate
+A consistent bracing style is used in the file: It is the K&R style Java
+ variant, in which the opening brace is on the same line not only for the
+ blocks inside a function, but also for class or method declarations.
+\end_layout
+
+\begin_layout Enumerate
+All if, while, do-while, try-catch, and for statments that contains only
+ one statement uses the curly braces.
+\end_layout
+
+\begin_layout Subsection
+File organization
+\end_layout
+
+\begin_layout Enumerate
+Blank lines are properly used to separate sections.
+ There is an useless blank line inside a documentation fragment on line
+ 35.
+\end_layout
+
+\begin_layout Enumerate
+Many lines, especially methods params declaration and comments, exceed the
+ 80 characters limit.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Many lines, especially methods params declaration, exceed the the 120 characters
+ limit.
+\end_layout
+
+\begin_layout Subsection
+Wrapping Lines
+\end_layout
+
+\begin_layout Enumerate
+All lines breaks occur after a comma ora an operator.
+\end_layout
+
+\begin_layout Enumerate
+High-level breaks are used.
+\end_layout
+
+\begin_layout Enumerate
+All new statements are alligned with the beginning of the expression at
+ the same level as the previus line.
+\end_layout
+
+\begin_layout Subsection
+Comments
+\end_layout
+
+\begin_layout Enumerate
+There are no comments inside the code.
+ Procedures are almost very straightforward to understand.
+\end_layout
+
+\begin_layout Enumerate
+The only comments out of code are the license at the beginning of the file
+ (line 1 to 18), a comment explaining the absence of the setter methods
+ (line 190 to 192) and two TODO reminders (line 96, line 297).
+\end_layout
+
+\begin_layout Subsection
+Java Source Files
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+The file contains the declaration of a public class (line 39) and of a public
+ enum (line 42)
+\color inherit
+.
+ This violates the best practice that states that each java source file
+ should contain a single public class or interface.
+\end_layout
+
+\begin_layout Enumerate
+The public class is the first class in the file.
+\end_layout
+
+\begin_layout Enumerate
+External program interfaces are implemented consistently with what is described
+ in the JavaDoc.
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+The JavaDoc is not complete.
+ 
+\color inherit
+JavaDoc is missing for methods on lines 95, 219, 249, 269, 288, 298.
+ Some parameters are not specified (line 82, 173).
+\end_layout
+
+\begin_layout Subsection
+Package and Import Statements
+\end_layout
+
+\begin_layout Enumerate
+The package statement is the first uncommented statement and it is followed
+ by import statements.
+\end_layout
+
+\begin_layout Subsection
+Class and Interface Declarations
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+The class declaration does not follow the common order.
+ 
+\color inherit
+The class implementation code is not right after the class statement but
+ it is on line (189).
+ Variables declaration is after the constructors.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Methods are grouped by functionality.
+\end_layout
+
+\begin_layout Enumerate
+Code is free from duplicates.
+ The most long method counts 32 lines.
+\end_layout
+
+\begin_layout Subsection
+Initialization and Declarations
+\end_layout
+
+\begin_layout Enumerate
+All variables are of the correct type and have the correct visibility.
+ Plus, they all are final since the entire class is final.
+\end_layout
+
+\begin_layout Enumerate
+All variables are declared in their proper scope.
+\end_layout
+
+\begin_layout Enumerate
+Constructors are called when a new object is desired.
+\end_layout
+
+\begin_layout Enumerate
+All variables are intialized befor use.
+\end_layout
+
+\begin_layout Enumerate
+All variables are initialized where they are declared, unless for class
+ global variables, which are initializaed using the constructor.
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Declarations does not appear at the beginning of a block
+\color inherit
+.
+ Variables are often declared using a logic divisioning.
+\end_layout
+
+\begin_layout Subsection
+Method Calls
+\end_layout
+
+\begin_layout Enumerate
+Parameters are presented in the right order.
+\end_layout
+
+\begin_layout Enumerate
+Correct methods are always colled (they mainly are overload methods).
+\end_layout
+
+\begin_layout Enumerate
+Method returned values are used properly.
+\end_layout
+
+\begin_layout Subsection
+Arrays
+\end_layout
+
+\begin_layout Enumerate
+All arrays (implemented with the ArrayList classe) are accessed using the
+ iterator.
+\end_layout
+
+\begin_layout Enumerate
+Same as the previous.
+\end_layout
+
+\begin_layout Enumerate
+Constructors are always called when a new item array is desired.
+\end_layout
+
+\begin_layout Subsection
+Object Comparison
+\end_layout
+
+\begin_layout Enumerate
+The equals method is always used.
+\end_layout
+
+\begin_layout Subsection
+Output Format
+\end_layout
+
+\begin_layout Enumerate
+The only output is a log message (line 152) and it is free of spelling and
+ grammatical errors.
+\end_layout
+
+\begin_layout Enumerate
+
+\color orange
+Error messages are comprehensive but they do not provide information on
+ how to correct the error.
+\end_layout
+
+\begin_layout Enumerate
+Output is formatted correctly.
+\end_layout
+
+\begin_layout Subsection
+Computation, Comparison and Assignments
+\end_layout
+
+\begin_layout Enumerate
+There are no 
+\begin_inset Quotes eld
+\end_inset
+
+brutish programming
+\begin_inset Quotes erd
+\end_inset
+
+ implementations.
+\end_layout
+
+\begin_layout Enumerate
+Operators precedence and parenthesizing is correct.
+\end_layout
+
+\begin_layout Enumerate
+THere are no precedence problems.
+\end_layout
+
+\begin_layout Enumerate
+There are no integers or other numeric variables.
+\end_layout
+
+\begin_layout Enumerate
+Comparison and Boolean operators are correct.
+\end_layout
+
+\begin_layout Enumerate
+There are no throw-clatch expressions.
+\end_layout
+
+\begin_layout Enumerate
+There are no implicit type conversations.
+\end_layout
+
+\begin_layout Subsection
+Exception
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Not all the relevant exceptions are caught
+\color inherit
+.
+ For example, on line 298, a NullPointerException could be raised if the
+ document param is null.
+\end_layout
+
+\begin_layout Enumerate
+There are not try-catch blocks.
+\end_layout
+
+\begin_layout Subsection
+Flow control
+\end_layout
+
+\begin_layout Enumerate
+There are no switch statements.
+\end_layout
+
+\begin_layout Enumerate
+There are no switch statements.
+\end_layout
+
+\begin_layout Enumerate
+All loops are correctly formed.
+\end_layout
+
+\begin_layout Subsection
+Files
+\end_layout
+
+\begin_layout Enumerate
+No files are used.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Other problems
+\end_layout
+
+\begin_layout Enumerate
+There is an useless null check on line 313 since the validators variable
+ is implemented using the List class which always returns an iterator.
+ However, this check could be useful if the implementation of the validators
+ variable will change in the future.
+\end_layout
+
+\end_body
+\end_document
