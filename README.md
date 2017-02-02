@@ -20,3 +20,6 @@ Guido Borrelli 	Mat. 874451
 	
 + Project Plan Document. Deadline 22/01/2017
 	- [PDF Document of the latest version](./releases/4.PPD/Project Plan Document - v1.0.pdf)
+	
++ Code Inspection. Deadline 05/02/2017
+	- [PDF Document of the latest version](./release/4.CODE INSPECTION/CodeInspection.pdf)

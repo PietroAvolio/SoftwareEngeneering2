@@ -183,7 +183,7 @@ vspace{50pt}
 Version 
 \series bold
 1.0 
-\begin_inset Formula $\mathrm{-}/01/2017$
+\begin_inset Formula $\mathrm{-}02/02/2017$
 \end_inset
 
  
@@ -308,17 +308,30 @@ Functional role of assigned classes
 \end_layout
 
 \begin_layout Standard
-This ModelField class implements the field elements, that is a field of
- a row in a database.
- There are attributes indicating if the field is part of the Primary Key
- of the table or indicating of the field is null or not.
+As stated in a comment inside the code, this ModelField class implements
+ the field element.
+\end_layout
+
+\begin_layout Standard
+This means that this class is used to store the content of a field of a
+ query result: the instantiated object of the class keeps track if the field
+ is part of the primary key or if its content is null or not.
 \end_layout
 
 \begin_layout Standard
 It is an immutable class: all the attributes are final and there are no
- setter methods.
- The constructor is private and the object can be created only using the
- overloaded create method (factory pattern).
+ setter methods, if an user needs to modify the attribute of the object
+ needs toinstatiate a new one.
+ 
+\end_layout
+
+\begin_layout Standard
+The constructor is private and the object can be created only using the
+ overloaded 
+\shape italic
+create
+\shape default
+ method (factory pattern).
  
 \begin_inset Newline newline
 \end_inset
@@ -328,8 +341,8 @@ It is an immutable class: all the attributes are final and there are no
 \end_inset
 
 The class can also represent an encrypted field: the encryption method is
- passed using the create method.
- There is also a method to export the field by attaching it to an XML Document.
+ passed when instantiating the object.
+ There is also a method to export the field by appending it to an XML Document.
 \end_layout
 
 \begin_layout Standard
@@ -720,6 +733,94 @@ There is an useless null check on line 313 since the validators variable
  is implemented using the List class which always returns an iterator.
  However, this check could be useful if the implementation of the validators
  variable will change in the future.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Appendix
+\end_layout
+
+\begin_layout Subsection
+Tools Used
+\end_layout
+
+\begin_layout Itemize
+IntelliJ Idea as Java IDE
+\end_layout
+
+\begin_layout Itemize
+Sonar
+\end_layout
+
+\begin_layout Itemize
+Notepad++ to verify if the indentation was realised with tab or four spaces
+\end_layout
+
+\begin_layout Itemize
+Git as version controller
+\end_layout
+
+\begin_layout Subsection
+Effort Spent
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pietro Avolio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Guido Borrelli
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_body
