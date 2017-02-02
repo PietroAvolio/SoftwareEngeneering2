@@ -313,9 +313,9 @@ As stated in a comment inside the code, this ModelField class implements
 \end_layout
 
 \begin_layout Standard
-This means that this class is used to store the content of a field of a
- query result: the instantiated object of the class keeps track if the field
- is part of the primary key or if its content is null or not.
+This means that this class is used to represent the content of a field of
+ a query result: the instantiated object of the class keeps track if the
+ field is part of the primary key or if its content is null or not.
 \end_layout
 
 \begin_layout Standard

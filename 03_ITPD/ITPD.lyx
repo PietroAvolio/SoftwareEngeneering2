@@ -508,7 +508,7 @@ ion of the algorithms and in the usage of the data structures.
 The project should also have passed through a phase of code inspection in
  order to ensure maintainability, the respect of the conventions, the usage
  of the best known practices and the avoidance of the bad ones.
- The code inspection should be executed via automated tools as much as possibile
+ The code inspection should be executed via automated tools as much as possible
  in order to be able to spend most of the time on manual inspection of the
  most complex parts.
 \end_layout
@@ -605,7 +605,7 @@ name "subsec:Integration-testing-strategy"
 \end_layout
 
 \begin_layout Standard
-In order to prevent all the possibile issues coming from a typical big bang
+In order to prevent all the possible issues coming from a typical big bang
  approach, in which all the integration tests are performed at the end of
  the development process, a slowly incremental approach is the one chosen
  for the integration tests of the system.
@@ -6751,7 +6751,7 @@ The SMS should be correctly sent
 \begin_inset Text
 
 \begin_layout Plain Layout
-The test checks both the connection with the SMS gateway and the possibile
+The test checks both the connection with the SMS gateway and the possible
  issues with special characters
 \end_layout
 
