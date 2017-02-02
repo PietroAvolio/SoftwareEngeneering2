@@ -10,7 +10,7 @@ Guido Borrelli 	Mat. 874451
 
 + Requirements analysys and Specification Document. Deadline 13/11/2016:  
 	- [PDF document of the latest version](./releases/1.RASD/RASD - v1.1.pdf)
-    - [Alloy model](./releases/RASD/alloy model Avolio Borrelli - v1.0.als)
+    - [Alloy model](./releases/1.RASD/alloy model Avolio Borrelli - v1.0.als)
 	
 + Design document. Deadline 11/12/2016:
 	- [PDF Document of the latest version](./releases/2.DD/Design Document - v1.1.pdf) 
